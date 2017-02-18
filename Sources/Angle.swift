@@ -1,3 +1,11 @@
+//
+//  Angle.swift
+//  DLAngle
+//
+//  Created by David Livadaru on 18/02/2017.
+//
+//
+
 import Foundation
 
 public class Angle<Representation : FloatingPoint>: AngleType, InverseTrigonometricType, TrigonometricType {
