@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Angle<Representation : FloatingPoint>: AngleType, InverseTrigonometricType, TrigonometricType {
+public class Angle<Representation : FloatingPoint>: AngleType {
     public typealias RawValue = Representation
     public var rawValue: Representation
     

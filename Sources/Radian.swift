@@ -26,8 +26,8 @@ public class Radian<Representation: FloatingPoint>: Angle<Representation> {
         lhs.rawValue += rhs.rawValue
     }
     
-    public static func -(lhs: Radian<Representation>, rhs: Representation) -> Radian<Representation> {
-        return Radian<Representation>(rawValue: lhs.rawValue - rhs)
+    public static func -(lhs: Radian<Representation>, rhs: Radian<Representation>) -> Radian<Representation> {
+        return Radian<Representation>(rawValue: lhs.rawValue - rhs.rawValue)
     }
     
     public static func -=(lhs: inout Radian<Representation>, rhs: Radian<Representation>) {
