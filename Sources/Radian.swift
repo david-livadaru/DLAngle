@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Radian<Representation: FloatingPoint>: Angle<Representation> {
+public class  Radian<Representation: FloatingPoint>: Angle<Representation>, Comparable {
     public convenience init(degrees: Representation) {
         let radians: RawValue = degrees / 180 * Representation.pi
         self.init(rawValue: radians)
@@ -19,43 +19,51 @@ public class Radian<Representation: FloatingPoint>: Angle<Representation> {
     }
     
     public static func +(lhs: Radian<Representation>, rhs: Radian<Representation>) -> Radian<Representation> {
-        return Radian<Representation>(rawValue: lhs.rawValue + rhs.rawValue)
+        return add(lhs: lhs, rhs: rhs)
     }
     
     public static func +=(lhs: inout Radian<Representation>, rhs: Radian<Representation>) {
-        lhs.rawValue += rhs.rawValue
+        addEqual(lhs: &lhs, rhs: rhs)
     }
     
     public static func -(lhs: Radian<Representation>, rhs: Radian<Representation>) -> Radian<Representation> {
-        return Radian<Representation>(rawValue: lhs.rawValue - rhs.rawValue)
+        return minus(lhs: lhs, rhs: rhs)
     }
     
     public static func -=(lhs: inout Radian<Representation>, rhs: Radian<Representation>) {
-        lhs.rawValue -= rhs.rawValue
+        minusEqual(lhs: &lhs, rhs: rhs)
     }
     
     public static func *(lhs: Radian<Representation>, rhs: Representation) -> Radian<Representation> {
-        return Radian<Representation>(rawValue: lhs.rawValue * rhs)
+        return multiply(angle: lhs, with: rhs)
     }
     
     public static func *(lhs: Representation, rhs: Radian<Representation>) -> Radian<Representation> {
-        return Radian<Representation>(rawValue: lhs * rhs.rawValue)
+        return multiply(value: lhs, with: rhs)
     }
     
     public static func *=(lhs: inout Radian<Representation>, rhs: Representation) {
-        lhs.rawValue *= rhs
+        multiplyEqual(angle: &lhs, with: rhs)
     }
     
     public static func /(lhs: Radian<Representation>, rhs: Representation) -> Radian<Representation> {
-        return Radian<Representation>(rawValue: lhs.rawValue / rhs)
+        return divide(angle: lhs, with: rhs)
     }
     
     public static func /(lhs: Representation, rhs: Radian<Representation>) -> Radian<Representation> {
-        return Radian<Representation>(rawValue: lhs / rhs.rawValue)
+        return divide(value: lhs, with: rhs)
     }
     
     public static func /=(lhs: inout Radian<Representation>, rhs: Representation) {
-        lhs.rawValue /= rhs
+        divideEqual(lhs: &lhs, rhs: rhs)
+    }
+    
+    public static func ==(lhs: Radian<Representation>, rhs: Radian<Representation>) -> Bool {
+        return equal(lhs: lhs, rhs: rhs)
+    }
+    
+    public static func <(lhs: Radian<Representation>, rhs: Radian<Representation>) -> Bool {
+        return lessThan(lhs: lhs, rhs: rhs)
     }
 }
 

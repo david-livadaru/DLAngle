@@ -12,38 +12,44 @@
 		639D79CA1E588A5E008D10EF /* DLAngletvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 639D79C81E588A5E008D10EF /* DLAngletvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		639D79D71E588A80008D10EF /* DLAnglemacOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 639D79D51E588A80008D10EF /* DLAnglemacOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		639D79DB1E588A8B008D10EF /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D79891E58898A008D10EF /* Angle.swift */; };
-		639D79DC1E588A8B008D10EF /* AngleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D798A1E58898A008D10EF /* AngleType.swift */; };
 		639D79DD1E588A8B008D10EF /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D798B1E58898A008D10EF /* Degree.swift */; };
 		639D79DF1E588A8B008D10EF /* Radian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D798D1E58898A008D10EF /* Radian.swift */; };
 		639D79E11E588A8B008D10EF /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D79891E58898A008D10EF /* Angle.swift */; };
-		639D79E21E588A8B008D10EF /* AngleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D798A1E58898A008D10EF /* AngleType.swift */; };
 		639D79E31E588A8B008D10EF /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D798B1E58898A008D10EF /* Degree.swift */; };
 		639D79E51E588A8B008D10EF /* Radian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D798D1E58898A008D10EF /* Radian.swift */; };
 		639D79E71E588A8C008D10EF /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D79891E58898A008D10EF /* Angle.swift */; };
-		639D79E81E588A8C008D10EF /* AngleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D798A1E58898A008D10EF /* AngleType.swift */; };
 		639D79E91E588A8C008D10EF /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D798B1E58898A008D10EF /* Degree.swift */; };
 		639D79EB1E588A8C008D10EF /* Radian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D798D1E58898A008D10EF /* Radian.swift */; };
 		639D79ED1E588A8C008D10EF /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D79891E58898A008D10EF /* Angle.swift */; };
-		639D79EE1E588A8C008D10EF /* AngleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D798A1E58898A008D10EF /* AngleType.swift */; };
 		639D79EF1E588A8C008D10EF /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D798B1E58898A008D10EF /* Degree.swift */; };
 		639D79F11E588A8C008D10EF /* Radian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D798D1E58898A008D10EF /* Radian.swift */; };
 		639D79F61E58D426008D10EF /* TrigonometryFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D79F51E58D426008D10EF /* TrigonometryFunctions.swift */; };
 		639D79F71E58D426008D10EF /* TrigonometryFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D79F51E58D426008D10EF /* TrigonometryFunctions.swift */; };
 		639D79F81E58D426008D10EF /* TrigonometryFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D79F51E58D426008D10EF /* TrigonometryFunctions.swift */; };
 		639D79F91E58D426008D10EF /* TrigonometryFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D79F51E58D426008D10EF /* TrigonometryFunctions.swift */; };
-		639D7A061E58DAB2008D10EF /* DLAngleiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D7A051E58DAB2008D10EF /* DLAngleiOSTests.swift */; };
 		639D7A081E58DAB2008D10EF /* DLAngleiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639D79AC1E588A0C008D10EF /* DLAngleiOS.framework */; };
 		639D7A0F1E58DADF008D10EF /* AngleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D7A0E1E58DADF008D10EF /* AngleTests.swift */; };
 		639D7A101E58DB4D008D10EF /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D79891E58898A008D10EF /* Angle.swift */; };
-		639D7A111E58DB4D008D10EF /* AngleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D798A1E58898A008D10EF /* AngleType.swift */; };
 		639D7A121E58DB4D008D10EF /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D798B1E58898A008D10EF /* Degree.swift */; };
 		639D7A131E58DB4D008D10EF /* Radian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D798D1E58898A008D10EF /* Radian.swift */; };
 		639D7A141E58DB4D008D10EF /* TrigonometryFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D79F51E58D426008D10EF /* TrigonometryFunctions.swift */; };
+		639D7A161E58DE2B008D10EF /* DegreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D7A151E58DE2B008D10EF /* DegreeTests.swift */; };
+		639D7A181E58F1E6008D10EF /* RadianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D7A171E58F1E6008D10EF /* RadianTests.swift */; };
+		63F7BE2B1E58F84400708BAF /* TrigonometryFunctionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F7BE2A1E58F84400708BAF /* TrigonometryFunctionsTest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		639D7A091E58DAB2008D10EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 639D79331E588865008D10EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 639D79AB1E588A0C008D10EF;
+			remoteInfo = DLAngleiOS;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		639D79891E58898A008D10EF /* Angle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
-		639D798A1E58898A008D10EF /* AngleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleType.swift; sourceTree = "<group>"; };
 		639D798B1E58898A008D10EF /* Degree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Degree.swift; sourceTree = "<group>"; };
 		639D798D1E58898A008D10EF /* Radian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Radian.swift; sourceTree = "<group>"; };
 		639D79AC1E588A0C008D10EF /* DLAngleiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLAngleiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +65,12 @@
 		639D79D51E588A80008D10EF /* DLAnglemacOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAnglemacOS.h; sourceTree = "<group>"; };
 		639D79D61E588A80008D10EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		639D79F51E58D426008D10EF /* TrigonometryFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrigonometryFunctions.swift; sourceTree = "<group>"; };
+		639D7A031E58DAB1008D10EF /* DLAngleiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLAngleiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		639D7A071E58DAB2008D10EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		639D7A0E1E58DADF008D10EF /* AngleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleTests.swift; sourceTree = "<group>"; };
+		639D7A151E58DE2B008D10EF /* DegreeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DegreeTests.swift; sourceTree = "<group>"; };
+		639D7A171E58F1E6008D10EF /* RadianTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadianTests.swift; sourceTree = "<group>"; };
+		63F7BE2A1E58F84400708BAF /* TrigonometryFunctionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrigonometryFunctionsTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +102,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		639D7A001E58DAB1008D10EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639D7A081E58DAB2008D10EF /* DLAngleiOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -101,6 +121,7 @@
 				639D79BA1E588A33008D10EF /* DLAnglewatchOS */,
 				639D79C71E588A5E008D10EF /* DLAngletvOS */,
 				639D79D41E588A80008D10EF /* DLAnglemacOS */,
+				639D7A041E58DAB2008D10EF /* DLAngleiOSTests */,
 				639D793D1E588865008D10EF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +133,7 @@
 				639D79B91E588A32008D10EF /* DLAnglewatchOS.framework */,
 				639D79C61E588A5E008D10EF /* DLAngletvOS.framework */,
 				639D79D31E588A80008D10EF /* DLAnglemacOS.framework */,
+				639D7A031E58DAB1008D10EF /* DLAngleiOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				639D79891E58898A008D10EF /* Angle.swift */,
-				639D798A1E58898A008D10EF /* AngleType.swift */,
 				639D798B1E58898A008D10EF /* Degree.swift */,
 				639D798D1E58898A008D10EF /* Radian.swift */,
 				639D79F51E58D426008D10EF /* TrigonometryFunctions.swift */,
@@ -171,6 +192,18 @@
 				639D79D61E588A80008D10EF /* Info.plist */,
 			);
 			path = DLAnglemacOS;
+			sourceTree = "<group>";
+		};
+		639D7A041E58DAB2008D10EF /* DLAngleiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				639D7A0E1E58DADF008D10EF /* AngleTests.swift */,
+				639D7A151E58DE2B008D10EF /* DegreeTests.swift */,
+				639D7A171E58F1E6008D10EF /* RadianTests.swift */,
+				63F7BE2A1E58F84400708BAF /* TrigonometryFunctionsTest.swift */,
+				639D7A071E58DAB2008D10EF /* Info.plist */,
+			);
+			path = DLAngleiOSTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,12 +316,31 @@
 			productReference = 639D79D31E588A80008D10EF /* DLAnglemacOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		639D7A021E58DAB1008D10EF /* DLAngleiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 639D7A0B1E58DAB2008D10EF /* Build configuration list for PBXNativeTarget "DLAngleiOSTests" */;
+			buildPhases = (
+				639D79FF1E58DAB1008D10EF /* Sources */,
+				639D7A001E58DAB1008D10EF /* Frameworks */,
+				639D7A011E58DAB1008D10EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				639D7A0A1E58DAB2008D10EF /* PBXTargetDependency */,
+			);
+			name = DLAngleiOSTests;
+			productName = DLAngleiOSTests;
+			productReference = 639D7A031E58DAB1008D10EF /* DLAngleiOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		639D79331E588865008D10EF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				TargetAttributes = {
 					639D79AB1E588A0C008D10EF = {
@@ -304,6 +356,10 @@
 						ProvisioningStyle = Automatic;
 					};
 					639D79D21E588A80008D10EF = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					639D7A021E58DAB1008D10EF = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -325,6 +381,7 @@
 				639D79B81E588A32008D10EF /* DLAnglewatchOS */,
 				639D79C51E588A5E008D10EF /* DLAngletvOS */,
 				639D79D21E588A80008D10EF /* DLAnglemacOS */,
+				639D7A021E58DAB1008D10EF /* DLAngleiOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -358,6 +415,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		639D7A011E58DAB1008D10EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -369,7 +433,6 @@
 				639D79DF1E588A8B008D10EF /* Radian.swift in Sources */,
 				639D79DD1E588A8B008D10EF /* Degree.swift in Sources */,
 				639D79F61E58D426008D10EF /* TrigonometryFunctions.swift in Sources */,
-				639D79DC1E588A8B008D10EF /* AngleType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +444,6 @@
 				639D79E51E588A8B008D10EF /* Radian.swift in Sources */,
 				639D79E31E588A8B008D10EF /* Degree.swift in Sources */,
 				639D79F71E58D426008D10EF /* TrigonometryFunctions.swift in Sources */,
-				639D79E21E588A8B008D10EF /* AngleType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +455,6 @@
 				639D79EB1E588A8C008D10EF /* Radian.swift in Sources */,
 				639D79E91E588A8C008D10EF /* Degree.swift in Sources */,
 				639D79F81E58D426008D10EF /* TrigonometryFunctions.swift in Sources */,
-				639D79E81E588A8C008D10EF /* AngleType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,11 +466,33 @@
 				639D79F11E588A8C008D10EF /* Radian.swift in Sources */,
 				639D79EF1E588A8C008D10EF /* Degree.swift in Sources */,
 				639D79F91E58D426008D10EF /* TrigonometryFunctions.swift in Sources */,
-				639D79EE1E588A8C008D10EF /* AngleType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639D79FF1E58DAB1008D10EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639D7A121E58DB4D008D10EF /* Degree.swift in Sources */,
+				639D7A101E58DB4D008D10EF /* Angle.swift in Sources */,
+				639D7A161E58DE2B008D10EF /* DegreeTests.swift in Sources */,
+				63F7BE2B1E58F84400708BAF /* TrigonometryFunctionsTest.swift in Sources */,
+				639D7A0F1E58DADF008D10EF /* AngleTests.swift in Sources */,
+				639D7A131E58DB4D008D10EF /* Radian.swift in Sources */,
+				639D7A181E58F1E6008D10EF /* RadianTests.swift in Sources */,
+				639D7A141E58DB4D008D10EF /* TrigonometryFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		639D7A0A1E58DAB2008D10EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 639D79AB1E588A0C008D10EF /* DLAngleiOS */;
+			targetProxy = 639D7A091E58DAB2008D10EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		639D79421E588865008D10EF /* Debug */ = {
@@ -677,6 +760,28 @@
 			};
 			name = Release;
 		};
+		639D7A0C1E58DAB2008D10EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DLAngleiOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.DLAngleiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		639D7A0D1E58DAB2008D10EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DLAngleiOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.DLAngleiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -696,6 +801,7 @@
 				639D79B31E588A0C008D10EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		639D79BE1E588A33008D10EF /* Build configuration list for PBXNativeTarget "DLAnglewatchOS" */ = {
 			isa = XCConfigurationList;
@@ -704,6 +810,7 @@
 				639D79C01E588A33008D10EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		639D79CB1E588A5E008D10EF /* Build configuration list for PBXNativeTarget "DLAngletvOS" */ = {
 			isa = XCConfigurationList;
@@ -712,6 +819,7 @@
 				639D79CD1E588A5E008D10EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		639D79D81E588A80008D10EF /* Build configuration list for PBXNativeTarget "DLAnglemacOS" */ = {
 			isa = XCConfigurationList;
@@ -720,6 +828,16 @@
 				639D79DA1E588A80008D10EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		639D7A0B1E58DAB2008D10EF /* Build configuration list for PBXNativeTarget "DLAngleiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639D7A0C1E58DAB2008D10EF /* Debug */,
+				639D7A0D1E58DAB2008D10EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

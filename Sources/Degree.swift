@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Degree<Representation: FloatingPoint>: Angle<Representation> {
+public class Degree<Representation: FloatingPoint>: Angle<Representation>, Comparable {
     public convenience init(radians: Representation) {
         let degrees: RawValue = 180 * radians / Representation.pi
         self.init(rawValue: degrees)
@@ -19,43 +19,47 @@ public class Degree<Representation: FloatingPoint>: Angle<Representation> {
     }
     
     public static func +(lhs: Degree<Representation>, rhs: Degree<Representation>) -> Degree<Representation> {
-        return Degree<Representation>(rawValue: lhs.rawValue + rhs.rawValue)
+        return add(lhs: lhs, rhs: rhs)
     }
     
     public static func +=(lhs: inout Degree<Representation>, rhs: Degree<Representation>) {
-        lhs.rawValue += rhs.rawValue
+        addEqual(lhs: &lhs, rhs: rhs)
     }
     
     public static func -(lhs: Degree<Representation>, rhs: Degree<Representation>) -> Degree<Representation> {
-        return Degree<Representation>(rawValue: lhs.rawValue - rhs.rawValue)
+        return minus(lhs: lhs, rhs: rhs)
     }
     
     public static func -=(lhs: inout Degree<Representation>, rhs: Degree<Representation>) {
-        lhs.rawValue -= rhs.rawValue
+        minusEqual(lhs: &lhs, rhs: rhs)
     }
     
     public static func *(lhs: Degree<Representation>, rhs: Representation) -> Degree<Representation> {
-        return Degree<Representation>(rawValue: lhs.rawValue * rhs)
+        return multiply(angle: lhs, with: rhs)
     }
     
     public static func *(lhs: Representation, rhs: Degree<Representation>) -> Degree<Representation> {
-        return Degree<Representation>(rawValue: lhs * rhs.rawValue)
+        return multiply(value: lhs, with: rhs)
     }
     
     public static func *=(lhs: inout Degree<Representation>, rhs: Representation) {
-        lhs.rawValue *= rhs
+        multiplyEqual(angle: &lhs, with: rhs)
     }
     
     public static func /(lhs: Degree<Representation>, rhs: Representation) -> Degree<Representation> {
-        return Degree<Representation>(rawValue: lhs.rawValue / rhs)
-    }
-    
-    public static func /(lhs: Representation, rhs: Degree<Representation>) -> Degree<Representation> {
-        return Degree<Representation>(rawValue: lhs / rhs.rawValue)
+        return divide(angle: lhs, with: rhs)
     }
     
     public static func /=(lhs: inout Degree<Representation>, rhs: Representation) {
-        lhs.rawValue /= rhs
+        divideEqual(lhs: &lhs, rhs: rhs)
+    }
+    
+    public static func ==(lhs: Degree<Representation>, rhs: Degree<Representation>) -> Bool {
+        return equal(lhs: lhs, rhs: rhs)
+    }
+    
+    public static func <(lhs: Degree<Representation>, rhs: Degree<Representation>) -> Bool {
+        return lessThan(lhs: lhs, rhs: rhs)
     }
 }
 
