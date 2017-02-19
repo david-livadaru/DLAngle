@@ -43,6 +43,16 @@ public final class Degree: Angle, Comparable, AngleType {
         self.init(radians: radian.rawValue)
     }
     
+    // MARK: AngleType
+    
+    public func normalize() {
+        normalize(by: Degree.normalizationValue)
+    }
+    
+    public func normalized() -> Degree {
+        return normalized(by: Degree.normalizationValue)
+    }
+    
     // MARK: Operators
     
     public static func +(lhs: Degree, rhs: Degree) -> Degree {
@@ -157,16 +167,6 @@ public final class Degree: Angle, Comparable, AngleType {
     
     public static func <(lhs: Degree, rhs: Degree) -> Bool {
         return lessThan(lhs: lhs, rhs: rhs)
-    }
-    
-    // MARK: AngleType
-    
-    func normalize() {
-        normalize(by: Degree.normalizationValue)
-    }
-    
-    func normalized() -> Degree {
-        return normalized(by: Degree.normalizationValue)
     }
 }
 

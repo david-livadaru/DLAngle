@@ -8,7 +8,9 @@
 
 import Foundation
 
-protocol AngleType: class {
+public protocol AngleType: class {
+    /// Bring the angle into [0, 2 * Pi]  interval.
     func normalize()
+    /// Bring the angle into [0, 2 * Pi]  interval.
     func normalized() -> Self
 }

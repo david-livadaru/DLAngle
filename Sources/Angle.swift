@@ -13,7 +13,7 @@ import Foundation
 
 /// A class which provides an abstraction of the angle.
 public class Angle {
-    public var rawValue: Float80
+    public private (set) var rawValue: Float80
     
     public var float: Float {
         return Float(rawValue)
@@ -40,23 +40,33 @@ public class Angle {
     
     // MARK: Initializers
     
-    required public init(rawValue: Float80) {
+    public required init(rawValue: Float80) {
         self.rawValue = rawValue
     }
     
-    convenience init(float: Float) {
+    public convenience init(float: Float) {
         self.init(rawValue: Float80(float))
     }
     
-    convenience init(double: Double) {
+    public convenience init(double: Double) {
         self.init(rawValue: Float80(double))
     }
     
     #if !os(Linux)
-    convenience init(cgFloat: CGFloat) {
+    public convenience init(cgFloat: CGFloat) {
         self.init(double: Double(cgFloat))
     }
     #endif
+    
+    // MARK: Normalization
+    
+    func normalize(by value: Float80) {
+        rawValue = rawValue.truncatingRemainder(dividingBy: value)
+    }
+    
+    func normalized<T: Angle>(by value: Float80) -> T {
+        return T(rawValue: rawValue.truncatingRemainder(dividingBy: value))
+    }
     
     // MARK: Operations
     
@@ -193,16 +203,6 @@ public class Angle {
     
     static func lessThan<T: Angle>(lhs: T, rhs: T) -> Bool {
         return lhs.rawValue < rhs.rawValue
-    }
-    
-    // MARK: Normalization
-    
-    func normalize(by value: Float80) {
-        rawValue = rawValue.truncatingRemainder(dividingBy: value)
-    }
-    
-    func normalized<T: Angle>(by value: Float80) -> T {
-        return T(rawValue: rawValue.truncatingRemainder(dividingBy: value))
     }
 }
 
