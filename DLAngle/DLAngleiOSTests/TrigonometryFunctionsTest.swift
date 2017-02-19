@@ -11,13 +11,12 @@ import XCTest
 
 class TrigonometryFunctionsTest: XCTestCase {
     func testSineAsineFunction() {
-        let angle = Radian<Double>(degrees: 45)
-        let otherAngle = Trigonometry.asin(Trigonometry.sin(angle))
+        let angle = Radian(degrees: 45.0)
+        let value: Float80 = Trigonometry.sin(angle)
+        let otherAngle: Radian = Trigonometry.asin(value)
         
         XCTAssert(angle == otherAngle, "Sin or asin function doesn't compute correctly")
     }
-    
-    func testSineFunction2() {
-        // WARNING: continue from here
-    }
+
+    // WARNING: continue from here
 }
