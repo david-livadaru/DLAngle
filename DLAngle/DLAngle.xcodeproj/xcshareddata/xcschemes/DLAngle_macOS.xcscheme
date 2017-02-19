@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "639D79C51E588A5E008D10EF"
-               BuildableName = "DLAngletvOS.framework"
-               BlueprintName = "DLAngletvOS"
+               BlueprintIdentifier = "63252D551E5A3BA600324B66"
+               BuildableName = "DLAngle_macOS.framework"
+               BlueprintName = "DLAngle_macOS"
                ReferencedContainer = "container:DLAngle.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "639D79C51E588A5E008D10EF"
-            BuildableName = "DLAngletvOS.framework"
-            BlueprintName = "DLAngletvOS"
+            BlueprintIdentifier = "63252D551E5A3BA600324B66"
+            BuildableName = "DLAngle_macOS.framework"
+            BlueprintName = "DLAngle_macOS"
             ReferencedContainer = "container:DLAngle.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "639D79C51E588A5E008D10EF"
-            BuildableName = "DLAngletvOS.framework"
-            BlueprintName = "DLAngletvOS"
+            BlueprintIdentifier = "63252D551E5A3BA600324B66"
+            BuildableName = "DLAngle_macOS.framework"
+            BlueprintName = "DLAngle_macOS"
             ReferencedContainer = "container:DLAngle.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

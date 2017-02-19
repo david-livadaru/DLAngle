@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "639D79B81E588A32008D10EF"
-               BuildableName = "DLAnglewatchOS.framework"
-               BlueprintName = "DLAnglewatchOS"
+               BlueprintIdentifier = "63252D481E5A3B8800324B66"
+               BuildableName = "DLAngle_tvOS.framework"
+               BlueprintName = "DLAngle_tvOS"
                ReferencedContainer = "container:DLAngle.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "639D79B81E588A32008D10EF"
-            BuildableName = "DLAnglewatchOS.framework"
-            BlueprintName = "DLAnglewatchOS"
+            BlueprintIdentifier = "63252D481E5A3B8800324B66"
+            BuildableName = "DLAngle_tvOS.framework"
+            BlueprintName = "DLAngle_tvOS"
             ReferencedContainer = "container:DLAngle.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "639D79B81E588A32008D10EF"
-            BuildableName = "DLAnglewatchOS.framework"
-            BlueprintName = "DLAnglewatchOS"
+            BlueprintIdentifier = "63252D481E5A3B8800324B66"
+            BuildableName = "DLAngle_tvOS.framework"
+            BlueprintName = "DLAngle_tvOS"
             ReferencedContainer = "container:DLAngle.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
