@@ -61,6 +61,8 @@ Documentations, more tests, examples, images, CI and other stuff *Coming soon(TM
 
 A feature which would nice to have is to throw exceptions when a function is called with an invalid argument(e.g.: calling tan function with Pi/2 argument).
 
+Conversion between Foundation.Measurement<UnitAngle> and DLAngle.Angle subclasses for iOS 10 and later.
+
 ## Contribution
 
 [Open an issue](https://github.com/davidlivadaru/DLAngle/issues/new) if you have found a bug, have a feature request or provide feedback.
