@@ -34,7 +34,7 @@ Save the file, then fetch the new dependencies:
 
 `swift package fetch`
 
-Open the path folder Packaged/DLAngle-0.1.2/DLAngle/ and the Xcode project from into your application project/workspace. Now expand the Products group from DLAngle project and drag the framework for which OS you target into your application project's Embed Framework section.
+Open the path folder Packages/DLAngle-major.minor.patch/DLAngle/ and the Xcode project from into your application project/workspace. Now expand the Products group from DLAngle project and drag the framework for which OS you target into your application project's Embed Framework section.
 
 
 ### Carthage
@@ -57,7 +57,7 @@ If you're use .framework file do not forget to the configure the [copy framework
 
 ## Concepts
 
-Documentations, more tests, examples, images, CI and other stuff *Coming soon(TM)*.
+Documentations, more tests, examples, images, CI and other stuff *Coming soon&trade;*.
 
 A feature which would nice to have is to throw exceptions when a function is called with an invalid argument(e.g.: calling tan function with Pi/2 argument).
 
