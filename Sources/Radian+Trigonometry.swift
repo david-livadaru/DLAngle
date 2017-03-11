@@ -12,20 +12,24 @@ import Foundation
 #endif
 
 public extension Radian {
-    public convenience init(acos: Float80) {
+    public convenience init(acos: Float80) throws {
+        try Trigonometry.validate(value: acos, for: .acos)
         self.init(rawValue: Trigonometry.acos(acos))
     }
     
-    public convenience init(acos: Float) {
+    public convenience init(acos: Float) throws {
+        try Trigonometry.validate(value: acos, for: .acos)
         self.init(float: GenericTrigonometry.acos(acos))
     }
     
-    public convenience init(acos: Double) {
+    public convenience init(acos: Double) throws {
+        try Trigonometry.validate(value: acos, for: .acos)
         self.init(double: GenericTrigonometry.acos(acos))
     }
     
     #if !os(Linux)
-    public convenience init(acos: CGFloat) {
+    public convenience init(acos: CGFloat) throws {
+        try Trigonometry.validate(value: acos, for: .acos)
         self.init(cgFloat: Trigonometry.acos(acos))
     }
     #endif
@@ -48,20 +52,23 @@ public extension Radian {
     }
     #endif
     
-    public convenience init(asin: Float80) {
+    public convenience init(asin: Float80) throws {
+        try Trigonometry.validate(value: asin, for: .asin)
         self.init(rawValue: Trigonometry.asin(asin))
     }
     
-    public convenience init(asin: Float) {
+    public convenience init(asin: Float) throws {
+        try Trigonometry.validate(value: asin, for: .asin)
         self.init(float: GenericTrigonometry.asin(asin))
     }
     
-    public convenience init(asin: Double) {
+    public convenience init(asin: Double) throws {
+        try Trigonometry.validate(value: asin, for: .asin)
         self.init(double: GenericTrigonometry.asin(asin))
     }
     
     #if !os(Linux)
-    public convenience init(asin: CGFloat) {
+    public convenience init(asin: CGFloat) throws {
         self.init(cgFloat: Trigonometry.asin(asin))
     }
     #endif
@@ -102,20 +109,24 @@ public extension Radian {
     }
     #endif
     
-    public convenience init(atan2X x: Float80, y: Float80) {
+    public convenience init(atan2X x: Float80, y: Float80) throws {
+        try Trigonometry.validate(value: x, for: .atan2)
         self.init(rawValue: Trigonometry.atan2(x: x, y: y))
     }
     
-    public convenience init(atan2X x: Float, y: Float) {
+    public convenience init(atan2X x: Float, y: Float) throws {
+        try Trigonometry.validate(value: x, for: .atan2)
         self.init(float: GenericTrigonometry.atan2(x: x, y: y))
     }
     
-    public convenience init(atan2X x: Double, y: Double) {
+    public convenience init(atan2X x: Double, y: Double) throws {
+        try Trigonometry.validate(value: x, for: .atan2)
         self.init(double: GenericTrigonometry.atan2(x: x, y: y))
     }
     
     #if !os(Linux)
-    public convenience init(atan2X x: CGFloat, y: CGFloat) {
+    public convenience init(atan2X x: CGFloat, y: CGFloat) throws {
+        try Trigonometry.validate(value: x, for: .atan2)
         self.init(cgFloat: Trigonometry.atan2(x: x, y: y))
     }
     #endif
@@ -210,21 +221,21 @@ public extension Radian {
     }
     #endif
     
-    public func tan() -> Float80 {
-        return Trigonometry.tan(self)
+    public func tan() throws -> Float80 {
+        return try Trigonometry.tan(self)
     }
     
-    public func tan() -> Float {
-        return Trigonometry.tan(self)
+    public func tan() throws -> Float {
+        return try Trigonometry.tan(self)
     }
     
-    public func tan() -> Double {
-        return Trigonometry.tan(self)
+    public func tan() throws -> Double {
+        return try Trigonometry.tan(self)
     }
     
     #if !os(Linux)
-    public func tan() -> CGFloat {
-        return Trigonometry.tan(self)
+    public func tan() throws -> CGFloat {
+        return try Trigonometry.tan(self)
     }
     #endif
     
@@ -246,21 +257,21 @@ public extension Radian {
     }
     #endif
     
-    public func cot() -> Float80 {
-        return Trigonometry.cot(self)
+    public func cot() throws -> Float80 {
+        return try Trigonometry.cot(self)
     }
     
-    public func cot() -> Float {
-        return Trigonometry.cot(self)
+    public func cot() throws -> Float {
+        return try Trigonometry.cot(self)
     }
     
-    public func cot() -> Double {
-        return Trigonometry.cot(self)
+    public func cot() throws -> Double {
+        return try Trigonometry.cot(self)
     }
     
     #if !os(Linux)
-    public func cot() -> CGFloat {
-        return Trigonometry.cot(self)
+    public func cot() throws -> CGFloat {
+        return try Trigonometry.cot(self)
     }
     #endif
     
@@ -282,39 +293,39 @@ public extension Radian {
     }
     #endif
     
-    public func cosec() -> Float80 {
-        return Trigonometry.cosec(self)
+    public func cosec() throws -> Float80 {
+        return try Trigonometry.cosec(self)
     }
     
-    public func cosec() -> Float {
-        return Trigonometry.cosec(self)
+    public func cosec() throws -> Float {
+        return try Trigonometry.cosec(self)
     }
     
-    public func cosec() -> Double {
-        return Trigonometry.cosec(self)
+    public func cosec() throws -> Double {
+        return try Trigonometry.cosec(self)
     }
     
     #if !os(Linux)
-    public func cosec() -> CGFloat {
-        return Trigonometry.cosec(self)
+    public func cosec() throws -> CGFloat {
+        return try Trigonometry.cosec(self)
     }
     #endif
     
-    public func sec() -> Float80 {
-        return Trigonometry.sec(self)
+    public func sec() throws -> Float80 {
+        return try Trigonometry.sec(self)
     }
     
-    public func sec() -> Float {
-        return Trigonometry.sec(self)
+    public func sec() throws -> Float {
+        return try Trigonometry.sec(self)
     }
     
-    public func sec() -> Double {
-        return Trigonometry.sec(self)
+    public func sec() throws -> Double {
+        return try Trigonometry.sec(self)
     }
     
     #if !os(Linux)
-    public func sec() -> CGFloat {
-        return Trigonometry.sec(self)
+    public func sec() throws -> CGFloat {
+        return try Trigonometry.sec(self)
     }
     #endif
 }

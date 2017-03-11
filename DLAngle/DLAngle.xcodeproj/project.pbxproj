@@ -49,6 +49,18 @@
 		639D7A141E58DB4D008D10EF /* Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D79F51E58D426008D10EF /* Trigonometry.swift */; };
 		639D7A161E58DE2B008D10EF /* DegreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D7A151E58DE2B008D10EF /* DegreeTests.swift */; };
 		639D7A181E58F1E6008D10EF /* RadianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D7A171E58F1E6008D10EF /* RadianTests.swift */; };
+		63F6872F1E74016800E6CA13 /* AngleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F6872E1E74016800E6CA13 /* AngleError.swift */; };
+		63F687301E74016800E6CA13 /* AngleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F6872E1E74016800E6CA13 /* AngleError.swift */; };
+		63F687311E74016800E6CA13 /* AngleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F6872E1E74016800E6CA13 /* AngleError.swift */; };
+		63F687321E74016800E6CA13 /* AngleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F6872E1E74016800E6CA13 /* AngleError.swift */; };
+		63F687341E7402D700E6CA13 /* ArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F687331E7402D700E6CA13 /* ArgumentsChecker.swift */; };
+		63F687351E7402D700E6CA13 /* ArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F687331E7402D700E6CA13 /* ArgumentsChecker.swift */; };
+		63F687361E7402D700E6CA13 /* ArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F687331E7402D700E6CA13 /* ArgumentsChecker.swift */; };
+		63F687371E7402D700E6CA13 /* ArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F687331E7402D700E6CA13 /* ArgumentsChecker.swift */; };
+		63F687391E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F687381E74055400E6CA13 /* TrigonometricArgumentsChecker.swift */; };
+		63F6873A1E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F687381E74055400E6CA13 /* TrigonometricArgumentsChecker.swift */; };
+		63F6873B1E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F687381E74055400E6CA13 /* TrigonometricArgumentsChecker.swift */; };
+		63F6873C1E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F687381E74055400E6CA13 /* TrigonometricArgumentsChecker.swift */; };
 		63F7BE2B1E58F84400708BAF /* TrigonometryFunctionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F7BE2A1E58F84400708BAF /* TrigonometryFunctionsTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +89,9 @@
 		639D7A0E1E58DADF008D10EF /* AngleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleTests.swift; sourceTree = "<group>"; };
 		639D7A151E58DE2B008D10EF /* DegreeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DegreeTests.swift; sourceTree = "<group>"; };
 		639D7A171E58F1E6008D10EF /* RadianTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadianTests.swift; sourceTree = "<group>"; };
+		63F6872E1E74016800E6CA13 /* AngleError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleError.swift; sourceTree = "<group>"; };
+		63F687331E7402D700E6CA13 /* ArgumentsChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentsChecker.swift; sourceTree = "<group>"; };
+		63F687381E74055400E6CA13 /* TrigonometricArgumentsChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrigonometricArgumentsChecker.swift; sourceTree = "<group>"; };
 		63F7BE2A1E58F84400708BAF /* TrigonometryFunctionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrigonometryFunctionsTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +213,9 @@
 				63252C711E59BDB200324B66 /* Radian+Trigonometry.swift */,
 				639D79F51E58D426008D10EF /* Trigonometry.swift */,
 				63252C6B1E59AC0E00324B66 /* GenericTrigonometry.swift */,
+				63F6872E1E74016800E6CA13 /* AngleError.swift */,
+				63F687331E7402D700E6CA13 /* ArgumentsChecker.swift */,
+				63F687381E74055400E6CA13 /* TrigonometricArgumentsChecker.swift */,
 			);
 			name = Sources;
 			path = ../../Sources;
@@ -438,11 +456,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				63252D5E1E5A3BCE00324B66 /* Angle.swift in Sources */,
+				63F687391E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */,
 				63252D641E5A3BCE00324B66 /* GenericTrigonometry.swift in Sources */,
 				63252D601E5A3BCE00324B66 /* Degree.swift in Sources */,
 				63252D631E5A3BCE00324B66 /* Trigonometry.swift in Sources */,
+				63F6872F1E74016800E6CA13 /* AngleError.swift in Sources */,
 				63252D611E5A3BCE00324B66 /* Radian.swift in Sources */,
 				63252D621E5A3BCE00324B66 /* Radian+Trigonometry.swift in Sources */,
+				63F687341E7402D700E6CA13 /* ArgumentsChecker.swift in Sources */,
 				63252D5F1E5A3BCE00324B66 /* AngleType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,11 +473,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				63252D651E5A3BCE00324B66 /* Angle.swift in Sources */,
+				63F6873A1E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */,
 				63252D6B1E5A3BCE00324B66 /* GenericTrigonometry.swift in Sources */,
 				63252D671E5A3BCE00324B66 /* Degree.swift in Sources */,
 				63252D6A1E5A3BCE00324B66 /* Trigonometry.swift in Sources */,
+				63F687301E74016800E6CA13 /* AngleError.swift in Sources */,
 				63252D681E5A3BCE00324B66 /* Radian.swift in Sources */,
 				63252D691E5A3BCE00324B66 /* Radian+Trigonometry.swift in Sources */,
+				63F687351E7402D700E6CA13 /* ArgumentsChecker.swift in Sources */,
 				63252D661E5A3BCE00324B66 /* AngleType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,11 +490,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				63252D6C1E5A3BCF00324B66 /* Angle.swift in Sources */,
+				63F6873B1E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */,
 				63252D721E5A3BCF00324B66 /* GenericTrigonometry.swift in Sources */,
 				63252D6E1E5A3BCF00324B66 /* Degree.swift in Sources */,
 				63252D711E5A3BCF00324B66 /* Trigonometry.swift in Sources */,
+				63F687311E74016800E6CA13 /* AngleError.swift in Sources */,
 				63252D6F1E5A3BCF00324B66 /* Radian.swift in Sources */,
 				63252D701E5A3BCF00324B66 /* Radian+Trigonometry.swift in Sources */,
+				63F687361E7402D700E6CA13 /* ArgumentsChecker.swift in Sources */,
 				63252D6D1E5A3BCF00324B66 /* AngleType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,11 +507,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				63252D731E5A3BCF00324B66 /* Angle.swift in Sources */,
+				63F6873C1E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */,
 				63252D791E5A3BCF00324B66 /* GenericTrigonometry.swift in Sources */,
 				63252D751E5A3BCF00324B66 /* Degree.swift in Sources */,
 				63252D781E5A3BCF00324B66 /* Trigonometry.swift in Sources */,
+				63F687321E74016800E6CA13 /* AngleError.swift in Sources */,
 				63252D761E5A3BCF00324B66 /* Radian.swift in Sources */,
 				63252D771E5A3BCF00324B66 /* Radian+Trigonometry.swift in Sources */,
+				63F687371E7402D700E6CA13 /* ArgumentsChecker.swift in Sources */,
 				63252D741E5A3BCF00324B66 /* AngleType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -809,6 +839,7 @@
 				63252D351E5A3B6500324B66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63252D411E5A3B7600324B66 /* Build configuration list for PBXNativeTarget "DLAngle_watchOS" */ = {
 			isa = XCConfigurationList;
@@ -817,6 +848,7 @@
 				63252D431E5A3B7600324B66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63252D4E1E5A3B8800324B66 /* Build configuration list for PBXNativeTarget "DLAngle_tvOS" */ = {
 			isa = XCConfigurationList;
@@ -825,6 +857,7 @@
 				63252D501E5A3B8800324B66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63252D5B1E5A3BA600324B66 /* Build configuration list for PBXNativeTarget "DLAngle_macOS" */ = {
 			isa = XCConfigurationList;
@@ -833,6 +866,7 @@
 				63252D5D1E5A3BA600324B66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		639D79361E588865008D10EF /* Build configuration list for PBXProject "DLAngle" */ = {
 			isa = XCConfigurationList;
