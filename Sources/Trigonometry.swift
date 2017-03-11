@@ -305,24 +305,24 @@ public struct Trigonometry {
     #endif
     
     public static func tan(_ angle: Radian) throws -> Float80 {
-        try validate(value: angle.rawValue, for: .tan)
+        try validate(angle: angle, for: .tan)
         let tan = GenericTrigonometry.tan(angle.double)
         return Float80(tan)
     }
     
     public static func tan(_ angle: Radian) throws -> Float {
-        try validate(value: angle.rawValue, for: .tan)
+        try validate(angle: angle, for: .tan)
         return GenericTrigonometry.tan(angle.float)
     }
     
     public static func tan(_ angle: Radian) throws -> Double {
-        try validate(value: angle.rawValue, for: .tan)
+        try validate(angle: angle, for: .tan)
         return GenericTrigonometry.tan(angle.double)
     }
     
     #if !os(Linux)
     public static func tan(_ angle: Radian) throws -> CGFloat {
-        try validate(value: angle.rawValue, for: .tan)
+        try validate(angle: angle, for: .tan)
         let tan = GenericTrigonometry.tan(angle.double)
         return CGFloat(tan)
     }
@@ -351,24 +351,24 @@ public struct Trigonometry {
     // MARK: Additional functions
     
     public static func cot(_ angle: Radian) throws -> Float80 {
-        try validate(value: angle.rawValue, for: .cot)
+        try validate(angle: angle, for: .cot)
         let cot = 1.0 / GenericTrigonometry.tan(angle.double)
         return Float80(cot)
     }
     
     public static func cot(_ angle: Radian) throws -> Float {
-        try validate(value: angle.rawValue, for: .cot)
+        try validate(angle: angle, for: .cot)
         return 1.0 / GenericTrigonometry.tan(angle.float)
     }
     
     public static func cot(_ angle: Radian) throws -> Double {
-        try validate(value: angle.rawValue, for: .cot)
+        try validate(angle: angle, for: .cot)
         return 1.0 / GenericTrigonometry.tan(angle.double)
     }
     
     #if !os(Linux)
     public static func cot(_ angle: Radian) throws -> CGFloat {
-        try validate(value: angle.rawValue, for: .cot)
+        try validate(angle: angle, for: .cot)
         let cot = GenericTrigonometry.tan(angle.double)
         return 1.0 / CGFloat(cot)
     }
@@ -395,45 +395,45 @@ public struct Trigonometry {
     #endif
     
     public static func cosec(_ angle: Radian) throws -> Float80 {
-        try validate(value: angle.rawValue, for: .cosec)
+        try validate(angle: angle, for: .cosec)
         return 1.0 / sin(angle)
     }
     
     public static func cosec(_ angle: Radian) throws -> Float {
-        try validate(value: angle.rawValue, for: .cosec)
+        try validate(angle: angle, for: .cosec)
         return 1.0 / sin(angle)
     }
     
     public static func cosec(_ angle: Radian) throws -> Double {
-        try validate(value: angle.rawValue, for: .cosec)
+        try validate(angle: angle, for: .cosec)
         return 1.0 / sin(angle)
     }
     
     #if !os(Linux)
     public static func cosec(_ angle: Radian) throws -> CGFloat {
-        try validate(value: angle.rawValue, for: .cosec)
+        try validate(angle: angle, for: .cosec)
         return 1.0 / sin(angle)
     }
     #endif
     
     public static func sec(_ angle: Radian) throws -> Float80 {
-        try validate(value: angle.rawValue, for: .sec)
+        try validate(angle: angle, for: .sec)
         return 1.0 / cos(angle)
     }
     
     public static func sec(_ angle: Radian) throws -> Float {
-        try validate(value: angle.rawValue, for: .sec)
+        try validate(angle: angle, for: .sec)
         return 1.0 / cos(angle)
     }
     
     public static func sec(_ angle: Radian) throws -> Double {
-        try validate(value: angle.rawValue, for: .sec)
+        try validate(angle: angle, for: .sec)
         return 1.0 / cos(angle)
     }
     
     #if !os(Linux)
     public static func sec(_ angle: Radian) throws -> CGFloat {
-        try validate(value: angle.rawValue, for: .sec)
+        try validate(angle: angle, for: .sec)
         return 1.0 / cos(angle)
     }
     #endif
@@ -445,6 +445,14 @@ public struct Trigonometry {
         let checker = try TrigonometricArgumentsChecker(value: value, function: function)
         if checker.check() == false {
             throw AngleError(reason: "Argument '\(value)' is not defined for function '\(TrigonometricArgumentsChecker.TrigonometricFunction.acos)'.")
+        }
+    }
+    
+    static func validate(angle: Radian,
+                         for function: TrigonometricArgumentsChecker.TrigonometricFunction) throws {
+        let checker = try TrigonometricArgumentsChecker(angle: angle, function: function)
+        if checker.check() == false {
+            throw AngleError(reason: "Argument '\(angle)' is not defined for function '\(TrigonometricArgumentsChecker.TrigonometricFunction.acos)'.")
         }
     }
     

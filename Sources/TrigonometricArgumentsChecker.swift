@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// A concrete interface for checking arguments of trigonometric functions.  
 class TrigonometricArgumentsChecker: ArgumentsChecker<Float80> {
     enum TrigonometricFunction: String {
         case asin, acos, atan2, tan, cot, sec, cosec

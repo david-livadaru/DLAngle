@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// An abstract utility class which provides an interface to check values.
 class ArgumentsChecker<Type : Comparable> {
     private let value: Type
     private let predicate: NSPredicate
