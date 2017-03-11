@@ -438,11 +438,11 @@ public struct Trigonometry {
     }
     #endif
     
-    // MARK: Private functionality
+    // MARK: Validation
     
     static func validate(value: Float80,
                          for function: TrigonometricArgumentsChecker.TrigonometricFunction) throws {
-        let checker = try TrigonometricArgumentsChecker(value: value, function: function)
+        let checker = try TrigonometricArgumentsChecker(value: Double(value), function: function)
         if checker.check() == false {
             throw AngleError(reason: "Argument '\(value)' is not defined for function '\(TrigonometricArgumentsChecker.TrigonometricFunction.acos)'.")
         }

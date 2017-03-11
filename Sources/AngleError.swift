@@ -12,4 +12,8 @@ import Foundation
 /// the computation error of trigonometric functions.
 public struct AngleError: Error {
     public let reason: String
+    
+    public var localizedDescription: String {
+        return reason
+    }
 }

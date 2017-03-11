@@ -17,7 +17,7 @@ class ArgumentsChecker<Type : Comparable> {
     
     init(value: Type, validValues: [Type]) {
         self.value = value
-        self.predicate = NSPredicate(format: "SELF IN %@", validValues)
+        self.predicate = ArgumentsChecker.predicate(for: validValues)
     }
     
     init(value: Type, validRange: ClosedRange<Type>) {
@@ -27,7 +27,8 @@ class ArgumentsChecker<Type : Comparable> {
     
     init(value: Type, invalidValues: [Type]) {
         self.value = value
-        self.predicate = NSPredicate(format: "SELF NOT IN %@", invalidValues)
+        self.predicate = NSCompoundPredicate(notPredicateWithSubpredicate: ArgumentsChecker.predicate(for: invalidValues))
+        
     }
     
     init(value: Type, invalidRange: ClosedRange<Type>) {
@@ -42,6 +43,10 @@ class ArgumentsChecker<Type : Comparable> {
     }
     
     // MARK: Private functionality
+    
+    private static func predicate(for array: [Type]) -> NSPredicate {
+        return NSPredicate(format: "SELF IN %@", array)
+    }
     
     private static func predicate(for range: ClosedRange<Type>) -> NSPredicate {
         return NSPredicate(format: "SELF BETWEEN %@", [range.lowerBound, range.upperBound])

@@ -9,20 +9,21 @@
 import UIKit
 
 /// A concrete interface for checking arguments of trigonometric functions.  
-class TrigonometricArgumentsChecker: ArgumentsChecker<Float80> {
+class TrigonometricArgumentsChecker: ArgumentsChecker<Double> {
     enum TrigonometricFunction: String {
         case asin, acos, atan2, tan, cot, sec, cosec
     }
     
-    init(value: Float80, function: TrigonometricFunction) throws {
+    init(value: Double, function: TrigonometricFunction) throws {
         switch function {
         case .asin:
             fallthrough
         case .acos:
-            fallthrough
-        case .atan2:
             super.init(value: value,
                        validRange: TrigonometricArgumentsChecker.validRange(for: function))
+        case .atan2:
+            super.init(value: value,
+                       invalidValues: TrigonometricArgumentsChecker.invalidArguments(for: function))
         default:
             throw AngleError(reason: "Invalid function to check.")
         }
@@ -38,7 +39,7 @@ class TrigonometricArgumentsChecker: ArgumentsChecker<Float80> {
         case .sec:
             fallthrough
         case .cosec:
-            super.init(value: angle.rawValue,
+            super.init(value: angle.double,
                        invalidValues: TrigonometricArgumentsChecker.invalidArguments(for: function))
         default:
             throw AngleError(reason: "Invalid function to check.")
@@ -47,16 +48,16 @@ class TrigonometricArgumentsChecker: ArgumentsChecker<Float80> {
     
     // MARK: Private functionality
     
-    private static func invalidArguments(for function: TrigonometricFunction) -> [Float80] {
+    private static func invalidArguments(for function: TrigonometricFunction) -> [Double] {
         switch function {
         case .sec:
             fallthrough
         case .tan:
-            return [Float80.pi / 2, 3 * Float80.pi / 2]
+            return [Double.pi / 2, 3 * Double.pi / 2]
         case .cosec:
             fallthrough
         case .cot:
-            return [0.0, Float80.pi]
+            return [0.0, Double.pi]
         case .atan2:
             return [0.0]
         default:
@@ -64,14 +65,14 @@ class TrigonometricArgumentsChecker: ArgumentsChecker<Float80> {
         }
     }
     
-    private static func validRange(for function: TrigonometricFunction) -> ClosedRange<Float80> {
+    private static func validRange(for function: TrigonometricFunction) -> ClosedRange<Double> {
         switch function {
         case .asin:
             fallthrough
         case .acos:
             return -1.0...1.0
         default:
-            return -Float80.infinity...Float80.infinity
+            return -Double.infinity...Double.infinity
         }
     }
 }

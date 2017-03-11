@@ -88,6 +88,24 @@ class RadianTests: XCTestCase {
     func testDivideEqualOperation() {
         var angle = Radian(cgFloat: CGFloat.pi)
         angle /= 4.0
-        XCTAssert(angle.cgFloat == CGFloat.pi / 4.0, "Degree's '/=' operator doesn't devide values correctly.")
+        XCTAssert(angle.cgFloat == CGFloat.pi / 4.0, "Radian's '/=' operator doesn't devide values correctly.")
+    }
+    
+    func testNormalization() {
+        let angle = Radian(rawValue: 2 * Float80.pi)
+        angle.normalize()
+        XCTAssert(angle == Radian(rawValue: 0.0), "Radian's does not normalize values correctly.")
+    }
+    
+    func testSecondNormalization() {
+        let angle = Radian(rawValue: 5 * Float80.pi / 2)
+        angle.normalize()
+        XCTAssert(angle == Radian(rawValue: Float80.pi / 2), "Radian's does not normalize values correctly.")
+    }
+    
+    func testNormalizationForNegativeAngle() {
+        let angle = Radian(rawValue: -Float80.pi)
+        angle.normalize()
+        XCTAssert(angle.rawValue == Float80.pi, "Radian's does not normalize negative values correctly.")
     }
 }

@@ -79,4 +79,22 @@ class DegreeTests: XCTestCase {
         angle /= 2.0
         XCTAssert(angle.rawValue == 50.0, "Degree's '/=' operator doesn't devide values correctly.")
     }
+    
+    func testNormalization() {
+        let angle = Degree(rawValue: 720.0)
+        angle.normalize()
+        XCTAssert(angle.rawValue == 0.0, "Degree's does not normalize values correctly.")
+    }
+    
+    func testSecondNormalization() {
+        let angle = Degree(rawValue: 700.0)
+        angle.normalize()
+        XCTAssert(angle.rawValue == 340.0, "Degree's does not normalize values correctly.")
+    }
+    
+    func testNormalizationForNegativeAngle() {
+        let angle = Degree(rawValue: -90.0)
+        angle.normalize()
+        XCTAssert(angle.rawValue == 270.0, "Degree's does not normalize negative values correctly.")
+    }
 }
