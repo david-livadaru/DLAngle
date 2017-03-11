@@ -62,6 +62,9 @@ public class Angle {
     
     func normalize(by value: Float80) {
         rawValue = rawValue.truncatingRemainder(dividingBy: value)
+        if rawValue < 0.0 {
+           rawValue += value
+        }
     }
     
     func normalized<T: Angle>(by value: Float80) -> T {
