@@ -104,4 +104,69 @@ class IntervalTests: XCTestCase {
         let intersection = interval1.intersection(with: interval2)
         XCTAssert(intersection.isEmpty, "Interval's intersection is returning working properly.")
     }
+    
+    func testElementContainment1() {
+        let interval: Interval = 1.0.><.2.0
+        XCTAssert(interval.contains(1.0) == false, "Containment is not working")
+    }
+    
+    func testElementContainment2() {
+        let interval: Interval = 1.0.><.2.0
+        XCTAssert(interval.contains(2.0) == false, "Containment is not working")
+    }
+    
+    func testElementContainment3() {
+        let interval: Interval = 1.0.><.2.0
+        XCTAssert(interval.contains(1.5), "Containment is not working")
+    }
+    
+    func testElementContainment4() {
+        let interval: Interval = 1.0.>.2.0
+        XCTAssert(interval.contains(1.0) == false, "Containment is not working")
+    }
+    
+    func testElementContainment5() {
+        let interval: Interval = 1.0.>.2.0
+        XCTAssert(interval.contains(2.0), "Containment is not working")
+    }
+    
+    func testElementContainment6() {
+        let interval: Interval = 1.0.>.2.0
+        XCTAssert(interval.contains(1.5), "Containment is not working")
+    }
+    
+    func testElementContainment7() {
+        let interval: Interval = 1.0.<.2.0
+        XCTAssert(interval.contains(1.0), "Containment is not working")
+    }
+    
+    func testElementContainment8() {
+        let interval: Interval = 1.0.<.2.0
+        XCTAssert(interval.contains(2.0) == false, "Containment is not working")
+    }
+    
+    func testElementContainment9() {
+        let interval: Interval = 1.0.<.2.0
+        XCTAssert(interval.contains(1.5), "Containment is not working")
+    }
+    
+    func testElementContainment10() {
+        let interval: Interval = [1.0..2.0]
+        XCTAssert(interval.contains(1.0), "Containment is not working")
+    }
+    
+    func testElementContainment11() {
+        let interval: Interval = [1.0..2.0]
+        XCTAssert(interval.contains(2.0), "Containment is not working")
+    }
+    
+    func testElementContainment12() {
+        let interval: Interval = [1.0..2.0]
+        XCTAssert(interval.contains(1.5), "Containment is not working")
+    }
+    
+    func testElementContainment13() {
+        let interval: Interval = [1.0..2.0]
+        XCTAssert(interval.contains(2.1) == false, "Containment is not working")
+    }
 }

@@ -20,13 +20,13 @@ public struct IntervalBoundary: Comparable, NSPredicateFormatConvertible, NSPred
     // MARK: NSPredicateFormatConvertible
     
     public var predicateFormat: String {
-        return "SELF \(boundary.predicateFormat) %@"
+        return "SELF \(boundary.predicateFormat) \(value)"
     }
     
     // MARK: NSPredicateConvertible
     
     public var predicate: NSPredicate {
-        return NSPredicate(format: predicateFormat, value)
+        return NSPredicate(format: predicateFormat)
     }
     
 //    // MARK: Public interface
