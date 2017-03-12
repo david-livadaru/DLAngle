@@ -7,21 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63206FFA1E75D2B600ACD30B /* IntervalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63206FF91E75D2B600ACD30B /* IntervalType.swift */; };
 		63206FFC1E75D2FA00ACD30B /* IntervalOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63206FFB1E75D2FA00ACD30B /* IntervalOperators.swift */; };
-		63206FFD1E75D2FE00ACD30B /* IntervalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63206FF91E75D2B600ACD30B /* IntervalType.swift */; };
 		63206FFE1E75D2FE00ACD30B /* IntervalOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63206FFB1E75D2FA00ACD30B /* IntervalOperators.swift */; };
-		63206FFF1E75D2FE00ACD30B /* IntervalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63206FF91E75D2B600ACD30B /* IntervalType.swift */; };
 		632070001E75D2FE00ACD30B /* IntervalOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63206FFB1E75D2FA00ACD30B /* IntervalOperators.swift */; };
-		632070031E75D2FF00ACD30B /* IntervalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63206FF91E75D2B600ACD30B /* IntervalType.swift */; };
 		632070041E75D2FF00ACD30B /* IntervalOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63206FFB1E75D2FA00ACD30B /* IntervalOperators.swift */; };
-		632070051E75D2FF00ACD30B /* IntervalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63206FF91E75D2B600ACD30B /* IntervalType.swift */; };
 		632070061E75D2FF00ACD30B /* IntervalOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63206FFB1E75D2FA00ACD30B /* IntervalOperators.swift */; };
-		632070081E75D31900ACD30B /* AbstractInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070071E75D31900ACD30B /* AbstractInterval.swift */; };
-		632070091E75D31E00ACD30B /* AbstractInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070071E75D31900ACD30B /* AbstractInterval.swift */; };
-		6320700A1E75D31E00ACD30B /* AbstractInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070071E75D31900ACD30B /* AbstractInterval.swift */; };
-		6320700B1E75D31F00ACD30B /* AbstractInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070071E75D31900ACD30B /* AbstractInterval.swift */; };
-		6320700C1E75D31F00ACD30B /* AbstractInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070071E75D31900ACD30B /* AbstractInterval.swift */; };
 		6320700F1E75D34200ACD30B /* ExpressibleByIntervalTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320700E1E75D34200ACD30B /* ExpressibleByIntervalTuple.swift */; };
 		632070101E75D34200ACD30B /* ExpressibleByIntervalTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320700E1E75D34200ACD30B /* ExpressibleByIntervalTuple.swift */; };
 		632070111E75D34200ACD30B /* ExpressibleByIntervalTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320700E1E75D34200ACD30B /* ExpressibleByIntervalTuple.swift */; };
@@ -42,17 +32,32 @@
 		632070231E75D37400ACD30B /* ExpressibleByRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070201E75D37400ACD30B /* ExpressibleByRange.swift */; };
 		632070241E75D37400ACD30B /* ExpressibleByRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070201E75D37400ACD30B /* ExpressibleByRange.swift */; };
 		632070251E75D37400ACD30B /* ExpressibleByRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070201E75D37400ACD30B /* ExpressibleByRange.swift */; };
-		632070271E75D39200ACD30B /* IntervalBound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070261E75D39200ACD30B /* IntervalBound.swift */; };
-		632070281E75D39200ACD30B /* IntervalBound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070261E75D39200ACD30B /* IntervalBound.swift */; };
-		632070291E75D39200ACD30B /* IntervalBound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070261E75D39200ACD30B /* IntervalBound.swift */; };
-		6320702A1E75D39200ACD30B /* IntervalBound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070261E75D39200ACD30B /* IntervalBound.swift */; };
-		6320702B1E75D39200ACD30B /* IntervalBound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070261E75D39200ACD30B /* IntervalBound.swift */; };
+		632070271E75D39200ACD30B /* IntervalBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070261E75D39200ACD30B /* IntervalBoundary.swift */; };
+		632070281E75D39200ACD30B /* IntervalBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070261E75D39200ACD30B /* IntervalBoundary.swift */; };
+		632070291E75D39200ACD30B /* IntervalBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070261E75D39200ACD30B /* IntervalBoundary.swift */; };
+		6320702A1E75D39200ACD30B /* IntervalBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070261E75D39200ACD30B /* IntervalBoundary.swift */; };
+		6320702B1E75D39200ACD30B /* IntervalBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070261E75D39200ACD30B /* IntervalBoundary.swift */; };
 		632070331E75D3FF00ACD30B /* IntervalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070321E75D3FF00ACD30B /* IntervalTests.swift */; };
 		6320703A1E75D4D400ACD30B /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070391E75D4D400ACD30B /* Interval.swift */; };
 		6320703B1E75D4D400ACD30B /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070391E75D4D400ACD30B /* Interval.swift */; };
 		6320703C1E75D4D400ACD30B /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070391E75D4D400ACD30B /* Interval.swift */; };
 		6320703D1E75D4D400ACD30B /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070391E75D4D400ACD30B /* Interval.swift */; };
 		6320703E1E75D4D400ACD30B /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070391E75D4D400ACD30B /* Interval.swift */; };
+		632070401E75F97100ACD30B /* Boundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320703F1E75F97100ACD30B /* Boundary.swift */; };
+		632070411E75F97100ACD30B /* Boundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320703F1E75F97100ACD30B /* Boundary.swift */; };
+		632070421E75F97100ACD30B /* Boundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320703F1E75F97100ACD30B /* Boundary.swift */; };
+		632070431E75F97100ACD30B /* Boundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320703F1E75F97100ACD30B /* Boundary.swift */; };
+		632070441E75F97100ACD30B /* Boundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320703F1E75F97100ACD30B /* Boundary.swift */; };
+		632070461E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070451E7607D400ACD30B /* NSPredicateFormatConvertible.swift */; };
+		632070471E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070451E7607D400ACD30B /* NSPredicateFormatConvertible.swift */; };
+		632070481E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070451E7607D400ACD30B /* NSPredicateFormatConvertible.swift */; };
+		632070491E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070451E7607D400ACD30B /* NSPredicateFormatConvertible.swift */; };
+		6320704A1E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070451E7607D400ACD30B /* NSPredicateFormatConvertible.swift */; };
+		6320704C1E76083800ACD30B /* NSPredicateConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320704B1E76083800ACD30B /* NSPredicateConvertible.swift */; };
+		6320704D1E76083800ACD30B /* NSPredicateConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320704B1E76083800ACD30B /* NSPredicateConvertible.swift */; };
+		6320704E1E76083800ACD30B /* NSPredicateConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320704B1E76083800ACD30B /* NSPredicateConvertible.swift */; };
+		6320704F1E76083800ACD30B /* NSPredicateConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320704B1E76083800ACD30B /* NSPredicateConvertible.swift */; };
+		632070501E76083800ACD30B /* NSPredicateConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320704B1E76083800ACD30B /* NSPredicateConvertible.swift */; };
 		63252C701E59AC1A00324B66 /* GenericTrigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63252C6B1E59AC0E00324B66 /* GenericTrigonometry.swift */; };
 		63252C761E59CABC00324B66 /* Radian+Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63252C711E59BDB200324B66 /* Radian+Trigonometry.swift */; };
 		63252C7C1E59DECE00324B66 /* AngleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63252C771E59D5D400324B66 /* AngleType.swift */; };
@@ -116,16 +121,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		63206FF91E75D2B600ACD30B /* IntervalType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalType.swift; sourceTree = "<group>"; };
 		63206FFB1E75D2FA00ACD30B /* IntervalOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalOperators.swift; sourceTree = "<group>"; };
-		632070071E75D31900ACD30B /* AbstractInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractInterval.swift; sourceTree = "<group>"; };
 		6320700E1E75D34200ACD30B /* ExpressibleByIntervalTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressibleByIntervalTuple.swift; sourceTree = "<group>"; };
 		632070141E75D35500ACD30B /* ExpressibleByIntervalArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressibleByIntervalArray.swift; sourceTree = "<group>"; };
 		6320701A1E75D36300ACD30B /* ExpressibleByClosedRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressibleByClosedRange.swift; sourceTree = "<group>"; };
 		632070201E75D37400ACD30B /* ExpressibleByRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressibleByRange.swift; sourceTree = "<group>"; };
-		632070261E75D39200ACD30B /* IntervalBound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalBound.swift; sourceTree = "<group>"; };
+		632070261E75D39200ACD30B /* IntervalBoundary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalBoundary.swift; sourceTree = "<group>"; };
 		632070321E75D3FF00ACD30B /* IntervalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalTests.swift; sourceTree = "<group>"; };
 		632070391E75D4D400ACD30B /* Interval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interval.swift; sourceTree = "<group>"; };
+		6320703F1E75F97100ACD30B /* Boundary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boundary.swift; sourceTree = "<group>"; };
+		632070451E7607D400ACD30B /* NSPredicateFormatConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPredicateFormatConvertible.swift; sourceTree = "<group>"; };
+		6320704B1E76083800ACD30B /* NSPredicateConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPredicateConvertible.swift; sourceTree = "<group>"; };
 		63252C6B1E59AC0E00324B66 /* GenericTrigonometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTrigonometry.swift; sourceTree = "<group>"; };
 		63252C711E59BDB200324B66 /* Radian+Trigonometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Radian+Trigonometry.swift"; sourceTree = "<group>"; };
 		63252C771E59D5D400324B66 /* AngleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleType.swift; sourceTree = "<group>"; };
@@ -201,10 +207,9 @@
 			isa = PBXGroup;
 			children = (
 				6320700D1E75D33000ACD30B /* Protocols */,
-				63206FF91E75D2B600ACD30B /* IntervalType.swift */,
 				63206FFB1E75D2FA00ACD30B /* IntervalOperators.swift */,
-				632070071E75D31900ACD30B /* AbstractInterval.swift */,
-				632070261E75D39200ACD30B /* IntervalBound.swift */,
+				6320703F1E75F97100ACD30B /* Boundary.swift */,
+				632070261E75D39200ACD30B /* IntervalBoundary.swift */,
 				632070391E75D4D400ACD30B /* Interval.swift */,
 			);
 			name = Interval;
@@ -217,6 +222,8 @@
 				632070141E75D35500ACD30B /* ExpressibleByIntervalArray.swift */,
 				6320701A1E75D36300ACD30B /* ExpressibleByClosedRange.swift */,
 				632070201E75D37400ACD30B /* ExpressibleByRange.swift */,
+				632070451E7607D400ACD30B /* NSPredicateFormatConvertible.swift */,
+				6320704B1E76083800ACD30B /* NSPredicateConvertible.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -547,7 +554,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				632070211E75D37400ACD30B /* ExpressibleByRange.swift in Sources */,
-				63206FFA1E75D2B600ACD30B /* IntervalType.swift in Sources */,
+				632070461E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */,
+				6320704C1E76083800ACD30B /* NSPredicateConvertible.swift in Sources */,
 				6320701B1E75D36300ACD30B /* ExpressibleByClosedRange.swift in Sources */,
 				63252D5E1E5A3BCE00324B66 /* Angle.swift in Sources */,
 				632070151E75D35500ACD30B /* ExpressibleByIntervalArray.swift in Sources */,
@@ -555,14 +563,14 @@
 				63F687391E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */,
 				63252D641E5A3BCE00324B66 /* GenericTrigonometry.swift in Sources */,
 				63252D601E5A3BCE00324B66 /* Degree.swift in Sources */,
+				632070401E75F97100ACD30B /* Boundary.swift in Sources */,
 				6320703A1E75D4D400ACD30B /* Interval.swift in Sources */,
 				6320700F1E75D34200ACD30B /* ExpressibleByIntervalTuple.swift in Sources */,
 				63252D631E5A3BCE00324B66 /* Trigonometry.swift in Sources */,
-				632070081E75D31900ACD30B /* AbstractInterval.swift in Sources */,
 				63F6872F1E74016800E6CA13 /* AngleError.swift in Sources */,
 				63252D611E5A3BCE00324B66 /* Radian.swift in Sources */,
 				63252D621E5A3BCE00324B66 /* Radian+Trigonometry.swift in Sources */,
-				632070271E75D39200ACD30B /* IntervalBound.swift in Sources */,
+				632070271E75D39200ACD30B /* IntervalBoundary.swift in Sources */,
 				63F687341E7402D700E6CA13 /* ArgumentsChecker.swift in Sources */,
 				63252D5F1E5A3BCE00324B66 /* AngleType.swift in Sources */,
 			);
@@ -573,7 +581,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				632070221E75D37400ACD30B /* ExpressibleByRange.swift in Sources */,
-				63206FFD1E75D2FE00ACD30B /* IntervalType.swift in Sources */,
+				632070471E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */,
+				6320704D1E76083800ACD30B /* NSPredicateConvertible.swift in Sources */,
 				6320701C1E75D36300ACD30B /* ExpressibleByClosedRange.swift in Sources */,
 				63252D651E5A3BCE00324B66 /* Angle.swift in Sources */,
 				632070161E75D35500ACD30B /* ExpressibleByIntervalArray.swift in Sources */,
@@ -581,14 +590,14 @@
 				63F6873A1E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */,
 				63252D6B1E5A3BCE00324B66 /* GenericTrigonometry.swift in Sources */,
 				63252D671E5A3BCE00324B66 /* Degree.swift in Sources */,
+				632070411E75F97100ACD30B /* Boundary.swift in Sources */,
 				6320703B1E75D4D400ACD30B /* Interval.swift in Sources */,
 				632070101E75D34200ACD30B /* ExpressibleByIntervalTuple.swift in Sources */,
 				63252D6A1E5A3BCE00324B66 /* Trigonometry.swift in Sources */,
-				632070091E75D31E00ACD30B /* AbstractInterval.swift in Sources */,
 				63F687301E74016800E6CA13 /* AngleError.swift in Sources */,
 				63252D681E5A3BCE00324B66 /* Radian.swift in Sources */,
 				63252D691E5A3BCE00324B66 /* Radian+Trigonometry.swift in Sources */,
-				632070281E75D39200ACD30B /* IntervalBound.swift in Sources */,
+				632070281E75D39200ACD30B /* IntervalBoundary.swift in Sources */,
 				63F687351E7402D700E6CA13 /* ArgumentsChecker.swift in Sources */,
 				63252D661E5A3BCE00324B66 /* AngleType.swift in Sources */,
 			);
@@ -599,7 +608,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				632070231E75D37400ACD30B /* ExpressibleByRange.swift in Sources */,
-				63206FFF1E75D2FE00ACD30B /* IntervalType.swift in Sources */,
+				632070481E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */,
+				6320704E1E76083800ACD30B /* NSPredicateConvertible.swift in Sources */,
 				6320701D1E75D36300ACD30B /* ExpressibleByClosedRange.swift in Sources */,
 				63252D6C1E5A3BCF00324B66 /* Angle.swift in Sources */,
 				632070171E75D35500ACD30B /* ExpressibleByIntervalArray.swift in Sources */,
@@ -607,14 +617,14 @@
 				63F6873B1E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */,
 				63252D721E5A3BCF00324B66 /* GenericTrigonometry.swift in Sources */,
 				63252D6E1E5A3BCF00324B66 /* Degree.swift in Sources */,
+				632070421E75F97100ACD30B /* Boundary.swift in Sources */,
 				6320703C1E75D4D400ACD30B /* Interval.swift in Sources */,
 				632070111E75D34200ACD30B /* ExpressibleByIntervalTuple.swift in Sources */,
 				63252D711E5A3BCF00324B66 /* Trigonometry.swift in Sources */,
-				6320700A1E75D31E00ACD30B /* AbstractInterval.swift in Sources */,
 				63F687311E74016800E6CA13 /* AngleError.swift in Sources */,
 				63252D6F1E5A3BCF00324B66 /* Radian.swift in Sources */,
 				63252D701E5A3BCF00324B66 /* Radian+Trigonometry.swift in Sources */,
-				632070291E75D39200ACD30B /* IntervalBound.swift in Sources */,
+				632070291E75D39200ACD30B /* IntervalBoundary.swift in Sources */,
 				63F687361E7402D700E6CA13 /* ArgumentsChecker.swift in Sources */,
 				63252D6D1E5A3BCF00324B66 /* AngleType.swift in Sources */,
 			);
@@ -625,7 +635,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				632070241E75D37400ACD30B /* ExpressibleByRange.swift in Sources */,
-				632070031E75D2FF00ACD30B /* IntervalType.swift in Sources */,
+				632070491E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */,
+				6320704F1E76083800ACD30B /* NSPredicateConvertible.swift in Sources */,
 				6320701E1E75D36300ACD30B /* ExpressibleByClosedRange.swift in Sources */,
 				63252D731E5A3BCF00324B66 /* Angle.swift in Sources */,
 				632070181E75D35500ACD30B /* ExpressibleByIntervalArray.swift in Sources */,
@@ -633,14 +644,14 @@
 				63F6873C1E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */,
 				63252D791E5A3BCF00324B66 /* GenericTrigonometry.swift in Sources */,
 				63252D751E5A3BCF00324B66 /* Degree.swift in Sources */,
+				632070431E75F97100ACD30B /* Boundary.swift in Sources */,
 				6320703D1E75D4D400ACD30B /* Interval.swift in Sources */,
 				632070121E75D34200ACD30B /* ExpressibleByIntervalTuple.swift in Sources */,
 				63252D781E5A3BCF00324B66 /* Trigonometry.swift in Sources */,
-				6320700B1E75D31F00ACD30B /* AbstractInterval.swift in Sources */,
 				63F687321E74016800E6CA13 /* AngleError.swift in Sources */,
 				63252D761E5A3BCF00324B66 /* Radian.swift in Sources */,
 				63252D771E5A3BCF00324B66 /* Radian+Trigonometry.swift in Sources */,
-				6320702A1E75D39200ACD30B /* IntervalBound.swift in Sources */,
+				6320702A1E75D39200ACD30B /* IntervalBoundary.swift in Sources */,
 				63F687371E7402D700E6CA13 /* ArgumentsChecker.swift in Sources */,
 				63252D741E5A3BCF00324B66 /* AngleType.swift in Sources */,
 			);
@@ -651,18 +662,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				63F6873D1E74318000E6CA13 /* AngleError.swift in Sources */,
+				6320704A1E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */,
 				639D7A121E58DB4D008D10EF /* Degree.swift in Sources */,
 				632070331E75D3FF00ACD30B /* IntervalTests.swift in Sources */,
 				632070191E75D35500ACD30B /* ExpressibleByIntervalArray.swift in Sources */,
 				6320703E1E75D4D400ACD30B /* Interval.swift in Sources */,
-				6320702B1E75D39200ACD30B /* IntervalBound.swift in Sources */,
+				6320702B1E75D39200ACD30B /* IntervalBoundary.swift in Sources */,
 				632070131E75D34200ACD30B /* ExpressibleByIntervalTuple.swift in Sources */,
 				63F687411E74348100E6CA13 /* ArgumentsCheckerTests.swift in Sources */,
 				639D7A101E58DB4D008D10EF /* Angle.swift in Sources */,
 				639D7A161E58DE2B008D10EF /* DegreeTests.swift in Sources */,
 				63252C761E59CABC00324B66 /* Radian+Trigonometry.swift in Sources */,
-				632070051E75D2FF00ACD30B /* IntervalType.swift in Sources */,
 				63F7BE2B1E58F84400708BAF /* TrigonometryFunctionsTest.swift in Sources */,
+				632070501E76083800ACD30B /* NSPredicateConvertible.swift in Sources */,
 				63F687431E74349200E6CA13 /* TrigonometricArgumentsCheckerTests.swift in Sources */,
 				63F6873E1E74318000E6CA13 /* ArgumentsChecker.swift in Sources */,
 				639D7A0F1E58DADF008D10EF /* AngleTests.swift in Sources */,
@@ -674,7 +686,7 @@
 				639D7A181E58F1E6008D10EF /* RadianTests.swift in Sources */,
 				632070251E75D37400ACD30B /* ExpressibleByRange.swift in Sources */,
 				639D7A141E58DB4D008D10EF /* Trigonometry.swift in Sources */,
-				6320700C1E75D31F00ACD30B /* AbstractInterval.swift in Sources */,
+				632070441E75F97100ACD30B /* Boundary.swift in Sources */,
 				6320701F1E75D36300ACD30B /* ExpressibleByClosedRange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

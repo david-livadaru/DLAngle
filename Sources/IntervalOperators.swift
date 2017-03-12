@@ -13,21 +13,27 @@ infix operator .>.: RangeFormationPrecedence
 infix operator .<.: RangeFormationPrecedence
 infix operator .><.: RangeFormationPrecedence
 
-public func ..(_ lowerBound: Double, _ upperBound: Double) -> AbstractInterval {
-    return AbstractInterval(lowerBound: lowerBound, upperBound: upperBound)
+public func ..(_ lowerBoundary: Double, _ upperBoundary: Double) -> AbstractInterval {
+    return (lowerBoundary: lowerBoundary, upperBoundary: upperBoundary)
 }
 
-public func .>.(_ lowerBound: Double, _ upperBound: Double) -> Interval {
-    return Interval(lowerBound: IntervalBound(value: lowerBound, type: .open),
-                    upperBound: IntervalBound(value: upperBound, type: .closed))
+public func .>.(_ lowerBoundary: Double, _ upperBoundary: Double) -> Interval {
+    return Interval(lowerBoundary: IntervalBoundary(value: lowerBoundary,
+                                                 boundary: Boundary(type: .open, side: .left)),
+                    upperBoundary: IntervalBoundary(value: upperBoundary,
+                                                 boundary: Boundary(type: .closed, side: .right)))
 }
 
-public func .<.(_ lowerBound: Double, _ upperBound: Double) -> Interval {
-    return Interval(lowerBound: IntervalBound(value: lowerBound, type: .closed),
-                    upperBound: IntervalBound(value: upperBound, type: .open))
+public func .<.(_ lowerBoundary: Double, _ upperBoundary: Double) -> Interval {
+    return Interval(lowerBoundary: IntervalBoundary(value: lowerBoundary,
+                                                 boundary: Boundary(type: .closed, side: .left)),
+                    upperBoundary: IntervalBoundary(value: upperBoundary,
+                                                 boundary: Boundary(type: .open, side: .right)))
 }
 
-public func .><.(_ lowerBound: Double, _ upperBound: Double) -> Interval {
-    return Interval(lowerBound: IntervalBound(value: lowerBound, type: .open),
-                    upperBound: IntervalBound(value: upperBound, type: .open))
+public func .><.(_ lowerBoundary: Double, _ upperBoundary: Double) -> Interval {
+    return Interval(lowerBoundary: IntervalBoundary(value: lowerBoundary,
+                                                 boundary: Boundary(type: .open, side: .left)),
+                    upperBoundary: IntervalBoundary(value: upperBoundary,
+                                                 boundary: Boundary(type: .open, side: .right)))
 }

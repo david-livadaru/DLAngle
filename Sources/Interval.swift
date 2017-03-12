@@ -8,21 +8,30 @@
 
 import Foundation
 
-public struct Interval: IntervalType, ExpressibleByArrayLiteral, ExpressibleByIntervalArray, ExpressibleByIntervalTuple, ExpressibleByClosedRange, ExpressibleByRange {
-    public typealias Bound = IntervalBound
+public typealias AbstractInterval = (lowerBoundary: Double, upperBoundary: Double)
+
+public struct Interval: ExpressibleByArrayLiteral, ExpressibleByIntervalArray,
+ExpressibleByIntervalTuple, ExpressibleByClosedRange, ExpressibleByRange, NSPredicateConvertible {
     
-    public let lowerBound: Bound
-    public let upperBound: Bound
+    public let lowerBoundary: IntervalBoundary
+    public let upperBoundary: IntervalBoundary
     
     public var isEmpty: Bool {
-        return lowerBound.type == .open && lowerBound == upperBound
+        return lowerBoundary.value == upperBoundary.value &&
+            lowerBoundary.boundary.type == upperBoundary.boundary.type &&
+            lowerBoundary.boundary.type == .open
+    }
+    
+    public var predicate: NSPredicate {
+        return NSCompoundPredicate(andPredicateWithSubpredicates: [lowerBoundary.predicate,
+                                                                   upperBoundary.predicate])
     }
     
     public static let zero = Interval((0..0))
     
-    public init(lowerBound: Bound, upperBound: Bound) {
-        self.lowerBound = lowerBound
-        self.upperBound = upperBound
+    public init(lowerBoundary: IntervalBoundary, upperBoundary: IntervalBoundary) {
+        self.lowerBoundary = lowerBoundary
+        self.upperBoundary = upperBoundary
         
         validateBounds()
     }
@@ -35,8 +44,10 @@ public struct Interval: IntervalType, ExpressibleByArrayLiteral, ExpressibleByIn
         Interval.validateIntervalArray(elements)
         
         let first = elements.first!
-        lowerBound = IntervalBound(value: first.lowerBound, type: .closed)
-        upperBound = IntervalBound(value: first.upperBound, type: .closed)
+        lowerBoundary = IntervalBoundary(value: first.lowerBoundary,
+                                         boundary: Boundary(type: .closed, side: .left))
+        upperBoundary = IntervalBoundary(value: first.upperBoundary,
+                                         boundary: Boundary(type: .closed, side: .right))
         
         validateBounds()
     }
@@ -47,8 +58,10 @@ public struct Interval: IntervalType, ExpressibleByArrayLiteral, ExpressibleByIn
         Interval.validateIntervalArray(intervalArray)
         
         let first = intervalArray.first!
-        lowerBound = IntervalBound(value: first.lowerBound, type: .closed)
-        upperBound = IntervalBound(value: first.upperBound, type: .closed)
+        lowerBoundary = IntervalBoundary(value: first.lowerBoundary,
+                                         boundary: Boundary(type: .closed, side: .left))
+        upperBoundary = IntervalBoundary(value: first.upperBoundary,
+                                         boundary: Boundary(type: .closed, side: .right))
         
         validateBounds()
     }
@@ -56,8 +69,10 @@ public struct Interval: IntervalType, ExpressibleByArrayLiteral, ExpressibleByIn
     // MARK: ExpressibleByIntervalTuple
     
     public init(_ intervalTuple: (AbstractInterval)) {
-        lowerBound = IntervalBound(value: intervalTuple.lowerBound, type: .open)
-        upperBound = IntervalBound(value: intervalTuple.upperBound, type: .open)
+        lowerBoundary = IntervalBoundary(value: intervalTuple.lowerBoundary,
+                                         boundary: Boundary(type: .open, side: .left))
+        upperBoundary = IntervalBoundary(value: intervalTuple.upperBoundary,
+                                         boundary: Boundary(type: .open, side: .right))
         
         validateBounds()
     }
@@ -67,8 +82,10 @@ public struct Interval: IntervalType, ExpressibleByArrayLiteral, ExpressibleByIn
     public typealias RangeBound = Double
     
     public init(_ closedRange: ClosedRange<RangeBound>) {
-        lowerBound = IntervalBound(value: closedRange.lowerBound, type: .closed)
-        upperBound = IntervalBound(value: closedRange.upperBound, type: .closed)
+        lowerBoundary = IntervalBoundary(value: closedRange.lowerBound,
+                                         boundary: Boundary(type: .closed, side: .left))
+        upperBoundary = IntervalBoundary(value: closedRange.upperBound,
+                                         boundary: Boundary(type: .closed, side: .right))
         
         validateBounds()
     }
@@ -76,29 +93,61 @@ public struct Interval: IntervalType, ExpressibleByArrayLiteral, ExpressibleByIn
     // MARK: ExpressibleByRange
     
     public init(_ range: Range<RangeBound>) {
-        lowerBound = IntervalBound(value: range.lowerBound, type: .closed)
-        upperBound = IntervalBound(value: range.upperBound, type: .open)
+        lowerBoundary = IntervalBoundary(value: range.lowerBound,
+                                         boundary: Boundary(type: .closed, side: .left))
+        upperBoundary = IntervalBoundary(value: range.upperBound,
+                                         boundary: Boundary(type: .open, side: .right))
         
         validateBounds()
     }
     
     // MARK: Public interface
     
+    public func contains(_ element: Double) -> Bool {
+        return predicate.evaluate(with: element)
+    }
+    
     public func intersection(with other: Interval) -> Interval {
-        var lower: IntervalBound! // ! is safe because will be set before usage
-        if contains(other.lowerBound) {
-            lower = other.lowerBound
-        } else if other.contains(lowerBound) {
-            lower = lowerBound
+        var lower: IntervalBoundary! // ! is safe because will be set before usage
+        if contains(other.lowerBoundary) {
+            lower = other.lowerBoundary
+        } else if other.contains(lowerBoundary) {
+            lower = lowerBoundary
         } else {
             return Interval.zero
         }
         
-        let upper = min(other.upperBound, upperBound)
-        return Interval(lowerBound: lower, upperBound: upper)
+        let upper = min(other.upperBoundary, upperBoundary)
+        return Interval(lowerBoundary: lower, upperBoundary: upper)
     }
     
     // MARK: Private functionality
+    
+    private func validateBounds() {
+        assert(upperBoundary >= lowerBoundary, "Cannot create an interval with lowerBoundary > upperBoundary.")
+        
+        assert(lowerBoundary.boundary.side == .left, "Left boundary must have .left side")
+        assert(upperBoundary.boundary.side == .right, "Left boundary must have .right side")
+        
+        
+        switch (lowerBoundary.boundary.type, upperBoundary.boundary.type) {
+        case (.closed, .open):
+            assert(lowerBoundary.value != -Double.infinity, "Cannot create an interval closed in -infinity.")
+            assert(upperBoundary.value != lowerBoundary.value, "Cannot create a closed open interval with the same bound values.")
+        case (.open, .closed):
+            assert(upperBoundary.value != lowerBoundary.value, "Cannot create an open closed interval with the same bound values.")
+            assert(upperBoundary.value != Double.infinity, "Cannot create an interval closed in infinity.")
+        case (.closed, .closed):
+            assert(lowerBoundary.value != -Double.infinity, "Cannot create an interval closed in -infinity.")
+            assert(upperBoundary.value != Double.infinity, "Cannot create an interval closed in infinity.")
+        default:
+            break
+        }
+    }
+    
+    private func contains(_ element: IntervalBoundary) -> Bool {
+        return element <= upperBoundary && element >= lowerBoundary
+    }
     
     private static func validateIntervalArray(_ array: [AbstractInterval]) {
         assert(array.count > 0, "Cannot initialize Interval with empty array.")
@@ -108,26 +157,6 @@ public struct Interval: IntervalType, ExpressibleByArrayLiteral, ExpressibleByIn
             if ignoredElements.count > 0 {
                 print("The following elements are ignored: \(ignoredElements)")
             }
-        }
-    }
-    
-    private func validateBounds() {
-        assert(upperBound >= lowerBound, "Cannot create an interval with lowerBound > upperBound.")
-        
-        switch (lowerBound.type, upperBound.type) {
-        case (.closed, .open):
-            assert(upperBound.value != lowerBound.value, "Cannot create a closed open interval with the same bound values.")
-        case (.open, .closed):
-            assert(upperBound.value != lowerBound.value, "Cannot create an open closed interval with the same bound values.")
-        case (.closed, .closed):
-            assert(lowerBound.value != -Double.infinity, "Cannot create an interval closed in -infinity.")
-            assert(upperBound.value != Double.infinity, "Cannot create an interval closed in infinity.")
-        case (.unspecified, _):
-            fallthrough
-        case (_, .unspecified):
-            assert(false, "Cannot create an interval with unspecified bounds.")
-        default:
-            break
         }
     }
 }
