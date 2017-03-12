@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import DLAngleiOS
+@testable import DLAngle_iOS
 
 class DegreeTests: XCTestCase {
     func testConvenienceInitWithRawRadiansValue() {

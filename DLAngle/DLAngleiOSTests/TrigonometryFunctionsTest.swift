@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import DLAngleiOS
+@testable import DLAngle_iOS
 
 extension Float80 {
     func isEqual(to other: Float80) -> Bool {
@@ -98,7 +98,7 @@ class TrigonometryFunctionsTest: XCTestCase {
 //        }
     }
     
-    func testRadianTanAtanFunction() {
+//    func testRadianTanAtanFunction() {
 //        do {
 //            let angle = Radian(atan: 1.0)
 //            let tanValue: Float80 = try angle.tan()
@@ -107,7 +107,7 @@ class TrigonometryFunctionsTest: XCTestCase {
 //        } catch {
 //            XCTFail("Failed due to error: \(error.localizedDescription)")
 //        }
-    }
+//    }
     
     // MARK: Fail messages
     

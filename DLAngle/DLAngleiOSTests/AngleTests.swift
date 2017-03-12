@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import DLAngleiOS
+@testable import DLAngle_iOS
 
 class AngleTests: XCTestCase {
     func testConstructor1() {
