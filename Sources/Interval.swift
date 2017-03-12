@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Interval: IntervalType, ExpressibleByArrayLiteral, ExpressibleByIntervalArray, ExpressibleByIntervalTuple, ExpressibleByClosedRange, ExpressibleByRange {//, CustomDebugStringConvertible {
+public struct Interval: IntervalType, ExpressibleByArrayLiteral, ExpressibleByIntervalArray, ExpressibleByIntervalTuple, ExpressibleByClosedRange, ExpressibleByRange {
     public typealias Bound = IntervalBound
     
     public let lowerBound: Bound
@@ -17,10 +17,6 @@ public struct Interval: IntervalType, ExpressibleByArrayLiteral, ExpressibleByIn
     public var isEmpty: Bool {
         return lowerBound.type == .open && lowerBound == upperBound
     }
-    
-//    public var debugDescription: String {
-//        return "Interval : { lower: \(lowerBound), upper: \(upperBound), isEmpty: \(isEmpty) }"
-//    }
     
     public static let zero = Interval((0..0))
     

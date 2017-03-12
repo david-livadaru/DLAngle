@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct IntervalBound: Comparable, ExpressibleByFloatLiteral {//, CustomDebugStringConvertible {
+public struct IntervalBound: Comparable, ExpressibleByFloatLiteral {
     public enum BoundType: Comparable {
         case closed, open, undefined
         
@@ -40,10 +40,6 @@ public struct IntervalBound: Comparable, ExpressibleByFloatLiteral {//, CustomDe
     public let value: Double
     public let type: BoundType
     
-//    public var debugDescription: String {
-//        return "IntervalBound: { value: \(value), type: \(type) }"
-//    }
-    
     public init(value: Double, type: BoundType) {
         self.value = value
         self.type = type
@@ -64,14 +60,6 @@ public struct IntervalBound: Comparable, ExpressibleByFloatLiteral {//, CustomDe
         return lhs.type == rhs.type && lhs.value == rhs.value
     }
     
-    //    public static func ==(lhs: EndPointBound, rhs: Double) -> Bool {
-    //        return lhs.value == rhs
-    //    }
-    //
-    //    public static func ==(lhs: Double, rhs: EndPointBound) -> Bool {
-    //        return lhs == rhs.value
-    //    }
-    
     // MARK: Comparable
     
     public static func <(lhs: IntervalBound, rhs: IntervalBound) -> Bool {
@@ -83,12 +71,4 @@ public struct IntervalBound: Comparable, ExpressibleByFloatLiteral {//, CustomDe
             return lhs.value < rhs.value
         }
     }
-    
-    //    public static func <(lhs: EndPointBound, rhs: Double) -> Bool {
-    //        return lhs.value < rhs
-    //    }
-    //
-    //    public static func <(lhs: Double, rhs: EndPointBound) -> Bool {
-    //        return lhs < rhs.value
-    //    }
 }
