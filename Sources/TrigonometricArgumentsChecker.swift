@@ -11,7 +11,7 @@ import UIKit
 /// A concrete interface for checking arguments of trigonometric functions.  
 class TrigonometricArgumentsChecker: ArgumentsChecker<Double> {
     enum TrigonometricFunction: String {
-        case asin, acos, atan2, tan, cot, sec, cosec
+        case asin, acos, atan, atan2, sin, cos, tan, cot, sec, cosec
     }
     
     init(value: Double, function: TrigonometricFunction) throws {
