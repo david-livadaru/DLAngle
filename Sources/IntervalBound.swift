@@ -8,9 +8,48 @@
 
 import Foundation
 
+public struct Boundary: Comparable {
+    public enum BoundaryType {
+        case closed, open, unspecified
+    }
+    
+    public enum Side {
+        case left, right, unspecified
+    }
+    
+    let type: BoundaryType
+    let side: Side
+    
+    public static func ==(_ lhs: Boundary, _ rhs: Boundary) -> Bool {
+        if lhs.side == rhs.side && lhs.type == rhs.type {
+            return true
+        }
+        
+        switch (lhs.side, lhs.type, rhs.side, rhs.type) {
+        case (.unspecified, .unspecified, _, _):
+            fallthrough
+        case (_, _, .unspecified, .unspecified):
+            return true
+        default:
+            return false
+        }
+    }
+    
+    public static func <(_ lhs: Boundary, _ rhs: Boundary) -> Bool {
+        switch (lhs.side, lhs.type, rhs.side, rhs.type) {
+        case (.unspecified, .unspecified, .right, let type) where type != .unspecified:
+            return true
+        case (.left, let type, .unspecified, .unspecified) where type != .unspecified:
+            return true
+        default:
+            return false
+        }
+    }
+}
+
 public struct IntervalBound: Comparable, ExpressibleByFloatLiteral {
     public enum BoundType: Comparable {
-        case closed, open, undefined
+        case closed, open, unspecified
         
         public static func ==(_ lhs: BoundType, _ rhs: BoundType) -> Bool {
             switch (lhs, rhs) {
@@ -27,9 +66,9 @@ public struct IntervalBound: Comparable, ExpressibleByFloatLiteral {
             switch (lhs, rhs) {
             case (.open, .closed):
                 fallthrough
-            case (.undefined, .open):
+            case (.unspecified, .open):
                 fallthrough
-            case (.undefined, .closed):
+            case (.unspecified, .closed):
                 return true
             default:
                 return false
@@ -51,7 +90,7 @@ public struct IntervalBound: Comparable, ExpressibleByFloatLiteral {
     
     public init(floatLiteral value: FloatLiteralType) {
         self.value = value
-        self.type = .undefined
+        self.type = .unspecified
     }
     
     // MARK: Equatable

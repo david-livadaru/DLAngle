@@ -86,9 +86,9 @@ public struct Interval: IntervalType, ExpressibleByArrayLiteral, ExpressibleByIn
     
     public func intersection(with other: Interval) -> Interval {
         var lower: IntervalBound! // ! is safe because will be set before usage
-        if other.lowerBound < upperBound {
+        if contains(other.lowerBound) {
             lower = other.lowerBound
-        } else if lowerBound < other.upperBound {
+        } else if other.contains(lowerBound) {
             lower = lowerBound
         } else {
             return Interval.zero
@@ -122,10 +122,10 @@ public struct Interval: IntervalType, ExpressibleByArrayLiteral, ExpressibleByIn
         case (.closed, .closed):
             assert(lowerBound.value != -Double.infinity, "Cannot create an interval closed in -infinity.")
             assert(upperBound.value != Double.infinity, "Cannot create an interval closed in infinity.")
-        case (.undefined, _):
+        case (.unspecified, _):
             fallthrough
-        case (_, .undefined):
-            assert(false, "Cannot create an interval with undefined bounds.")
+        case (_, .unspecified):
+            assert(false, "Cannot create an interval with unspecified bounds.")
         default:
             break
         }
