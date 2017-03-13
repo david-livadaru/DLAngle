@@ -10,7 +10,7 @@ import Foundation
 
 public typealias AbstractInterval = (lowerBoundary: Double, upperBoundary: Double)
 
-public struct Interval: ExpressibleByArrayLiteral, ExpressibleByIntervalArray,
+public struct Interval: IntervalType, ExpressibleByArrayLiteral, ExpressibleByIntervalArray,
 ExpressibleByIntervalTuple, ExpressibleByClosedRange, ExpressibleByRange, Comparable {
     
     public let lowerBoundary: IntervalBoundary

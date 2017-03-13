@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct UnionInterval {
+public struct UnionInterval: IntervalType {
     public private (set) var intervals: [Interval]
     
     public var lowerBoundary: IntervalBoundary? {

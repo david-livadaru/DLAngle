@@ -9,7 +9,7 @@
 import UIKit
 
 /// A concrete interface for checking arguments of trigonometric functions.  
-class TrigonometricArgumentsChecker: ArgumentsChecker<Double> {
+class TrigonometricArgumentsChecker: ArgumentsChecker {
     enum TrigonometricFunction: String {
         case asin, acos, atan, atan2, sin, cos, tan, cot, sec, cosec
     }
@@ -20,7 +20,7 @@ class TrigonometricArgumentsChecker: ArgumentsChecker<Double> {
             fallthrough
         case .acos:
             super.init(value: value,
-                       validRange: TrigonometricArgumentsChecker.validRange(for: function))
+                       validInterval: TrigonometricArgumentsChecker.validInterval(for: function))
         case .atan2:
             super.init(value: value,
                        invalidValues: TrigonometricArgumentsChecker.invalidArguments(for: function))
@@ -65,14 +65,14 @@ class TrigonometricArgumentsChecker: ArgumentsChecker<Double> {
         }
     }
     
-    private static func validRange(for function: TrigonometricFunction) -> ClosedRange<Double> {
+    private static func validInterval(for function: TrigonometricFunction) -> Interval {
         switch function {
         case .asin:
             fallthrough
         case .acos:
-            return -1.0...1.0
+            return [-1.0..1.0]
         default:
-            return -Double.infinity...Double.infinity
+            return -Double.infinity.><.Double.infinity
         }
     }
 }

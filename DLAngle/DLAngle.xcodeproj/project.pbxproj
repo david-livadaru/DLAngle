@@ -88,6 +88,16 @@
 		63269E7E1E7732E700EBEA7C /* UnionInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63269E7B1E7732E700EBEA7C /* UnionInterval.swift */; };
 		63269E7F1E7732E700EBEA7C /* UnionInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63269E7B1E7732E700EBEA7C /* UnionInterval.swift */; };
 		63269E801E7732E700EBEA7C /* UnionInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63269E7B1E7732E700EBEA7C /* UnionInterval.swift */; };
+		63269E821E773D7700EBEA7C /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63269E811E773D7700EBEA7C /* Predicate.swift */; };
+		63269E831E773D7700EBEA7C /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63269E811E773D7700EBEA7C /* Predicate.swift */; };
+		63269E841E773D7700EBEA7C /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63269E811E773D7700EBEA7C /* Predicate.swift */; };
+		63269E851E773D7700EBEA7C /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63269E811E773D7700EBEA7C /* Predicate.swift */; };
+		63269E861E773D7700EBEA7C /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63269E811E773D7700EBEA7C /* Predicate.swift */; };
+		63269E881E773E4000EBEA7C /* IntervalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63269E871E773E4000EBEA7C /* IntervalType.swift */; };
+		63269E891E773E4000EBEA7C /* IntervalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63269E871E773E4000EBEA7C /* IntervalType.swift */; };
+		63269E8A1E773E4000EBEA7C /* IntervalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63269E871E773E4000EBEA7C /* IntervalType.swift */; };
+		63269E8B1E773E4000EBEA7C /* IntervalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63269E871E773E4000EBEA7C /* IntervalType.swift */; };
+		63269E8C1E773E4000EBEA7C /* IntervalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63269E871E773E4000EBEA7C /* IntervalType.swift */; };
 		639D7A0F1E58DADF008D10EF /* AngleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D7A0E1E58DADF008D10EF /* AngleTests.swift */; };
 		639D7A101E58DB4D008D10EF /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D79891E58898A008D10EF /* Angle.swift */; };
 		639D7A121E58DB4D008D10EF /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D798B1E58898A008D10EF /* Degree.swift */; };
@@ -141,6 +151,8 @@
 		63252D581E5A3BA600324B66 /* DLAngle_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAngle_macOS.h; sourceTree = "<group>"; };
 		63252D591E5A3BA600324B66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63269E7B1E7732E700EBEA7C /* UnionInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnionInterval.swift; sourceTree = "<group>"; };
+		63269E811E773D7700EBEA7C /* Predicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predicate.swift; sourceTree = "<group>"; };
+		63269E871E773E4000EBEA7C /* IntervalType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalType.swift; sourceTree = "<group>"; };
 		639D79891E58898A008D10EF /* Angle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
 		639D798B1E58898A008D10EF /* Degree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Degree.swift; sourceTree = "<group>"; };
 		639D798D1E58898A008D10EF /* Radian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Radian.swift; sourceTree = "<group>"; };
@@ -204,6 +216,7 @@
 				63206FFB1E75D2FA00ACD30B /* IntervalOperators.swift */,
 				6320703F1E75F97100ACD30B /* Boundary.swift */,
 				632070261E75D39200ACD30B /* IntervalBoundary.swift */,
+				63269E871E773E4000EBEA7C /* IntervalType.swift */,
 				632070391E75D4D400ACD30B /* Interval.swift */,
 				63269E7B1E7732E700EBEA7C /* UnionInterval.swift */,
 			);
@@ -302,6 +315,7 @@
 				639D79F51E58D426008D10EF /* Trigonometry.swift */,
 				63252C6B1E59AC0E00324B66 /* GenericTrigonometry.swift */,
 				63F6872E1E74016800E6CA13 /* AngleError.swift */,
+				63269E811E773D7700EBEA7C /* Predicate.swift */,
 				63F687331E7402D700E6CA13 /* ArgumentsChecker.swift */,
 				63F687381E74055400E6CA13 /* TrigonometricArgumentsChecker.swift */,
 			);
@@ -546,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63269E881E773E4000EBEA7C /* IntervalType.swift in Sources */,
 				632070211E75D37400ACD30B /* ExpressibleByRange.swift in Sources */,
 				6320701B1E75D36300ACD30B /* ExpressibleByClosedRange.swift in Sources */,
 				63252D5E1E5A3BCE00324B66 /* Angle.swift in Sources */,
@@ -553,6 +568,7 @@
 				63206FFC1E75D2FA00ACD30B /* IntervalOperators.swift in Sources */,
 				63F687391E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */,
 				63252D641E5A3BCE00324B66 /* GenericTrigonometry.swift in Sources */,
+				63269E821E773D7700EBEA7C /* Predicate.swift in Sources */,
 				63252D601E5A3BCE00324B66 /* Degree.swift in Sources */,
 				63269E7C1E7732E700EBEA7C /* UnionInterval.swift in Sources */,
 				632070401E75F97100ACD30B /* Boundary.swift in Sources */,
@@ -572,6 +588,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63269E891E773E4000EBEA7C /* IntervalType.swift in Sources */,
 				632070221E75D37400ACD30B /* ExpressibleByRange.swift in Sources */,
 				6320701C1E75D36300ACD30B /* ExpressibleByClosedRange.swift in Sources */,
 				63252D651E5A3BCE00324B66 /* Angle.swift in Sources */,
@@ -579,6 +596,7 @@
 				63206FFE1E75D2FE00ACD30B /* IntervalOperators.swift in Sources */,
 				63F6873A1E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */,
 				63252D6B1E5A3BCE00324B66 /* GenericTrigonometry.swift in Sources */,
+				63269E831E773D7700EBEA7C /* Predicate.swift in Sources */,
 				63252D671E5A3BCE00324B66 /* Degree.swift in Sources */,
 				63269E7D1E7732E700EBEA7C /* UnionInterval.swift in Sources */,
 				632070411E75F97100ACD30B /* Boundary.swift in Sources */,
@@ -598,6 +616,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63269E8A1E773E4000EBEA7C /* IntervalType.swift in Sources */,
 				632070231E75D37400ACD30B /* ExpressibleByRange.swift in Sources */,
 				6320701D1E75D36300ACD30B /* ExpressibleByClosedRange.swift in Sources */,
 				63252D6C1E5A3BCF00324B66 /* Angle.swift in Sources */,
@@ -605,6 +624,7 @@
 				632070001E75D2FE00ACD30B /* IntervalOperators.swift in Sources */,
 				63F6873B1E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */,
 				63252D721E5A3BCF00324B66 /* GenericTrigonometry.swift in Sources */,
+				63269E841E773D7700EBEA7C /* Predicate.swift in Sources */,
 				63252D6E1E5A3BCF00324B66 /* Degree.swift in Sources */,
 				63269E7E1E7732E700EBEA7C /* UnionInterval.swift in Sources */,
 				632070421E75F97100ACD30B /* Boundary.swift in Sources */,
@@ -624,6 +644,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63269E8B1E773E4000EBEA7C /* IntervalType.swift in Sources */,
 				632070241E75D37400ACD30B /* ExpressibleByRange.swift in Sources */,
 				6320701E1E75D36300ACD30B /* ExpressibleByClosedRange.swift in Sources */,
 				63252D731E5A3BCF00324B66 /* Angle.swift in Sources */,
@@ -631,6 +652,7 @@
 				632070041E75D2FF00ACD30B /* IntervalOperators.swift in Sources */,
 				63F6873C1E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */,
 				63252D791E5A3BCF00324B66 /* GenericTrigonometry.swift in Sources */,
+				63269E851E773D7700EBEA7C /* Predicate.swift in Sources */,
 				63252D751E5A3BCF00324B66 /* Degree.swift in Sources */,
 				63269E7F1E7732E700EBEA7C /* UnionInterval.swift in Sources */,
 				632070431E75F97100ACD30B /* Boundary.swift in Sources */,
@@ -650,6 +672,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63269E8C1E773E4000EBEA7C /* IntervalType.swift in Sources */,
 				63F6873D1E74318000E6CA13 /* AngleError.swift in Sources */,
 				639D7A121E58DB4D008D10EF /* Degree.swift in Sources */,
 				632070331E75D3FF00ACD30B /* IntervalTests.swift in Sources */,
@@ -657,6 +680,7 @@
 				6320703E1E75D4D400ACD30B /* Interval.swift in Sources */,
 				6320702B1E75D39200ACD30B /* IntervalBoundary.swift in Sources */,
 				632070131E75D34200ACD30B /* ExpressibleByIntervalTuple.swift in Sources */,
+				63269E861E773D7700EBEA7C /* Predicate.swift in Sources */,
 				63F687411E74348100E6CA13 /* ArgumentsCheckerTests.swift in Sources */,
 				639D7A101E58DB4D008D10EF /* Angle.swift in Sources */,
 				639D7A161E58DE2B008D10EF /* DegreeTests.swift in Sources */,

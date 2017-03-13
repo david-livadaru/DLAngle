@@ -9,46 +9,41 @@
 import Foundation
 
 /// An abstract utility class which provides an interface to check values.
-class ArgumentsChecker<Type : Comparable> {
-    private let value: Type
-    private let predicate: NSPredicate
+class ArgumentsChecker {
+    private let predicate: Predicate
     
     // MARK: Initialization
     
-    init(value: Type, validValues: [Type]) {
-        self.value = value
-        self.predicate = ArgumentsChecker.predicate(for: validValues)
+    init(value: Double, validValues values: [Double]) {
+        predicate = ArgumentsChecker.predicate(for: value, in: values)
     }
     
-    init(value: Type, validRange: ClosedRange<Type>) {
-        self.value = value
-        self.predicate = ArgumentsChecker.predicate(for: validRange)
+    init(value: Double, validInterval interval: Interval) {
+        predicate = ArgumentsChecker.predicate(for: value, in: interval)
     }
     
-    init(value: Type, invalidValues: [Type]) {
-        self.value = value
-        self.predicate = NSCompoundPredicate(notPredicateWithSubpredicate: ArgumentsChecker.predicate(for: invalidValues))
+    init(value: Double, invalidValues values: [Double]) {
+        predicate = Predicate(not: ArgumentsChecker.predicate(for: value, in: values))
         
     }
     
-    init(value: Type, invalidRange: ClosedRange<Type>) {
-        self.value = value
-        self.predicate = NSCompoundPredicate(notPredicateWithSubpredicate: ArgumentsChecker.predicate(for: invalidRange))
+    init(value: Double, invalidInterval interval: Interval) {
+        predicate = Predicate(not: ArgumentsChecker.predicate(for: value, in: interval))
     }
     
     // MARK: Check
     
     func check() -> Bool {
-        return predicate.evaluate(with: value)
+        return predicate.evaluate()
     }
     
     // MARK: Private functionality
     
-    private static func predicate(for array: [Type]) -> NSPredicate {
-        return NSPredicate(format: "SELF IN %@", array)
+    private static func predicate(for value: Double, in array: [Double]) -> Predicate {
+        return Predicate(closure: { return array.contains(value) })
     }
     
-    private static func predicate(for range: ClosedRange<Type>) -> NSPredicate {
-        return NSPredicate(format: "SELF BETWEEN %@", [range.lowerBound, range.upperBound])
+    private static func predicate(for value: Double, in interval: Interval) -> Predicate {
+        return Predicate(closure: { return interval.contains(value) })
     }
 }
