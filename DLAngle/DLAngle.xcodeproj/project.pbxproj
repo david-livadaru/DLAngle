@@ -48,16 +48,6 @@
 		632070421E75F97100ACD30B /* Boundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320703F1E75F97100ACD30B /* Boundary.swift */; };
 		632070431E75F97100ACD30B /* Boundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320703F1E75F97100ACD30B /* Boundary.swift */; };
 		632070441E75F97100ACD30B /* Boundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320703F1E75F97100ACD30B /* Boundary.swift */; };
-		632070461E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070451E7607D400ACD30B /* NSPredicateFormatConvertible.swift */; };
-		632070471E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070451E7607D400ACD30B /* NSPredicateFormatConvertible.swift */; };
-		632070481E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070451E7607D400ACD30B /* NSPredicateFormatConvertible.swift */; };
-		632070491E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070451E7607D400ACD30B /* NSPredicateFormatConvertible.swift */; };
-		6320704A1E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070451E7607D400ACD30B /* NSPredicateFormatConvertible.swift */; };
-		6320704C1E76083800ACD30B /* NSPredicateConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320704B1E76083800ACD30B /* NSPredicateConvertible.swift */; };
-		6320704D1E76083800ACD30B /* NSPredicateConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320704B1E76083800ACD30B /* NSPredicateConvertible.swift */; };
-		6320704E1E76083800ACD30B /* NSPredicateConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320704B1E76083800ACD30B /* NSPredicateConvertible.swift */; };
-		6320704F1E76083800ACD30B /* NSPredicateConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320704B1E76083800ACD30B /* NSPredicateConvertible.swift */; };
-		632070501E76083800ACD30B /* NSPredicateConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6320704B1E76083800ACD30B /* NSPredicateConvertible.swift */; };
 		63252C701E59AC1A00324B66 /* GenericTrigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63252C6B1E59AC0E00324B66 /* GenericTrigonometry.swift */; };
 		63252C761E59CABC00324B66 /* Radian+Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63252C711E59BDB200324B66 /* Radian+Trigonometry.swift */; };
 		63252C7C1E59DECE00324B66 /* AngleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63252C771E59D5D400324B66 /* AngleType.swift */; };
@@ -93,6 +83,11 @@
 		63252D771E5A3BCF00324B66 /* Radian+Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63252C711E59BDB200324B66 /* Radian+Trigonometry.swift */; };
 		63252D781E5A3BCF00324B66 /* Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D79F51E58D426008D10EF /* Trigonometry.swift */; };
 		63252D791E5A3BCF00324B66 /* GenericTrigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63252C6B1E59AC0E00324B66 /* GenericTrigonometry.swift */; };
+		63269E7C1E7732E700EBEA7C /* UnionInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63269E7B1E7732E700EBEA7C /* UnionInterval.swift */; };
+		63269E7D1E7732E700EBEA7C /* UnionInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63269E7B1E7732E700EBEA7C /* UnionInterval.swift */; };
+		63269E7E1E7732E700EBEA7C /* UnionInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63269E7B1E7732E700EBEA7C /* UnionInterval.swift */; };
+		63269E7F1E7732E700EBEA7C /* UnionInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63269E7B1E7732E700EBEA7C /* UnionInterval.swift */; };
+		63269E801E7732E700EBEA7C /* UnionInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63269E7B1E7732E700EBEA7C /* UnionInterval.swift */; };
 		639D7A0F1E58DADF008D10EF /* AngleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D7A0E1E58DADF008D10EF /* AngleTests.swift */; };
 		639D7A101E58DB4D008D10EF /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D79891E58898A008D10EF /* Angle.swift */; };
 		639D7A121E58DB4D008D10EF /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D798B1E58898A008D10EF /* Degree.swift */; };
@@ -130,8 +125,6 @@
 		632070321E75D3FF00ACD30B /* IntervalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalTests.swift; sourceTree = "<group>"; };
 		632070391E75D4D400ACD30B /* Interval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interval.swift; sourceTree = "<group>"; };
 		6320703F1E75F97100ACD30B /* Boundary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boundary.swift; sourceTree = "<group>"; };
-		632070451E7607D400ACD30B /* NSPredicateFormatConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPredicateFormatConvertible.swift; sourceTree = "<group>"; };
-		6320704B1E76083800ACD30B /* NSPredicateConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPredicateConvertible.swift; sourceTree = "<group>"; };
 		63252C6B1E59AC0E00324B66 /* GenericTrigonometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTrigonometry.swift; sourceTree = "<group>"; };
 		63252C711E59BDB200324B66 /* Radian+Trigonometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Radian+Trigonometry.swift"; sourceTree = "<group>"; };
 		63252C771E59D5D400324B66 /* AngleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleType.swift; sourceTree = "<group>"; };
@@ -147,6 +140,7 @@
 		63252D561E5A3BA600324B66 /* DLAngle_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLAngle_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63252D581E5A3BA600324B66 /* DLAngle_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAngle_macOS.h; sourceTree = "<group>"; };
 		63252D591E5A3BA600324B66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63269E7B1E7732E700EBEA7C /* UnionInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnionInterval.swift; sourceTree = "<group>"; };
 		639D79891E58898A008D10EF /* Angle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
 		639D798B1E58898A008D10EF /* Degree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Degree.swift; sourceTree = "<group>"; };
 		639D798D1E58898A008D10EF /* Radian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Radian.swift; sourceTree = "<group>"; };
@@ -211,6 +205,7 @@
 				6320703F1E75F97100ACD30B /* Boundary.swift */,
 				632070261E75D39200ACD30B /* IntervalBoundary.swift */,
 				632070391E75D4D400ACD30B /* Interval.swift */,
+				63269E7B1E7732E700EBEA7C /* UnionInterval.swift */,
 			);
 			name = Interval;
 			sourceTree = "<group>";
@@ -222,8 +217,6 @@
 				632070141E75D35500ACD30B /* ExpressibleByIntervalArray.swift */,
 				6320701A1E75D36300ACD30B /* ExpressibleByClosedRange.swift */,
 				632070201E75D37400ACD30B /* ExpressibleByRange.swift */,
-				632070451E7607D400ACD30B /* NSPredicateFormatConvertible.swift */,
-				6320704B1E76083800ACD30B /* NSPredicateConvertible.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -554,8 +547,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				632070211E75D37400ACD30B /* ExpressibleByRange.swift in Sources */,
-				632070461E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */,
-				6320704C1E76083800ACD30B /* NSPredicateConvertible.swift in Sources */,
 				6320701B1E75D36300ACD30B /* ExpressibleByClosedRange.swift in Sources */,
 				63252D5E1E5A3BCE00324B66 /* Angle.swift in Sources */,
 				632070151E75D35500ACD30B /* ExpressibleByIntervalArray.swift in Sources */,
@@ -563,6 +554,7 @@
 				63F687391E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */,
 				63252D641E5A3BCE00324B66 /* GenericTrigonometry.swift in Sources */,
 				63252D601E5A3BCE00324B66 /* Degree.swift in Sources */,
+				63269E7C1E7732E700EBEA7C /* UnionInterval.swift in Sources */,
 				632070401E75F97100ACD30B /* Boundary.swift in Sources */,
 				6320703A1E75D4D400ACD30B /* Interval.swift in Sources */,
 				6320700F1E75D34200ACD30B /* ExpressibleByIntervalTuple.swift in Sources */,
@@ -581,8 +573,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				632070221E75D37400ACD30B /* ExpressibleByRange.swift in Sources */,
-				632070471E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */,
-				6320704D1E76083800ACD30B /* NSPredicateConvertible.swift in Sources */,
 				6320701C1E75D36300ACD30B /* ExpressibleByClosedRange.swift in Sources */,
 				63252D651E5A3BCE00324B66 /* Angle.swift in Sources */,
 				632070161E75D35500ACD30B /* ExpressibleByIntervalArray.swift in Sources */,
@@ -590,6 +580,7 @@
 				63F6873A1E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */,
 				63252D6B1E5A3BCE00324B66 /* GenericTrigonometry.swift in Sources */,
 				63252D671E5A3BCE00324B66 /* Degree.swift in Sources */,
+				63269E7D1E7732E700EBEA7C /* UnionInterval.swift in Sources */,
 				632070411E75F97100ACD30B /* Boundary.swift in Sources */,
 				6320703B1E75D4D400ACD30B /* Interval.swift in Sources */,
 				632070101E75D34200ACD30B /* ExpressibleByIntervalTuple.swift in Sources */,
@@ -608,8 +599,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				632070231E75D37400ACD30B /* ExpressibleByRange.swift in Sources */,
-				632070481E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */,
-				6320704E1E76083800ACD30B /* NSPredicateConvertible.swift in Sources */,
 				6320701D1E75D36300ACD30B /* ExpressibleByClosedRange.swift in Sources */,
 				63252D6C1E5A3BCF00324B66 /* Angle.swift in Sources */,
 				632070171E75D35500ACD30B /* ExpressibleByIntervalArray.swift in Sources */,
@@ -617,6 +606,7 @@
 				63F6873B1E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */,
 				63252D721E5A3BCF00324B66 /* GenericTrigonometry.swift in Sources */,
 				63252D6E1E5A3BCF00324B66 /* Degree.swift in Sources */,
+				63269E7E1E7732E700EBEA7C /* UnionInterval.swift in Sources */,
 				632070421E75F97100ACD30B /* Boundary.swift in Sources */,
 				6320703C1E75D4D400ACD30B /* Interval.swift in Sources */,
 				632070111E75D34200ACD30B /* ExpressibleByIntervalTuple.swift in Sources */,
@@ -635,8 +625,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				632070241E75D37400ACD30B /* ExpressibleByRange.swift in Sources */,
-				632070491E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */,
-				6320704F1E76083800ACD30B /* NSPredicateConvertible.swift in Sources */,
 				6320701E1E75D36300ACD30B /* ExpressibleByClosedRange.swift in Sources */,
 				63252D731E5A3BCF00324B66 /* Angle.swift in Sources */,
 				632070181E75D35500ACD30B /* ExpressibleByIntervalArray.swift in Sources */,
@@ -644,6 +632,7 @@
 				63F6873C1E74055400E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */,
 				63252D791E5A3BCF00324B66 /* GenericTrigonometry.swift in Sources */,
 				63252D751E5A3BCF00324B66 /* Degree.swift in Sources */,
+				63269E7F1E7732E700EBEA7C /* UnionInterval.swift in Sources */,
 				632070431E75F97100ACD30B /* Boundary.swift in Sources */,
 				6320703D1E75D4D400ACD30B /* Interval.swift in Sources */,
 				632070121E75D34200ACD30B /* ExpressibleByIntervalTuple.swift in Sources */,
@@ -662,7 +651,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				63F6873D1E74318000E6CA13 /* AngleError.swift in Sources */,
-				6320704A1E7607D400ACD30B /* NSPredicateFormatConvertible.swift in Sources */,
 				639D7A121E58DB4D008D10EF /* Degree.swift in Sources */,
 				632070331E75D3FF00ACD30B /* IntervalTests.swift in Sources */,
 				632070191E75D35500ACD30B /* ExpressibleByIntervalArray.swift in Sources */,
@@ -674,13 +662,13 @@
 				639D7A161E58DE2B008D10EF /* DegreeTests.swift in Sources */,
 				63252C761E59CABC00324B66 /* Radian+Trigonometry.swift in Sources */,
 				63F7BE2B1E58F84400708BAF /* TrigonometryFunctionsTest.swift in Sources */,
-				632070501E76083800ACD30B /* NSPredicateConvertible.swift in Sources */,
 				63F687431E74349200E6CA13 /* TrigonometricArgumentsCheckerTests.swift in Sources */,
 				63F6873E1E74318000E6CA13 /* ArgumentsChecker.swift in Sources */,
 				639D7A0F1E58DADF008D10EF /* AngleTests.swift in Sources */,
 				63252C7C1E59DECE00324B66 /* AngleType.swift in Sources */,
 				63F6873F1E74318000E6CA13 /* TrigonometricArgumentsChecker.swift in Sources */,
 				63252C701E59AC1A00324B66 /* GenericTrigonometry.swift in Sources */,
+				63269E801E7732E700EBEA7C /* UnionInterval.swift in Sources */,
 				632070061E75D2FF00ACD30B /* IntervalOperators.swift in Sources */,
 				639D7A131E58DB4D008D10EF /* Radian.swift in Sources */,
 				639D7A181E58F1E6008D10EF /* RadianTests.swift in Sources */,

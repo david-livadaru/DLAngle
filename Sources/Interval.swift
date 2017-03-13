@@ -11,23 +11,10 @@ import Foundation
 public typealias AbstractInterval = (lowerBoundary: Double, upperBoundary: Double)
 
 public struct Interval: ExpressibleByArrayLiteral, ExpressibleByIntervalArray,
-ExpressibleByIntervalTuple, ExpressibleByClosedRange, ExpressibleByRange, NSPredicateConvertible {
+ExpressibleByIntervalTuple, ExpressibleByClosedRange, ExpressibleByRange, Comparable {
     
     public let lowerBoundary: IntervalBoundary
     public let upperBoundary: IntervalBoundary
-    
-    public var isEmpty: Bool {
-        return lowerBoundary.value == upperBoundary.value &&
-            lowerBoundary.boundary.type == upperBoundary.boundary.type &&
-            lowerBoundary.boundary.type == .open
-    }
-    
-    public var predicate: NSPredicate {
-        return NSCompoundPredicate(andPredicateWithSubpredicates: [lowerBoundary.predicate,
-                                                                   upperBoundary.predicate])
-    }
-    
-    public static let zero = Interval((0..0))
     
     public init(lowerBoundary: IntervalBoundary, upperBoundary: IntervalBoundary) {
         self.lowerBoundary = lowerBoundary
@@ -104,21 +91,39 @@ ExpressibleByIntervalTuple, ExpressibleByClosedRange, ExpressibleByRange, NSPred
     // MARK: Public interface
     
     public func contains(_ element: Double) -> Bool {
-        return predicate.evaluate(with: element)
+        return lowerBoundary.contains(element) && upperBoundary.contains(element)
     }
     
-    public func intersection(with other: Interval) -> Interval {
+    public func intersection(with other: Interval) -> Interval? {
         var lower: IntervalBoundary! // ! is safe because will be set before usage
         if contains(other.lowerBoundary) {
             lower = other.lowerBoundary
         } else if other.contains(lowerBoundary) {
             lower = lowerBoundary
         } else {
-            return Interval.zero
+            return nil
         }
         
         let upper = min(other.upperBoundary, upperBoundary)
         return Interval(lowerBoundary: lower, upperBoundary: upper)
+    }
+    
+    public func formUnion(_ other: Interval) -> UnionInterval {
+        var unionInterval = UnionInterval(intervals: [self, other])
+        unionInterval.mergeIntervals()
+        return unionInterval
+    }
+    
+    // MARK: Comparable
+    
+    public static func <(_ lhs: Interval, _ rhs: Interval) -> Bool {
+        return lhs.lowerBoundary < rhs.lowerBoundary
+    }
+    
+    // MARK: Equatable
+    
+    public static func ==(_ lhs: Interval, _ rhs: Interval) -> Bool {
+        return lhs.lowerBoundary == rhs.lowerBoundary && lhs.lowerBoundary == rhs.upperBoundary
     }
     
     // MARK: Private functionality
@@ -133,15 +138,15 @@ ExpressibleByIntervalTuple, ExpressibleByClosedRange, ExpressibleByRange, NSPred
         switch (lowerBoundary.boundary.type, upperBoundary.boundary.type) {
         case (.closed, .open):
             assert(lowerBoundary.value != -Double.infinity, "Cannot create an interval closed in -infinity.")
-            assert(upperBoundary.value != lowerBoundary.value, "Cannot create a closed open interval with the same bound values.")
+            assert(upperBoundary.value != lowerBoundary.value, "Cannot create a closed open interval with the same bound value.")
         case (.open, .closed):
-            assert(upperBoundary.value != lowerBoundary.value, "Cannot create an open closed interval with the same bound values.")
+            assert(upperBoundary.value != lowerBoundary.value, "Cannot create an open closed interval with the same bound value.")
             assert(upperBoundary.value != Double.infinity, "Cannot create an interval closed in infinity.")
         case (.closed, .closed):
             assert(lowerBoundary.value != -Double.infinity, "Cannot create an interval closed in -infinity.")
             assert(upperBoundary.value != Double.infinity, "Cannot create an interval closed in infinity.")
-        default:
-            break
+        case (.open, .open):
+            assert(upperBoundary.value != lowerBoundary.value, "Cannot create a bounded interval with the same bound value.")
         }
     }
     

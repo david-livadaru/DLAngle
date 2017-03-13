@@ -8,41 +8,17 @@
 
 import Foundation
 
-public struct Boundary: Comparable, NSPredicateFormatConvertible {
-    public enum BoundaryType: NSPredicateFormatConvertible {
+public struct Boundary: Comparable {
+    public enum BoundaryType {
         case closed, open
-        
-        public var predicateFormat: String {
-            switch self {
-            case .closed:
-                return "="
-            default:
-                return ""
-            }
-        }
     }
     
-    public enum Side: NSPredicateFormatConvertible {
+    public enum Side {
         case left, right
-        
-        public var predicateFormat: String {
-            switch self {
-            case .left:
-                return ">"
-            case .right:
-                return "<"
-            }
-        }
     }
     
     let type: BoundaryType
     let side: Side
-    
-    // MARK: NSPredicateFormatConvertible
-    
-    public var predicateFormat: String {
-        return "\(side.predicateFormat)\(type.predicateFormat)"
-    }
     
     // MARK: Equatable
     

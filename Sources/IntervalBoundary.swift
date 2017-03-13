@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct IntervalBoundary: Comparable, NSPredicateFormatConvertible, NSPredicateConvertible {
+public struct IntervalBoundary: Comparable {
     public let value: Double
     public let boundary: Boundary
     
@@ -17,23 +17,24 @@ public struct IntervalBoundary: Comparable, NSPredicateFormatConvertible, NSPred
         self.boundary = boundary
     }
     
-    // MARK: NSPredicateFormatConvertible
+    // MARK: Public interface
     
-    public var predicateFormat: String {
-        return "SELF \(boundary.predicateFormat) \(value)"
+    public func contains(_ element: Double) -> Bool {
+        if abs(element) == Double.infinity && abs(value) == Double.infinity {
+            return true
+        }
+        
+        switch (boundary.side, boundary.type) {
+        case (.left, .open):
+            return element > value
+        case (.left, .closed):
+            return element >= value
+        case (.right, .open):
+            return element < value
+        case (.right, .closed):
+            return element <= value
+        }
     }
-    
-    // MARK: NSPredicateConvertible
-    
-    public var predicate: NSPredicate {
-        return NSPredicate(format: predicateFormat)
-    }
-    
-//    // MARK: Public interface
-//    
-//    public func contains(_ element: Double) -> Bool {
-//        return predicate.evaluate(with: element)
-//    }
     
     // MARK: Equatable
     
