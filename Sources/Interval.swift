@@ -109,9 +109,7 @@ ExpressibleByIntervalTuple, ExpressibleByClosedRange, ExpressibleByRange, Compar
     }
     
     public func formUnion(_ other: Interval) -> UnionInterval {
-        var unionInterval = UnionInterval(intervals: [self, other])
-        unionInterval.mergeIntervals()
-        return unionInterval
+        return [self, other]
     }
     
     // MARK: Comparable

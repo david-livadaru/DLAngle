@@ -12,7 +12,7 @@ import Foundation
 #endif
 
 public extension Radian {
-    public convenience init(acos: Float80) throws {
+    public convenience init(acos: Double) throws {
         try Trigonometry.validate(value: acos, for: .acos)
         self.init(rawValue: Trigonometry.acos(acos))
     }
@@ -22,11 +22,6 @@ public extension Radian {
         self.init(float: GenericTrigonometry.acos(acos))
     }
     
-    public convenience init(acos: Double) throws {
-        try Trigonometry.validate(value: acos, for: .acos)
-        self.init(double: GenericTrigonometry.acos(acos))
-    }
-    
     #if !os(Linux)
     public convenience init(acos: CGFloat) throws {
         try Trigonometry.validate(value: acos, for: .acos)
@@ -34,16 +29,12 @@ public extension Radian {
     }
     #endif
     
-    public convenience init(acosh: Float80) {
+    public convenience init(acosh: Double) {
         self.init(rawValue: Trigonometry.acosh(acosh))
     }
     
     public convenience init(acosh: Float) {
         self.init(float: GenericTrigonometry.acosh(acosh))
-    }
-    
-    public convenience init(acosh: Double) {
-        self.init(double: GenericTrigonometry.acosh(acosh))
     }
     
     #if !os(Linux)
@@ -52,7 +43,7 @@ public extension Radian {
     }
     #endif
     
-    public convenience init(asin: Float80) throws {
+    public convenience init(asin: Double) throws {
         try Trigonometry.validate(value: asin, for: .asin)
         self.init(rawValue: Trigonometry.asin(asin))
     }
@@ -62,27 +53,18 @@ public extension Radian {
         self.init(float: GenericTrigonometry.asin(asin))
     }
     
-    public convenience init(asin: Double) throws {
-        try Trigonometry.validate(value: asin, for: .asin)
-        self.init(double: GenericTrigonometry.asin(asin))
-    }
-    
     #if !os(Linux)
     public convenience init(asin: CGFloat) throws {
         self.init(cgFloat: Trigonometry.asin(asin))
     }
     #endif
     
-    public convenience init(asinh: Float80) {
+    public convenience init(asinh: Double) {
         self.init(rawValue: Trigonometry.asinh(asinh))
     }
     
     public convenience init(asinh: Float) {
         self.init(float: GenericTrigonometry.asinh(asinh))
-    }
-    
-    public convenience init(asinh: Double) {
-        self.init(double: GenericTrigonometry.asinh(asinh))
     }
     
     #if !os(Linux)
@@ -91,16 +73,12 @@ public extension Radian {
     }
     #endif
     
-    public convenience init(atan: Float80) {
+    public convenience init(atan: Double) {
         self.init(rawValue: Trigonometry.atan(atan))
     }
     
     public convenience init(atan: Float) {
         self.init(float: GenericTrigonometry.atan(atan))
-    }
-    
-    public convenience init(atan: Double) {
-        self.init(double: GenericTrigonometry.atan(atan))
     }
     
     #if !os(Linux)
@@ -109,7 +87,7 @@ public extension Radian {
     }
     #endif
     
-    public convenience init(atan2X x: Float80, y: Float80) throws {
+    public convenience init(atan2X x: Double, y: Double) throws {
         try Trigonometry.validate(value: x, for: .atan2)
         self.init(rawValue: Trigonometry.atan2(x: x, y: y))
     }
@@ -119,11 +97,6 @@ public extension Radian {
         self.init(float: GenericTrigonometry.atan2(x: x, y: y))
     }
     
-    public convenience init(atan2X x: Double, y: Double) throws {
-        try Trigonometry.validate(value: x, for: .atan2)
-        self.init(double: GenericTrigonometry.atan2(x: x, y: y))
-    }
-    
     #if !os(Linux)
     public convenience init(atan2X x: CGFloat, y: CGFloat) throws {
         try Trigonometry.validate(value: x, for: .atan2)
@@ -131,16 +104,12 @@ public extension Radian {
     }
     #endif
     
-    public convenience init(atanh: Float80) {
+    public convenience init(atanh: Double) {
         self.init(rawValue: Trigonometry.atanh(atanh))
     }
     
     public convenience init(atanh: Float) {
         self.init(float: GenericTrigonometry.atanh(atanh))
-    }
-    
-    public convenience init(atanh: Double) {
-        self.init(double: GenericTrigonometry.atanh(atanh))
     }
     
     #if !os(Linux)
@@ -149,15 +118,11 @@ public extension Radian {
     }
     #endif
     
-    public func cos() -> Float80 {
+    public func cos() -> Double {
         return Trigonometry.cos(self)
     }
     
     public func cos() -> Float {
-        return Trigonometry.cos(self)
-    }
-    
-    public func cos() -> Double {
         return Trigonometry.cos(self)
     }
     
@@ -167,15 +132,11 @@ public extension Radian {
     }
     #endif
     
-    public func cosh() -> Float80 {
+    public func cosh() -> Double {
         return Trigonometry.cosh(self)
     }
     
     public func cosh() -> Float {
-        return Trigonometry.cosh(self)
-    }
-    
-    public func cosh() -> Double {
         return Trigonometry.cosh(self)
     }
     
@@ -185,15 +146,11 @@ public extension Radian {
     }
     #endif
     
-    public func sin() -> Float80 {
+    public func sin() -> Double {
         return Trigonometry.sin(self)
     }
     
     public func sin() -> Float {
-        return Trigonometry.sin(self)
-    }
-    
-    public func sin() -> Double {
         return Trigonometry.sin(self)
     }
     
@@ -203,15 +160,11 @@ public extension Radian {
     }
     #endif
     
-    public func sinh() -> Float80 {
+    public func sinh() -> Double {
         return Trigonometry.sinh(self)
     }
     
     public func sinh() -> Float {
-        return Trigonometry.sinh(self)
-    }
-    
-    public func sinh() -> Double {
         return Trigonometry.sinh(self)
     }
     
@@ -221,15 +174,11 @@ public extension Radian {
     }
     #endif
     
-    public func tan() throws -> Float80 {
+    public func tan() throws -> Double {
         return try Trigonometry.tan(self)
     }
     
     public func tan() throws -> Float {
-        return try Trigonometry.tan(self)
-    }
-    
-    public func tan() throws -> Double {
         return try Trigonometry.tan(self)
     }
     
@@ -239,15 +188,11 @@ public extension Radian {
     }
     #endif
     
-    public func tanh() -> Float80 {
+    public func tanh() -> Double {
         return Trigonometry.tanh(self)
     }
     
     public func tanh() -> Float {
-        return Trigonometry.tanh(self)
-    }
-    
-    public func tanh() -> Double {
         return Trigonometry.tanh(self)
     }
     
@@ -257,15 +202,11 @@ public extension Radian {
     }
     #endif
     
-    public func cot() throws -> Float80 {
+    public func cot() throws -> Double {
         return try Trigonometry.cot(self)
     }
     
     public func cot() throws -> Float {
-        return try Trigonometry.cot(self)
-    }
-    
-    public func cot() throws -> Double {
         return try Trigonometry.cot(self)
     }
     
@@ -275,33 +216,25 @@ public extension Radian {
     }
     #endif
     
-    public func coth() -> Float80 {
-        return Trigonometry.coth(self)
+    public func coth() throws -> Double {
+        return try Trigonometry.coth(self)
     }
     
-    public func coth() -> Float {
-        return Trigonometry.coth(self)
-    }
-    
-    public func coth() -> Double {
-        return Trigonometry.coth(self)
+    public func coth() throws -> Float {
+        return try Trigonometry.coth(self)
     }
     
     #if !os(Linux)
-    public func coth() -> CGFloat {
-        return Trigonometry.coth(self)
+    public func coth() throws -> CGFloat {
+        return try Trigonometry.coth(self)
     }
     #endif
     
-    public func cosec() throws -> Float80 {
+    public func cosec() throws -> Double {
         return try Trigonometry.cosec(self)
     }
     
     public func cosec() throws -> Float {
-        return try Trigonometry.cosec(self)
-    }
-    
-    public func cosec() throws -> Double {
         return try Trigonometry.cosec(self)
     }
     
@@ -311,15 +244,11 @@ public extension Radian {
     }
     #endif
     
-    public func sec() throws -> Float80 {
+    public func sec() throws -> Double {
         return try Trigonometry.sec(self)
     }
     
     public func sec() throws -> Float {
-        return try Trigonometry.sec(self)
-    }
-    
-    public func sec() throws -> Double {
         return try Trigonometry.sec(self)
     }
     

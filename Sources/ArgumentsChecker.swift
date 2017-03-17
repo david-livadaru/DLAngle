@@ -18,7 +18,7 @@ class ArgumentsChecker {
         predicate = ArgumentsChecker.predicate(for: value, in: values)
     }
     
-    init(value: Double, validInterval interval: Interval) {
+    init(value: Double, validInterval interval: IntervalType) {
         predicate = ArgumentsChecker.predicate(for: value, in: interval)
     }
     
@@ -40,10 +40,10 @@ class ArgumentsChecker {
     // MARK: Private functionality
     
     private static func predicate(for value: Double, in array: [Double]) -> Predicate {
-        return Predicate(closure: { return array.contains(value) })
+        return Predicate(array: array, value: value)
     }
     
-    private static func predicate(for value: Double, in interval: Interval) -> Predicate {
-        return Predicate(closure: { return interval.contains(value) })
+    private static func predicate(for value: Double, in interval: IntervalType) -> Predicate {
+        return Predicate(interval: interval, value: value)
     }
 }

@@ -15,6 +15,12 @@ public struct Predicate {
         _predicate = predicate
     }
     
+    public init(array: [Double], value: Double) {
+        _predicate = {
+            return array.contains(value)
+        }
+    }
+    
     public init(interval: IntervalType, value: Double) {
         _predicate = {
             return interval.contains(value)

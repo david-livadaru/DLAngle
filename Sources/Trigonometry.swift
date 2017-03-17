@@ -14,72 +14,120 @@ import Foundation
 /// Provides an easy to use and strongly typed interface for applying 
 /// trigonometric functions on floating point types.
 public struct Trigonometry {
-    static func acos(_ value: Float80) -> Float80 {
-        let angle = GenericTrigonometry.acos(Double(value))
-        return Float80(angle)
+    // MARK: Trigonometric functions
+    
+    public static func sin(_ angle: Radian) -> Double {
+        let sin = GenericTrigonometry.sin(angle.rawValue)
+        return sin
     }
     
-    public static func acos(_ value: Float80) throws -> Radian {
-        try validate(value: value, for: .acos)
-        return Radian(rawValue: acos(value))
-    }
-    
-    public static func acos(_ value: Float) throws -> Radian {
-        try validate(value: value, for: .acos)
-        return Radian(float: GenericTrigonometry.acos(value))
-    }
-    
-    public static func acos(_ value: Double) throws -> Radian {
-        try validate(value: value, for: .acos)
-        return Radian(double: GenericTrigonometry.acos(value))
+    public static func sin(_ angle: Radian) -> Float {
+        return GenericTrigonometry.sin(angle.float)
     }
     
     #if !os(Linux)
-    static func acos(_ value: CGFloat) -> CGFloat {
-        let angle = GenericTrigonometry.acos(Double(value))
-        return CGFloat(angle)
-    }
-    
-    public static func acos(_ value: CGFloat) throws -> Radian {
-        try validate(value: value, for: .acos)
-        return Radian(cgFloat: acos(value))
+    public static func sin(_ angle: Radian) -> CGFloat {
+        let sin = GenericTrigonometry.sin(angle.rawValue)
+        return CGFloat(sin)
     }
     #endif
     
-    static func acosh(_ value: Float80) -> Float80 {
-        let angle = GenericTrigonometry.acosh(Double(value))
-        return Float80(angle)
+    public static func cos(_ angle: Radian) -> Double {
+        let cos = GenericTrigonometry.cos(angle.rawValue)
+        return cos
     }
     
-    public static func acosh(_ value: Float80) -> Radian {
-        return Radian(rawValue: acosh(value))
-    }
-    
-    public static func acosh(_ value: Float) -> Radian {
-        return Radian(float: GenericTrigonometry.acosh(value))
-    }
-    
-    public static func acosh(_ value: Double) -> Radian {
-        return Radian(double: GenericTrigonometry.acosh(value))
+    public static func cos(_ angle: Radian) -> Float {
+        return GenericTrigonometry.cos(angle.float)
     }
     
     #if !os(Linux)
-    static func acosh(_ value: CGFloat) -> CGFloat {
-        let angle = GenericTrigonometry.acosh(Double(value))
-        return CGFloat(angle)
-    }
-    
-    public static func acosh(_ value: CGFloat) -> Radian {
-        return Radian(cgFloat: acosh(value))
+    public static func cos(_ angle: Radian) -> CGFloat {
+        let cos = GenericTrigonometry.cos(angle.rawValue)
+        return CGFloat(cos)
     }
     #endif
     
-    static func asin(_ value: Float80) -> Float80 {
-        let angle = GenericTrigonometry.asin(Double(value))
-        return Float80(angle)
+    public static func tan(_ angle: Radian) throws -> Double {
+        try validate(angle: angle, for: .tan)
+        let tan = GenericTrigonometry.tan(angle.rawValue)
+        return tan
     }
     
-    public static func asin(_ value: Float80) throws -> Radian {
+    public static func tan(_ angle: Radian) throws -> Float {
+        try validate(angle: angle, for: .tan)
+        return GenericTrigonometry.tan(angle.float)
+    }
+    
+    #if !os(Linux)
+    public static func tan(_ angle: Radian) throws -> CGFloat {
+        try validate(angle: angle, for: .tan)
+        let tan = GenericTrigonometry.tan(angle.rawValue)
+        return CGFloat(tan)
+    }
+    #endif
+    
+    public static func cot(_ angle: Radian) throws -> Double {
+        try validate(angle: angle, for: .cot)
+        let cot = 1.0 / GenericTrigonometry.tan(angle.rawValue)
+        return cot
+    }
+    
+    public static func cot(_ angle: Radian) throws -> Float {
+        try validate(angle: angle, for: .cot)
+        return 1.0 / GenericTrigonometry.tan(angle.float)
+    }
+    
+    #if !os(Linux)
+    public static func cot(_ angle: Radian) throws -> CGFloat {
+        try validate(angle: angle, for: .cot)
+        let cot = GenericTrigonometry.tan(angle.rawValue)
+        return 1.0 / CGFloat(cot)
+    }
+    #endif
+    
+    public static func sec(_ angle: Radian) throws -> Double {
+        try validate(angle: angle, for: .sec)
+        return 1.0 / cos(angle)
+    }
+    
+    public static func sec(_ angle: Radian) throws -> Float {
+        try validate(angle: angle, for: .sec)
+        return 1.0 / cos(angle)
+    }
+    
+    #if !os(Linux)
+    public static func sec(_ angle: Radian) throws -> CGFloat {
+        try validate(angle: angle, for: .sec)
+        return 1.0 / cos(angle)
+    }
+    #endif
+    
+    public static func cosec(_ angle: Radian) throws -> Double {
+        try validate(angle: angle, for: .cosec)
+        return 1.0 / sin(angle)
+    }
+    
+    public static func cosec(_ angle: Radian) throws -> Float {
+        try validate(angle: angle, for: .cosec)
+        return 1.0 / sin(angle)
+    }
+    
+    #if !os(Linux)
+    public static func cosec(_ angle: Radian) throws -> CGFloat {
+        try validate(angle: angle, for: .cosec)
+        return 1.0 / sin(angle)
+    }
+    #endif
+    
+    // MARK: Inverse trigonometric functions
+    
+    static func asin(_ value: Double) -> Double {
+        let angle = GenericTrigonometry.asin(value)
+        return angle
+    }
+    
+    public static func asin(_ value: Double) throws -> Radian {
         try validate(value: value, for: .asin)
         return Radian(rawValue: asin(value))
     }
@@ -87,11 +135,6 @@ public struct Trigonometry {
     public static func asin(_ value: Float) throws -> Radian {
         try validate(value: value, for: .asin)
         return Radian(float: GenericTrigonometry.asin(value))
-    }
-    
-    public static func asin(_ value: Double) throws -> Radian {
-        try validate(value: value, for: .asin)
-        return Radian(double: GenericTrigonometry.asin(value))
     }
     
     #if !os(Linux)
@@ -106,49 +149,44 @@ public struct Trigonometry {
     }
     #endif
     
-    static func asinh(_ value: Float80) -> Float80 {
-        let angle = GenericTrigonometry.asinh(Double(value))
-        return Float80(angle)
+    static func acos(_ value: Double) -> Double {
+        let angle = GenericTrigonometry.acos(value)
+        return angle
     }
     
-    public static func asinh(_ value: Float80) -> Radian {
-        return Radian(rawValue: asinh(value))
+    public static func acos(_ value: Double) throws -> Radian {
+        try validate(value: value, for: .acos)
+        return Radian(rawValue: acos(value))
     }
     
-    public static func asinh(_ value: Float) -> Radian {
-        return Radian(float: GenericTrigonometry.asinh(value))
-    }
-    
-    public static func asinh(_ value: Double) -> Radian {
-        return Radian(double: GenericTrigonometry.asinh(value))
+    public static func acos(_ value: Float) throws -> Radian {
+        try validate(value: value, for: .acos)
+        return Radian(float: GenericTrigonometry.acos(value))
     }
     
     #if !os(Linux)
-    static func asinh(_ value: CGFloat) -> CGFloat {
-        let angle = GenericTrigonometry.asinh(Double(value))
+    static func acos(_ value: CGFloat) -> CGFloat {
+        let angle = GenericTrigonometry.acos(Double(value))
         return CGFloat(angle)
     }
     
-    public static func asinh(_ value: CGFloat) -> Radian {
-        return Radian(cgFloat: asinh(value))
+    public static func acos(_ value: CGFloat) throws -> Radian {
+        try validate(value: value, for: .acos)
+        return Radian(cgFloat: acos(value))
     }
     #endif
     
-    static func atan(_ value: Float80) -> Float80 {
-        let angle = GenericTrigonometry.atan(Double(value))
-        return Float80(angle)
+    static func atan(_ value: Double) -> Double {
+        let angle = GenericTrigonometry.atan(value)
+        return angle
     }
     
-    public static func atan(_ value: Float80) -> Radian {
+    public static func atan(_ value: Double) -> Radian {
         return Radian(rawValue: atan(value))
     }
     
     public static func atan(_ value: Float) -> Radian {
         return Radian(float: GenericTrigonometry.atan(value))
-    }
-    
-    public static func atan(_ value: Double) -> Radian {
-        return Radian(double: GenericTrigonometry.atan(value))
     }
     
     #if !os(Linux)
@@ -162,12 +200,12 @@ public struct Trigonometry {
     }
     #endif
     
-    static func atan2(x: Float80, y: Float80) -> Float80 {
-        let angle = GenericTrigonometry.atan2(x: Double(x), y: Double(y))
-        return Float80(angle)
+    static func atan2(x: Double, y: Double) -> Double {
+        let angle = GenericTrigonometry.atan2(x: x, y: y)
+        return angle
     }
     
-    public static func atan2(x: Float80, y: Float80) throws -> Radian {
+    public static func atan2(x: Double, y: Double) throws -> Radian {
         try validate(value: x, for: .atan2)
         return Radian(rawValue: atan2(x: x, y: y))
     }
@@ -176,12 +214,6 @@ public struct Trigonometry {
         try validate(value: x, for: .atan2)
         let angle = GenericTrigonometry.atan2(x: x, y: y)
         return Radian(float: angle)
-    }
-    
-    public static func atan2(x: Double, y: Double) throws -> Radian {
-        try validate(value: x, for: .atan2)
-        let angle = GenericTrigonometry.atan2(x: x, y: y)
-        return Radian(double: angle)
     }
     
     #if !os(Linux)
@@ -196,21 +228,252 @@ public struct Trigonometry {
     }
     #endif
     
-    static func atanh(_ value: Float80) -> Float80 {
-        let angle = GenericTrigonometry.atanh(Double(value))
-        return Float80(angle)
+    static func acot(_ value: Double) -> Double {
+        return Double.pi / 2 - atan(value)
     }
     
-    public static func atanh(_ value: Float80) -> Radian {
+    public static func acot(_ value: Double) throws -> Radian {
+        return Radian(rawValue: acot(value))
+    }
+    
+    public static func acot(_ value: Float) throws -> Radian {
+        return Radian(rawValue: acot(Double(value)))
+    }
+    
+    #if !os(Linux)
+    static func acot(_ value: CGFloat) -> CGFloat {
+        let doubleValue = Double(value)
+        let acotValue: Double = acot(doubleValue)
+        let angle = CGFloat(acotValue)
+        return CGFloat(angle)
+    }
+    
+    public static func acot(_ value: CGFloat) throws -> Radian {
+        return Radian(cgFloat: acot(value))
+    }
+    #endif
+    
+    static func asec(_ value: Double) -> Double {
+        return acos(1.0 / value)
+    }
+    
+    public static func asec(_ value: Double) throws -> Radian {
+        try validate(value: value, for: .asec)
+        return Radian(rawValue: asec(value))
+    }
+    
+    public static func asec(_ value: Float) throws -> Radian {
+        try validate(value: value, for: .asec)
+        return Radian(rawValue: asec(Double(value)))
+    }
+    
+    #if !os(Linux)
+    static func asec(_ value: CGFloat) -> CGFloat {
+        let doubleValue = Double(value)
+        let acotValue: Double = asec(doubleValue)
+        let angle = CGFloat(acotValue)
+        return CGFloat(angle)
+    }
+    
+    public static func asec(_ value: CGFloat) throws -> Radian {
+        try validate(value: value, for: .asec)
+        return Radian(cgFloat: asec(value))
+    }
+    #endif
+    
+    static func acosec(_ value: Double) -> Double {
+        return asin(1.0 / value)
+    }
+    
+    public static func acosec(_ value: Double) throws -> Radian {
+        try validate(value: value, for: .acosec)
+        return Radian(rawValue: acosec(value))
+    }
+    
+    public static func acosec(_ value: Float) throws -> Radian {
+        try validate(value: value, for: .acosec)
+        return Radian(rawValue: acosec(Double(value)))
+    }
+    
+    #if !os(Linux)
+    static func acosec(_ value: CGFloat) -> CGFloat {
+        let doubleValue = Double(value)
+        let acotValue: Double = acosec(doubleValue)
+        let angle = CGFloat(acotValue)
+        return CGFloat(angle)
+    }
+    
+    public static func acosec(_ value: CGFloat) throws -> Radian {
+        try validate(value: value, for: .acosec)
+        return Radian(cgFloat: acosec(value))
+    }
+    #endif
+    
+    // MARK: Hyperbolic functions
+    
+    public static func sinh(_ angle: Radian) -> Double {
+        let sinh = GenericTrigonometry.sinh(angle.rawValue)
+        return sinh
+    }
+    
+    public static func sinh(_ angle: Radian) -> Float {
+        return GenericTrigonometry.sinh(angle.float)
+    }
+    
+    #if !os(Linux)
+    public static func sinh(_ angle: Radian) -> CGFloat {
+        let sinh = GenericTrigonometry.sinh(angle.rawValue)
+        return CGFloat(sinh)
+    }
+    #endif
+    
+    public static func cosh(_ angle: Radian) -> Double {
+        let cosh = GenericTrigonometry.cosh(angle.rawValue)
+        return cosh
+    }
+    
+    public static func cosh(_ angle: Radian) -> Float {
+        return GenericTrigonometry.cosh(angle.float)
+    }
+    
+    #if !os(Linux)
+    public static func cosh(_ angle: Radian) -> CGFloat {
+        let cosh = GenericTrigonometry.cosh(angle.rawValue)
+        return CGFloat(cosh)
+    }
+    #endif
+    
+    public static func tanh(_ angle: Radian) -> Double {
+        let tanh = GenericTrigonometry.tanh(angle.rawValue)
+        return tanh
+    }
+    
+    public static func tanh(_ angle: Radian) -> Float {
+        return GenericTrigonometry.tanh(angle.float)
+    }
+    
+    #if !os(Linux)
+    public static func tanh(_ angle: Radian) -> CGFloat {
+        let tanh = GenericTrigonometry.tanh(angle.rawValue)
+        return CGFloat(tanh)
+    }
+    #endif
+    
+    public static func coth(_ angle: Radian) throws -> Double {
+        try validate(value: angle.rawValue, for: .coth)
+        let tanh = GenericTrigonometry.tanh(angle.rawValue)
+        return 1.0 / tanh
+    }
+    
+    public static func coth(_ angle: Radian) throws -> Float {
+        try validate(value: angle.rawValue, for: .coth)
+        return 1.0 / GenericTrigonometry.tanh(angle.float)
+    }
+    
+    #if !os(Linux)
+    public static func coth(_ angle: Radian) throws -> CGFloat {
+        try validate(value: angle.rawValue, for: .coth)
+        let tanh = GenericTrigonometry.tanh(angle.rawValue)
+        return 1.0 / CGFloat(tanh)
+    }
+    #endif
+    
+    public static func sech(_ angle: Radian) -> Double {
+        return 1.0 / cosh(angle)
+    }
+    
+    public static func sech(_ angle: Radian) -> Float {
+        return 1.0 / cosh(angle)
+    }
+    
+    #if !os(Linux)
+    public static func sech(_ angle: Radian) -> CGFloat {
+        return 1.0 / cosh(angle)
+    }
+    #endif
+    
+    public static func cosech(_ angle: Radian) throws -> Double {
+        try validate(value: angle.rawValue, for: .cosech)
+        return 1.0 / sinh(angle)
+    }
+    
+    public static func cosech(_ angle: Radian) throws -> Float {
+        return 1.0 / sinh(angle)
+    }
+    
+    #if !os(Linux)
+    public static func cosech(_ angle: Radian) throws -> CGFloat {
+        try validate(value: angle.rawValue, for: .cosech)
+        return 1.0 / sinh(angle)
+    }
+    #endif
+    
+    // MARK: Inverse hyperbolic functions
+    
+    static func asinh(_ value: Double) -> Double {
+        let angle = GenericTrigonometry.asinh(value)
+        return angle
+    }
+    
+    public static func asinh(_ value: Double) -> Radian {
+        return Radian(rawValue: asinh(value))
+    }
+    
+    public static func asinh(_ value: Float) -> Radian {
+        return Radian(float: GenericTrigonometry.asinh(value))
+    }
+    
+    #if !os(Linux)
+    static func asinh(_ value: CGFloat) -> CGFloat {
+        let angle = GenericTrigonometry.asinh(Double(value))
+        return CGFloat(angle)
+    }
+    
+    public static func asinh(_ value: CGFloat) -> Radian {
+        return Radian(cgFloat: asinh(value))
+    }
+    #endif
+    
+    static func acosh(_ value: Double) -> Double {
+        let angle = GenericTrigonometry.acosh(value)
+        return angle
+    }
+    
+    public static func acosh(_ value: Double) throws -> Radian {
+        try validate(value: value, for: .acosh)
+        return Radian(rawValue: acosh(value))
+    }
+    
+    public static func acosh(_ value: Float) throws -> Radian {
+        try validate(value: value, for: .acosh)
+        return Radian(float: GenericTrigonometry.acosh(value))
+    }
+    
+    #if !os(Linux)
+    static func acosh(_ value: CGFloat) -> CGFloat {
+        let angle = GenericTrigonometry.acosh(Double(value))
+        return CGFloat(angle)
+    }
+    
+    public static func acosh(_ value: CGFloat) throws -> Radian {
+        try validate(value: value, for: .acosh)
+        return Radian(cgFloat: acosh(value))
+    }
+    #endif
+    
+    static func atanh(_ value: Double) -> Double {
+        let angle = GenericTrigonometry.atanh(value)
+        return angle
+    }
+    
+    public static func atanh(_ value: Double) throws -> Radian {
+        try validate(value: value, for: .atanh)
         return Radian(rawValue: atanh(value))
     }
     
-    public static func atanh(_ value: Float) -> Radian {
+    public static func atanh(_ value: Float) throws -> Radian {
+        try validate(value: value, for: .atanh)
         return Radian(float: GenericTrigonometry.atanh(value))
-    }
-    
-    public static func atanh(_ value: Double) -> Radian {
-        return Radian(double: GenericTrigonometry.atanh(value))
     }
     
     #if !os(Linux)
@@ -219,256 +482,116 @@ public struct Trigonometry {
         return CGFloat(angle)
     }
     
-    public static func atanh(_ value: CGFloat) -> Radian {
+    public static func atanh(_ value: CGFloat) throws -> Radian {
+        try validate(value: value, for: .atanh)
         return Radian(cgFloat: atanh(value))
     }
     #endif
     
-    public static func cos(_ angle: Radian) -> Float80 {
-        let cos = GenericTrigonometry.cos(angle.double)
-        return Float80(cos)
+    static func acoth(_ value: Double) -> Double {
+        return log((value + 1) / (value - 1)) / 2.0
     }
     
-    public static func cos(_ angle: Radian) -> Float {
-        return GenericTrigonometry.cos(angle.float)
+    public static func acoth(_ value: Double) throws -> Radian {
+        try validate(value: value, for: .acoth)
+        return Radian(rawValue: acoth(value))
     }
     
-    public static func cos(_ angle: Radian) -> Double {
-        return GenericTrigonometry.cos(angle.double)
+    public static func acoth(_ value: Float) throws -> Radian {
+        try validate(value: value, for: .acoth)
+        return Radian(rawValue: acoth(Double(value)))
     }
     
     #if !os(Linux)
-    public static func cos(_ angle: Radian) -> CGFloat {
-        let cos = GenericTrigonometry.cos(angle.double)
-        return CGFloat(cos)
+    static func acoth(_ value: CGFloat) -> CGFloat {
+        let angle: Double = acoth(Double(value))
+        return CGFloat(angle)
+    }
+    
+    public static func acoth(_ value: CGFloat) throws -> Radian {
+        try validate(value: value, for: .acoth)
+        return Radian(cgFloat: atanh(value))
     }
     #endif
     
-    public static func cosh(_ angle: Radian) -> Float80 {
-        let cosh = GenericTrigonometry.cosh(angle.double)
-        return Float80(cosh)
+    static func asech(_ value: Double) -> Double {
+        return log(1.0 / value + sqrt(1.0 / value - 1.0) * sqrt(1.0 / value + 1.0))
     }
     
-    public static func cosh(_ angle: Radian) -> Float {
-        return GenericTrigonometry.cosh(angle.float)
+    public static func asech(_ value: Double) throws -> Radian {
+        try validate(value: value, for: .asech)
+        return Radian(rawValue: asech(value))
     }
     
-    public static func cosh(_ angle: Radian) -> Double {
-        return GenericTrigonometry.cosh(angle.double)
+    public static func asech(_ value: Float) throws -> Radian {
+        try validate(value: value, for: .asech)
+        return Radian(rawValue: asech(Double(value)))
     }
     
     #if !os(Linux)
-    public static func cosh(_ angle: Radian) -> CGFloat {
-        let cosh = GenericTrigonometry.cosh(angle.double)
-        return CGFloat(cosh)
+    static func asech(_ value: CGFloat) -> CGFloat {
+        let angle: Double = acoth(Double(value))
+        return CGFloat(angle)
+    }
+    
+    public static func asech(_ value: CGFloat) throws -> Radian {
+        try validate(value: value, for: .asech)
+        return Radian(cgFloat: asech(value))
     }
     #endif
     
-    public static func sin(_ angle: Radian) -> Float80 {
-        let sin = GenericTrigonometry.sin(angle.double)
-        return Float80(sin)
+    static func acosech(_ value: Double) -> Double {
+        return log(1.0 / value + sqrt(1.0 / pow(value, 2.0) + 1.0))
     }
     
-    public static func sin(_ angle: Radian) -> Float {
-        return GenericTrigonometry.sin(angle.float)
+    public static func acosech(_ value: Double) throws -> Radian {
+        try validate(value: value, for: .acosech)
+        return Radian(rawValue: acoth(value))
     }
     
-    public static func sin(_ angle: Radian) -> Double {
-        return GenericTrigonometry.sin(angle.double)
-    }
-    
-    #if !os(Linux)
-    public static func sin(_ angle: Radian) -> CGFloat {
-        let sin = GenericTrigonometry.sin(angle.double)
-        return CGFloat(sin)
-    }
-    #endif
-    
-    public static func sinh(_ angle: Radian) -> Float80 {
-        let sinh = GenericTrigonometry.sinh(angle.double)
-        return Float80(sinh)
-    }
-    
-    public static func sinh(_ angle: Radian) -> Float {
-        return GenericTrigonometry.sinh(angle.float)
-    }
-    
-    public static func sinh(_ angle: Radian) -> Double {
-        return GenericTrigonometry.sinh(angle.double)
+    public static func acosech(_ value: Float) throws -> Radian {
+        try validate(value: value, for: .acosech)
+        return Radian(rawValue: acoth(Double(value)))
     }
     
     #if !os(Linux)
-    public static func sinh(_ angle: Radian) -> CGFloat {
-        let sinh = GenericTrigonometry.sinh(angle.double)
-        return CGFloat(sinh)
-    }
-    #endif
-    
-    public static func tan(_ angle: Radian) throws -> Float80 {
-        try validate(angle: angle, for: .tan)
-        let tan = GenericTrigonometry.tan(angle.double)
-        return Float80(tan)
+    static func acosech(_ value: CGFloat) -> CGFloat {
+        let angle: Double = acosech(Double(value))
+        return CGFloat(angle)
     }
     
-    public static func tan(_ angle: Radian) throws -> Float {
-        try validate(angle: angle, for: .tan)
-        return GenericTrigonometry.tan(angle.float)
-    }
-    
-    public static func tan(_ angle: Radian) throws -> Double {
-        try validate(angle: angle, for: .tan)
-        return GenericTrigonometry.tan(angle.double)
-    }
-    
-    #if !os(Linux)
-    public static func tan(_ angle: Radian) throws -> CGFloat {
-        try validate(angle: angle, for: .tan)
-        let tan = GenericTrigonometry.tan(angle.double)
-        return CGFloat(tan)
-    }
-    #endif
-    
-    public static func tanh(_ angle: Radian) -> Float80 {
-        let tanh = GenericTrigonometry.tanh(angle.double)
-        return Float80(tanh)
-    }
-    
-    public static func tanh(_ angle: Radian) -> Float {
-        return GenericTrigonometry.tanh(angle.float)
-    }
-    
-    public static func tanh(_ angle: Radian) -> Double {
-        return GenericTrigonometry.tanh(angle.double)
-    }
-    
-    #if !os(Linux)
-    public static func tanh(_ angle: Radian) -> CGFloat {
-        let tanh = GenericTrigonometry.tanh(angle.double)
-        return CGFloat(tanh)
-    }
-    #endif
-    
-    // MARK: Additional functions
-    
-    public static func cot(_ angle: Radian) throws -> Float80 {
-        try validate(angle: angle, for: .cot)
-        let cot = 1.0 / GenericTrigonometry.tan(angle.double)
-        return Float80(cot)
-    }
-    
-    public static func cot(_ angle: Radian) throws -> Float {
-        try validate(angle: angle, for: .cot)
-        return 1.0 / GenericTrigonometry.tan(angle.float)
-    }
-    
-    public static func cot(_ angle: Radian) throws -> Double {
-        try validate(angle: angle, for: .cot)
-        return 1.0 / GenericTrigonometry.tan(angle.double)
-    }
-    
-    #if !os(Linux)
-    public static func cot(_ angle: Radian) throws -> CGFloat {
-        try validate(angle: angle, for: .cot)
-        let cot = GenericTrigonometry.tan(angle.double)
-        return 1.0 / CGFloat(cot)
-    }
-    #endif
-    
-    public static func coth(_ angle: Radian) -> Float80 {
-        let tanh = GenericTrigonometry.tanh(angle.double)
-        return 1.0 / Float80(tanh)
-    }
-    
-    public static func coth(_ angle: Radian) -> Float {
-        return 1.0 / GenericTrigonometry.tanh(angle.float)
-    }
-    
-    public static func coth(_ angle: Radian) -> Double {
-        return 1.0 / GenericTrigonometry.tanh(angle.double)
-    }
-    
-    #if !os(Linux)
-    public static func coth(_ angle: Radian) -> CGFloat {
-        let tanh = GenericTrigonometry.tanh(angle.double)
-        return 1.0 / CGFloat(tanh)
-    }
-    #endif
-    
-    public static func cosec(_ angle: Radian) throws -> Float80 {
-        try validate(angle: angle, for: .cosec)
-        return 1.0 / sin(angle)
-    }
-    
-    public static func cosec(_ angle: Radian) throws -> Float {
-        try validate(angle: angle, for: .cosec)
-        return 1.0 / sin(angle)
-    }
-    
-    public static func cosec(_ angle: Radian) throws -> Double {
-        try validate(angle: angle, for: .cosec)
-        return 1.0 / sin(angle)
-    }
-    
-    #if !os(Linux)
-    public static func cosec(_ angle: Radian) throws -> CGFloat {
-        try validate(angle: angle, for: .cosec)
-        return 1.0 / sin(angle)
-    }
-    #endif
-    
-    public static func sec(_ angle: Radian) throws -> Float80 {
-        try validate(angle: angle, for: .sec)
-        return 1.0 / cos(angle)
-    }
-    
-    public static func sec(_ angle: Radian) throws -> Float {
-        try validate(angle: angle, for: .sec)
-        return 1.0 / cos(angle)
-    }
-    
-    public static func sec(_ angle: Radian) throws -> Double {
-        try validate(angle: angle, for: .sec)
-        return 1.0 / cos(angle)
-    }
-    
-    #if !os(Linux)
-    public static func sec(_ angle: Radian) throws -> CGFloat {
-        try validate(angle: angle, for: .sec)
-        return 1.0 / cos(angle)
+    public static func acosech(_ value: CGFloat) throws -> Radian {
+        try validate(value: value, for: .acosech)
+        return Radian(cgFloat: atanh(value))
     }
     #endif
     
     // MARK: Validation
     
-    static func validate(value: Float80,
-                         for function: TrigonometricArgumentsChecker.TrigonometricFunction) throws {
-        let checker = try TrigonometricArgumentsChecker(value: Double(value), function: function)
+    static func validate(value: Double,
+                         for function: TrigonometricFunction) throws {
+        let checker = try TrigonometricArgumentsChecker(value: value, function: function)
         if checker.check() == false {
-            throw AngleError(reason: "Argument '\(value)' is not defined for function '\(TrigonometricArgumentsChecker.TrigonometricFunction.acos)'.")
+            throw AngleError(reason: "Argument '\(value)' is not defined for function '\(function)'.")
         }
     }
     
     static func validate(angle: Radian,
-                         for function: TrigonometricArgumentsChecker.TrigonometricFunction) throws {
+                         for function: TrigonometricFunction) throws {
         let checker = try TrigonometricArgumentsChecker(angle: angle, function: function)
         if checker.check() == false {
-            throw AngleError(reason: "Argument '\(angle)' is not defined for function '\(TrigonometricArgumentsChecker.TrigonometricFunction.acos)'.")
+            throw AngleError(reason: "Argument '\(angle)' is not defined for function '\(function)'.")
         }
     }
     
-    static func validate(value: Double,
-                         for function: TrigonometricArgumentsChecker.TrigonometricFunction) throws {
-        try validate(value: Float80(value), for: function)
-    }
-    
     static func validate(value: Float,
-                         for function: TrigonometricArgumentsChecker.TrigonometricFunction) throws {
-        try validate(value: Float80(value), for: function)
+                         for function: TrigonometricFunction) throws {
+        try validate(value: Double(value), for: function)
     }
     
     #if !os(Linux)
     static func validate(value: CGFloat,
-                         for function: TrigonometricArgumentsChecker.TrigonometricFunction) throws {
+                         for function: TrigonometricFunction) throws {
         try validate(value: Double(value), for: function)
     }
     #endif

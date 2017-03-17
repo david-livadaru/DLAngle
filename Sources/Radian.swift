@@ -14,29 +14,22 @@ import Foundation
 /// A concrete implementation for radian angles. 
 /// Provides convience initializers and functions for trigonometric functions.
 public final class Radian: Angle, Comparable, AngleType {
-    public static let normalizationValue: Float80 = 2 * Float80.pi
+    public static let normalizationValue: Double = 2 * Double.pi
     
     // MARK: Initializers
     
-    public convenience init(degrees: Float80) {
-        let radians: Float80 = degrees / 180 * Float80.pi
+    public convenience init(degrees: Double) {
+        let radians: Double = degrees / 180 * Double.pi
         self.init(rawValue: radians)
     }
     
     public convenience init(degrees: Float) {
-        let radians: Float = degrees / 180 * Float.pi
-        self.init(float: radians)
-    }
-    
-    public convenience init(degrees: Double) {
-        let radians: Double = degrees / 180 * Double.pi
-        self.init(double: radians)
+        self.init(degrees: Double(degrees))
     }
     
     #if !os(Linux)
     public convenience init(degrees: CGFloat) {
-        let radians: CGFloat = degrees / 180 * CGFloat.pi
-        self.init(cgFloat: radians)
+        self.init(degrees: Double(degrees))
     }
     #endif
 
@@ -72,15 +65,11 @@ public final class Radian: Angle, Comparable, AngleType {
         minusEqual(lhs: &lhs, rhs: rhs)
     }
     
-    public static func *(lhs: Radian, rhs: Float80) -> Radian {
+    public static func *(lhs: Radian, rhs: Double) -> Radian {
         return multiply(angle: lhs, with: rhs)
     }
     
     public static func *(lhs: Radian, rhs: Float) -> Radian {
-        return multiply(angle: lhs, with: rhs)
-    }
-    
-    public static func *(lhs: Radian, rhs: Double) -> Radian {
         return multiply(angle: lhs, with: rhs)
     }
     
@@ -90,15 +79,11 @@ public final class Radian: Angle, Comparable, AngleType {
     }
     #endif
     
-    public static func *(lhs: Float80, rhs: Radian) -> Radian {
+    public static func *(lhs: Double, rhs: Radian) -> Radian {
         return multiply(value: lhs, with: rhs)
     }
     
     public static func *(lhs: Float, rhs: Radian) -> Radian {
-        return multiply(value: lhs, with: rhs)
-    }
-    
-    public static func *(lhs: Double, rhs: Radian) -> Radian {
         return multiply(value: lhs, with: rhs)
     }
     
@@ -108,15 +93,11 @@ public final class Radian: Angle, Comparable, AngleType {
     }
     #endif
     
-    public static func *=(lhs: inout Radian, rhs: Float80) {
+    public static func *=(lhs: inout Radian, rhs: Double) {
         multiplyEqual(angle: &lhs, with: rhs)
     }
     
     public static func *=(lhs: inout Radian, rhs: Float) {
-        multiplyEqual(angle: &lhs, with: rhs)
-    }
-    
-    public static func *=(lhs: inout Radian, rhs: Double) {
         multiplyEqual(angle: &lhs, with: rhs)
     }
     
@@ -126,15 +107,11 @@ public final class Radian: Angle, Comparable, AngleType {
     }
     #endif
     
-    public static func /(lhs: Radian, rhs: Float80) -> Radian {
+    public static func /(lhs: Radian, rhs: Double) -> Radian {
         return divide(angle: lhs, with: rhs)
     }
     
     public static func /(lhs: Radian, rhs: Float) -> Radian {
-        return divide(angle: lhs, with: rhs)
-    }
-    
-    public static func /(lhs: Radian, rhs: Double) -> Radian {
         return divide(angle: lhs, with: rhs)
     }
     
@@ -144,15 +121,11 @@ public final class Radian: Angle, Comparable, AngleType {
     }
     #endif
     
-    public static func /(lhs: Float80, rhs: Radian) -> Radian {
+    public static func /(lhs: Double, rhs: Radian) -> Radian {
         return divide(value: lhs, with: rhs)
     }
     
     public static func /(lhs: Float, rhs: Radian) -> Radian {
-        return divide(value: lhs, with: rhs)
-    }
-    
-    public static func /(lhs: Double, rhs: Radian) -> Radian {
         return divide(value: lhs, with: rhs)
     }
     
@@ -162,15 +135,11 @@ public final class Radian: Angle, Comparable, AngleType {
     }
     #endif
     
-    public static func /=(lhs: inout Radian, rhs: Float80) {
+    public static func /=(lhs: inout Radian, rhs: Double) {
         divideEqual(lhs: &lhs, rhs: rhs)
     }
     
     public static func /=(lhs: inout Radian, rhs: Float) {
-        divideEqual(lhs: &lhs, rhs: rhs)
-    }
-    
-    public static func /=(lhs: inout Radian, rhs: Double) {
         divideEqual(lhs: &lhs, rhs: rhs)
     }
     

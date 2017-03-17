@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct UnionInterval: IntervalType {
+public struct UnionInterval: IntervalType, ExpressibleByArrayLiteral {
     public private (set) var intervals: [Interval]
     
     public var lowerBoundary: IntervalBoundary? {
@@ -23,8 +23,10 @@ public struct UnionInterval: IntervalType {
         return intervals.count > 0
     }
     
-    public init(intervals: [Interval] = []) {
-        self.intervals = intervals
+    public typealias Element = Interval
+    
+    public init(arrayLiteral elements: Element...) {
+        self.intervals = elements
         mergeIntervals()
     }
     
@@ -59,7 +61,9 @@ public struct UnionInterval: IntervalType {
         return newUnion
     }
     
-    mutating func mergeIntervals() {
+    // MARK: Private functionality
+    
+    private mutating func mergeIntervals() {
         var newIntervals: [Interval] = []
         for index in 0..<intervals.count - 1 {
             let current = intervals[index]
