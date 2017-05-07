@@ -21,7 +21,7 @@ public struct Predicate {
         }
     }
     
-    public init(interval: IntervalType, value: Double) {
+    public init<I: IntervalType>(interval: I, value: Double) {
         _predicate = {
             return interval.contains(value)
         }

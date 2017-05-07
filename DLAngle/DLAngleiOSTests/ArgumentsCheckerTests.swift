@@ -30,12 +30,14 @@ class ArgumentsCheckerTests: XCTestCase {
     }
     
     func testValidRange() {
-        let checker = ArgumentsChecker(value: 0, validInterval: [-1..1])
+        let interval: Interval = [-1..1]
+        let checker = ArgumentsChecker(value: 0, validInterval: interval)
         XCTAssert(checker.check() == true, "Checker fails to validate range of valid values.")
     }
     
     func testValidRange2() {
-        let checker = ArgumentsChecker(value: -5, validInterval: [-1..1])
+        let interval: Interval = [-1..1]
+        let checker = ArgumentsChecker(value: -5, validInterval: interval)
         XCTAssert(checker.check() == false, "Checker fails to validate range of valid values.")
     }
     
@@ -50,12 +52,14 @@ class ArgumentsCheckerTests: XCTestCase {
     }
     
     func testInvalidRange() {
-        let checker = ArgumentsChecker(value: 2, invalidInterval: [0..1])
+        let interval: Interval = [0..1]
+        let checker = ArgumentsChecker(value: 2, invalidInterval: interval)
         XCTAssert(checker.check() == true, "Checker fails to validate range of invalid values.")
     }
     
     func testInvalidRange2() {
-        let checker = ArgumentsChecker(value: 0.5, invalidInterval: [0..1])
+        let interval: Interval = [-1..1]
+        let checker = ArgumentsChecker(value: 0.5, invalidInterval: interval)
         XCTAssert(checker.check() == false, "Checker fails to validate range of invalid values.")
     }
 }

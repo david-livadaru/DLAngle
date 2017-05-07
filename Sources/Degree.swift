@@ -12,7 +12,7 @@ import Foundation
 #endif
 
 /// A concrete implementation for degree angles.
-public final class Degree: Angle, Comparable, AngleType {
+public final class Degree: Angle, Comparable, NormalizedType {
     public static let normalizationValue: Double = 360
     
     // MARK: Initializers
@@ -36,7 +36,7 @@ public final class Degree: Angle, Comparable, AngleType {
         self.init(radians: radian.rawValue)
     }
     
-    // MARK: AngleType
+    // MARK: NormalizedType
     
     public func normalize() {
         normalize(by: Degree.normalizationValue)

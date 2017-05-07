@@ -17,7 +17,7 @@ class DegreeTests: XCTestCase {
     }
     
     func testConvenienceInitWithRadianAngle() {
-        let radianAngle = Radian(double: Double.pi / 2.0)
+        let radianAngle = Radian(rawValue: Double.pi / 2.0)
         let degreeAngle = Degree(radian: radianAngle)
         XCTAssert(degreeAngle.rawValue == 90.0, "Degree's conveniene init which accepts radian angle failes to convert the angle.")
     }

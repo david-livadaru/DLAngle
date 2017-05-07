@@ -25,14 +25,12 @@ public class Angle {
     }
     #endif
     
-    public static var equalityPrecision: UInt = 15 {
-        didSet {
-            let precision = Double(equalityPrecision)
-            marginOfError = Double(pow(10.0, -precision))
-        }
-    }
+    public static var equalityPrecision: UInt = 15
     
-    private static var marginOfError: Double = Double(pow(10.0, Double(equalityPrecision)))
+    private static var marginOfError: Double {
+        let precision = Double(equalityPrecision)
+        return Double(pow(10.0, -precision))
+    }
     
     // MARK: Initializers
     
@@ -59,120 +57,120 @@ public class Angle {
         }
     }
     
-    func normalized<T: Angle>(by value: Double) -> T {
-        return T(rawValue: rawValue.truncatingRemainder(dividingBy: value))
+    func normalized<A: Angle>(by value: Double) -> A {
+        return A(rawValue: rawValue.truncatingRemainder(dividingBy: value))
     }
     
     // MARK: Operations
     
-    static func add<T: Angle>(lhs: T, rhs: T) -> T {
-        return T(rawValue: lhs.rawValue + rhs.rawValue)
+    static func add<A: Angle>(lhs: A, rhs: A) -> A {
+        return A(rawValue: lhs.rawValue + rhs.rawValue)
     }
     
-    static func addEqual<T: Angle>(lhs: inout T, rhs: T) {
+    static func addEqual<A: Angle>(lhs: inout A, rhs: A) {
         lhs.rawValue += rhs.rawValue
     }
     
-    static func minus<T: Angle>(lhs: T, rhs: T) -> T {
-        return T(rawValue: lhs.rawValue - rhs.rawValue)
+    static func minus<A: Angle>(lhs: A, rhs: A) -> A {
+        return A(rawValue: lhs.rawValue - rhs.rawValue)
     }
     
-    static func minusEqual<T: Angle>(lhs: inout T, rhs: T) {
+    static func minusEqual<A: Angle>(lhs: inout A, rhs: A) {
         lhs.rawValue -= rhs.rawValue
     }
     
-    static func multiply<T: Angle>(angle: T, with value: Double) -> T {
-        return T(rawValue: angle.rawValue * value)
+    static func multiply<A: Angle>(angle: A, with value: Double) -> A {
+        return A(rawValue: angle.rawValue * value)
     }
     
-    static func multiply<T: Angle>(angle: T, with value: Float) -> T {
-        return T(rawValue: angle.rawValue * Double(value))
-    }
-    
-    #if !os(Linux)
-    static func multiply<T: Angle>(angle: T, with value: CGFloat) -> T {
-        return T(rawValue: angle.rawValue * Double(Double(value)))
-    }
-    #endif
-    
-    static func multiply<T: Angle>(value: Double, with angle: T) -> T {
-        return T(rawValue: value * angle.rawValue)
-    }
-    
-    static func multiply<T: Angle>(value: Float, with angle: T) -> T {
-        return T(rawValue: Double(value) * angle.rawValue)
+    static func multiply<A: Angle>(angle: A, with value: Float) -> A {
+        return A(rawValue: angle.rawValue * Double(value))
     }
     
     #if !os(Linux)
-    static func multiply<T: Angle>(value: CGFloat, with angle: T) -> T {
-        return T(rawValue: Double(value) * angle.rawValue)
+    static func multiply<A: Angle>(angle: A, with value: CGFloat) -> A {
+        return A(rawValue: angle.rawValue * Double(Double(value)))
     }
     #endif
     
-    static func multiplyEqual<T: Angle>(angle: inout T, with value: Double) {
+    static func multiply<A: Angle>(value: Double, with angle: A) -> A {
+        return A(rawValue: value * angle.rawValue)
+    }
+    
+    static func multiply<A: Angle>(value: Float, with angle: A) -> A {
+        return A(rawValue: Double(value) * angle.rawValue)
+    }
+    
+    #if !os(Linux)
+    static func multiply<A: Angle>(value: CGFloat, with angle: A) -> A {
+        return A(rawValue: Double(value) * angle.rawValue)
+    }
+    #endif
+    
+    static func multiplyEqual<A: Angle>(angle: inout A, with value: Double) {
         angle.rawValue = angle.rawValue * value
     }
     
-    static func multiplyEqual<T: Angle>(angle: inout T, with value: Float) {
+    static func multiplyEqual<A: Angle>(angle: inout A, with value: Float) {
         angle.rawValue = angle.rawValue * Double(value)
     }
     
     #if !os(Linux)
-    static func multiplyEqual<T: Angle>(angle: inout T, with value: CGFloat) {
+    static func multiplyEqual<A: Angle>(angle: inout A, with value: CGFloat) {
         angle.rawValue = angle.rawValue * Double(value)
     }
     #endif
     
-    static func divide<T: Angle>(angle: T, with value: Double) -> T {
-        return T(rawValue: angle.rawValue / value)
+    static func divide<A: Angle>(angle: A, with value: Double) -> A {
+        return A(rawValue: angle.rawValue / value)
     }
     
-    static func divide<T: Angle>(angle: T, with value: Float) -> T {
-        return T(rawValue: angle.rawValue / Double(value))
-    }
-    
-    #if !os(Linux)
-    static func divide<T: Angle>(angle: T, with value: CGFloat) -> T {
-        return T(rawValue: angle.rawValue / Double(value))
-    }
-    #endif
-    
-    static func divide<T: Angle>(value: Double, with angle: T) -> T {
-        return T(rawValue: value / angle.rawValue)
-    }
-    
-    static func divide<T: Angle>(value: Float, with angle: T) -> T {
-        return T(rawValue: Double(value) / angle.rawValue)
+    static func divide<A: Angle>(angle: A, with value: Float) -> A {
+        return A(rawValue: angle.rawValue / Double(value))
     }
     
     #if !os(Linux)
-    static func divide<T: Angle>(value: CGFloat, with angle: T) -> T {
-        return T(rawValue: Double(value) / angle.rawValue)
+    static func divide<A: Angle>(angle: A, with value: CGFloat) -> A {
+        return A(rawValue: angle.rawValue / Double(value))
     }
     #endif
     
-    static func divideEqual<T: Angle>(lhs: inout T, rhs: Double) {
+    static func divide<A: Angle>(value: Double, with angle: A) -> A {
+        return A(rawValue: value / angle.rawValue)
+    }
+    
+    static func divide<A: Angle>(value: Float, with angle: A) -> A {
+        return A(rawValue: Double(value) / angle.rawValue)
+    }
+    
+    #if !os(Linux)
+    static func divide<A: Angle>(value: CGFloat, with angle: A) -> A {
+        return A(rawValue: Double(value) / angle.rawValue)
+    }
+    #endif
+    
+    static func divideEqual<A: Angle>(lhs: inout A, rhs: Double) {
         lhs.rawValue = lhs.rawValue / rhs
     }
     
-    static func divideEqual<T: Angle>(lhs: inout T, rhs: Float) {
+    static func divideEqual<A: Angle>(lhs: inout A, rhs: Float) {
         lhs.rawValue = lhs.rawValue / Double(rhs)
     }
     
     #if !os(Linux)
-    static func divideEqual<T: Angle>(lhs: inout T, rhs: CGFloat) {
+    static func divideEqual<A: Angle>(lhs: inout A, rhs: CGFloat) {
         lhs.rawValue = lhs.rawValue / Double(rhs)
     }
     #endif
     
     // MARK: Equality and Comparison
     
-    static func equal<T: Angle>(lhs: T, rhs: T) -> Bool {
+    static func equal<A: Angle>(lhs: A, rhs: A) -> Bool {
         let difference = abs(lhs.rawValue - rhs.rawValue)
         return difference < marginOfError
     }
     
-    static func lessThan<T: Angle>(lhs: T, rhs: T) -> Bool {
+    static func lessThan<A: Angle>(lhs: A, rhs: A) -> Bool {
         return lhs.rawValue < rhs.rawValue
     }
 }

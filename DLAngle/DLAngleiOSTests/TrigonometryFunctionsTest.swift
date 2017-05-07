@@ -9,17 +9,17 @@
 import XCTest
 @testable import DLAngle_iOS
 
-extension Float80 {
-    func isEqual(to other: Float80) -> Bool {
+extension Double {
+    func isEqual(to other: Double) -> Bool {
         let diff = self - other
-        return diff < Float80(pow(10.0, Double(Angle.equalityPrecision)))
+        return diff < Double(pow(10.0, Double(Angle.equalityPrecision)))
     }
 }
 
 class TrigonometryFunctionsTest: XCTestCase {
     func testSineAsinFunction() {
         let angle = Radian(degrees: 45.0)
-        let value: Float80 = Trigonometry.sin(angle)
+        let value: Double = Trigonometry.sin(angle)
         do {
             let otherAngle: Radian = try Trigonometry.asin(value)
             
@@ -32,7 +32,7 @@ class TrigonometryFunctionsTest: XCTestCase {
     func testRadianSineAsinFunction() {
         do {
             let angle = try Radian(asin: 0.5)
-            let sinValue: Float80 = angle.sin()
+            let sinValue: Double = angle.sin()
             
             XCTAssert(sinValue.isEqual(to: 0.5), failMessage(testing: .sin, and: .asin))
         } catch {
@@ -42,7 +42,7 @@ class TrigonometryFunctionsTest: XCTestCase {
     
     func testCosineAcosinFunction() {
         let angle = Radian(degrees: 45.0)
-        let value: Float80 = Trigonometry.cos(angle)
+        let value: Double = Trigonometry.cos(angle)
         do {
             let otherAngle: Radian = try Trigonometry.acos(value)
             
@@ -55,7 +55,7 @@ class TrigonometryFunctionsTest: XCTestCase {
     func testRadianCosAcosFunction() {
         do {
             let angle = try Radian(acos: 0.75)
-            let cosValue: Float80 = angle.cos()
+            let cosValue: Double = angle.cos()
             
             XCTAssert(cosValue.isEqual(to: 0.75), failMessage(testing: .cos, and: .acos))
         } catch {
@@ -66,7 +66,7 @@ class TrigonometryFunctionsTest: XCTestCase {
     func testTanAtanFunction() {
         let angle = Radian(degrees: 70.0)
         do {
-            let value: Float80 = try Trigonometry.tan(angle)
+            let value: Double = try Trigonometry.tan(angle)
             let otherAngle: Radian = Trigonometry.atan(value)
             
             XCTAssert(angle == otherAngle, failMessage(testing: .tan, and: .atan))
@@ -78,7 +78,7 @@ class TrigonometryFunctionsTest: XCTestCase {
     func testRadianTanAtanFunction() {
         do {
             let angle = Radian(atan: 1.0)
-            let tanValue: Float80 = try angle.tan()
+            let tanValue: Double = try angle.tan()
             
             XCTAssert(tanValue.isEqual(to: 1.0), failMessage(testing: .sin, and: .asin))
         } catch {
@@ -89,7 +89,7 @@ class TrigonometryFunctionsTest: XCTestCase {
     func testCotAcotFunction() {
 //        let angle = Radian(degrees: 20.0)
 //        do {
-//            let value: Float80 = try Trigonometry.cot(angle)
+//            let value: Double = try Trigonometry.cot(angle)
 //            let otherAngle: Radian = Trigonometry.acot(value)
 //            
 //            XCTAssert(angle == otherAngle, failMessage(testing: .tan, and: .atan))
@@ -101,7 +101,7 @@ class TrigonometryFunctionsTest: XCTestCase {
 //    func testRadianTanAtanFunction() {
 //        do {
 //            let angle = Radian(atan: 1.0)
-//            let tanValue: Float80 = try angle.tan()
+//            let tanValue: Double = try angle.tan()
 //            
 //            XCTAssert(tanValue.isEqual(to: 1.0), failMessage(testing: .sin, and: .asin))
 //        } catch {
@@ -111,14 +111,14 @@ class TrigonometryFunctionsTest: XCTestCase {
     
     // MARK: Fail messages
     
-    private func failMessage(testing inverseFunction: TrigonometricArgumentsChecker.TrigonometricFunction,
-                             and function: TrigonometricArgumentsChecker.TrigonometricFunction) -> String {
+    private func failMessage(testing inverseFunction: TrigonometricFunction,
+                             and function: TrigonometricFunction) -> String {
         return "\(function.rawValue.capitalized) or \(inverseFunction) function is not computed correctly."
     }
     
     private func failMessage(forCatched error: Error,
-                             testing inverseFunction: TrigonometricArgumentsChecker.TrigonometricFunction,
-                             and function: TrigonometricArgumentsChecker.TrigonometricFunction) -> String {
+                             testing inverseFunction: TrigonometricFunction,
+                             and function: TrigonometricFunction) -> String {
         return "Failed to compute \(function) or \(inverseFunction) due to error: \(error.localizedDescription)"
     }
 }

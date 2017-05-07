@@ -13,7 +13,7 @@ import Foundation
 
 /// A concrete implementation for radian angles. 
 /// Provides convience initializers and functions for trigonometric functions.
-public final class Radian: Angle, Comparable, AngleType {
+public final class Radian: Angle, Comparable, NormalizedType {
     public static let normalizationValue: Double = 2 * Double.pi
     
     // MARK: Initializers
@@ -37,7 +37,7 @@ public final class Radian: Angle, Comparable, AngleType {
         self.init(degrees: degree.rawValue)
     }
     
-    // MARK: AngleType
+    // MARK: NormalizedType
     
     public func normalize() {
         normalize(by: Radian.normalizationValue)

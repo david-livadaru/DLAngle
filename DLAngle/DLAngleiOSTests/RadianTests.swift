@@ -12,47 +12,47 @@ import XCTest
 class RadianTests: XCTestCase {
     func testConvenienceInitWithRawDegrees() {
         let radianAngle = Radian(degrees: 90.0)
-        XCTAssert(radianAngle.rawValue == Float80.pi / 2.0, "Radian's convenience init which accepts degrees as raw value fails to convert the angle.")
+        XCTAssert(radianAngle.rawValue == Double.pi / 2.0, "Radian's convenience init which accepts degrees as raw value fails to convert the angle.")
     }
     
     func testConvenienceInitWithRadianAngle() {
         let degreeAngle = Degree(rawValue: 45.0)
         let radianAngle = Radian(degree: degreeAngle)
-        XCTAssert(radianAngle.rawValue == Float80.pi / 4.0, "Radian's conveniene init which accepts degree angle failes to convert the angle.")
+        XCTAssert(radianAngle.rawValue == Double.pi / 4.0, "Radian's conveniene init which accepts degree angle failes to convert the angle.")
     }
     
     func testPlusOperation() {
-        let firstAngle = Radian(double: Double.pi / 4.0)
-        let secondAngle = Radian(double: Double.pi / 4.0)
+        let firstAngle = Radian(rawValue: Double.pi / 4.0)
+        let secondAngle = Radian(rawValue: Double.pi / 4.0)
         let resultAngle = firstAngle + secondAngle
-        XCTAssert(resultAngle.rawValue == Float80.pi / 2.0, "Radian's '+' operator doesn't add values correctly.")
+        XCTAssert(resultAngle.rawValue == Double.pi / 2.0, "Radian's '+' operator doesn't add values correctly.")
     }
 
     func testPlusEqualOperation() {
-        var firstAngle = Radian(double: Double.pi / 6.0)
-        let secondAngle = Radian(double: Double.pi / 12.0)
+        var firstAngle = Radian(rawValue: Double.pi / 6.0)
+        let secondAngle = Radian(rawValue: Double.pi / 12.0)
         firstAngle += secondAngle
-        XCTAssert(firstAngle.double == Double.pi / 4.0, "Radian's '+=' operator doesn't add values correctly.")
+        XCTAssert(firstAngle.rawValue == Double.pi / 4.0, "Radian's '+=' operator doesn't add values correctly.")
     }
 
     func testMinusOperation() {
-        let firstAngle = Radian(double: 3.0 * Double.pi / 4.0)
-        let secondAngle = Radian(double: Double.pi / 4.0)
+        let firstAngle = Radian(rawValue: 3.0 * Double.pi / 4.0)
+        let secondAngle = Radian(rawValue: Double.pi / 4.0)
         let resultAngle = firstAngle - secondAngle
-        XCTAssert(resultAngle.double == Double.pi / 2.0, "Radian's '-' operator doesn't subtracts values correctly.")
+        XCTAssert(resultAngle.rawValue == Double.pi / 2.0, "Radian's '-' operator doesn't subtracts values correctly.")
     }
     
     func testMinusEqualOperation() {
-        var firstAngle = Radian(double: 2.0 * Double.pi)
-        let secondAngle = Radian(double: Double.pi / 2.0)
+        var firstAngle = Radian(rawValue: 2.0 * Double.pi)
+        let secondAngle = Radian(rawValue: Double.pi / 2.0)
         firstAngle -= secondAngle
-        XCTAssert(firstAngle.double == 3.0 * Double.pi / 2.0, "Radian's '-=' operator doesn't subtracts values correctly.")
+        XCTAssert(firstAngle.rawValue == 3.0 * Double.pi / 2.0, "Radian's '-=' operator doesn't subtracts values correctly.")
     }
     
     func testMultiplicationOperation() {
-        let angle = Radian(double: Double.pi / 2)
+        let angle = Radian(rawValue: Double.pi / 2)
         let resultAngle = angle * 2.0
-        XCTAssert(resultAngle.double == Double.pi, "Radian's '*' operator doesn't multiply values correctly.")
+        XCTAssert(resultAngle.rawValue == Double.pi, "Radian's '*' operator doesn't multiply values correctly.")
     }
     
     func testValueMultipliedWithAngleOperation() {
@@ -74,15 +74,15 @@ class RadianTests: XCTestCase {
     }
     
     func testValueDevideAngleOperation() {
-        let angle = Radian(double: Double.pi)
+        let angle = Radian(rawValue: Double.pi)
         let resultAngle = 1.0 / angle
-        XCTAssert(resultAngle.double == M_1_PI, "Radian's '/' operator doesn't devide value to angle correctly.")
+        XCTAssert(resultAngle.rawValue == M_1_PI, "Radian's '/' operator doesn't devide value to angle correctly.")
     }
 
     func testValueDevideAngleOperation2() {
-        let angle = Radian(double: Double.pi)
+        let angle = Radian(rawValue: Double.pi)
         let resultAngle = 2.0 / angle
-        XCTAssert(resultAngle.double == M_2_PI, "Radian's '/' operator doesn't devide value to angle correctly.")
+        XCTAssert(resultAngle.rawValue == M_2_PI, "Radian's '/' operator doesn't devide value to angle correctly.")
     }
     
     func testDivideEqualOperation() {
@@ -92,20 +92,20 @@ class RadianTests: XCTestCase {
     }
     
     func testNormalization() {
-        let angle = Radian(rawValue: 2 * Float80.pi)
+        let angle = Radian(rawValue: 2 * Double.pi)
         angle.normalize()
         XCTAssert(angle == Radian(rawValue: 0.0), "Radian's does not normalize values correctly.")
     }
     
     func testSecondNormalization() {
-        let angle = Radian(rawValue: 5 * Float80.pi / 2)
+        let angle = Radian(rawValue: 5 * Double.pi / 2)
         angle.normalize()
-        XCTAssert(angle == Radian(rawValue: Float80.pi / 2), "Radian's does not normalize values correctly.")
+        XCTAssert(angle == Radian(rawValue: Double.pi / 2), "Radian's does not normalize values correctly.")
     }
     
     func testNormalizationForNegativeAngle() {
-        let angle = Radian(rawValue: -Float80.pi)
+        let angle = Radian(rawValue: -Double.pi)
         angle.normalize()
-        XCTAssert(angle.rawValue == Float80.pi, "Radian's does not normalize negative values correctly.")
+        XCTAssert(angle.rawValue == Double.pi, "Radian's does not normalize negative values correctly.")
     }
 }

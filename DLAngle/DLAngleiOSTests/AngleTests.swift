@@ -11,7 +11,7 @@ import XCTest
 
 class AngleTests: XCTestCase {
     func testConstructor1() {
-        let rawValue: Float80 = 25.0
+        let rawValue: Double = 25.0
         let angle = Angle(rawValue: rawValue)
         XCTAssert(angle.rawValue == rawValue, "Angle constructor is not setting rawValue property properly.")
     }
@@ -24,8 +24,8 @@ class AngleTests: XCTestCase {
     
     func testConstructor3() {
         let rawValue: Double = 25.0
-        let angle = Angle(double: rawValue)
-        XCTAssert(angle.double == rawValue, "Angle constructor is not setting rawValue property properly.")
+        let angle = Angle(rawValue: rawValue)
+        XCTAssert(angle.rawValue == rawValue, "Angle constructor is not setting rawValue property properly.")
     }
     
     func testConstructor4() {

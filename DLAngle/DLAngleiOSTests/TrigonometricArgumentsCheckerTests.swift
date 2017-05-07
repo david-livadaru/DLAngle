@@ -65,7 +65,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
     
     func testTanCheck() {
         do {
-            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Float80.pi / 2), function: .tan)
+            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Double.pi / 2), function: .tan)
             XCTAssert(checker.check() == false, failMessage(testing: .tan))
         } catch {
             XCTFail(failMessage(forCatched: error, testing: .tan))
@@ -74,7 +74,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
     
     func testTanCheck2() {
         do {
-            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: 3 * Float80.pi / 2), function: .tan)
+            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: 3 * Double.pi / 2), function: .tan)
             XCTAssert(checker.check() == false, failMessage(testing: .tan))
         } catch {
             XCTFail(failMessage(forCatched: error, testing: .tan))
@@ -83,7 +83,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
     
     func testTanCheck3() {
         do {
-            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Float80.pi), function: .tan)
+            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Double.pi), function: .tan)
             XCTAssert(checker.check(), failMessage(testing: .tan))
         } catch {
             XCTFail(failMessage(forCatched: error, testing: .tan))
@@ -101,7 +101,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
     
     func testCotCheck2() {
         do {
-            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Float80.pi), function: .cot)
+            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Double.pi), function: .cot)
             XCTAssert(checker.check() == false, failMessage(testing: .cot))
         } catch {
             XCTFail(failMessage(forCatched: error, testing: .cot))
@@ -110,7 +110,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
     
     func testCotCheck3() {
         do {
-            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Float80.pi / 2), function: .cot)
+            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Double.pi / 2), function: .cot)
             XCTAssert(checker.check(), failMessage(testing: .cot))
         } catch {
             XCTFail(failMessage(forCatched: error, testing: .cot))
@@ -119,7 +119,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
     
     func testSecCheck() {
         do {
-            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Float80.pi / 2), function: .sec)
+            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Double.pi / 2), function: .sec)
             XCTAssert(checker.check() == false, failMessage(testing: .sec))
         } catch {
             XCTFail(failMessage(forCatched: error, testing: .sec))
@@ -128,7 +128,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
     
     func testSecCheck2() {
         do {
-            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: 3 * Float80.pi / 2), function: .sec)
+            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: 3 * Double.pi / 2), function: .sec)
             XCTAssert(checker.check() == false, failMessage(testing: .sec))
         } catch {
             XCTFail(failMessage(forCatched: error, testing: .sec))
@@ -137,7 +137,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
     
     func testSecCheck3() {
         do {
-            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Float80.pi), function: .sec)
+            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Double.pi), function: .sec)
             XCTAssert(checker.check(), failMessage(testing: .sec))
         } catch {
             XCTFail(failMessage(forCatched: error, testing: .sec))
@@ -146,7 +146,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
     
     func testCosecCheck() {
         do {
-            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Float80.pi / 2), function: .cosec)
+            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Double.pi / 2), function: .cosec)
             XCTAssert(checker.check(), failMessage(testing: .cosec))
         } catch {
             XCTFail(failMessage(forCatched: error, testing: .cosec))
@@ -155,7 +155,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
     
     func testCosecCheck2() {
         do {
-            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Float80.pi), function: .cosec)
+            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Double.pi), function: .cosec)
             XCTAssert(checker.check() == false, failMessage(testing: .cosec))
         } catch {
             XCTFail(failMessage(forCatched: error, testing: .cosec))
@@ -164,7 +164,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
     
     func testCosecCheck3() {
         do {
-            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Float80.pi / 2), function: .cosec)
+            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Double.pi / 2), function: .cosec)
             XCTAssert(checker.check(), failMessage(testing: .cosec))
         } catch {
             XCTFail(failMessage(forCatched: error, testing: .cosec))
@@ -173,12 +173,12 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
     
     // MARK: Fail messages
     
-    private func failMessage(testing function: TrigonometricArgumentsChecker.TrigonometricFunction) -> String {
+    private func failMessage(testing function: TrigonometricFunction) -> String {
         return "Trigonometric checker failed to check value for \(function) function."
     }
     
     private func failMessage(forCatched error: Error,
-                         testing function: TrigonometricArgumentsChecker.TrigonometricFunction) -> String {
+                         testing function: TrigonometricFunction) -> String {
         return "\(function.rawValue.capitalized) check failed due to error \(error.localizedDescription)"
     }
 }
