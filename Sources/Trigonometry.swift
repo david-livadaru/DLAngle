@@ -233,10 +233,12 @@ public struct Trigonometry {
     }
     
     public static func acot(_ value: Double) throws -> Radian {
+        try validate(value: value, for: .acot)
         return Radian(rawValue: acot(value))
     }
     
     public static func acot(_ value: Float) throws -> Radian {
+        try validate(value: value, for: .acot)
         return Radian(rawValue: acot(Double(value)))
     }
     
@@ -249,6 +251,7 @@ public struct Trigonometry {
     }
     
     public static func acot(_ value: CGFloat) throws -> Radian {
+        try validate(value: value, for: .acot)
         return Radian(cgFloat: acot(value))
     }
     #endif
