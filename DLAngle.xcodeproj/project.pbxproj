@@ -12,6 +12,7 @@
 		63252D4D1E5A3B8800324B66 /* DLAngle_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 63252D4B1E5A3B8800324B66 /* DLAngle_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63252D5A1E5A3BA600324B66 /* DLAngle_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 63252D581E5A3BA600324B66 /* DLAngle_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63271FB11FCA047E00CBF9DD /* DLInterval_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639220BF1FCA000D003FB121 /* DLInterval_iOS.framework */; };
+		6348975C1FCA08D5001AC50A /* DLAngle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63252D2F1E5A3B6400324B66 /* DLAngle_iOS.framework */; };
 		639220481FC9FD82003FB121 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220321FC9FD82003FB121 /* Angle.swift */; };
 		639220491FC9FD82003FB121 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220321FC9FD82003FB121 /* Angle.swift */; };
 		6392204A1FC9FD82003FB121 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220321FC9FD82003FB121 /* Angle.swift */; };
@@ -153,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6348975C1FCA08D5001AC50A /* DLAngle_iOS.framework in Frameworks */,
 				63271FB11FCA047E00CBF9DD /* DLInterval_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -931,7 +933,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = DLAngleiOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = org.DLAngleiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -947,7 +949,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = DLAngleiOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = org.DLAngleiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
