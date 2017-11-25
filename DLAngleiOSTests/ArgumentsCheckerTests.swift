@@ -7,6 +7,8 @@
 //
 
 import XCTest
+@testable import DLAngle_iOS
+import DLInterval_iOS
 
 class ArgumentsCheckerTests: XCTestCase {
     func testValidValues() {

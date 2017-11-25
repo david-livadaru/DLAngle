@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import DLAngle_iOS
 
 class TrigonometricArgumentsCheckerTests: XCTestCase {
     func testAsinCheck() {

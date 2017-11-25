@@ -11,6 +11,7 @@
 		63252D401E5A3B7600324B66 /* DLAngle_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 63252D3E1E5A3B7600324B66 /* DLAngle_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63252D4D1E5A3B8800324B66 /* DLAngle_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 63252D4B1E5A3B8800324B66 /* DLAngle_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63252D5A1E5A3BA600324B66 /* DLAngle_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 63252D581E5A3BA600324B66 /* DLAngle_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63271FB11FCA047E00CBF9DD /* DLInterval_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639220BF1FCA000D003FB121 /* DLInterval_iOS.framework */; };
 		639220481FC9FD82003FB121 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220321FC9FD82003FB121 /* Angle.swift */; };
 		639220491FC9FD82003FB121 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220321FC9FD82003FB121 /* Angle.swift */; };
 		6392204A1FC9FD82003FB121 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220321FC9FD82003FB121 /* Angle.swift */; };
@@ -152,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63271FB11FCA047E00CBF9DD /* DLInterval_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -924,6 +926,10 @@
 		639D7A0C1E58DAB2008D10EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DLAngleiOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.DLAngleiOSTests;
@@ -935,6 +941,10 @@
 		639D7A0D1E58DAB2008D10EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DLAngleiOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.DLAngleiOSTests;
