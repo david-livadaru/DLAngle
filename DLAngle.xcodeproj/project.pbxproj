@@ -207,14 +207,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		639220301FC9FD65003FB121 /* DLAngle */ = {
-			isa = PBXGroup;
-			children = (
-				639220311FC9FD82003FB121 /* Sources */,
-			);
-			path = DLAngle;
-			sourceTree = "<group>";
-		};
 		639220311FC9FD82003FB121 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,7 +254,7 @@
 		639D79321E588865008D10EF = {
 			isa = PBXGroup;
 			children = (
-				639220301FC9FD65003FB121 /* DLAngle */,
+				639220311FC9FD82003FB121 /* Sources */,
 				63252D301E5A3B6400324B66 /* DLAngle_iOS */,
 				63252D3D1E5A3B7600324B66 /* DLAngle_watchOS */,
 				63252D4A1E5A3B8800324B66 /* DLAngle_tvOS */,
