@@ -9,9 +9,10 @@
 import Foundation
 
 public struct Predicate {
-    private let _predicate: (Void) -> Bool
+    public typealias Closure = () -> Bool
+    private let _predicate: Closure
     
-    public init(closure predicate: @escaping (Void) -> Bool) {
+    public init(closure predicate: @escaping Closure) {
         _predicate = predicate
     }
     
