@@ -1,0 +1,1018 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		632070331E75D3FF00ACD30B /* IntervalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070321E75D3FF00ACD30B /* IntervalTests.swift */; };
+		63252D331E5A3B6400324B66 /* DLAngle_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 63252D311E5A3B6400324B66 /* DLAngle_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63252D401E5A3B7600324B66 /* DLAngle_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 63252D3E1E5A3B7600324B66 /* DLAngle_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63252D4D1E5A3B8800324B66 /* DLAngle_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 63252D4B1E5A3B8800324B66 /* DLAngle_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63252D5A1E5A3BA600324B66 /* DLAngle_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 63252D581E5A3BA600324B66 /* DLAngle_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		639220481FC9FD82003FB121 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220321FC9FD82003FB121 /* Angle.swift */; };
+		639220491FC9FD82003FB121 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220321FC9FD82003FB121 /* Angle.swift */; };
+		6392204A1FC9FD82003FB121 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220321FC9FD82003FB121 /* Angle.swift */; };
+		6392204B1FC9FD82003FB121 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220321FC9FD82003FB121 /* Angle.swift */; };
+		6392204C1FC9FD82003FB121 /* AngleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220331FC9FD82003FB121 /* AngleError.swift */; };
+		6392204D1FC9FD82003FB121 /* AngleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220331FC9FD82003FB121 /* AngleError.swift */; };
+		6392204E1FC9FD82003FB121 /* AngleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220331FC9FD82003FB121 /* AngleError.swift */; };
+		6392204F1FC9FD82003FB121 /* AngleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220331FC9FD82003FB121 /* AngleError.swift */; };
+		639220581FC9FD82003FB121 /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220361FC9FD82003FB121 /* Degree.swift */; };
+		639220591FC9FD82003FB121 /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220361FC9FD82003FB121 /* Degree.swift */; };
+		6392205A1FC9FD82003FB121 /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220361FC9FD82003FB121 /* Degree.swift */; };
+		6392205B1FC9FD82003FB121 /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220361FC9FD82003FB121 /* Degree.swift */; };
+		6392206C1FC9FD82003FB121 /* GenericTrigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392203B1FC9FD82003FB121 /* GenericTrigonometry.swift */; };
+		6392206D1FC9FD82003FB121 /* GenericTrigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392203B1FC9FD82003FB121 /* GenericTrigonometry.swift */; };
+		6392206E1FC9FD82003FB121 /* GenericTrigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392203B1FC9FD82003FB121 /* GenericTrigonometry.swift */; };
+		6392206F1FC9FD82003FB121 /* GenericTrigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392203B1FC9FD82003FB121 /* GenericTrigonometry.swift */; };
+		639220801FC9FD82003FB121 /* NormalizedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220401FC9FD82003FB121 /* NormalizedType.swift */; };
+		639220811FC9FD82003FB121 /* NormalizedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220401FC9FD82003FB121 /* NormalizedType.swift */; };
+		639220821FC9FD82003FB121 /* NormalizedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220401FC9FD82003FB121 /* NormalizedType.swift */; };
+		639220831FC9FD82003FB121 /* NormalizedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220401FC9FD82003FB121 /* NormalizedType.swift */; };
+		639220881FC9FD82003FB121 /* Radian+Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220421FC9FD82003FB121 /* Radian+Trigonometry.swift */; };
+		639220891FC9FD82003FB121 /* Radian+Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220421FC9FD82003FB121 /* Radian+Trigonometry.swift */; };
+		6392208A1FC9FD82003FB121 /* Radian+Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220421FC9FD82003FB121 /* Radian+Trigonometry.swift */; };
+		6392208B1FC9FD82003FB121 /* Radian+Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220421FC9FD82003FB121 /* Radian+Trigonometry.swift */; };
+		6392208C1FC9FD82003FB121 /* Radian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220431FC9FD82003FB121 /* Radian.swift */; };
+		6392208D1FC9FD82003FB121 /* Radian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220431FC9FD82003FB121 /* Radian.swift */; };
+		6392208E1FC9FD82003FB121 /* Radian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220431FC9FD82003FB121 /* Radian.swift */; };
+		6392208F1FC9FD82003FB121 /* Radian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220431FC9FD82003FB121 /* Radian.swift */; };
+		639220981FC9FD82003FB121 /* Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220461FC9FD82003FB121 /* Trigonometry.swift */; };
+		639220991FC9FD82003FB121 /* Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220461FC9FD82003FB121 /* Trigonometry.swift */; };
+		6392209A1FC9FD82003FB121 /* Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220461FC9FD82003FB121 /* Trigonometry.swift */; };
+		6392209B1FC9FD82003FB121 /* Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220461FC9FD82003FB121 /* Trigonometry.swift */; };
+		639220AC1FC9FE60003FB121 /* ArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220A81FC9FE60003FB121 /* ArgumentsChecker.swift */; };
+		639220AD1FC9FE60003FB121 /* ArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220A81FC9FE60003FB121 /* ArgumentsChecker.swift */; };
+		639220AE1FC9FE60003FB121 /* ArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220A81FC9FE60003FB121 /* ArgumentsChecker.swift */; };
+		639220AF1FC9FE60003FB121 /* ArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220A81FC9FE60003FB121 /* ArgumentsChecker.swift */; };
+		639220B01FC9FE60003FB121 /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220A91FC9FE60003FB121 /* Predicate.swift */; };
+		639220B11FC9FE60003FB121 /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220A91FC9FE60003FB121 /* Predicate.swift */; };
+		639220B21FC9FE60003FB121 /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220A91FC9FE60003FB121 /* Predicate.swift */; };
+		639220B31FC9FE60003FB121 /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220A91FC9FE60003FB121 /* Predicate.swift */; };
+		639220B41FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220AA1FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift */; };
+		639220B51FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220AA1FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift */; };
+		639220B61FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220AA1FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift */; };
+		639220B71FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220AA1FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift */; };
+		639220B81FC9FE60003FB121 /* TrigonometricFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220AB1FC9FE60003FB121 /* TrigonometricFunction.swift */; };
+		639220B91FC9FE60003FB121 /* TrigonometricFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220AB1FC9FE60003FB121 /* TrigonometricFunction.swift */; };
+		639220BA1FC9FE60003FB121 /* TrigonometricFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220AB1FC9FE60003FB121 /* TrigonometricFunction.swift */; };
+		639220BB1FC9FE60003FB121 /* TrigonometricFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220AB1FC9FE60003FB121 /* TrigonometricFunction.swift */; };
+		639220C01FCA000D003FB121 /* DLInterval_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639220BF1FCA000D003FB121 /* DLInterval_iOS.framework */; };
+		639220C21FCA0018003FB121 /* DLInterval_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639220C11FCA0018003FB121 /* DLInterval_watchOS.framework */; };
+		639220C41FCA001C003FB121 /* DLInterval_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639220C31FCA001C003FB121 /* DLInterval_tvOS.framework */; };
+		639220C61FCA0023003FB121 /* DLInterval_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639220C51FCA0022003FB121 /* DLInterval_macOS.framework */; };
+		639220C81FCA0134003FB121 /* IntervalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220C71FCA0134003FB121 /* IntervalType.swift */; };
+		639220C91FCA0134003FB121 /* IntervalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220C71FCA0134003FB121 /* IntervalType.swift */; };
+		639220CA1FCA0134003FB121 /* IntervalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220C71FCA0134003FB121 /* IntervalType.swift */; };
+		639220CB1FCA0134003FB121 /* IntervalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220C71FCA0134003FB121 /* IntervalType.swift */; };
+		639D7A0F1E58DADF008D10EF /* AngleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D7A0E1E58DADF008D10EF /* AngleTests.swift */; };
+		639D7A161E58DE2B008D10EF /* DegreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D7A151E58DE2B008D10EF /* DegreeTests.swift */; };
+		639D7A181E58F1E6008D10EF /* RadianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D7A171E58F1E6008D10EF /* RadianTests.swift */; };
+		63F687411E74348100E6CA13 /* ArgumentsCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F687401E74348100E6CA13 /* ArgumentsCheckerTests.swift */; };
+		63F687431E74349200E6CA13 /* TrigonometricArgumentsCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F687421E74349200E6CA13 /* TrigonometricArgumentsCheckerTests.swift */; };
+		63F7BE2B1E58F84400708BAF /* TrigonometryFunctionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F7BE2A1E58F84400708BAF /* TrigonometryFunctionsTest.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		632070321E75D3FF00ACD30B /* IntervalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalTests.swift; sourceTree = "<group>"; };
+		63252D2F1E5A3B6400324B66 /* DLAngle_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLAngle_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63252D311E5A3B6400324B66 /* DLAngle_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAngle_iOS.h; sourceTree = "<group>"; };
+		63252D321E5A3B6400324B66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63252D3C1E5A3B7600324B66 /* DLAngle_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLAngle_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63252D3E1E5A3B7600324B66 /* DLAngle_watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAngle_watchOS.h; sourceTree = "<group>"; };
+		63252D3F1E5A3B7600324B66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63252D491E5A3B8800324B66 /* DLAngle_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLAngle_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63252D4B1E5A3B8800324B66 /* DLAngle_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAngle_tvOS.h; sourceTree = "<group>"; };
+		63252D4C1E5A3B8800324B66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63252D561E5A3BA600324B66 /* DLAngle_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLAngle_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63252D581E5A3BA600324B66 /* DLAngle_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAngle_macOS.h; sourceTree = "<group>"; };
+		63252D591E5A3BA600324B66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		639220321FC9FD82003FB121 /* Angle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
+		639220331FC9FD82003FB121 /* AngleError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleError.swift; sourceTree = "<group>"; };
+		639220361FC9FD82003FB121 /* Degree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Degree.swift; sourceTree = "<group>"; };
+		6392203B1FC9FD82003FB121 /* GenericTrigonometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTrigonometry.swift; sourceTree = "<group>"; };
+		639220401FC9FD82003FB121 /* NormalizedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalizedType.swift; sourceTree = "<group>"; };
+		639220421FC9FD82003FB121 /* Radian+Trigonometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Radian+Trigonometry.swift"; sourceTree = "<group>"; };
+		639220431FC9FD82003FB121 /* Radian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Radian.swift; sourceTree = "<group>"; };
+		639220461FC9FD82003FB121 /* Trigonometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigonometry.swift; sourceTree = "<group>"; };
+		639220A81FC9FE60003FB121 /* ArgumentsChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentsChecker.swift; sourceTree = "<group>"; };
+		639220A91FC9FE60003FB121 /* Predicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predicate.swift; sourceTree = "<group>"; };
+		639220AA1FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrigonometricArgumentsChecker.swift; sourceTree = "<group>"; };
+		639220AB1FC9FE60003FB121 /* TrigonometricFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrigonometricFunction.swift; sourceTree = "<group>"; };
+		639220BF1FCA000D003FB121 /* DLInterval_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DLInterval_iOS.framework; path = Carthage/Build/iOS/DLInterval_iOS.framework; sourceTree = "<group>"; };
+		639220C11FCA0018003FB121 /* DLInterval_watchOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DLInterval_watchOS.framework; path = Carthage/Build/watchOS/DLInterval_watchOS.framework; sourceTree = "<group>"; };
+		639220C31FCA001C003FB121 /* DLInterval_tvOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DLInterval_tvOS.framework; path = Carthage/Build/tvOS/DLInterval_tvOS.framework; sourceTree = "<group>"; };
+		639220C51FCA0022003FB121 /* DLInterval_macOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DLInterval_macOS.framework; path = Carthage/Build/Mac/DLInterval_macOS.framework; sourceTree = "<group>"; };
+		639220C71FCA0134003FB121 /* IntervalType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalType.swift; sourceTree = "<group>"; };
+		639D7A031E58DAB1008D10EF /* DLAngleiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLAngleiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		639D7A071E58DAB2008D10EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		639D7A0E1E58DADF008D10EF /* AngleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleTests.swift; sourceTree = "<group>"; };
+		639D7A151E58DE2B008D10EF /* DegreeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DegreeTests.swift; sourceTree = "<group>"; };
+		639D7A171E58F1E6008D10EF /* RadianTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadianTests.swift; sourceTree = "<group>"; };
+		63F687401E74348100E6CA13 /* ArgumentsCheckerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentsCheckerTests.swift; sourceTree = "<group>"; };
+		63F687421E74349200E6CA13 /* TrigonometricArgumentsCheckerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrigonometricArgumentsCheckerTests.swift; sourceTree = "<group>"; };
+		63F7BE2A1E58F84400708BAF /* TrigonometryFunctionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrigonometryFunctionsTest.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63252D2B1E5A3B6400324B66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639220C01FCA000D003FB121 /* DLInterval_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63252D381E5A3B7600324B66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639220C21FCA0018003FB121 /* DLInterval_watchOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63252D451E5A3B8800324B66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639220C41FCA001C003FB121 /* DLInterval_tvOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63252D521E5A3BA600324B66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639220C61FCA0023003FB121 /* DLInterval_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639D7A001E58DAB1008D10EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63252D301E5A3B6400324B66 /* DLAngle_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				63252D311E5A3B6400324B66 /* DLAngle_iOS.h */,
+				63252D321E5A3B6400324B66 /* Info.plist */,
+			);
+			path = DLAngle_iOS;
+			sourceTree = "<group>";
+		};
+		63252D3D1E5A3B7600324B66 /* DLAngle_watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				63252D3E1E5A3B7600324B66 /* DLAngle_watchOS.h */,
+				63252D3F1E5A3B7600324B66 /* Info.plist */,
+			);
+			path = DLAngle_watchOS;
+			sourceTree = "<group>";
+		};
+		63252D4A1E5A3B8800324B66 /* DLAngle_tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				63252D4B1E5A3B8800324B66 /* DLAngle_tvOS.h */,
+				63252D4C1E5A3B8800324B66 /* Info.plist */,
+			);
+			path = DLAngle_tvOS;
+			sourceTree = "<group>";
+		};
+		63252D571E5A3BA600324B66 /* DLAngle_macOS */ = {
+			isa = PBXGroup;
+			children = (
+				63252D581E5A3BA600324B66 /* DLAngle_macOS.h */,
+				63252D591E5A3BA600324B66 /* Info.plist */,
+			);
+			path = DLAngle_macOS;
+			sourceTree = "<group>";
+		};
+		63921F351FC9EB1B003FB121 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				639220C51FCA0022003FB121 /* DLInterval_macOS.framework */,
+				639220C31FCA001C003FB121 /* DLInterval_tvOS.framework */,
+				639220C11FCA0018003FB121 /* DLInterval_watchOS.framework */,
+				639220BF1FCA000D003FB121 /* DLInterval_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		639220301FC9FD65003FB121 /* DLAngle */ = {
+			isa = PBXGroup;
+			children = (
+				639220311FC9FD82003FB121 /* Sources */,
+			);
+			path = DLAngle;
+			sourceTree = "<group>";
+		};
+		639220311FC9FD82003FB121 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				639220BD1FC9FE76003FB121 /* Angle */,
+				639220A71FC9FE4A003FB121 /* Model */,
+				639220BE1FC9FEA7003FB121 /* Trigonometry */,
+			);
+			path = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		639220A71FC9FE4A003FB121 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				639220C71FCA0134003FB121 /* IntervalType.swift */,
+				639220A81FC9FE60003FB121 /* ArgumentsChecker.swift */,
+				639220A91FC9FE60003FB121 /* Predicate.swift */,
+				639220AA1FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift */,
+				639220AB1FC9FE60003FB121 /* TrigonometricFunction.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		639220BD1FC9FE76003FB121 /* Angle */ = {
+			isa = PBXGroup;
+			children = (
+				639220321FC9FD82003FB121 /* Angle.swift */,
+				639220331FC9FD82003FB121 /* AngleError.swift */,
+				639220361FC9FD82003FB121 /* Degree.swift */,
+				639220401FC9FD82003FB121 /* NormalizedType.swift */,
+				639220431FC9FD82003FB121 /* Radian.swift */,
+				639220421FC9FD82003FB121 /* Radian+Trigonometry.swift */,
+			);
+			name = Angle;
+			sourceTree = "<group>";
+		};
+		639220BE1FC9FEA7003FB121 /* Trigonometry */ = {
+			isa = PBXGroup;
+			children = (
+				639220461FC9FD82003FB121 /* Trigonometry.swift */,
+				6392203B1FC9FD82003FB121 /* GenericTrigonometry.swift */,
+			);
+			name = Trigonometry;
+			sourceTree = "<group>";
+		};
+		639D79321E588865008D10EF = {
+			isa = PBXGroup;
+			children = (
+				639220301FC9FD65003FB121 /* DLAngle */,
+				63252D301E5A3B6400324B66 /* DLAngle_iOS */,
+				63252D3D1E5A3B7600324B66 /* DLAngle_watchOS */,
+				63252D4A1E5A3B8800324B66 /* DLAngle_tvOS */,
+				63252D571E5A3BA600324B66 /* DLAngle_macOS */,
+				639D7A041E58DAB2008D10EF /* DLAngleiOSTests */,
+				639D793D1E588865008D10EF /* Products */,
+				63921F351FC9EB1B003FB121 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		639D793D1E588865008D10EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				639D7A031E58DAB1008D10EF /* DLAngleiOSTests.xctest */,
+				63252D2F1E5A3B6400324B66 /* DLAngle_iOS.framework */,
+				63252D3C1E5A3B7600324B66 /* DLAngle_watchOS.framework */,
+				63252D491E5A3B8800324B66 /* DLAngle_tvOS.framework */,
+				63252D561E5A3BA600324B66 /* DLAngle_macOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		639D7A041E58DAB2008D10EF /* DLAngleiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				639D7A0E1E58DADF008D10EF /* AngleTests.swift */,
+				639D7A151E58DE2B008D10EF /* DegreeTests.swift */,
+				639D7A171E58F1E6008D10EF /* RadianTests.swift */,
+				63F7BE2A1E58F84400708BAF /* TrigonometryFunctionsTest.swift */,
+				63F687401E74348100E6CA13 /* ArgumentsCheckerTests.swift */,
+				63F687421E74349200E6CA13 /* TrigonometricArgumentsCheckerTests.swift */,
+				632070321E75D3FF00ACD30B /* IntervalTests.swift */,
+				639D7A071E58DAB2008D10EF /* Info.plist */,
+			);
+			path = DLAngleiOSTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		63252D2C1E5A3B6400324B66 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63252D331E5A3B6400324B66 /* DLAngle_iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63252D391E5A3B7600324B66 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63252D401E5A3B7600324B66 /* DLAngle_watchOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63252D461E5A3B8800324B66 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63252D4D1E5A3B8800324B66 /* DLAngle_tvOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63252D531E5A3BA600324B66 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63252D5A1E5A3BA600324B66 /* DLAngle_macOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		63252D2E1E5A3B6400324B66 /* DLAngle_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63252D361E5A3B6500324B66 /* Build configuration list for PBXNativeTarget "DLAngle_iOS" */;
+			buildPhases = (
+				63252D2A1E5A3B6400324B66 /* Sources */,
+				63252D2B1E5A3B6400324B66 /* Frameworks */,
+				63252D2C1E5A3B6400324B66 /* Headers */,
+				63252D2D1E5A3B6400324B66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DLAngle_iOS;
+			productName = DLAngle_iOS;
+			productReference = 63252D2F1E5A3B6400324B66 /* DLAngle_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		63252D3B1E5A3B7600324B66 /* DLAngle_watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63252D411E5A3B7600324B66 /* Build configuration list for PBXNativeTarget "DLAngle_watchOS" */;
+			buildPhases = (
+				63252D371E5A3B7600324B66 /* Sources */,
+				63252D381E5A3B7600324B66 /* Frameworks */,
+				63252D391E5A3B7600324B66 /* Headers */,
+				63252D3A1E5A3B7600324B66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DLAngle_watchOS;
+			productName = DLAngle_watchOS;
+			productReference = 63252D3C1E5A3B7600324B66 /* DLAngle_watchOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		63252D481E5A3B8800324B66 /* DLAngle_tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63252D4E1E5A3B8800324B66 /* Build configuration list for PBXNativeTarget "DLAngle_tvOS" */;
+			buildPhases = (
+				63252D441E5A3B8800324B66 /* Sources */,
+				63252D451E5A3B8800324B66 /* Frameworks */,
+				63252D461E5A3B8800324B66 /* Headers */,
+				63252D471E5A3B8800324B66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DLAngle_tvOS;
+			productName = DLAngle_tvOS;
+			productReference = 63252D491E5A3B8800324B66 /* DLAngle_tvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		63252D551E5A3BA600324B66 /* DLAngle_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63252D5B1E5A3BA600324B66 /* Build configuration list for PBXNativeTarget "DLAngle_macOS" */;
+			buildPhases = (
+				63252D511E5A3BA600324B66 /* Sources */,
+				63252D521E5A3BA600324B66 /* Frameworks */,
+				63252D531E5A3BA600324B66 /* Headers */,
+				63252D541E5A3BA600324B66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DLAngle_macOS;
+			productName = DLAngle_macOS;
+			productReference = 63252D561E5A3BA600324B66 /* DLAngle_macOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		639D7A021E58DAB1008D10EF /* DLAngleiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 639D7A0B1E58DAB2008D10EF /* Build configuration list for PBXNativeTarget "DLAngleiOSTests" */;
+			buildPhases = (
+				639D79FF1E58DAB1008D10EF /* Sources */,
+				639D7A001E58DAB1008D10EF /* Frameworks */,
+				639D7A011E58DAB1008D10EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DLAngleiOSTests;
+			productName = DLAngleiOSTests;
+			productReference = 639D7A031E58DAB1008D10EF /* DLAngleiOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		639D79331E588865008D10EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0910;
+				TargetAttributes = {
+					63252D2E1E5A3B6400324B66 = {
+						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+					63252D3B1E5A3B7600324B66 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					63252D481E5A3B8800324B66 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					63252D551E5A3BA600324B66 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					639D7A021E58DAB1008D10EF = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 639D79361E588865008D10EF /* Build configuration list for PBXProject "DLAngle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 639D79321E588865008D10EF;
+			productRefGroup = 639D793D1E588865008D10EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63252D2E1E5A3B6400324B66 /* DLAngle_iOS */,
+				63252D3B1E5A3B7600324B66 /* DLAngle_watchOS */,
+				63252D481E5A3B8800324B66 /* DLAngle_tvOS */,
+				63252D551E5A3BA600324B66 /* DLAngle_macOS */,
+				639D7A021E58DAB1008D10EF /* DLAngleiOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63252D2D1E5A3B6400324B66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63252D3A1E5A3B7600324B66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63252D471E5A3B8800324B66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63252D541E5A3BA600324B66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639D7A011E58DAB1008D10EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63252D2A1E5A3B6400324B66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639220981FC9FD82003FB121 /* Trigonometry.swift in Sources */,
+				6392206C1FC9FD82003FB121 /* GenericTrigonometry.swift in Sources */,
+				639220881FC9FD82003FB121 /* Radian+Trigonometry.swift in Sources */,
+				639220B41FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift in Sources */,
+				639220C81FCA0134003FB121 /* IntervalType.swift in Sources */,
+				639220801FC9FD82003FB121 /* NormalizedType.swift in Sources */,
+				639220B81FC9FE60003FB121 /* TrigonometricFunction.swift in Sources */,
+				6392208C1FC9FD82003FB121 /* Radian.swift in Sources */,
+				6392204C1FC9FD82003FB121 /* AngleError.swift in Sources */,
+				639220581FC9FD82003FB121 /* Degree.swift in Sources */,
+				639220B01FC9FE60003FB121 /* Predicate.swift in Sources */,
+				639220481FC9FD82003FB121 /* Angle.swift in Sources */,
+				639220AC1FC9FE60003FB121 /* ArgumentsChecker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63252D371E5A3B7600324B66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639220991FC9FD82003FB121 /* Trigonometry.swift in Sources */,
+				6392206D1FC9FD82003FB121 /* GenericTrigonometry.swift in Sources */,
+				639220891FC9FD82003FB121 /* Radian+Trigonometry.swift in Sources */,
+				639220B51FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift in Sources */,
+				639220C91FCA0134003FB121 /* IntervalType.swift in Sources */,
+				639220811FC9FD82003FB121 /* NormalizedType.swift in Sources */,
+				639220B91FC9FE60003FB121 /* TrigonometricFunction.swift in Sources */,
+				6392208D1FC9FD82003FB121 /* Radian.swift in Sources */,
+				6392204D1FC9FD82003FB121 /* AngleError.swift in Sources */,
+				639220591FC9FD82003FB121 /* Degree.swift in Sources */,
+				639220B11FC9FE60003FB121 /* Predicate.swift in Sources */,
+				639220491FC9FD82003FB121 /* Angle.swift in Sources */,
+				639220AD1FC9FE60003FB121 /* ArgumentsChecker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63252D441E5A3B8800324B66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6392209A1FC9FD82003FB121 /* Trigonometry.swift in Sources */,
+				6392206E1FC9FD82003FB121 /* GenericTrigonometry.swift in Sources */,
+				6392208A1FC9FD82003FB121 /* Radian+Trigonometry.swift in Sources */,
+				639220B61FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift in Sources */,
+				639220CA1FCA0134003FB121 /* IntervalType.swift in Sources */,
+				639220821FC9FD82003FB121 /* NormalizedType.swift in Sources */,
+				639220BA1FC9FE60003FB121 /* TrigonometricFunction.swift in Sources */,
+				6392208E1FC9FD82003FB121 /* Radian.swift in Sources */,
+				6392204E1FC9FD82003FB121 /* AngleError.swift in Sources */,
+				6392205A1FC9FD82003FB121 /* Degree.swift in Sources */,
+				639220B21FC9FE60003FB121 /* Predicate.swift in Sources */,
+				6392204A1FC9FD82003FB121 /* Angle.swift in Sources */,
+				639220AE1FC9FE60003FB121 /* ArgumentsChecker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63252D511E5A3BA600324B66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6392209B1FC9FD82003FB121 /* Trigonometry.swift in Sources */,
+				6392206F1FC9FD82003FB121 /* GenericTrigonometry.swift in Sources */,
+				6392208B1FC9FD82003FB121 /* Radian+Trigonometry.swift in Sources */,
+				639220B71FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift in Sources */,
+				639220CB1FCA0134003FB121 /* IntervalType.swift in Sources */,
+				639220831FC9FD82003FB121 /* NormalizedType.swift in Sources */,
+				639220BB1FC9FE60003FB121 /* TrigonometricFunction.swift in Sources */,
+				6392208F1FC9FD82003FB121 /* Radian.swift in Sources */,
+				6392204F1FC9FD82003FB121 /* AngleError.swift in Sources */,
+				6392205B1FC9FD82003FB121 /* Degree.swift in Sources */,
+				639220B31FC9FE60003FB121 /* Predicate.swift in Sources */,
+				6392204B1FC9FD82003FB121 /* Angle.swift in Sources */,
+				639220AF1FC9FE60003FB121 /* ArgumentsChecker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639D79FF1E58DAB1008D10EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				632070331E75D3FF00ACD30B /* IntervalTests.swift in Sources */,
+				63F687411E74348100E6CA13 /* ArgumentsCheckerTests.swift in Sources */,
+				639D7A161E58DE2B008D10EF /* DegreeTests.swift in Sources */,
+				63F7BE2B1E58F84400708BAF /* TrigonometryFunctionsTest.swift in Sources */,
+				63F687431E74349200E6CA13 /* TrigonometricArgumentsCheckerTests.swift in Sources */,
+				639D7A0F1E58DADF008D10EF /* AngleTests.swift in Sources */,
+				639D7A181E58F1E6008D10EF /* RadianTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		63252D341E5A3B6500324B66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = DLAngle_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.DLAngle-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		63252D351E5A3B6500324B66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = DLAngle_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.DLAngle-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		63252D421E5A3B7600324B66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = DLAngle_watchOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.DLAngle-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		63252D431E5A3B7600324B66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = DLAngle_watchOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.DLAngle-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		63252D4F1E5A3B8800324B66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = DLAngle_tvOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.DLAngle-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		63252D501E5A3B8800324B66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = DLAngle_tvOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.DLAngle-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		63252D5C1E5A3BA600324B66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = DLAngle_macOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.DLAngle-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		63252D5D1E5A3BA600324B66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = DLAngle_macOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.DLAngle-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		639D79421E588865008D10EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		639D79431E588865008D10EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		639D7A0C1E58DAB2008D10EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DLAngleiOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.DLAngleiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		639D7A0D1E58DAB2008D10EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DLAngleiOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.DLAngleiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63252D361E5A3B6500324B66 /* Build configuration list for PBXNativeTarget "DLAngle_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63252D341E5A3B6500324B66 /* Debug */,
+				63252D351E5A3B6500324B66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63252D411E5A3B7600324B66 /* Build configuration list for PBXNativeTarget "DLAngle_watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63252D421E5A3B7600324B66 /* Debug */,
+				63252D431E5A3B7600324B66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63252D4E1E5A3B8800324B66 /* Build configuration list for PBXNativeTarget "DLAngle_tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63252D4F1E5A3B8800324B66 /* Debug */,
+				63252D501E5A3B8800324B66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63252D5B1E5A3BA600324B66 /* Build configuration list for PBXNativeTarget "DLAngle_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63252D5C1E5A3BA600324B66 /* Debug */,
+				63252D5D1E5A3BA600324B66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		639D79361E588865008D10EF /* Build configuration list for PBXProject "DLAngle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639D79421E588865008D10EF /* Debug */,
+				639D79431E588865008D10EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		639D7A0B1E58DAB2008D10EF /* Build configuration list for PBXNativeTarget "DLAngleiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639D7A0C1E58DAB2008D10EF /* Debug */,
+				639D7A0D1E58DAB2008D10EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 639D79331E588865008D10EF /* Project object */;
+}

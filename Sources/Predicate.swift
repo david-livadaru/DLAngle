@@ -7,6 +7,17 @@
 //
 
 import Foundation
+#if os(iOS)
+    import DLInterval_iOS
+#elseif os(watchOS)
+    import DLInteval_watchOS
+#elseif os(tvOS)
+    import DLInteval_tvOS
+#elseif os(macOS)
+    import DLInteval_macOS
+#elseif os(Linux)
+    import DLInteval
+#endif
 
 public struct Predicate {
     public typealias Closure = () -> Bool

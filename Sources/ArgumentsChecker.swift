@@ -7,6 +7,17 @@
 //
 
 import Foundation
+#if os(iOS)
+    import DLInterval_iOS
+#elseif os(watchOS)
+    import DLInteval_watchOS
+#elseif os(tvOS)
+    import DLInteval_tvOS
+#elseif os(macOS)
+    import DLInteval_macOS
+#elseif os(Linux)
+    import DLInteval
+#endif
 
 /// An abstract utility class which provides an interface to check values.
 class ArgumentsChecker {
@@ -24,7 +35,6 @@ class ArgumentsChecker {
     
     init(value: Double, invalidValues values: [Double]) {
         predicate = Predicate(not: ArgumentsChecker.predicate(for: value, in: values))
-        
     }
     
     init<I: IntervalType>(value: Double, invalidInterval interval: I) {
