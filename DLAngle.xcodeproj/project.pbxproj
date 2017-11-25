@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		632070331E75D3FF00ACD30B /* IntervalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632070321E75D3FF00ACD30B /* IntervalTests.swift */; };
 		63252D331E5A3B6400324B66 /* DLAngle_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 63252D311E5A3B6400324B66 /* DLAngle_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63252D401E5A3B7600324B66 /* DLAngle_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 63252D3E1E5A3B7600324B66 /* DLAngle_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63252D4D1E5A3B8800324B66 /* DLAngle_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 63252D4B1E5A3B8800324B66 /* DLAngle_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -77,7 +76,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		632070321E75D3FF00ACD30B /* IntervalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalTests.swift; sourceTree = "<group>"; };
 		63252D2F1E5A3B6400324B66 /* DLAngle_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLAngle_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63252D311E5A3B6400324B66 /* DLAngle_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAngle_iOS.h; sourceTree = "<group>"; };
 		63252D321E5A3B6400324B66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -286,7 +284,6 @@
 				63F7BE2A1E58F84400708BAF /* TrigonometryFunctionsTest.swift */,
 				63F687401E74348100E6CA13 /* ArgumentsCheckerTests.swift */,
 				63F687421E74349200E6CA13 /* TrigonometricArgumentsCheckerTests.swift */,
-				632070321E75D3FF00ACD30B /* IntervalTests.swift */,
 				639D7A071E58DAB2008D10EF /* Info.plist */,
 			);
 			path = DLAngleiOSTests;
@@ -595,7 +592,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				632070331E75D3FF00ACD30B /* IntervalTests.swift in Sources */,
 				63F687411E74348100E6CA13 /* ArgumentsCheckerTests.swift in Sources */,
 				639D7A161E58DE2B008D10EF /* DegreeTests.swift in Sources */,
 				63F7BE2B1E58F84400708BAF /* TrigonometryFunctionsTest.swift in Sources */,
