@@ -24,9 +24,17 @@ public class Angle {
         return CGFloat(rawValue)
     }
     #endif
-    
-    public static var equalityPrecision: UInt = 15
-    
+
+    public static var equalityPrecision: Int {
+        get {
+            return _equalityPrecision
+        }
+        set {
+            _equalityPrecision = min(newValue, 15)
+        }
+    }
+
+    private static var _equalityPrecision: Int = 15
     private static var marginOfError: Double {
         let precision = Double(equalityPrecision)
         return Double(pow(10.0, -precision))
@@ -58,7 +66,9 @@ public class Angle {
     }
     
     func normalized<A: Angle>(by value: Double) -> A {
-        return A(rawValue: rawValue.truncatingRemainder(dividingBy: value))
+        let angle = A(rawValue: rawValue)
+        angle.normalize(by: value)
+        return angle
     }
     
     // MARK: Operations
