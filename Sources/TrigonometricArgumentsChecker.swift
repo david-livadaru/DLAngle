@@ -30,7 +30,7 @@ class TrigonometricArgumentsChecker: ArgumentsChecker {
             super.init(value: value,
                        invalidValues: TrigonometricArgumentsChecker.invalidArguments(for: function))
         default:
-            throw AngleError(reason: "Unable to check the \(function) function.")
+            throw TrigonometricError(reason: "Unable to check the \(function) function.")
         }
     }
 
@@ -41,7 +41,7 @@ class TrigonometricArgumentsChecker: ArgumentsChecker {
             super.init(value: angle.rawValue,
                        invalidValues: TrigonometricArgumentsChecker.invalidArguments(for: function))
         default:
-            throw AngleError(reason: "Unable to check the \(function) function.")
+            throw TrigonometricError(reason: "Unable to check the \(function) function.")
         }
     }
     

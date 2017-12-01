@@ -575,7 +575,7 @@ public struct Trigonometry {
                          for function: TrigonometricFunction) throws {
         let checker = try TrigonometricArgumentsChecker(value: value, function: function)
         if checker.check() == false {
-            throw AngleError(reason: "Argument '\(value)' is not defined for function '\(function)'.")
+            throw TrigonometricError(reason: "Argument '\(value)' is not defined for function '\(function)'.")
         }
     }
     
@@ -583,7 +583,7 @@ public struct Trigonometry {
                          for function: TrigonometricFunction) throws {
         let checker = try TrigonometricArgumentsChecker(angle: angle, function: function)
         if checker.check() == false {
-            throw AngleError(reason: "Argument '\(angle)' is not defined for function '\(function)'.")
+            throw TrigonometricError(reason: "Argument '\(angle)' is not defined for function '\(function)'.")
         }
     }
     
