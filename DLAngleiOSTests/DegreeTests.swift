@@ -77,28 +77,28 @@ class DegreeTests: XCTestCase {
         XCTAssert(angle.rawValue == 90)
     }
     
-    func testPlusOperation() {
+    func testAdditionOperation() {
         let firstAngle = Degree(rawValue: 45.0)
         let secondAngle = Degree(rawValue: 15.0)
         let resultAngle = firstAngle + secondAngle
         XCTAssert(resultAngle.rawValue == 60.0)
     }
 
-    func testPlusEqualOperation() {
+    func testAdditionEqualOperation() {
         var firstAngle = Degree(rawValue: 65.0)
         let secondAngle = Degree(rawValue: 25.0)
         firstAngle += secondAngle
         XCTAssert(firstAngle.rawValue == 90.0)
     }
 
-    func testMinusOperation() {
+    func testSubtractOperation() {
         let firstAngle = Degree(rawValue: 180.0)
         let secondAngle = Degree(rawValue: 10.0)
         let resultAngle = firstAngle - secondAngle
         XCTAssert(resultAngle.rawValue == 170.0)
     }
 
-    func testMinusEqualOperation() {
+    func testSubtractEqualOperation() {
         var firstAngle = Degree(rawValue: 25.0)
         let secondAngle = Degree(rawValue: 15.0)
         firstAngle -= secondAngle

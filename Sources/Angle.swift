@@ -41,11 +41,15 @@ public class Angle {
     }
     
     // MARK: Initializers
-    
+
     public required init(rawValue: Double) {
         self.rawValue = rawValue
     }
-    
+
+    public convenience init() {
+        self.init(rawValue: 0.0)
+    }
+
     public convenience init(float: Float) {
         self.init(rawValue: Double(float))
     }
