@@ -62,20 +62,23 @@ public extension Radian {
     }
     #endif
     
-    public convenience init(atan2X x: Double, y: Double) throws {
-        try Trigonometry.validate(value: x, for: .atan2)
-        self.init(rawValue: Trigonometry.atan2(x: x, y: y))
+    public convenience init(atan2Y y: Double, x: Double) throws {
+        let atan2Checker = Atan2ArgumentsChecker(y: y, x: x)
+        try atan2Checker.check()
+        self.init(rawValue: Trigonometry.atan2(y: y, x: x))
     }
     
-    public convenience init(atan2X x: Float, y: Float) throws {
-        try Trigonometry.validate(value: x, for: .atan2)
-        self.init(float: GenericTrigonometry.atan2(x: x, y: y))
+    public convenience init(atan2Y y: Float, x: Float) throws {
+        let atan2Checker = Atan2ArgumentsChecker(y: Double(y), x: Double(x))
+        try atan2Checker.check()
+        self.init(float: GenericTrigonometry.atan2(y: y, x: x))
     }
     
     #if !os(Linux)
-    public convenience init(atan2X x: CGFloat, y: CGFloat) throws {
-        try Trigonometry.validate(value: x, for: .atan2)
-        self.init(cgFloat: Trigonometry.atan2(x: x, y: y))
+    public convenience init(atan2Y y: CGFloat, x: CGFloat) throws {
+        let atan2Checker = Atan2ArgumentsChecker(y: Double(y), x: Double(x))
+        try atan2Checker.check()
+        self.init(cgFloat: Trigonometry.atan2(y: y, x: x))
     }
     #endif
     

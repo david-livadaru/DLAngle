@@ -26,11 +26,11 @@ class TrigonometricArgumentsChecker: ArgumentsChecker {
         case .asin, .acos, .asec, .acosec, .acosh, .atanh, .acoth, .asech:
             super.init(value: value,
                        validInterval: TrigonometricArgumentsChecker.validInterval(for: function))
-        case .atan2, .acot, .acosech:
+        case .acot, .acosech:
             super.init(value: value,
                        invalidValues: TrigonometricArgumentsChecker.invalidArguments(for: function))
         default:
-            throw TrigonometricError(reason: "Unable to check the \(function) function.")
+            throw TrigonometricError.undefinedFunction
         }
     }
 
@@ -41,7 +41,7 @@ class TrigonometricArgumentsChecker: ArgumentsChecker {
             super.init(value: angle.rawValue,
                        invalidValues: TrigonometricArgumentsChecker.invalidArguments(for: function))
         default:
-            throw TrigonometricError(reason: "Unable to check the \(function) function.")
+            throw TrigonometricError.undefinedFunction
         }
     }
     
@@ -53,7 +53,7 @@ class TrigonometricArgumentsChecker: ArgumentsChecker {
             return [Double.pi / 2, 3 * Double.pi / 2]
         case .cot, .cosec:
             return [0.0, Double.pi]
-        case .atan2 /* y value */, .coth, .cosech, .acot, .acosech:
+        case .coth, .cosech, .acot, .acosech:
             return [0.0]
         default:
             return []

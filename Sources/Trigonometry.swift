@@ -200,31 +200,34 @@ public struct Trigonometry {
     }
     #endif
     
-    static func atan2(x: Double, y: Double) -> Double {
-        let angle = GenericTrigonometry.atan2(x: x, y: y)
+    static func atan2(y: Double, x: Double) -> Double {
+        let angle = GenericTrigonometry.atan2(y: y, x: x)
         return angle
     }
     
-    public static func atan2(x: Double, y: Double) throws -> Radian {
-        try validate(value: x, for: .atan2)
-        return Radian(rawValue: atan2(x: x, y: y))
+    public static func atan2(y: Double, x: Double) throws -> Radian {
+        let atan2Checker = Atan2ArgumentsChecker(y: y, x: x)
+        try atan2Checker.check()
+        return Radian(rawValue: atan2(y: y, x: x))
     }
     
-    public static func atan2(x: Float, y: Float) throws -> Radian {
-        try validate(value: x, for: .atan2)
-        let angle = GenericTrigonometry.atan2(x: x, y: y)
+    public static func atan2(y: Float, x: Float) throws -> Radian {
+        let atan2Checker = Atan2ArgumentsChecker(y: Double(y), x: Double(x))
+        try atan2Checker.check()
+        let angle = GenericTrigonometry.atan2(y: y, x: x)
         return Radian(float: angle)
     }
     
     #if !os(Linux)
-    static func atan2(x: CGFloat, y: CGFloat) -> CGFloat {
-        let angle = GenericTrigonometry.atan2(x: Double(x), y: Double(y))
+    static func atan2(y: CGFloat, x: CGFloat) -> CGFloat {
+        let angle = GenericTrigonometry.atan2(y: Double(y), x: Double(x))
         return CGFloat(angle)
     }
     
-    public static func atan2(x: CGFloat, y: CGFloat) throws -> Radian {
-        try validate(value: x, for: .atan2)
-        return Radian(cgFloat: atan2(x: x, y: y))
+    public static func atan2(y: CGFloat, x: CGFloat) throws -> Radian {
+        let atan2Checker = Atan2ArgumentsChecker(y: Double(y), x: Double(x))
+        try atan2Checker.check()
+        return Radian(cgFloat: atan2(y: y, x: x))
     }
     #endif
     
@@ -574,17 +577,13 @@ public struct Trigonometry {
     static func validate(value: Double,
                          for function: TrigonometricFunction) throws {
         let checker = try TrigonometricArgumentsChecker(value: value, function: function)
-        if checker.check() == false {
-            throw TrigonometricError(reason: "Argument '\(value)' is not defined for function '\(function)'.")
-        }
+        try checker.check()
     }
     
     static func validate(angle: Radian,
                          for function: TrigonometricFunction) throws {
         let checker = try TrigonometricArgumentsChecker(angle: angle, function: function)
-        if checker.check() == false {
-            throw TrigonometricError(reason: "Argument '\(angle)' is not defined for function '\(function)'.")
-        }
+        try checker.check()
     }
     
     static func validate(value: Float,

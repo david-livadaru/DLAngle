@@ -24,6 +24,10 @@ class ArgumentsChecker {
     private let predicate: Predicate
     
     // MARK: Initialization
+
+    init(predicate: Predicate) {
+        self.predicate = predicate
+    }
     
     init(value: Double, validValues values: [Double]) {
         predicate = ArgumentsChecker.predicate(for: value, in: values)
@@ -43,8 +47,10 @@ class ArgumentsChecker {
     
     // MARK: Check
     
-    func check() -> Bool {
-        return predicate.evaluate()
+    func check() throws {
+        if !predicate.evaluate() {
+            throw TrigonometricError.invalidParameter
+        }
     }
     
     // MARK: Private functionality

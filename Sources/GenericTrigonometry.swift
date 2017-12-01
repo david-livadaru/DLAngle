@@ -90,19 +90,19 @@ struct GenericTrigonometry {
         #endif
     }
     
-    static func atan2(x: Float, y: Float) -> Float {
+    static func atan2(y: Float, x: Float) -> Float {
         #if os(Linux)
-            return Glibc.atan2(x, y)
+            return Glibc.atan2(y, x)
         #else
-            return Darwin.atan2(x, y)
+            return Darwin.atan2(y, x)
         #endif
     }
     
-    static func atan2(x: Double, y: Double) -> Double {
+    static func atan2(y: Double, x: Double) -> Double {
         #if os(Linux)
-            return Glibc.atan2(x, y)
+            return Glibc.atan2(y, x)
         #else
-            return Darwin.atan2(x, y)
+            return Darwin.atan2(y, x)
         #endif
     }
     
