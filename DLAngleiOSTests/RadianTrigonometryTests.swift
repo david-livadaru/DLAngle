@@ -8,6 +8,14 @@
 import XCTest
 @testable import DLAngle_iOS
 
+private let sinh_PI: Double = 11.548739357257748
+private let sinh_PI_2: Double = 2.301298902307294
+private let sinh_PI_4: Double = 0.868670961486009
+
+private let cosh_PI: Double = 11.591953275521520
+private let cosh_PI_2: Double = 2.509178478658056
+private let cosh_PI_4: Double = 1.324609089252005
+
 class RadianTrigonometryTests: XCTestCase {
     func testAsin() {
         do {
@@ -137,6 +145,169 @@ class RadianTrigonometryTests: XCTestCase {
     }
 
     func testAcot() {
-        
+        do {
+            let angle = try Radian(acot: 1.0)
+            XCTAssert(angle.rawValue == Double.pi / 4)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAcotFloat() {
+        do {
+            let value: Float = 1.0
+            let angle = try Radian(acot: value)
+            XCTAssert(angle.rawValue == Double.pi / 4)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAcotCGFloat() {
+        do {
+            let value: CGFloat = 1.0
+            let angle = try Radian(acot: value)
+            XCTAssert(angle.rawValue == Double.pi / 4)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAcotFailing() {
+        do {
+            _ = try Radian(acot: 0.0)
+            XCTFail()
+        } catch {
+        }
+    }
+
+    func testAsec() {
+        do {
+            let angle = try Radian(asec: -1.0)
+            XCTAssert(angle.rawValue == Double.pi)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAsecFloat() {
+        do {
+            let value: Float = -1.0
+            let angle = try Radian(asec: value)
+            XCTAssert(angle.rawValue == Double.pi)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAsecCGFloat() {
+        do {
+            let value: CGFloat = 2.0
+            let angle = try Radian(asec: value)
+            XCTAssert(angle.rawValue == Double.pi / 3)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAsecFailing() {
+        do {
+            _ = try Radian(asec: 0.5)
+            XCTFail()
+        } catch {
+        }
+    }
+
+    func testAcosec() {
+        do {
+            let angle = try Radian(acosec: 1.0)
+            XCTAssert(angle.rawValue == Double.pi / 2)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAcosecFloat() {
+        do {
+            let value: Float = 1.0
+            let angle = try Radian(acosec: value)
+            XCTAssert(angle.rawValue == Double.pi / 2)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAcosecCGFloat() {
+        do {
+            let value: CGFloat = 2.0
+            let angle = try Radian(acosec: value)
+            XCTAssert(angle.rawValue == Double.pi / 6)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAcosecFailing() {
+        do {
+            _ = try Radian(acosec: 0.5)
+            XCTFail()
+        } catch {
+        }
+    }
+
+    func testAsinh() {
+        let angle = Radian(asinh: sinh_PI)
+        XCTAssert(angle.rawValue == Double.pi)
+    }
+
+    func testAsinhFloat() {
+        let value = Float(sinh_PI_2)
+        let angle = Radian(asinh: value)
+        Radian.equalityPrecision = 6
+        XCTAssert(angle == Radian(rawValue: Double.pi / 2))
+    }
+
+    func testAsinhCGFloat() {
+        let value = CGFloat(sinh_PI_4)
+        let angle = Radian(asinh: value)
+        Radian.equalityPrecision = 14
+        XCTAssert(angle == Radian(rawValue: Double.pi / 4))
+    }
+
+    func testAcosh() {
+        do {
+            let angle = try Radian(acosh: cosh_PI)
+            XCTAssert(angle.rawValue == Double.pi)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAcoshFloat() {
+        do {
+            let value: Float = 1.0
+            let angle = try Radian(acosh: value)
+            XCTAssert(angle.rawValue == 0.0)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAcoshCGFloat() {
+        do {
+            let value = CGFloat(sinh_PI_2)
+            let angle = try Radian(acosh: value)
+            XCTAssert(angle == Radian(rawValue: Double.pi / 2))
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAcoshFailing() {
+        do {
+            _ = try Radian(acosh: 0.0)
+            XCTFail()
+        } catch {
+        }
     }
 }
