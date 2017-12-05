@@ -536,7 +536,7 @@ public struct Trigonometry {
     
     #if !os(Linux)
     static func asech(_ value: CGFloat) -> CGFloat {
-        let angle: Double = acoth(Double(value))
+        let angle: Double = asech(Double(value))
         return CGFloat(angle)
     }
     

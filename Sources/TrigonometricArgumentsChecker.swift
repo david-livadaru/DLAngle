@@ -73,7 +73,7 @@ class TrigonometricArgumentsChecker: ArgumentsChecker {
         case .acoth:
             return [-Double.infinity .><. -1, 1.><.Double.infinity]
         case .asech:
-            return [-Double.infinity .><. 0, 1.><.Double.infinity]
+            return [0.<.1]
         default:
             return [-Double.infinity .><. Double.infinity]
         }

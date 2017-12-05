@@ -16,6 +16,13 @@ extension Double {
     }
 }
 
+extension CGFloat {
+    func isEqual(to other: CGFloat) -> Bool {
+        let diff = self - other
+        return diff < CGFloat(pow(10.0, CGFloat(Angle.equalityPrecision)))
+    }
+}
+
 class TrigonometryFunctionsTest: XCTestCase {
     func testSineAsinFunction() {
         let angle = Radian(degrees: 45.0)
