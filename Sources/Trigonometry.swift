@@ -399,17 +399,18 @@ public struct Trigonometry {
     #endif
     
     public static func cosech(_ angle: Radian) throws -> Double {
-        try validate(value: angle.rawValue, for: .cosech)
+        try validate(angle: angle, for: .cosech)
         return 1.0 / sinh(angle)
     }
     
     public static func cosech(_ angle: Radian) throws -> Float {
+        try validate(angle: angle, for: .cosech)
         return 1.0 / sinh(angle)
     }
     
     #if !os(Linux)
     public static func cosech(_ angle: Radian) throws -> CGFloat {
-        try validate(value: angle.rawValue, for: .cosech)
+        try validate(angle: angle, for: .cosech)
         return 1.0 / sinh(angle)
     }
     #endif
@@ -516,7 +517,7 @@ public struct Trigonometry {
     
     public static func acoth(_ value: CGFloat) throws -> Radian {
         try validate(value: value, for: .acoth)
-        return Radian(cgFloat: atanh(value))
+        return Radian(cgFloat: acoth(value))
     }
     #endif
     
@@ -552,12 +553,12 @@ public struct Trigonometry {
     
     public static func acosech(_ value: Double) throws -> Radian {
         try validate(value: value, for: .acosech)
-        return Radian(rawValue: acoth(value))
+        return Radian(rawValue: acosech(value))
     }
     
     public static func acosech(_ value: Float) throws -> Radian {
         try validate(value: value, for: .acosech)
-        return Radian(rawValue: acoth(Double(value)))
+        return Radian(rawValue: acosech(Double(value)))
     }
     
     #if !os(Linux)

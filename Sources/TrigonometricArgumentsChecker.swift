@@ -26,7 +26,7 @@ class TrigonometricArgumentsChecker: ArgumentsChecker {
         case .asin, .acos, .asec, .acosec, .acosh, .atanh, .acoth, .asech:
             super.init(value: value,
                        validInterval: TrigonometricArgumentsChecker.validInterval(for: function))
-        case .acot, .acosech:
+        case .acot, .acosech, .coth:
             super.init(value: value,
                        invalidValues: TrigonometricArgumentsChecker.invalidArguments(for: function))
         default:
