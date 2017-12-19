@@ -254,40 +254,40 @@ class TrigonometryFunctionsTest: XCTestCase {
     }
 
 
-    func testAcosec() {
+    func testAcsc() {
         do {
             let value: Double = 1.0
-            let angle: Radian = try Trigonometry.acosec(value)
+            let angle: Radian = try Trigonometry.acsc(value)
             XCTAssert(angle.rawValue == Double.pi / 2)
         } catch {
             XCTFail()
         }
     }
 
-    func testAcosecFloat() {
+    func testAcscFloat() {
         do {
             let value: Float = 1.0
-            let angle: Radian = try Trigonometry.acosec(value)
+            let angle: Radian = try Trigonometry.acsc(value)
             XCTAssert(angle.rawValue == Double.pi / 2)
         } catch {
             XCTFail()
         }
     }
 
-    func testAcosecCGFloat() {
+    func testAcscCGFloat() {
         do {
             let value: CGFloat = 1.0
-            let angle: Radian = try Trigonometry.acosec(value)
+            let angle: Radian = try Trigonometry.acsc(value)
             XCTAssert(angle.rawValue == Double.pi / 2)
         } catch {
             XCTFail()
         }
     }
 
-    func testAcosecThrowing() {
+    func testAcscThrowing() {
         do {
             let value: Double = 0.0
-            let _: Radian = try Trigonometry.acosec(value)
+            let _: Radian = try Trigonometry.acsc(value)
             XCTFail()
         } catch {
         }
@@ -471,40 +471,40 @@ class TrigonometryFunctionsTest: XCTestCase {
         }
     }
 
-    func testAcosech() {
+    func testAcsch() {
         do {
             let value: Double = 0.881373587019543
-            let angle: Radian = try Trigonometry.acosech(value)
+            let angle: Radian = try Trigonometry.acsch(value)
             XCTAssert(angle.rawValue.isEqual(to: 1.0))
         } catch {
             XCTFail()
         }
     }
 
-    func testAcosechFloat() {
+    func testAcschFloat() {
         do {
             let value: Float = 0.881373587019543
-            let angle: Radian = try Trigonometry.acosech(value)
+            let angle: Radian = try Trigonometry.acsch(value)
             XCTAssert(angle.rawValue.isEqual(to: 1.0))
         } catch {
             XCTFail()
         }
     }
 
-    func testAcosechCGFloat() {
+    func testAcschCGFloat() {
         do {
             let value: CGFloat = 0.881373587019543
-            let angle: Radian = try Trigonometry.acosech(value)
+            let angle: Radian = try Trigonometry.acsch(value)
             XCTAssert(angle.rawValue.isEqual(to: 1.0))
         } catch {
             XCTFail()
         }
     }
 
-    func testAcosechThrowing() {
+    func testAcschThrowing() {
         do {
             let value: Double = 0.0
-            let _: Radian = try Trigonometry.acosech(value)
+            let _: Radian = try Trigonometry.acsch(value)
             XCTFail()
         } catch {
         }

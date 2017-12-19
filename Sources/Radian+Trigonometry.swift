@@ -48,16 +48,16 @@ public extension Radian {
     }
     #endif
     
-    public convenience init(atan: Double) {
+    public convenience init(atan: Double) throws {
         self.init(rawValue: Trigonometry.atan(atan))
     }
     
-    public convenience init(atan: Float) {
+    public convenience init(atan: Float) throws {
         self.init(float: GenericTrigonometry.atan(atan))
     }
     
     #if !os(Linux)
-    public convenience init(atan: CGFloat) {
+    public convenience init(atan: CGFloat) throws {
         self.init(cgFloat: Trigonometry.atan(atan))
     }
     #endif
@@ -116,20 +116,20 @@ public extension Radian {
     }
     #endif
     
-    public convenience init(acosec: Double) throws {
-        try Trigonometry.validate(value: acosec, for: .acosec)
-        self.init(rawValue: Trigonometry.acosec(acosec))
+    public convenience init(acsc: Double) throws {
+        try Trigonometry.validate(value: acsc, for: .acsc)
+        self.init(rawValue: Trigonometry.acsc(acsc))
     }
     
-    public convenience init(acosec: Float) throws {
-        try Trigonometry.validate(value: acosec, for: .acosec)
-        self.init(rawValue: Trigonometry.acosec(Double(acosec)))
+    public convenience init(acsc: Float) throws {
+        try Trigonometry.validate(value: acsc, for: .acsc)
+        self.init(rawValue: Trigonometry.acsc(Double(acsc)))
     }
     
     #if !os(Linux)
-    public convenience init(acosec: CGFloat) throws {
-        try Trigonometry.validate(value: acosec, for: .acosec)
-        self.init(cgFloat: Trigonometry.acosec(acosec))
+    public convenience init(acsc: CGFloat) throws {
+        try Trigonometry.validate(value: acsc, for: .acsc)
+        self.init(cgFloat: Trigonometry.acsc(acsc))
     }
     #endif
     
@@ -217,36 +217,36 @@ public extension Radian {
     }
     #endif
     
-    public convenience init(acosech: Double) throws {
-        try Trigonometry.validate(value: acosech, for: .acosech)
-        self.init(rawValue: Trigonometry.acosech(acosech))
+    public convenience init(acsch: Double) throws {
+        try Trigonometry.validate(value: acsch, for: .acsch)
+        self.init(rawValue: Trigonometry.acsch(acsch))
     }
     
-    public convenience init(acosech: Float) throws {
-        try Trigonometry.validate(value: acosech, for: .acosech)
-        self.init(rawValue: Trigonometry.acosech(Double(acosech)))
+    public convenience init(acsch: Float) throws {
+        try Trigonometry.validate(value: acsch, for: .acsch)
+        self.init(rawValue: Trigonometry.acsch(Double(acsch)))
     }
     
     #if !os(Linux)
-    public convenience init(acosech: CGFloat) throws {
-        try Trigonometry.validate(value: acosech, for: .acosech)
-        self.init(cgFloat: Trigonometry.acosech(acosech))
+    public convenience init(acsch: CGFloat) throws {
+        try Trigonometry.validate(value: acsch, for: .acsch)
+        self.init(cgFloat: Trigonometry.acsch(acsch))
     }
     #endif
     
     // MARK: Trigonometric functions
     
-    public func sin() -> Double {
-        return Trigonometry.sin(self)
+    public func sin() throws -> Double {
+        return try Trigonometry.sin(self)
     }
     
-    public func sin() -> Float {
-        return Trigonometry.sin(self)
+    public func sin() throws -> Float {
+        return try Trigonometry.sin(self)
     }
     
     #if !os(Linux)
-    public func sin() -> CGFloat {
-        return Trigonometry.sin(self)
+    public func sin() throws -> CGFloat {
+        return try  Trigonometry.sin(self)
     }
     #endif
     
@@ -306,17 +306,17 @@ public extension Radian {
     }
     #endif
     
-    public func cosec() throws -> Double {
-        return try Trigonometry.cosec(self)
+    public func csc() throws -> Double {
+        return try Trigonometry.csc(self)
     }
     
-    public func cosec() throws -> Float {
-        return try Trigonometry.cosec(self)
+    public func csc() throws -> Float {
+        return try Trigonometry.csc(self)
     }
     
     #if !os(Linux)
-    public func cosec() throws -> CGFloat {
-        return try Trigonometry.cosec(self)
+    public func csc() throws -> CGFloat {
+        return try Trigonometry.csc(self)
     }
     #endif
     
@@ -392,17 +392,17 @@ public extension Radian {
     }
     #endif
     
-    public func cosech() throws -> Double {
-        return try Trigonometry.cosech(self)
+    public func csch() throws -> Double {
+        return try Trigonometry.csch(self)
     }
     
-    public func cosech() throws -> Float {
-        return try Trigonometry.cosech(self)
+    public func csch() throws -> Float {
+        return try Trigonometry.csch(self)
     }
     
     #if !os(Linux)
-    public func cosech() throws -> CGFloat {
-        return try Trigonometry.cosech(self)
+    public func csch() throws -> CGFloat {
+        return try Trigonometry.csch(self)
     }
     #endif
 }

@@ -153,34 +153,34 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
         }
     }
 
-    func testCosecCheck() {
+    func testCscCheck() {
         do {
-            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Double.pi / 2), function: .cosec)
+            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Double.pi / 2), function: .csc)
             try checker.check()
         } catch let error as TrigonometricError where error == .undefinedFunction {
-            XCTFail(failMessage(forCatched: error, testing: .cosec))
+            XCTFail(failMessage(forCatched: error, testing: .csc))
         } catch {
             XCTFail()
         }
     }
 
-    func testCosecCheck2() {
+    func testCscCheck2() {
         do {
-            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Double.pi), function: .cosec)
+            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Double.pi), function: .csc)
             try checker.check()
             XCTFail()
         } catch let error as TrigonometricError where error == .undefinedFunction {
-            XCTFail(failMessage(forCatched: error, testing: .cosec))
+            XCTFail(failMessage(forCatched: error, testing: .csc))
         } catch {
         }
     }
 
-    func testCosecCheck3() {
+    func testCscCheck3() {
         do {
-            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Double.pi / 2), function: .cosec)
+            let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Double.pi / 2), function: .csc)
             try checker.check()
         } catch let error as TrigonometricError where error == .undefinedFunction {
-            XCTFail(failMessage(forCatched: error, testing: .cosec))
+            XCTFail(failMessage(forCatched: error, testing: .csc))
         } catch {
             XCTFail()
         }

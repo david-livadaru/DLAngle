@@ -16,17 +16,20 @@ import Foundation
 public struct Trigonometry {
     // MARK: Trigonometric functions
     
-    public static func sin(_ angle: Radian) -> Double {
+    public static func sin(_ angle: Radian) throws -> Double {
+        if angle.rawValue == -Double.infinity || angle.rawValue == Double.infinity {
+            throw TrigonometricError.codomainValueNotComputable
+        }
         let sin = GenericTrigonometry.sin(angle.rawValue)
         return sin
     }
     
-    public static func sin(_ angle: Radian) -> Float {
+    public static func sin(_ angle: Radian) throws -> Float {
         return GenericTrigonometry.sin(angle.float)
     }
     
     #if !os(Linux)
-    public static func sin(_ angle: Radian) -> CGFloat {
+    public static func sin(_ angle: Radian) throws -> CGFloat {
         let sin = GenericTrigonometry.sin(angle.rawValue)
         return CGFloat(sin)
     }
@@ -103,20 +106,23 @@ public struct Trigonometry {
     }
     #endif
     
-    public static func cosec(_ angle: Radian) throws -> Double {
-        try validate(angle: angle, for: .cosec)
-        return 1.0 / sin(angle)
+    public static func csc(_ angle: Radian) throws -> Double {
+        try validate(angle: angle, for: .csc)
+        let sinValue: Double = try sin(angle)
+        return 1.0 / sinValue
     }
     
-    public static func cosec(_ angle: Radian) throws -> Float {
-        try validate(angle: angle, for: .cosec)
-        return 1.0 / sin(angle)
+    public static func csc(_ angle: Radian) throws -> Float {
+        try validate(angle: angle, for: .csc)
+        let sinValue: Float = try sin(angle)
+        return 1.0 / sinValue
     }
     
     #if !os(Linux)
-    public static func cosec(_ angle: Radian) throws -> CGFloat {
-        try validate(angle: angle, for: .cosec)
-        return 1.0 / sin(angle)
+    public static func csc(_ angle: Radian) throws -> CGFloat {
+        try validate(angle: angle, for: .csc)
+        let sinValue: CGFloat = try sin(angle)
+        return 1.0 / sinValue
     }
     #endif
     
@@ -287,31 +293,31 @@ public struct Trigonometry {
     }
     #endif
     
-    static func acosec(_ value: Double) -> Double {
+    static func acsc(_ value: Double) -> Double {
         return asin(1.0 / value)
     }
     
-    public static func acosec(_ value: Double) throws -> Radian {
-        try validate(value: value, for: .acosec)
-        return Radian(rawValue: acosec(value))
+    public static func acsc(_ value: Double) throws -> Radian {
+        try validate(value: value, for: .acsc)
+        return Radian(rawValue: acsc(value))
     }
     
-    public static func acosec(_ value: Float) throws -> Radian {
-        try validate(value: value, for: .acosec)
-        return Radian(rawValue: acosec(Double(value)))
+    public static func acsc(_ value: Float) throws -> Radian {
+        try validate(value: value, for: .acsc)
+        return Radian(rawValue: acsc(Double(value)))
     }
     
     #if !os(Linux)
-    static func acosec(_ value: CGFloat) -> CGFloat {
+    static func acsc(_ value: CGFloat) -> CGFloat {
         let doubleValue = Double(value)
-        let acotValue: Double = acosec(doubleValue)
+        let acotValue: Double = acsc(doubleValue)
         let angle = CGFloat(acotValue)
         return CGFloat(angle)
     }
     
-    public static func acosec(_ value: CGFloat) throws -> Radian {
-        try validate(value: value, for: .acosec)
-        return Radian(cgFloat: acosec(value))
+    public static func acsc(_ value: CGFloat) throws -> Radian {
+        try validate(value: value, for: .acsc)
+        return Radian(cgFloat: acsc(value))
     }
     #endif
     
@@ -398,19 +404,19 @@ public struct Trigonometry {
     }
     #endif
     
-    public static func cosech(_ angle: Radian) throws -> Double {
-        try validate(angle: angle, for: .cosech)
+    public static func csch(_ angle: Radian) throws -> Double {
+        try validate(angle: angle, for: .csch)
         return 1.0 / sinh(angle)
     }
     
-    public static func cosech(_ angle: Radian) throws -> Float {
-        try validate(angle: angle, for: .cosech)
+    public static func csch(_ angle: Radian) throws -> Float {
+        try validate(angle: angle, for: .csch)
         return 1.0 / sinh(angle)
     }
     
     #if !os(Linux)
-    public static func cosech(_ angle: Radian) throws -> CGFloat {
-        try validate(angle: angle, for: .cosech)
+    public static func csch(_ angle: Radian) throws -> CGFloat {
+        try validate(angle: angle, for: .csch)
         return 1.0 / sinh(angle)
     }
     #endif
@@ -547,28 +553,28 @@ public struct Trigonometry {
     }
     #endif
     
-    static func acosech(_ value: Double) -> Double {
+    static func acsch(_ value: Double) -> Double {
         return log(1.0 / value + sqrt(1.0 / pow(value, 2.0) + 1.0))
     }
     
-    public static func acosech(_ value: Double) throws -> Radian {
-        try validate(value: value, for: .acosech)
-        return Radian(rawValue: acosech(value))
+    public static func acsch(_ value: Double) throws -> Radian {
+        try validate(value: value, for: .acsch)
+        return Radian(rawValue: acsch(value))
     }
     
-    public static func acosech(_ value: Float) throws -> Radian {
-        try validate(value: value, for: .acosech)
-        return Radian(rawValue: acosech(Double(value)))
+    public static func acsch(_ value: Float) throws -> Radian {
+        try validate(value: value, for: .acsch)
+        return Radian(rawValue: acsch(Double(value)))
     }
     
     #if !os(Linux)
-    static func acosech(_ value: CGFloat) -> CGFloat {
-        let angle: Double = acosech(Double(value))
+    static func acsch(_ value: CGFloat) -> CGFloat {
+        let angle: Double = acsch(Double(value))
         return CGFloat(angle)
     }
     
-    public static func acosech(_ value: CGFloat) throws -> Radian {
-        try validate(value: value, for: .acosech)
+    public static func acsch(_ value: CGFloat) throws -> Radian {
+        try validate(value: value, for: .acsch)
         return Radian(cgFloat: atanh(value))
     }
     #endif

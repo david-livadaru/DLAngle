@@ -112,6 +112,28 @@ class RadianTrigonometryTests: XCTestCase {
         let angle = Radian(atan: value)
         XCTAssert(angle.rawValue == -Double.pi / 4)
     }
+    
+    func testAtanMinusInfinity() {
+        do {
+            _ = try Radian(atan: -Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .undefinedCodomainValue)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAtanInfinity() {
+        do {
+            _ = try Radian(atan: Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .undefinedCodomainValue)
+        } catch {
+            XCTFail()
+        }
+    }
 
     func testAtan2() {
         do {
@@ -139,6 +161,50 @@ class RadianTrigonometryTests: XCTestCase {
             let y: CGFloat = 0.0
             let angle = try Radian(atan2Y: y, x: x)
             XCTAssert(angle.rawValue == Double.pi)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAtan2MinusInfinityMinusInfinity() {
+        do {
+            _ = try Radian(atan2Y: -Double.infinity, x: -Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .invalidParameter)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAtan2MinusInfinityInfinity() {
+        do {
+            _ = try Radian(atan2Y: -Double.infinity, x: Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .invalidParameter)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAtan2InfinityMinusInfinity() {
+        do {
+            _ = try Radian(atan2Y: Double.infinity, x: -Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .invalidParameter)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAtan2InfinityInfinity() {
+        do {
+            _ = try Radian(atan2Y: Double.infinity, x: Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .invalidParameter)
         } catch {
             XCTFail()
         }
@@ -181,6 +247,28 @@ class RadianTrigonometryTests: XCTestCase {
         }
     }
 
+    func testAcotMinusInfinity() {
+        do {
+            _ = try Radian(acot: -Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .undefinedCodomainValue)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAcotInfinity() {
+        do {
+            _ = try Radian(acot: Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .undefinedCodomainValue)
+        } catch {
+            XCTFail()
+        }
+    }
+
     func testAsec() {
         do {
             let angle = try Radian(asec: -1.0)
@@ -218,40 +306,84 @@ class RadianTrigonometryTests: XCTestCase {
         }
     }
 
-    func testAcosec() {
+    func testAsecMinusInfinity() {
         do {
-            let angle = try Radian(acosec: 1.0)
+            _ = try Radian(asec: -Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .undefinedCodomainValue)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAsecInfinity() {
+        do {
+            _ = try Radian(asec: Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .undefinedCodomainValue)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAcsc() {
+        do {
+            let angle = try Radian(acsc: 1.0)
             XCTAssert(angle.rawValue == Double.pi / 2)
         } catch {
             XCTFail()
         }
     }
 
-    func testAcosecFloat() {
+    func testAcscFloat() {
         do {
             let value: Float = 1.0
-            let angle = try Radian(acosec: value)
+            let angle = try Radian(acsc: value)
             XCTAssert(angle.rawValue == Double.pi / 2)
         } catch {
             XCTFail()
         }
     }
 
-    func testAcosecCGFloat() {
+    func testAcscCGFloat() {
         do {
             let value: CGFloat = 2.0
-            let angle = try Radian(acosec: value)
+            let angle = try Radian(acsc: value)
             XCTAssert(angle.rawValue == Double.pi / 6)
         } catch {
             XCTFail()
         }
     }
 
-    func testAcosecFailing() {
+    func testAcscFailing() {
         do {
-            _ = try Radian(acosec: 0.5)
+            _ = try Radian(acsc: 0.5)
             XCTFail()
         } catch {
+        }
+    }
+
+    func testAcscMinusInfinity() {
+        do {
+            _ = try Radian(acsc: -Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .undefinedCodomainValue)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAcscInfinity() {
+        do {
+            _ = try Radian(acsc: Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .undefinedCodomainValue)
+        } catch {
+            XCTFail()
         }
     }
 
@@ -272,6 +404,16 @@ class RadianTrigonometryTests: XCTestCase {
         let angle = Radian(asinh: value)
         Radian.equalityPrecision = 14
         XCTAssert(angle == Radian(rawValue: Double.pi / 4))
+    }
+
+    func testAsinhMinusInfinity() {
+        let angle = Radian(asinh: -Double.infinity)
+        XCTAssert(angle.rawValue == -Double.infinity)
+    }
+
+    func testAsinhInfinity() {
+        let angle = Radian(asinh: Double.infinity)
+        XCTAssert(angle.rawValue == Double.infinity)
     }
 
     func testAcosh() {
@@ -308,6 +450,26 @@ class RadianTrigonometryTests: XCTestCase {
             _ = try Radian(acosh: 0.0)
             XCTFail()
         } catch {
+        }
+    }
+
+    func testAcoshMinusInfinity() {
+        do {
+            _ = try Radian(acosh: -Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .invalidParameter)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAcoshInfinity() {
+        do {
+            let angle = try Radian(acosh: Double.infinity)
+            XCTAssert(angle.rawValue == Double.infinity)
+        } catch {
+            XCTFail()
         }
     }
 
@@ -349,6 +511,28 @@ class RadianTrigonometryTests: XCTestCase {
             _ = try Radian(atanh: 1.0)
             XCTFail()
         } catch {
+        }
+    }
+
+    func testAtanhMinusInfinity() {
+        do {
+            _ = try Radian(atanh: -Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .invalidParameter)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAtanhInfinity() {
+        do {
+            _ = try Radian(atanh: Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .invalidParameter)
+        } catch {
+            XCTFail()
         }
     }
 
@@ -394,6 +578,28 @@ class RadianTrigonometryTests: XCTestCase {
         }
     }
 
+    func testAcothMinusInfinity() {
+        do {
+            _ = try Radian(acoth: -Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .undefinedCodomainValue)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAcothInfinity() {
+        do {
+            _ = try Radian(acoth: Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .undefinedCodomainValue)
+        } catch {
+            XCTFail()
+        }
+    }
+
     func testAsech() {
         do {
             let sech_1_tenth = 2.993222846126380
@@ -436,63 +642,144 @@ class RadianTrigonometryTests: XCTestCase {
         }
     }
 
-    func testAcosech() {
+    func testAsechMinusInfinity() {
         do {
-            let cosech_1 = 0.881373587019543
-            let angle = try Radian(acosech: 1.0)
-            XCTAssert(angle == Radian(rawValue: cosech_1))
+            _ = try Radian(asech: -Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .codomainValueNotComputable)
         } catch {
             XCTFail()
         }
     }
 
-    func testAcosechFloat() {
+    func testAsechInfinity() {
         do {
-            let cosech_2 = 0.481211825059603
+            _ = try Radian(asech: Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .codomainValueNotComputable)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAcsch() {
+        do {
+            let csch_1 = 0.881373587019543
+            let angle = try Radian(acsch: 1.0)
+            XCTAssert(angle == Radian(rawValue: csch_1))
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAcschFloat() {
+        do {
+            let csch_2 = 0.481211825059603
             let value: Float = 2.0
-            let angle = try Radian(acosech: value)
+            let angle = try Radian(acsch: value)
             Radian.equalityPrecision = 6
-            XCTAssert(angle == Radian(rawValue: cosech_2))
+            XCTAssert(angle == Radian(rawValue: csch_2))
         } catch {
             XCTFail()
         }
     }
 
-    func testAcosechCGFloat() {
+    func testAcschCGFloat() {
         do {
-            let cosech_minus_1 = -0.881373587019543
+            let csch_minus_1 = -0.881373587019543
             let value: CGFloat = -1.0
-            let angle = try Radian(acosech: value)
+            let angle = try Radian(acsch: value)
             Radian.equalityPrecision = 14
-            XCTAssert(angle == Radian(rawValue: cosech_minus_1))
+            XCTAssert(angle == Radian(rawValue: csch_minus_1))
         } catch {
             XCTFail()
         }
     }
 
-    func testAcosechFailing() {
+    func testAcschFailing() {
         do {
-            _ = try Radian(acosech: 0.0)
+            _ = try Radian(acsch: 0.0)
             XCTFail()
         } catch  {
         }
     }
 
+    func testAcschMinusInfinity() {
+        do {
+            _ = try Radian(acsch: -Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .undefinedCodomainValue)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testAcschInfinity() {
+        do {
+            _ = try Radian(acsch: Double.infinity)
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .undefinedCodomainValue)
+        } catch {
+            XCTFail()
+        }
+    }
+
     func testSin() {
-        let angle = Radian(rawValue: 0.0)
-        XCTAssert(angle.sin() == 0.0)
+        do {
+            let angle = Radian(rawValue: 0.0)
+            let value: Double = try angle.sin()
+            XCTAssert(value.isEqual(to: 0.0))
+        } catch {
+            XCTFail()
+        }
     }
 
     func testSinFloat() {
-        let angle = Radian(rawValue: Double.pi / 2)
-        let value: Float = angle.sin()
-        XCTAssert(value == 1.0)
+        do {
+            let angle = Radian(rawValue: Double.pi / 2)
+            let value: Double = try angle.sin()
+            XCTAssert(value.isEqual(to: 1.0))
+        } catch {
+            XCTFail()
+        }
     }
 
     func testSinCGFloat() {
-        let angle = Radian(rawValue: Double.pi / 6)
-        let value: CGFloat = angle.sin()
-        XCTAssert(value.isEqual(to: 0.5))
+        do {
+            let angle = Radian(rawValue: Double.pi / 6)
+            let value: Double = try angle.sin()
+            XCTAssert(value.isEqual(to: 0.5))
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testSinMinusInfinity() {
+        do {
+            let angle = Radian(rawValue: -Double.infinity)
+            let _: Double = try angle.sin()
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .codomainValueNotComputable)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testSinInfinity() {
+        do {
+            let angle = Radian(rawValue: Double.infinity)
+            let _: Double = try angle.sin()
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .codomainValueNotComputable)
+        } catch {
+            XCTFail()
+        }
     }
 
     func testCos() {
@@ -510,6 +797,30 @@ class RadianTrigonometryTests: XCTestCase {
         let angle = Radian(rawValue: Double.pi / 3)
         let value: CGFloat = angle.cos()
         XCTAssert(value.isEqual(to: 0.5))
+    }
+
+    func testCosMinusInfinity() {
+        do {
+            let angle = Radian(rawValue: -Double.infinity)
+            let _: Double = try angle.cos()
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .codomainValueNotComputable)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testCosInfinity() {
+        do {
+            let angle = Radian(rawValue: Double.infinity)
+            let _: Double = try angle.cos()
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .codomainValueNotComputable)
+        } catch {
+            XCTFail()
+        }
     }
 
     func testTan() {
@@ -548,6 +859,30 @@ class RadianTrigonometryTests: XCTestCase {
             let _: Double = try angle.tan()
             XCTFail()
         } catch {
+        }
+    }
+
+    func testTanMinusInfinity() {
+        do {
+            let angle = Radian(rawValue: -Double.infinity)
+            let _: Double = try angle.tan()
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .codomainValueNotComputable)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testTanInfinity() {
+        do {
+            let angle = Radian(rawValue: Double.infinity)
+            let _: Double = try angle.tan()
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .codomainValueNotComputable)
+        } catch {
+            XCTFail()
         }
     }
 
@@ -599,6 +934,30 @@ class RadianTrigonometryTests: XCTestCase {
         }
     }
 
+    func testCotMinusInfinity() {
+        do {
+            let angle = Radian(rawValue: -Double.infinity)
+            let _: Double = try angle.cot()
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .codomainValueNotComputable)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testCotInfinity() {
+        do {
+            let angle = Radian(rawValue: Double.infinity)
+            let _: Double = try angle.cot()
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .codomainValueNotComputable)
+        } catch {
+            XCTFail()
+        }
+    }
+
     func testSec() {
         let angle = Radian(rawValue: Double.pi / 6)
         do {
@@ -638,46 +997,92 @@ class RadianTrigonometryTests: XCTestCase {
         }
     }
 
-    func testCosec() {
+    func testSecMinusInfinity() {
+        do {
+            let angle = Radian(rawValue: -Double.infinity)
+            let _: Double = try angle.sec()
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .codomainValueNotComputable)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testSecInfinity() {
+        do {
+            let angle = Radian(rawValue: Double.infinity)
+            let _: Double = try angle.sec()
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .codomainValueNotComputable)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testCsc() {
         let angle = Radian(rawValue: Double.pi / 6)
         do {
-            let value: Double = try angle.cosec()
+            let value: Double = try angle.csc()
             XCTAssert(value.isEqual(to: 2))
         } catch {
             XCTFail()
         }
     }
 
-    func testCosecFloat() {
+    func testCscFloat() {
         let angle = Radian(rawValue: Double.pi / 4)
         do {
-            let value: Float = try angle.cosec()
+            let value: Float = try angle.csc()
             XCTAssert(value.isEqual(to: sqrt(2)))
         } catch {
             XCTFail()
         }
     }
 
-    func testCosecCGFloat() {
+    func testCscCGFloat() {
         let angle = Radian(rawValue: Double.pi / 3)
         do {
-            let value: CGFloat = try angle.cosec()
+            let value: CGFloat = try angle.csc()
             XCTAssert(value.isEqual(to: 2 / sqrt(3)))
         } catch {
             XCTFail()
         }
     }
 
-    func testCosecThrowing() {
+    func testCscThrowing() {
         let angle = Radian(rawValue: 0.0)
         do {
-            let _: Double = try angle.cosec()
+            let _: Double = try angle.csc()
             XCTFail()
         } catch {
         }
     }
 
+    func testCscMinusInfinity() {
+        do {
+            let angle = Radian(rawValue: -Double.infinity)
+            let _: Double = try angle.csc()
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .codomainValueNotComputable)
+        } catch {
+            XCTFail()
+        }
+    }
 
+    func testCscInfinity() {
+        do {
+            let angle = Radian(rawValue: Double.infinity)
+            let _: Double = try angle.csc()
+            XCTFail()
+        } catch let error as TrigonometricError {
+            XCTAssert(error == .codomainValueNotComputable)
+        } catch {
+            XCTFail()
+        }
+    }
 
     func testSinh() {
         let angle = Radian(rawValue: Double.pi / 6)
@@ -695,6 +1100,18 @@ class RadianTrigonometryTests: XCTestCase {
         let angle = Radian(rawValue: Double.pi / 6)
         let value: CGFloat = angle.sinh()
         XCTAssert(value.isEqual(to: 1.249367050523975))
+    }
+
+    func testSinhMinusInfinity() {
+        let angle = Radian(rawValue: -Double.infinity)
+        let value: Double = angle.sinh()
+        XCTAssert(value == -Double.infinity)
+    }
+
+    func testSinhInfinity() {
+        let angle = Radian(rawValue: Double.infinity)
+        let value: Double = angle.sinh()
+        XCTAssert(value == Double.infinity)
     }
 
     func testCosh() {
@@ -715,6 +1132,18 @@ class RadianTrigonometryTests: XCTestCase {
         XCTAssert(value.isEqual(to: 1.600286857702386))
     }
 
+    func testCoshMinusInfinity() {
+        let angle = Radian(rawValue: -Double.infinity)
+        let value: Double = angle.cosh()
+        XCTAssert(value == Double.infinity)
+    }
+
+    func testCoshInfinity() {
+        let angle = Radian(rawValue: Double.infinity)
+        let value: Double = angle.cosh()
+        XCTAssert(value == -Double.infinity)
+    }
+
     func testTanh() {
         let angle = Radian(rawValue: Double.pi / 6)
         let value: Double = angle.tanh()
@@ -731,6 +1160,18 @@ class RadianTrigonometryTests: XCTestCase {
         let angle = Radian(rawValue: Double.pi / 6)
         let value: CGFloat = angle.tanh()
         XCTAssert(value.isEqual(to: 0.780714435359267))
+    }
+
+    func testTanhMinusInfinity() {
+        let angle = Radian(rawValue: -Double.infinity)
+        let value: Double = angle.tanh()
+        XCTAssert(value.isEqual(to: -1.0))
+    }
+
+    func testTanhInfinity() {
+        let angle = Radian(rawValue: Double.infinity)
+        let value: Double = angle.tanh()
+        XCTAssert(value.isEqual(to: -1.0))
     }
 
     func testCoth() {
@@ -772,6 +1213,26 @@ class RadianTrigonometryTests: XCTestCase {
         }
     }
 
+    func testCothMinusInfinity() {
+        do {
+            let angle = Radian(rawValue: -Double.infinity)
+            let value: Double = try angle.coth()
+            XCTAssert(value.isEqual(to: -1.0))
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testCothInfinity() {
+        do {
+            let angle = Radian(rawValue: Double.infinity)
+            let value: Double = try angle.coth()
+            XCTAssert(value.isEqual(to: -1.0))
+        } catch {
+            XCTFail()
+        }
+    }
+
     func testSech() {
         let angle = Radian(rawValue: 0.0)
         let value: Double = angle.sech()
@@ -790,42 +1251,74 @@ class RadianTrigonometryTests: XCTestCase {
         XCTAssert(value.isEqual(to: 0.624887966296087))
     }
 
-    func testCosech() {
+    func testSechMinusInfinity() {
+        let angle = Radian(rawValue: -Double.infinity)
+        let value: Double = angle.sech()
+        XCTAssert(value.isEqual(to: 0.0))
+    }
+
+    func testSechInfinity() {
+        let angle = Radian(rawValue: Double.infinity)
+        let value: Double = angle.sech()
+        XCTAssert(value.isEqual(to: 0.0))
+    }
+
+    func testCsch() {
         let angle = Radian(rawValue: Double.pi / 6)
         do {
-            let value: Double = try angle.cosec()
+            let value: Double = try angle.csch()
             XCTAssert(value.isEqual(to: 1.825305574687953))
         } catch {
             XCTFail()
         }
     }
 
-    func testCosechFloat() {
+    func testCschFloat() {
         let angle = Radian(rawValue: Double.pi / 4)
         do {
-            let value: Float = try angle.cosech()
+            let value: Float = try angle.csch()
             XCTAssert(value.isEqual(to: 1.151183870920848))
         } catch {
             XCTFail()
         }
     }
 
-    func testCosechCGFloat() {
+    func testCschCGFloat() {
         let angle = Radian(rawValue: Double.pi / 3)
         do {
-            let value: CGFloat = try angle.cosech()
+            let value: CGFloat = try angle.csch()
             XCTAssert(value.isEqual(to: 0.800405292888593))
         } catch {
             XCTFail()
         }
     }
 
-    func testCosechThrowing() {
+    func testCschThrowing() {
         let angle = Radian(rawValue: 0.0)
         do {
-            let _: Double = try angle.cosech()
+            let _: Double = try angle.csch()
             XCTFail()
         } catch {
+        }
+    }
+
+    func testCschMinusInfinity() {
+        do {
+            let angle = Radian(rawValue: -Double.infinity)
+            let value: Double = try angle.csch()
+            XCTAssert(value.isEqual(to: 0.0))
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testCschInfinity() {
+        do {
+            let angle = Radian(rawValue: Double.infinity)
+            let value: Double = try angle.csch()
+            XCTAssert(value.isEqual(to: 0.0))
+        } catch {
+            XCTFail()
         }
     }
 }
