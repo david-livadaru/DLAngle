@@ -33,10 +33,10 @@
 		639220811FC9FD82003FB121 /* NormalizedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220401FC9FD82003FB121 /* NormalizedType.swift */; };
 		639220821FC9FD82003FB121 /* NormalizedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220401FC9FD82003FB121 /* NormalizedType.swift */; };
 		639220831FC9FD82003FB121 /* NormalizedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220401FC9FD82003FB121 /* NormalizedType.swift */; };
-		639220881FC9FD82003FB121 /* Radian+Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220421FC9FD82003FB121 /* Radian+Trigonometry.swift */; };
-		639220891FC9FD82003FB121 /* Radian+Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220421FC9FD82003FB121 /* Radian+Trigonometry.swift */; };
-		6392208A1FC9FD82003FB121 /* Radian+Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220421FC9FD82003FB121 /* Radian+Trigonometry.swift */; };
-		6392208B1FC9FD82003FB121 /* Radian+Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220421FC9FD82003FB121 /* Radian+Trigonometry.swift */; };
+		639220881FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220421FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift */; };
+		639220891FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220421FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift */; };
+		6392208A1FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220421FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift */; };
+		6392208B1FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220421FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift */; };
 		6392208C1FC9FD82003FB121 /* Radian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220431FC9FD82003FB121 /* Radian.swift */; };
 		6392208D1FC9FD82003FB121 /* Radian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220431FC9FD82003FB121 /* Radian.swift */; };
 		6392208E1FC9FD82003FB121 /* Radian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639220431FC9FD82003FB121 /* Radian.swift */; };
@@ -72,11 +72,35 @@
 		639D7A0F1E58DADF008D10EF /* AngleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D7A0E1E58DADF008D10EF /* AngleTests.swift */; };
 		639D7A161E58DE2B008D10EF /* DegreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D7A151E58DE2B008D10EF /* DegreeTests.swift */; };
 		639D7A181E58F1E6008D10EF /* RadianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D7A171E58F1E6008D10EF /* RadianTests.swift */; };
+		63A76A441FF2B07A00B5943F /* Trigonometry+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A431FF2B07A00B5943F /* Trigonometry+Validation.swift */; };
+		63A76A451FF2B07A00B5943F /* Trigonometry+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A431FF2B07A00B5943F /* Trigonometry+Validation.swift */; };
+		63A76A461FF2B07A00B5943F /* Trigonometry+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A431FF2B07A00B5943F /* Trigonometry+Validation.swift */; };
+		63A76A471FF2B07A00B5943F /* Trigonometry+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A431FF2B07A00B5943F /* Trigonometry+Validation.swift */; };
+		63A76A491FF2B0E800B5943F /* Trigonometry+InverseTrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A481FF2B0E800B5943F /* Trigonometry+InverseTrigonometricFunctions.swift */; };
+		63A76A4A1FF2B0E800B5943F /* Trigonometry+InverseTrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A481FF2B0E800B5943F /* Trigonometry+InverseTrigonometricFunctions.swift */; };
+		63A76A4B1FF2B0E800B5943F /* Trigonometry+InverseTrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A481FF2B0E800B5943F /* Trigonometry+InverseTrigonometricFunctions.swift */; };
+		63A76A4C1FF2B0E800B5943F /* Trigonometry+InverseTrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A481FF2B0E800B5943F /* Trigonometry+InverseTrigonometricFunctions.swift */; };
+		63A76A4E1FF2B17900B5943F /* Trigonometry+TrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A4D1FF2B17900B5943F /* Trigonometry+TrigonometricFunctions.swift */; };
+		63A76A4F1FF2B17900B5943F /* Trigonometry+TrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A4D1FF2B17900B5943F /* Trigonometry+TrigonometricFunctions.swift */; };
+		63A76A501FF2B17900B5943F /* Trigonometry+TrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A4D1FF2B17900B5943F /* Trigonometry+TrigonometricFunctions.swift */; };
+		63A76A511FF2B17900B5943F /* Trigonometry+TrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A4D1FF2B17900B5943F /* Trigonometry+TrigonometricFunctions.swift */; };
+		63A76A531FF2B1D300B5943F /* Trigonometry+HyperbolicTrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A521FF2B1D300B5943F /* Trigonometry+HyperbolicTrigonometricFunctions.swift */; };
+		63A76A541FF2B1D300B5943F /* Trigonometry+HyperbolicTrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A521FF2B1D300B5943F /* Trigonometry+HyperbolicTrigonometricFunctions.swift */; };
+		63A76A551FF2B1D300B5943F /* Trigonometry+HyperbolicTrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A521FF2B1D300B5943F /* Trigonometry+HyperbolicTrigonometricFunctions.swift */; };
+		63A76A561FF2B1D300B5943F /* Trigonometry+HyperbolicTrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A521FF2B1D300B5943F /* Trigonometry+HyperbolicTrigonometricFunctions.swift */; };
+		63A76A581FF2B23400B5943F /* Trigonometry+InverseHyperbolicTrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A571FF2B23400B5943F /* Trigonometry+InverseHyperbolicTrigonometricFunctions.swift */; };
+		63A76A591FF2B23400B5943F /* Trigonometry+InverseHyperbolicTrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A571FF2B23400B5943F /* Trigonometry+InverseHyperbolicTrigonometricFunctions.swift */; };
+		63A76A5A1FF2B23400B5943F /* Trigonometry+InverseHyperbolicTrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A571FF2B23400B5943F /* Trigonometry+InverseHyperbolicTrigonometricFunctions.swift */; };
+		63A76A5B1FF2B23400B5943F /* Trigonometry+InverseHyperbolicTrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A571FF2B23400B5943F /* Trigonometry+InverseHyperbolicTrigonometricFunctions.swift */; };
 		63B749CD1FD1F79300A6296F /* Atan2ArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B749CC1FD1F79300A6296F /* Atan2ArgumentsChecker.swift */; };
 		63B749CE1FD1F79300A6296F /* Atan2ArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B749CC1FD1F79300A6296F /* Atan2ArgumentsChecker.swift */; };
 		63B749CF1FD1F79300A6296F /* Atan2ArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B749CC1FD1F79300A6296F /* Atan2ArgumentsChecker.swift */; };
 		63B749D01FD1F79300A6296F /* Atan2ArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B749CC1FD1F79300A6296F /* Atan2ArgumentsChecker.swift */; };
 		63B749D41FD204A300A6296F /* Atan2ArgumentsCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B749D31FD204A300A6296F /* Atan2ArgumentsCheckerTests.swift */; };
+		63B911101FF2AE2B008E3E62 /* Radian+InverseTrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9110F1FF2AE2B008E3E62 /* Radian+InverseTrigonometricFunctions.swift */; };
+		63B911111FF2AE2B008E3E62 /* Radian+InverseTrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9110F1FF2AE2B008E3E62 /* Radian+InverseTrigonometricFunctions.swift */; };
+		63B911121FF2AE2B008E3E62 /* Radian+InverseTrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9110F1FF2AE2B008E3E62 /* Radian+InverseTrigonometricFunctions.swift */; };
+		63B911131FF2AE2B008E3E62 /* Radian+InverseTrigonometricFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9110F1FF2AE2B008E3E62 /* Radian+InverseTrigonometricFunctions.swift */; };
 		63DC4AC91FD1E0B500FA0ECE /* PredicateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC4AC81FD1E0B500FA0ECE /* PredicateTests.swift */; };
 		63DC4ACB1FD1E41300FA0ECE /* RadianTrigonometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC4ACA1FD1E41300FA0ECE /* RadianTrigonometryTests.swift */; };
 		63F687411E74348100E6CA13 /* ArgumentsCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F687401E74348100E6CA13 /* ArgumentsCheckerTests.swift */; };
@@ -102,7 +126,7 @@
 		639220361FC9FD82003FB121 /* Degree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Degree.swift; sourceTree = "<group>"; };
 		6392203B1FC9FD82003FB121 /* GenericTrigonometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTrigonometry.swift; sourceTree = "<group>"; };
 		639220401FC9FD82003FB121 /* NormalizedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalizedType.swift; sourceTree = "<group>"; };
-		639220421FC9FD82003FB121 /* Radian+Trigonometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Radian+Trigonometry.swift"; sourceTree = "<group>"; };
+		639220421FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Radian+TrigonometricFunctions.swift"; sourceTree = "<group>"; };
 		639220431FC9FD82003FB121 /* Radian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Radian.swift; sourceTree = "<group>"; };
 		639220461FC9FD82003FB121 /* Trigonometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigonometry.swift; sourceTree = "<group>"; };
 		639220A81FC9FE60003FB121 /* ArgumentsChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentsChecker.swift; sourceTree = "<group>"; };
@@ -119,8 +143,14 @@
 		639D7A0E1E58DADF008D10EF /* AngleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleTests.swift; sourceTree = "<group>"; };
 		639D7A151E58DE2B008D10EF /* DegreeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DegreeTests.swift; sourceTree = "<group>"; };
 		639D7A171E58F1E6008D10EF /* RadianTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadianTests.swift; sourceTree = "<group>"; };
+		63A76A431FF2B07A00B5943F /* Trigonometry+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trigonometry+Validation.swift"; sourceTree = "<group>"; };
+		63A76A481FF2B0E800B5943F /* Trigonometry+InverseTrigonometricFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trigonometry+InverseTrigonometricFunctions.swift"; sourceTree = "<group>"; };
+		63A76A4D1FF2B17900B5943F /* Trigonometry+TrigonometricFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trigonometry+TrigonometricFunctions.swift"; sourceTree = "<group>"; };
+		63A76A521FF2B1D300B5943F /* Trigonometry+HyperbolicTrigonometricFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trigonometry+HyperbolicTrigonometricFunctions.swift"; sourceTree = "<group>"; };
+		63A76A571FF2B23400B5943F /* Trigonometry+InverseHyperbolicTrigonometricFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trigonometry+InverseHyperbolicTrigonometricFunctions.swift"; sourceTree = "<group>"; };
 		63B749CC1FD1F79300A6296F /* Atan2ArgumentsChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atan2ArgumentsChecker.swift; sourceTree = "<group>"; };
 		63B749D31FD204A300A6296F /* Atan2ArgumentsCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atan2ArgumentsCheckerTests.swift; sourceTree = "<group>"; };
+		63B9110F1FF2AE2B008E3E62 /* Radian+InverseTrigonometricFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Radian+InverseTrigonometricFunctions.swift"; sourceTree = "<group>"; };
 		63DC4AC81FD1E0B500FA0ECE /* PredicateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredicateTests.swift; sourceTree = "<group>"; };
 		63DC4ACA1FD1E41300FA0ECE /* RadianTrigonometryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadianTrigonometryTests.swift; sourceTree = "<group>"; };
 		63F687401E74348100E6CA13 /* ArgumentsCheckerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentsCheckerTests.swift; sourceTree = "<group>"; };
@@ -233,9 +263,9 @@
 		639220A71FC9FE4A003FB121 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				639220C71FCA0134003FB121 /* IntervalType.swift */,
 				639220A81FC9FE60003FB121 /* ArgumentsChecker.swift */,
 				63B749CC1FD1F79300A6296F /* Atan2ArgumentsChecker.swift */,
+				639220C71FCA0134003FB121 /* IntervalType.swift */,
 				639220A91FC9FE60003FB121 /* Predicate.swift */,
 				639220AA1FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift */,
 				639220AB1FC9FE60003FB121 /* TrigonometricFunction.swift */,
@@ -251,7 +281,8 @@
 				639220361FC9FD82003FB121 /* Degree.swift */,
 				639220401FC9FD82003FB121 /* NormalizedType.swift */,
 				639220431FC9FD82003FB121 /* Radian.swift */,
-				639220421FC9FD82003FB121 /* Radian+Trigonometry.swift */,
+				639220421FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift */,
+				63B9110F1FF2AE2B008E3E62 /* Radian+InverseTrigonometricFunctions.swift */,
 			);
 			name = Angle;
 			sourceTree = "<group>";
@@ -259,8 +290,13 @@
 		639220BE1FC9FEA7003FB121 /* Trigonometry */ = {
 			isa = PBXGroup;
 			children = (
-				639220461FC9FD82003FB121 /* Trigonometry.swift */,
 				6392203B1FC9FD82003FB121 /* GenericTrigonometry.swift */,
+				639220461FC9FD82003FB121 /* Trigonometry.swift */,
+				63A76A431FF2B07A00B5943F /* Trigonometry+Validation.swift */,
+				63A76A481FF2B0E800B5943F /* Trigonometry+InverseTrigonometricFunctions.swift */,
+				63A76A4D1FF2B17900B5943F /* Trigonometry+TrigonometricFunctions.swift */,
+				63A76A521FF2B1D300B5943F /* Trigonometry+HyperbolicTrigonometricFunctions.swift */,
+				63A76A571FF2B23400B5943F /* Trigonometry+InverseHyperbolicTrigonometricFunctions.swift */,
 			);
 			name = Trigonometry;
 			sourceTree = "<group>";
@@ -354,6 +390,7 @@
 				63252D2B1E5A3B6400324B66 /* Frameworks */,
 				63252D2C1E5A3B6400324B66 /* Headers */,
 				63252D2D1E5A3B6400324B66 /* Resources */,
+				63B9110D1FF28CD7008E3E62 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -425,6 +462,7 @@
 				639D79FF1E58DAB1008D10EF /* Sources */,
 				639D7A001E58DAB1008D10EF /* Frameworks */,
 				639D7A011E58DAB1008D10EF /* Resources */,
+				63B9110E1FF28CE6008E3E62 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -526,19 +564,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		63B9110D1FF28CD7008E3E62 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		63B9110E1FF28CE6008E3E62 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		63252D2A1E5A3B6400324B66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				639220981FC9FD82003FB121 /* Trigonometry.swift in Sources */,
+				63A76A4E1FF2B17900B5943F /* Trigonometry+TrigonometricFunctions.swift in Sources */,
+				63A76A441FF2B07A00B5943F /* Trigonometry+Validation.swift in Sources */,
 				6392206C1FC9FD82003FB121 /* GenericTrigonometry.swift in Sources */,
-				639220881FC9FD82003FB121 /* Radian+Trigonometry.swift in Sources */,
+				63A76A581FF2B23400B5943F /* Trigonometry+InverseHyperbolicTrigonometricFunctions.swift in Sources */,
+				639220881FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift in Sources */,
 				639220B41FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift in Sources */,
+				63B911101FF2AE2B008E3E62 /* Radian+InverseTrigonometricFunctions.swift in Sources */,
+				63A76A531FF2B1D300B5943F /* Trigonometry+HyperbolicTrigonometricFunctions.swift in Sources */,
 				639220C81FCA0134003FB121 /* IntervalType.swift in Sources */,
 				639220801FC9FD82003FB121 /* NormalizedType.swift in Sources */,
 				639220B81FC9FE60003FB121 /* TrigonometricFunction.swift in Sources */,
 				6392208C1FC9FD82003FB121 /* Radian.swift in Sources */,
+				63A76A491FF2B0E800B5943F /* Trigonometry+InverseTrigonometricFunctions.swift in Sources */,
 				6392204C1FC9FD82003FB121 /* TrigonometricError.swift in Sources */,
 				639220581FC9FD82003FB121 /* Degree.swift in Sources */,
 				639220B01FC9FE60003FB121 /* Predicate.swift in Sources */,
@@ -553,13 +626,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				639220991FC9FD82003FB121 /* Trigonometry.swift in Sources */,
+				63A76A4F1FF2B17900B5943F /* Trigonometry+TrigonometricFunctions.swift in Sources */,
+				63A76A451FF2B07A00B5943F /* Trigonometry+Validation.swift in Sources */,
 				6392206D1FC9FD82003FB121 /* GenericTrigonometry.swift in Sources */,
-				639220891FC9FD82003FB121 /* Radian+Trigonometry.swift in Sources */,
+				63A76A591FF2B23400B5943F /* Trigonometry+InverseHyperbolicTrigonometricFunctions.swift in Sources */,
+				639220891FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift in Sources */,
 				639220B51FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift in Sources */,
+				63B911111FF2AE2B008E3E62 /* Radian+InverseTrigonometricFunctions.swift in Sources */,
+				63A76A541FF2B1D300B5943F /* Trigonometry+HyperbolicTrigonometricFunctions.swift in Sources */,
 				639220C91FCA0134003FB121 /* IntervalType.swift in Sources */,
 				639220811FC9FD82003FB121 /* NormalizedType.swift in Sources */,
 				639220B91FC9FE60003FB121 /* TrigonometricFunction.swift in Sources */,
 				6392208D1FC9FD82003FB121 /* Radian.swift in Sources */,
+				63A76A4A1FF2B0E800B5943F /* Trigonometry+InverseTrigonometricFunctions.swift in Sources */,
 				6392204D1FC9FD82003FB121 /* TrigonometricError.swift in Sources */,
 				639220591FC9FD82003FB121 /* Degree.swift in Sources */,
 				639220B11FC9FE60003FB121 /* Predicate.swift in Sources */,
@@ -574,13 +653,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				6392209A1FC9FD82003FB121 /* Trigonometry.swift in Sources */,
+				63A76A501FF2B17900B5943F /* Trigonometry+TrigonometricFunctions.swift in Sources */,
+				63A76A461FF2B07A00B5943F /* Trigonometry+Validation.swift in Sources */,
 				6392206E1FC9FD82003FB121 /* GenericTrigonometry.swift in Sources */,
-				6392208A1FC9FD82003FB121 /* Radian+Trigonometry.swift in Sources */,
+				63A76A5A1FF2B23400B5943F /* Trigonometry+InverseHyperbolicTrigonometricFunctions.swift in Sources */,
+				6392208A1FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift in Sources */,
 				639220B61FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift in Sources */,
+				63B911121FF2AE2B008E3E62 /* Radian+InverseTrigonometricFunctions.swift in Sources */,
+				63A76A551FF2B1D300B5943F /* Trigonometry+HyperbolicTrigonometricFunctions.swift in Sources */,
 				639220CA1FCA0134003FB121 /* IntervalType.swift in Sources */,
 				639220821FC9FD82003FB121 /* NormalizedType.swift in Sources */,
 				639220BA1FC9FE60003FB121 /* TrigonometricFunction.swift in Sources */,
 				6392208E1FC9FD82003FB121 /* Radian.swift in Sources */,
+				63A76A4B1FF2B0E800B5943F /* Trigonometry+InverseTrigonometricFunctions.swift in Sources */,
 				6392204E1FC9FD82003FB121 /* TrigonometricError.swift in Sources */,
 				6392205A1FC9FD82003FB121 /* Degree.swift in Sources */,
 				639220B21FC9FE60003FB121 /* Predicate.swift in Sources */,
@@ -595,13 +680,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				6392209B1FC9FD82003FB121 /* Trigonometry.swift in Sources */,
+				63A76A511FF2B17900B5943F /* Trigonometry+TrigonometricFunctions.swift in Sources */,
+				63A76A471FF2B07A00B5943F /* Trigonometry+Validation.swift in Sources */,
 				6392206F1FC9FD82003FB121 /* GenericTrigonometry.swift in Sources */,
-				6392208B1FC9FD82003FB121 /* Radian+Trigonometry.swift in Sources */,
+				63A76A5B1FF2B23400B5943F /* Trigonometry+InverseHyperbolicTrigonometricFunctions.swift in Sources */,
+				6392208B1FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift in Sources */,
 				639220B71FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift in Sources */,
+				63B911131FF2AE2B008E3E62 /* Radian+InverseTrigonometricFunctions.swift in Sources */,
+				63A76A561FF2B1D300B5943F /* Trigonometry+HyperbolicTrigonometricFunctions.swift in Sources */,
 				639220CB1FCA0134003FB121 /* IntervalType.swift in Sources */,
 				639220831FC9FD82003FB121 /* NormalizedType.swift in Sources */,
 				639220BB1FC9FE60003FB121 /* TrigonometricFunction.swift in Sources */,
 				6392208F1FC9FD82003FB121 /* Radian.swift in Sources */,
+				63A76A4C1FF2B0E800B5943F /* Trigonometry+InverseTrigonometricFunctions.swift in Sources */,
 				6392204F1FC9FD82003FB121 /* TrigonometricError.swift in Sources */,
 				6392205B1FC9FD82003FB121 /* Degree.swift in Sources */,
 				639220B31FC9FE60003FB121 /* Predicate.swift in Sources */,

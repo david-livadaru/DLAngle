@@ -8,6 +8,7 @@
 import XCTest
 @testable import DLAngle_iOS
 
+// swiftlint:disable identifier_name
 private let sinh_PI: Double = 11.548739357257748
 private let sinh_PI_2: Double = 2.301298902307294
 private let sinh_PI_4: Double = 0.868670961486009
@@ -15,6 +16,7 @@ private let sinh_PI_4: Double = 0.868670961486009
 private let cosh_PI: Double = 11.591953275521520
 private let cosh_PI_2: Double = 2.509178478658056
 private let cosh_PI_4: Double = 1.324609089252005
+// swiftlint:enable identifier_name
 
 class RadianTrigonometryTests: XCTestCase {
     func testAsin() {

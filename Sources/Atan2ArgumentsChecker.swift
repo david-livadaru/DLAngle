@@ -8,6 +8,7 @@
 import Foundation
 
 class Atan2ArgumentsChecker: ArgumentsChecker {
+    // swiftlint:disable:next identifier_name
     init(y: Double, x: Double) {
         super.init(predicate: Predicate(closure: {
             guard x.isFinite && y.isFinite else { return false }
