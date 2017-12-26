@@ -16,7 +16,7 @@ class ArgumentsCheckerTests: XCTestCase {
         do {
             try checker.check()
         } catch {
-            XCTFail()
+            XCTFail("ArgumentsChecker throws exception for a valid value.")
         }
     }
 
@@ -25,25 +25,7 @@ class ArgumentsCheckerTests: XCTestCase {
         do {
             try checker.check()
         } catch {
-            XCTFail()
-        }
-    }
-
-    func testValidValues3() {
-        let checker = ArgumentsChecker(value: 10, validValues: [1, 2, 3, 4])
-        do {
-            try checker.check()
-            XCTFail()
-        } catch {
-        }
-    }
-
-    func testValidValues4() {
-        let checker = ArgumentsChecker(value: Double.pi, validValues: [1.0, 1.25, 1.5, 1.75, 2.0])
-        do {
-            try checker.check()
-            XCTFail()
-        } catch {
+            XCTFail("ArgumentsChecker throws exception for a valid value.")
         }
     }
 
@@ -53,7 +35,7 @@ class ArgumentsCheckerTests: XCTestCase {
         do {
             try checker.check()
         } catch {
-            XCTFail()
+            XCTFail("ArgumentsChecker throws exception for a valid value.")
         }
     }
 
@@ -62,7 +44,7 @@ class ArgumentsCheckerTests: XCTestCase {
         let checker = ArgumentsChecker(value: -5, validInterval: interval)
         do {
             try checker.check()
-            XCTFail()
+            XCTFail("ArgumentsChecker throws exception for a valid value.")
         } catch {
         }
     }
@@ -72,7 +54,7 @@ class ArgumentsCheckerTests: XCTestCase {
         do {
             try checker.check()
         } catch {
-            XCTFail()
+            XCTFail("ArgumentsChecker does not throw an exception for an invalid value.")
         }
     }
 
@@ -80,7 +62,25 @@ class ArgumentsCheckerTests: XCTestCase {
         let checker = ArgumentsChecker(value: 2, invalidValues: [1, 2, 3, 4])
         do {
             try checker.check()
-            XCTFail()
+            XCTFail("ArgumentsChecker does not throw an exception for an invalid value.")
+        } catch {
+        }
+    }
+
+    func testInvalidValues3() {
+        let checker = ArgumentsChecker(value: 10, validValues: [1, 2, 3, 4])
+        do {
+            try checker.check()
+            XCTFail("ArgumentsChecker does not throw an exception for an invalid value.")
+        } catch {
+        }
+    }
+
+    func testInvalidValues4() {
+        let checker = ArgumentsChecker(value: Double.pi, validValues: [1.0, 1.25, 1.5, 1.75, 2.0])
+        do {
+            try checker.check()
+            XCTFail("ArgumentsChecker does not throw an exception for an invalid value.")
         } catch {
         }
     }
@@ -91,7 +91,7 @@ class ArgumentsCheckerTests: XCTestCase {
         do {
             try checker.check()
         } catch {
-            XCTFail()
+            XCTFail("ArgumentsChecker does not throw an exception for an invalid value.")
         }
     }
 
@@ -100,7 +100,7 @@ class ArgumentsCheckerTests: XCTestCase {
         let checker = ArgumentsChecker(value: 0.5, invalidInterval: interval)
         do {
             try checker.check()
-            XCTFail()
+            XCTFail("ArgumentsChecker does not throw an exception for an invalid value.")
         } catch {
         }
     }

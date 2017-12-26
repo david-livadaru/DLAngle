@@ -15,7 +15,7 @@ class InverseTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.asin(value)
             XCTAssert(angle == Radian(rawValue: -Double.pi / 2))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .asin))
         }
     }
 
@@ -26,7 +26,7 @@ class InverseTrigonometricTests: XCTestCase {
             Angle.equalityPrecision = 6
             XCTAssert(angle == Radian(rawValue: -Double.pi / 2))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .asin))
         }
     }
 
@@ -36,7 +36,7 @@ class InverseTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.asin(value)
             XCTAssert(angle == Radian(rawValue: -Double.pi / 2))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .asin))
         }
     }
 
@@ -44,7 +44,7 @@ class InverseTrigonometricTests: XCTestCase {
         do {
             let value: Double = 2.0
             let _: Radian = try Trigonometry.asin(value)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .asin))
         } catch {
         }
     }
@@ -55,7 +55,7 @@ class InverseTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.acos(value)
             XCTAssert(angle == Radian(rawValue: Double.pi))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acos))
         }
     }
 
@@ -66,7 +66,7 @@ class InverseTrigonometricTests: XCTestCase {
             Angle.equalityPrecision = 6
             XCTAssert(angle == Radian(rawValue: Double.pi))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acos))
         }
     }
 
@@ -76,7 +76,7 @@ class InverseTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.acos(value)
             XCTAssert(angle == Radian(rawValue: Double.pi))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acos))
         }
     }
 
@@ -84,7 +84,7 @@ class InverseTrigonometricTests: XCTestCase {
         do {
             let value: Double = 2.0
             let _: Radian = try Trigonometry.acos(value)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .acos))
         } catch {
         }
     }
@@ -95,7 +95,7 @@ class InverseTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.atan(value)
             XCTAssert(angle == Radian(rawValue: Double.pi / 4))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .atan))
         }
     }
 
@@ -116,7 +116,7 @@ class InverseTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.atan(value)
             XCTAssert(angle == Radian(rawValue: Double.pi / 4))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .atan))
         }
     }
 
@@ -127,7 +127,7 @@ class InverseTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.atan2(y: yValue, x: xValue)
             XCTAssert(angle == Radian(rawValue: Double.pi))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .atan2))
         }
     }
 
@@ -139,7 +139,7 @@ class InverseTrigonometricTests: XCTestCase {
             Angle.equalityPrecision = 6
             XCTAssert(angle == Radian(rawValue: Double.pi))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .atan2))
         }
     }
 
@@ -150,7 +150,7 @@ class InverseTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.atan2(y: yValue, x: xValue)
             XCTAssert(angle == Radian(rawValue: Double.pi))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .atan2))
         }
     }
 
@@ -159,7 +159,7 @@ class InverseTrigonometricTests: XCTestCase {
             let xValue: Double = 0.0
             let yValue: Double = 0.0
             let _: Radian = try Trigonometry.atan2(y: yValue, x: xValue)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .atan2))
         } catch {
         }
     }
@@ -170,7 +170,7 @@ class InverseTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.acot(value)
             XCTAssert(angle == Radian(rawValue: Double.pi / 4))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acot))
         }
     }
 
@@ -181,7 +181,7 @@ class InverseTrigonometricTests: XCTestCase {
             Angle.equalityPrecision = 6
             XCTAssert(angle == Radian(rawValue: Double.pi / 4))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acot))
         }
     }
 
@@ -191,7 +191,7 @@ class InverseTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.acot(value)
             XCTAssert(angle == Radian(rawValue: Double.pi / 4))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acot))
         }
     }
 
@@ -199,7 +199,7 @@ class InverseTrigonometricTests: XCTestCase {
         do {
             let value: Double = 0.0
             let _: Radian = try Trigonometry.acot(value)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .acot))
         } catch {
         }
     }
@@ -210,7 +210,7 @@ class InverseTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.asec(value)
             XCTAssert(angle.rawValue == Double.pi)
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .asec))
         }
     }
 
@@ -220,7 +220,7 @@ class InverseTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.asec(value)
             XCTAssert(angle.rawValue == Double.pi)
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .asec))
         }
     }
 
@@ -230,7 +230,7 @@ class InverseTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.asec(value)
             XCTAssert(angle.rawValue == Double.pi)
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .asec))
         }
     }
 
@@ -238,7 +238,7 @@ class InverseTrigonometricTests: XCTestCase {
         do {
             let value = 0.0
             let _: Radian = try Trigonometry.asec(value)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .asec))
         } catch {
         }
     }
@@ -249,7 +249,7 @@ class InverseTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.acsc(value)
             XCTAssert(angle.rawValue == Double.pi / 2)
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acsc))
         }
     }
 
@@ -259,7 +259,7 @@ class InverseTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.acsc(value)
             XCTAssert(angle.rawValue == Double.pi / 2)
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acsc))
         }
     }
 
@@ -269,7 +269,7 @@ class InverseTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.acsc(value)
             XCTAssert(angle.rawValue == Double.pi / 2)
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acsc))
         }
     }
 
@@ -277,7 +277,7 @@ class InverseTrigonometricTests: XCTestCase {
         do {
             let value: Double = 0.0
             let _: Radian = try Trigonometry.acsc(value)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .acsc))
         } catch {
         }
     }

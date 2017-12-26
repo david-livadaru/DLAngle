@@ -105,7 +105,7 @@ class RadianHyperbolicTrigonometricTests: XCTestCase {
             let value: Double = try angle.coth()
             XCTAssert(value.equals(to: 2.081283363933637))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .coth))
         }
     }
 
@@ -115,7 +115,7 @@ class RadianHyperbolicTrigonometricTests: XCTestCase {
             let value: Float = try angle.coth()
             XCTAssert(value.equals(to: 1.524868618822064))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .coth))
         }
     }
 
@@ -125,7 +125,7 @@ class RadianHyperbolicTrigonometricTests: XCTestCase {
             let value: CGFloat = try angle.coth()
             XCTAssert(value.equals(to: 1.280878071045044))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .coth))
         }
     }
 
@@ -133,7 +133,7 @@ class RadianHyperbolicTrigonometricTests: XCTestCase {
         let angle = Radian(rawValue: 0.0)
         do {
             let _: Double = try angle.coth()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .coth))
         } catch {
         }
     }
@@ -144,7 +144,7 @@ class RadianHyperbolicTrigonometricTests: XCTestCase {
             let value: Double = try angle.coth()
             XCTAssert(value.equals(to: -1.0))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .coth))
         }
     }
 
@@ -154,7 +154,7 @@ class RadianHyperbolicTrigonometricTests: XCTestCase {
             let value: Double = try angle.coth()
             XCTAssert(value.equals(to: 1.0))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .coth))
         }
     }
 
@@ -194,7 +194,7 @@ class RadianHyperbolicTrigonometricTests: XCTestCase {
             let value: Double = try angle.csch()
             XCTAssert(value.equals(to: 1.825305574687953))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .csch))
         }
     }
 
@@ -204,7 +204,7 @@ class RadianHyperbolicTrigonometricTests: XCTestCase {
             let value: Float = try angle.csch()
             XCTAssert(value.equals(to: 1.151183870920848))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .csch))
         }
     }
 
@@ -214,7 +214,7 @@ class RadianHyperbolicTrigonometricTests: XCTestCase {
             let value: CGFloat = try angle.csch()
             XCTAssert(value.equals(to: 0.800405292888593))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .csch))
         }
     }
 
@@ -222,7 +222,7 @@ class RadianHyperbolicTrigonometricTests: XCTestCase {
         let angle = Radian(rawValue: 0.0)
         do {
             let _: Double = try angle.csch()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .csch))
         } catch {
         }
     }
@@ -233,7 +233,7 @@ class RadianHyperbolicTrigonometricTests: XCTestCase {
             let value: Double = try angle.csch()
             XCTAssert(value.equals(to: 0.0))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .csch))
         }
     }
 
@@ -243,7 +243,7 @@ class RadianHyperbolicTrigonometricTests: XCTestCase {
             let value: Double = try angle.csch()
             XCTAssert(value.equals(to: 0.0))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .csch))
         }
     }
 }

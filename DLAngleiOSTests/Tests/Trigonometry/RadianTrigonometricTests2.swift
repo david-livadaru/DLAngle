@@ -15,7 +15,7 @@ class RadianTrigonometricTests2: XCTestCase {
             let value: Double = try angle.cot()
             XCTAssert(value.equals(to: 0.0))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .cot))
         }
     }
 
@@ -25,7 +25,7 @@ class RadianTrigonometricTests2: XCTestCase {
             let value: Float = try angle.cot()
             XCTAssert(value.equals(to: 1.0))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .cot))
         }
     }
 
@@ -35,7 +35,7 @@ class RadianTrigonometricTests2: XCTestCase {
             let value: CGFloat = try angle.cot()
             XCTAssert(value.equals(to: sqrt(3)))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .cot))
         }
     }
 
@@ -43,7 +43,7 @@ class RadianTrigonometricTests2: XCTestCase {
         let angle = Radian(rawValue: Double.pi)
         do {
             let _: Double = try angle.cot()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .cot))
         } catch {
         }
     }
@@ -52,7 +52,7 @@ class RadianTrigonometricTests2: XCTestCase {
         let angle = Radian(rawValue: 0.0)
         do {
             let _: Double = try angle.cot()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .cot))
         } catch {
         }
     }
@@ -61,11 +61,11 @@ class RadianTrigonometricTests2: XCTestCase {
         do {
             let angle = Radian(rawValue: -Double.infinity)
             let _: Double = try angle.cot()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .cot))
         } catch let error as TrigonometricError {
             XCTAssert(error == .codomainValueNotComputable)
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .cot))
         }
     }
 
@@ -73,11 +73,11 @@ class RadianTrigonometricTests2: XCTestCase {
         do {
             let angle = Radian(rawValue: Double.infinity)
             let _: Double = try angle.cot()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .cot))
         } catch let error as TrigonometricError {
             XCTAssert(error == .codomainValueNotComputable)
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .cot))
         }
     }
 
@@ -87,7 +87,7 @@ class RadianTrigonometricTests2: XCTestCase {
             let value: Double = try angle.sec()
             XCTAssert(value.equals(to: 2 / sqrt(3)))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .sec))
         }
     }
 
@@ -97,7 +97,7 @@ class RadianTrigonometricTests2: XCTestCase {
             let value: Float = try angle.sec()
             XCTAssert(value.equals(to: sqrt(2)))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .sec))
         }
     }
 
@@ -107,7 +107,7 @@ class RadianTrigonometricTests2: XCTestCase {
             let value: CGFloat = try angle.sec()
             XCTAssert(value.equals(to: 2))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .sec))
         }
     }
 
@@ -115,7 +115,7 @@ class RadianTrigonometricTests2: XCTestCase {
         let angle = Radian(rawValue: Double.pi / 2)
         do {
             let _: Double = try angle.sec()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .sec))
         } catch {
         }
     }
@@ -124,11 +124,11 @@ class RadianTrigonometricTests2: XCTestCase {
         do {
             let angle = Radian(rawValue: -Double.infinity)
             let _: Double = try angle.sec()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .sec))
         } catch let error as TrigonometricError {
             XCTAssert(error == .codomainValueNotComputable)
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .sec))
         }
     }
 
@@ -136,11 +136,11 @@ class RadianTrigonometricTests2: XCTestCase {
         do {
             let angle = Radian(rawValue: Double.infinity)
             let _: Double = try angle.sec()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .sec))
         } catch let error as TrigonometricError {
             XCTAssert(error == .codomainValueNotComputable)
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .sec))
         }
     }
 
@@ -150,7 +150,7 @@ class RadianTrigonometricTests2: XCTestCase {
             let value: Double = try angle.csc()
             XCTAssert(value.equals(to: 2))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .csc))
         }
     }
 
@@ -160,7 +160,7 @@ class RadianTrigonometricTests2: XCTestCase {
             let value: Float = try angle.csc()
             XCTAssert(value.equals(to: sqrt(2)))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .csc))
         }
     }
 
@@ -170,7 +170,7 @@ class RadianTrigonometricTests2: XCTestCase {
             let value: CGFloat = try angle.csc()
             XCTAssert(value.equals(to: 2 / sqrt(3)))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .csc))
         }
     }
 
@@ -178,7 +178,7 @@ class RadianTrigonometricTests2: XCTestCase {
         let angle = Radian(rawValue: 0.0)
         do {
             let _: Double = try angle.csc()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .csc))
         } catch {
         }
     }
@@ -187,11 +187,11 @@ class RadianTrigonometricTests2: XCTestCase {
         do {
             let angle = Radian(rawValue: -Double.infinity)
             let _: Double = try angle.csc()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .csc))
         } catch let error as TrigonometricError {
             XCTAssert(error == .codomainValueNotComputable)
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .csc))
         }
     }
 
@@ -199,11 +199,11 @@ class RadianTrigonometricTests2: XCTestCase {
         do {
             let angle = Radian(rawValue: Double.infinity)
             let _: Double = try angle.csc()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .csc))
         } catch let error as TrigonometricError {
             XCTAssert(error == .codomainValueNotComputable)
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .csc))
         }
     }
 }

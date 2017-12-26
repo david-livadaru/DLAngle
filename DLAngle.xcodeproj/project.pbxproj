@@ -105,6 +105,7 @@
 		63A76A761FF2BA0200B5943F /* RadianInverseTrigonometricTests2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A751FF2BA0200B5943F /* RadianInverseTrigonometricTests2.swift */; };
 		63A76A781FF2BA5600B5943F /* RadianTrigonometricTests2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A771FF2BA5600B5943F /* RadianTrigonometricTests2.swift */; };
 		63A76A7A1FF2BB1C00B5943F /* RadianInverseHTrigonometricTests2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A791FF2BB1C00B5943F /* RadianInverseHTrigonometricTests2.swift */; };
+		63A76A7C1FF2C52C00B5943F /* XCTest+FrameworkExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A76A7B1FF2C52C00B5943F /* XCTest+FrameworkExtension.swift */; };
 		63B749CD1FD1F79300A6296F /* Atan2ArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B749CC1FD1F79300A6296F /* Atan2ArgumentsChecker.swift */; };
 		63B749CE1FD1F79300A6296F /* Atan2ArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B749CC1FD1F79300A6296F /* Atan2ArgumentsChecker.swift */; };
 		63B749CF1FD1F79300A6296F /* Atan2ArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B749CC1FD1F79300A6296F /* Atan2ArgumentsChecker.swift */; };
@@ -172,6 +173,7 @@
 		63A76A751FF2BA0200B5943F /* RadianInverseTrigonometricTests2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadianInverseTrigonometricTests2.swift; sourceTree = "<group>"; };
 		63A76A771FF2BA5600B5943F /* RadianTrigonometricTests2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadianTrigonometricTests2.swift; sourceTree = "<group>"; };
 		63A76A791FF2BB1C00B5943F /* RadianInverseHTrigonometricTests2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadianInverseHTrigonometricTests2.swift; sourceTree = "<group>"; };
+		63A76A7B1FF2C52C00B5943F /* XCTest+FrameworkExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+FrameworkExtension.swift"; sourceTree = "<group>"; };
 		63B749CC1FD1F79300A6296F /* Atan2ArgumentsChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atan2ArgumentsChecker.swift; sourceTree = "<group>"; };
 		63B749D31FD204A300A6296F /* Atan2ArgumentsCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atan2ArgumentsCheckerTests.swift; sourceTree = "<group>"; };
 		63B9110F1FF2AE2B008E3E62 /* Radian+InverseTrigonometricFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Radian+InverseTrigonometricFunctions.swift"; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 				63A76A5D1FF2B4A700B5943F /* Double+FrameworkExtension.swift */,
 				63A76A5F1FF2B4C400B5943F /* Float+FrameworkExtension.swift */,
 				63A76A611FF2B4EC00B5943F /* CGFloat+FrameworkExtension.swift */,
+				63A76A7B1FF2C52C00B5943F /* XCTest+FrameworkExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -777,6 +780,7 @@
 				639D7A161E58DE2B008D10EF /* DegreeTests.swift in Sources */,
 				63A76A761FF2BA0200B5943F /* RadianInverseTrigonometricTests2.swift in Sources */,
 				63A76A681FF2B66000B5943F /* RadianInverseTrigonometricTests.swift in Sources */,
+				63A76A7C1FF2C52C00B5943F /* XCTest+FrameworkExtension.swift in Sources */,
 				63A76A621FF2B4EC00B5943F /* CGFloat+FrameworkExtension.swift in Sources */,
 				63A76A6A1FF2B68D00B5943F /* RadianInverseHTrigonometricTests.swift in Sources */,
 				63A76A741FF2B92C00B5943F /* InverseTrigonometricTests.swift in Sources */,

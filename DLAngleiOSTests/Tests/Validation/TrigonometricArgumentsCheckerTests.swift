@@ -14,7 +14,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
         do {
             let checker = try TrigonometricArgumentsChecker(value: -2.0, function: .asin)
             try checker.check()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .asin))
         } catch let error as TrigonometricError where error == .undefinedFunction {
             XCTFail(failMessage(forCatched: error, testing: .asin))
         } catch {
@@ -28,7 +28,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
         } catch let error as TrigonometricError where error == .undefinedFunction {
             XCTFail(failMessage(forCatched: error, testing: .asin))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .asin))
         }
     }
 
@@ -36,7 +36,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
         do {
             let checker = try TrigonometricArgumentsChecker(value: -7.0, function: .acos)
             try checker.check()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .acos))
         } catch let error as TrigonometricError where error == .undefinedFunction {
             XCTFail(failMessage(forCatched: error, testing: .acos))
         } catch {
@@ -50,7 +50,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
         } catch let error as TrigonometricError where error == .undefinedFunction {
             XCTFail(failMessage(forCatched: error, testing: .acos))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acos))
         }
     }
 
@@ -58,7 +58,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
         do {
             let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Double.pi / 2), function: .tan)
             try checker.check()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .tan))
         } catch let error as TrigonometricError where error == .undefinedFunction {
             XCTFail(failMessage(forCatched: error, testing: .tan))
         } catch {
@@ -69,7 +69,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
         do {
             let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: 3 * Double.pi / 2), function: .tan)
             try checker.check()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .asin))
         } catch let error as TrigonometricError where error == .undefinedFunction {
             XCTFail(failMessage(forCatched: error, testing: .tan))
         } catch {
@@ -83,7 +83,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
         } catch let error as TrigonometricError where error == .undefinedFunction {
             XCTFail(failMessage(forCatched: error, testing: .tan))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .tan))
         }
     }
 
@@ -91,7 +91,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
         do {
             let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: 0.0), function: .cot)
             try checker.check()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .cot))
         } catch let error as TrigonometricError where error == .undefinedFunction {
             XCTFail(failMessage(forCatched: error, testing: .cot))
         } catch {
@@ -102,7 +102,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
         do {
             let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Double.pi), function: .cot)
             try checker.check()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .cot))
         } catch let error as TrigonometricError where error == .undefinedFunction {
             XCTFail(failMessage(forCatched: error, testing: .cot))
         } catch {
@@ -116,7 +116,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
         } catch let error as TrigonometricError where error == .undefinedFunction {
             XCTFail(failMessage(forCatched: error, testing: .cot))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .cot))
         }
     }
 
@@ -124,7 +124,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
         do {
             let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Double.pi / 2), function: .sec)
             try checker.check()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .sec))
         } catch let error as TrigonometricError where error == .undefinedFunction {
             XCTFail(failMessage(forCatched: error, testing: .sec))
         } catch {
@@ -135,7 +135,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
         do {
             let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: 3 * Double.pi / 2), function: .sec)
             try checker.check()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .sec))
         } catch let error as TrigonometricError where error == .undefinedFunction {
             XCTFail(failMessage(forCatched: error, testing: .sec))
         } catch {
@@ -149,7 +149,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
         } catch let error as TrigonometricError where error == .undefinedFunction {
             XCTFail(failMessage(forCatched: error, testing: .sec))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .sec))
         }
     }
 
@@ -160,7 +160,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
         } catch let error as TrigonometricError where error == .undefinedFunction {
             XCTFail(failMessage(forCatched: error, testing: .csc))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .csc))
         }
     }
 
@@ -168,7 +168,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
         do {
             let checker = try TrigonometricArgumentsChecker(angle: Radian(rawValue: Double.pi), function: .csc)
             try checker.check()
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .csc))
         } catch let error as TrigonometricError where error == .undefinedFunction {
             XCTFail(failMessage(forCatched: error, testing: .csc))
         } catch {
@@ -182,14 +182,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
         } catch let error as TrigonometricError where error == .undefinedFunction {
             XCTFail(failMessage(forCatched: error, testing: .csc))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .csc))
         }
-    }
-
-    // MARK: Fail messages
-
-    private func failMessage(forCatched error: Error,
-                             testing function: TrigonometricFunction) -> String {
-        return "\(function.rawValue.capitalized) check failed due to error \(error.localizedDescription)"
     }
 }

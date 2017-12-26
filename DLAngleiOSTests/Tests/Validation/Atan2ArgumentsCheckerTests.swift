@@ -13,7 +13,7 @@ class Atan2ArgumentsCheckerTests: XCTestCase {
         let checker = Atan2ArgumentsChecker(y: 0.0, x: 0.0)
         do {
             try checker.check()
-            XCTFail()
+            XCTFail("Atan2ArgumentsChecker does not throw an error for invalid parameters.")
         } catch {
         }
     }
@@ -23,7 +23,7 @@ class Atan2ArgumentsCheckerTests: XCTestCase {
         do {
             try checker.check()
         } catch {
-            XCTFail()
+            XCTFail("Atan2ArgumentsChecker throws \(error) for valid parameters.")
         }
     }
 
@@ -32,7 +32,7 @@ class Atan2ArgumentsCheckerTests: XCTestCase {
         do {
             try checker.check()
         } catch {
-            XCTFail()
+            XCTFail("Atan2ArgumentsChecker throws \(error) for valid parameters.")
         }
     }
 
@@ -41,7 +41,7 @@ class Atan2ArgumentsCheckerTests: XCTestCase {
         do {
             try checker.check()
         } catch {
-            XCTFail()
+            XCTFail("Atan2ArgumentsChecker throws \(error) for valid parameters.")
         }
     }
 }

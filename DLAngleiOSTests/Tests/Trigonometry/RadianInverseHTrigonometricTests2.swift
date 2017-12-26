@@ -15,7 +15,7 @@ class RadianInverseHTrigonometricTests2: XCTestCase {
             let angle = try Radian(acoth: 1.5)
             XCTAssert(angle == Radian(rawValue: cotanh_1_and_half))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acoth))
         }
     }
 
@@ -27,7 +27,7 @@ class RadianInverseHTrigonometricTests2: XCTestCase {
             Radian.equalityPrecision = 7
             XCTAssert(angle == Radian(rawValue: cotanh_minus_5))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acoth))
         }
     }
 
@@ -39,14 +39,14 @@ class RadianInverseHTrigonometricTests2: XCTestCase {
             Radian.equalityPrecision = 14
             XCTAssert(angle == Radian(rawValue: atanh_2_and_half))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acoth))
         }
     }
 
     func testAcothFailing() {
         do {
             _ = try Radian(acoth: 0.5)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .acoth))
         } catch {
         }
     }
@@ -54,22 +54,22 @@ class RadianInverseHTrigonometricTests2: XCTestCase {
     func testAcothMinusInfinity() {
         do {
             _ = try Radian(acoth: -Double.infinity)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .acoth))
         } catch let error as TrigonometricError {
             XCTAssert(error == .undefinedCodomainValue)
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acoth))
         }
     }
 
     func testAcothInfinity() {
         do {
             _ = try Radian(acoth: Double.infinity)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .acoth))
         } catch let error as TrigonometricError {
             XCTAssert(error == .undefinedCodomainValue)
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acoth))
         }
     }
 
@@ -79,7 +79,7 @@ class RadianInverseHTrigonometricTests2: XCTestCase {
             let angle = try Radian(asech: 0.1)
             XCTAssert(angle == Radian(rawValue: sech_1_tenth))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .asech))
         }
     }
 
@@ -91,7 +91,7 @@ class RadianInverseHTrigonometricTests2: XCTestCase {
             Radian.equalityPrecision = 6
             XCTAssert(angle == Radian(rawValue: sech_half))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .asech))
         }
     }
 
@@ -103,14 +103,14 @@ class RadianInverseHTrigonometricTests2: XCTestCase {
             Radian.equalityPrecision = 14
             XCTAssert(angle == Radian(rawValue: sech_quarter))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .asech))
         }
     }
 
     func testAsechFailing() {
         do {
             _ = try Radian(asech: 2.0)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .asech))
         } catch {
         }
     }
@@ -118,22 +118,22 @@ class RadianInverseHTrigonometricTests2: XCTestCase {
     func testAsechMinusInfinity() {
         do {
             _ = try Radian(asech: -Double.infinity)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .asech))
         } catch let error as TrigonometricError {
             XCTAssert(error == .invalidParameter)
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .asech))
         }
     }
 
     func testAsechInfinity() {
         do {
             _ = try Radian(asech: Double.infinity)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .asech))
         } catch let error as TrigonometricError {
             XCTAssert(error == .invalidParameter)
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .asech))
         }
     }
 
@@ -143,7 +143,7 @@ class RadianInverseHTrigonometricTests2: XCTestCase {
             let angle = try Radian(acsch: 1.0)
             XCTAssert(angle == Radian(rawValue: csch_1))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acsch))
         }
     }
 
@@ -155,7 +155,7 @@ class RadianInverseHTrigonometricTests2: XCTestCase {
             Radian.equalityPrecision = 6
             XCTAssert(angle == Radian(rawValue: csch_2))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acsch))
         }
     }
 
@@ -167,14 +167,14 @@ class RadianInverseHTrigonometricTests2: XCTestCase {
             Radian.equalityPrecision = 14
             XCTAssert(angle == Radian(rawValue: csch_minus_1))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acsch))
         }
     }
 
     func testAcschFailing() {
         do {
             _ = try Radian(acsch: 0.0)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .acsch))
         } catch {
         }
     }
@@ -182,22 +182,22 @@ class RadianInverseHTrigonometricTests2: XCTestCase {
     func testAcschMinusInfinity() {
         do {
             _ = try Radian(acsch: -Double.infinity)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .acsch))
         } catch let error as TrigonometricError {
             XCTAssert(error == .undefinedCodomainValue)
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acsch))
         }
     }
 
     func testAcschInfinity() {
         do {
             _ = try Radian(acsch: Double.infinity)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .acsch))
         } catch let error as TrigonometricError {
             XCTAssert(error == .undefinedCodomainValue)
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acsch))
         }
     }
 }

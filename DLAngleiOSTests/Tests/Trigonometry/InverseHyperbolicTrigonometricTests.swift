@@ -34,7 +34,7 @@ class InverseHyperbolicTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.acosh(value)
             XCTAssert(angle == Radian(rawValue: Double.pi))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acosh))
         }
     }
 
@@ -45,7 +45,7 @@ class InverseHyperbolicTrigonometricTests: XCTestCase {
             Radian.equalityPrecision = 6
             XCTAssert(angle == Radian(rawValue: Double.pi))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acosh))
         }
     }
 
@@ -55,7 +55,7 @@ class InverseHyperbolicTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.acosh(value)
             XCTAssert(angle == Radian(rawValue: Double.pi))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acosh))
         }
     }
 
@@ -63,7 +63,7 @@ class InverseHyperbolicTrigonometricTests: XCTestCase {
         do {
             let value: Double = 0.0
             let _: Radian = try Trigonometry.acosh(value)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .acosh))
         } catch {
         }
     }
@@ -74,7 +74,7 @@ class InverseHyperbolicTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.atanh(value)
             XCTAssert(angle == Radian(rawValue: 0.549306144334054))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acosh))
         }
     }
 
@@ -85,7 +85,7 @@ class InverseHyperbolicTrigonometricTests: XCTestCase {
             Angle.equalityPrecision = 6
             XCTAssert(angle == Radian(rawValue: 0.549306144334054))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .atanh))
         }
     }
 
@@ -95,7 +95,7 @@ class InverseHyperbolicTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.atanh(value)
             XCTAssert(angle == Radian(rawValue: 0.549306144334054))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .atanh))
         }
     }
 
@@ -103,38 +103,38 @@ class InverseHyperbolicTrigonometricTests: XCTestCase {
         do {
             let value: Double = -2.0
             let _: Radian = try Trigonometry.atanh(value)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .atanh))
         } catch {
         }
     }
 
-    func testAcotanh() {
+    func testAcoth() {
         do {
             let value: Double = 1.5
             let angle: Radian = try Trigonometry.acoth(value)
             XCTAssert(angle == Radian(rawValue: 0.804718956217050))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acoth))
         }
     }
 
-    func testAcotanhFloat() {
+    func testAcothFloat() {
         do {
             let value: Float = 1.5
             let angle: Radian = try Trigonometry.acoth(value)
             XCTAssert(angle == Radian(rawValue: 0.804718956217050))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acoth))
         }
     }
 
-    func testAcotanhCGFloat() {
+    func testAcothCGFloat() {
         do {
             let value: CGFloat = 1.5
             let angle: Radian = try Trigonometry.acoth(value)
             XCTAssert(angle == Radian(rawValue: 0.804718956217050))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acoth))
         }
     }
 
@@ -142,7 +142,7 @@ class InverseHyperbolicTrigonometricTests: XCTestCase {
         do {
             let value: Double = 0.0
             let _: Radian = try Trigonometry.acoth(value)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .acoth))
         } catch {
         }
     }
@@ -153,7 +153,7 @@ class InverseHyperbolicTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.asech(value)
             XCTAssert(angle == Radian(rawValue: 2.063437068895560))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .asech))
         }
     }
 
@@ -164,7 +164,7 @@ class InverseHyperbolicTrigonometricTests: XCTestCase {
             Angle.equalityPrecision = 6
             XCTAssert(angle == Radian(rawValue: 2.063437068895560))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .asech))
         }
     }
 
@@ -174,7 +174,7 @@ class InverseHyperbolicTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.asech(value)
             XCTAssert(angle == Radian(rawValue: 2.063437068895560))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .asech))
         }
     }
 
@@ -182,7 +182,7 @@ class InverseHyperbolicTrigonometricTests: XCTestCase {
         do {
             let value: Double = -1.0
             let _: Radian = try Trigonometry.asech(value)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .asech))
         } catch {
         }
     }
@@ -193,7 +193,7 @@ class InverseHyperbolicTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.acsch(value)
             XCTAssert(angle.rawValue.equals(to: 1.0))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acsch))
         }
     }
 
@@ -204,7 +204,7 @@ class InverseHyperbolicTrigonometricTests: XCTestCase {
             let rawAngle = Float(angle.rawValue)
             XCTAssert(rawAngle.equals(to: 1.0))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acsch))
         }
     }
 
@@ -214,7 +214,7 @@ class InverseHyperbolicTrigonometricTests: XCTestCase {
             let angle: Radian = try Trigonometry.acsch(value)
             XCTAssert(angle.rawValue.equals(to: 1.0))
         } catch {
-            XCTFail()
+            XCTFail(failMessage(forCatched: error, testing: .acsch))
         }
     }
 
@@ -222,7 +222,7 @@ class InverseHyperbolicTrigonometricTests: XCTestCase {
         do {
             let value: Double = 0.0
             let _: Radian = try Trigonometry.acsch(value)
-            XCTFail()
+            XCTFail(throwFailedMessage(for: .acsch))
         } catch {
         }
     }
