@@ -15,121 +15,121 @@ public extension Radian {
     // MARK: Inverse trigonometric functions
     
     public convenience init(asin: Double) throws {
-        try Trigonometry.validate(value: asin, for: .asin)
-        self.init(rawValue: Trigonometry.asin(asin))
+        let rawValue: Double = try Trigonometry.asin(asin)
+        self.init(rawValue: rawValue)
     }
     
     public convenience init(asin: Float) throws {
-        try Trigonometry.validate(value: asin, for: .asin)
-        self.init(float: GenericTrigonometry.asin(asin))
+        let rawValue: Double = try Trigonometry.asin(Double(asin))
+        self.init(rawValue: rawValue)
     }
     
     #if !os(Linux)
     public convenience init(asin: CGFloat) throws {
-        try Trigonometry.validate(value: asin, for: .asin)
-        self.init(cgFloat: Trigonometry.asin(asin))
+        let rawValue: CGFloat = try Trigonometry.asin(asin)
+        self.init(cgFloat: rawValue)
     }
     #endif
     
     public convenience init(acos: Double) throws {
-        try Trigonometry.validate(value: acos, for: .acos)
-        self.init(rawValue: Trigonometry.acos(acos))
+        let rawValue: Double = try Trigonometry.acos(acos)
+        self.init(rawValue: rawValue)
     }
     
     public convenience init(acos: Float) throws {
-        try Trigonometry.validate(value: acos, for: .acos)
-        self.init(float: GenericTrigonometry.acos(acos))
+        let rawValue: Double = try Trigonometry.acos(Double(acos))
+        self.init(rawValue: rawValue)
     }
     
     #if !os(Linux)
     public convenience init(acos: CGFloat) throws {
-        try Trigonometry.validate(value: acos, for: .acos)
-        self.init(cgFloat: Trigonometry.acos(acos))
+        let rawValue: CGFloat = try Trigonometry.acos(acos)
+        self.init(cgFloat: rawValue)
     }
     #endif
     
     public convenience init(atan: Double) throws {
-        self.init(rawValue: Trigonometry.atan(atan))
+        let rawValue: Double = try Trigonometry.atan(atan)
+        self.init(rawValue: rawValue)
     }
     
     public convenience init(atan: Float) throws {
-        self.init(float: GenericTrigonometry.atan(atan))
+        let rawValue: Double = try Trigonometry.atan(Double(atan))
+        self.init(rawValue: rawValue)
     }
     
     #if !os(Linux)
     public convenience init(atan: CGFloat) throws {
-        self.init(cgFloat: Trigonometry.atan(atan))
+        let rawValue: CGFloat = try Trigonometry.atan(atan)
+        self.init(cgFloat: rawValue)
     }
     #endif
     
     public convenience init(atan2Y y: Double, x: Double) throws {
-        let atan2Checker = Atan2ArgumentsChecker(y: y, x: x)
-        try atan2Checker.check()
-        self.init(rawValue: Trigonometry.atan2(y: y, x: x))
+        let rawValue: Double = try Trigonometry.atan2(y: y, x: x)
+        self.init(rawValue: rawValue)
     }
     
     public convenience init(atan2Y y: Float, x: Float) throws {
-        let atan2Checker = Atan2ArgumentsChecker(y: Double(y), x: Double(x))
-        try atan2Checker.check()
-        self.init(float: GenericTrigonometry.atan2(y: y, x: x))
+        let rawValue: Double = try Trigonometry.atan2(y: Double(y), x: Double(x))
+        self.init(rawValue: rawValue)
     }
     
     #if !os(Linux)
     public convenience init(atan2Y y: CGFloat, x: CGFloat) throws {
-        let atan2Checker = Atan2ArgumentsChecker(y: Double(y), x: Double(x))
-        try atan2Checker.check()
-        self.init(cgFloat: Trigonometry.atan2(y: y, x: x))
+        let rawValue: CGFloat = try Trigonometry.atan2(y: y, x: x)
+        self.init(cgFloat: rawValue)
     }
     #endif
     
     public convenience init(acot: Double) throws {
-        try Trigonometry.validate(value: acot, for: .acot)
-        self.init(rawValue: Trigonometry.acot(acot))
+        let rawValue: Double = try Trigonometry.acot(acot)
+        self.init(rawValue: rawValue)
     }
     
     public convenience init(acot: Float) throws {
-        try Trigonometry.validate(value: acot, for: .acot)
-        self.init(rawValue: Trigonometry.acot(Double(acot)))
+        let rawValue: Double = try Trigonometry.acot(Double(acot))
+        self.init(rawValue: rawValue)
     }
     
     #if !os(Linux)
     public convenience init(acot: CGFloat) throws {
-        try Trigonometry.validate(value: acot, for: .acot)
-        self.init(cgFloat: Trigonometry.acot(acot))
+        let rawValue: CGFloat = try Trigonometry.acot(acot)
+        self.init(cgFloat: rawValue)
     }
     #endif
     
     public convenience init(asec: Double) throws {
-        try Trigonometry.validate(value: asec, for: .asec)
-        self.init(rawValue: Trigonometry.asec(asec))
+        let rawValue: Double = try Trigonometry.asec(asec)
+        self.init(rawValue: rawValue)
     }
     
     public convenience init(asec: Float) throws {
-        try Trigonometry.validate(value: asec, for: .asec)
-        self.init(rawValue: Trigonometry.asec(Double(asec)))
+        let rawValue: Double = try Trigonometry.asec(Double(asec))
+        self.init(rawValue: rawValue)
     }
     
     #if !os(Linux)
     public convenience init(asec: CGFloat) throws {
-        try Trigonometry.validate(value: asec, for: .asec)
-        self.init(cgFloat: Trigonometry.asec(asec))
+        let rawValue: CGFloat = try Trigonometry.asec(asec)
+        self.init(cgFloat: rawValue)
     }
     #endif
     
     public convenience init(acsc: Double) throws {
-        try Trigonometry.validate(value: acsc, for: .acsc)
-        self.init(rawValue: Trigonometry.acsc(acsc))
+        let rawValue: Double = try Trigonometry.acsc(acsc)
+        self.init(rawValue: rawValue)
     }
     
     public convenience init(acsc: Float) throws {
-        try Trigonometry.validate(value: acsc, for: .acsc)
-        self.init(rawValue: Trigonometry.acsc(Double(acsc)))
+        let rawValue: Double = try Trigonometry.acsc(Double(acsc))
+        self.init(rawValue: rawValue)
     }
     
     #if !os(Linux)
     public convenience init(acsc: CGFloat) throws {
-        try Trigonometry.validate(value: acsc, for: .acsc)
-        self.init(cgFloat: Trigonometry.acsc(acsc))
+        let rawValue: CGFloat = try Trigonometry.acsc(acsc)
+        self.init(cgFloat: rawValue)
     }
     #endif
     
@@ -150,87 +150,87 @@ public extension Radian {
     #endif
     
     public convenience init(acosh: Double) throws {
-        try Trigonometry.validate(value: acosh, for: .acosh)
-        self.init(rawValue: Trigonometry.acosh(acosh))
+        let rawValue: Double = try Trigonometry.acosh(acosh)
+        self.init(rawValue: rawValue)
     }
     
     public convenience init(acosh: Float) throws {
-        try Trigonometry.validate(value: acosh, for: .acosh)
-        self.init(float: GenericTrigonometry.acosh(acosh))
+        let rawValue: Double = try Trigonometry.acosh(Double(acosh))
+        self.init(rawValue: rawValue)
     }
     
     #if !os(Linux)
     public convenience init(acosh: CGFloat) throws {
-        try Trigonometry.validate(value: acosh, for: .acosh)
-        self.init(cgFloat: Trigonometry.acosh(acosh))
+        let rawValue: CGFloat = try Trigonometry.acosh(acosh)
+        self.init(cgFloat: rawValue)
     }
     #endif
     
     public convenience init(atanh: Double) throws {
-        try Trigonometry.validate(value: atanh, for: .atanh)
-        self.init(rawValue: Trigonometry.atanh(atanh))
+        let rawValue: Double = try Trigonometry.atanh(atanh)
+        self.init(rawValue: rawValue)
     }
     
     public convenience init(atanh: Float) throws {
-        try Trigonometry.validate(value: atanh, for: .atanh)
-        self.init(float: GenericTrigonometry.atanh(atanh))
+        let rawValue: Double = try Trigonometry.atanh(Double(atanh))
+        self.init(rawValue: rawValue)
     }
     
     #if !os(Linux)
     public convenience init(atanh: CGFloat) throws {
-        try Trigonometry.validate(value: atanh, for: .atanh)
-        self.init(cgFloat: Trigonometry.atanh(atanh))
+        let rawValue: CGFloat = try Trigonometry.atanh(atanh)
+        self.init(cgFloat: rawValue)
     }
     #endif
     
     public convenience init(acoth: Double) throws {
-        try Trigonometry.validate(value: acoth, for: .acoth)
-        self.init(rawValue: Trigonometry.acoth(acoth))
+        let rawValue: Double = try Trigonometry.acoth(acoth)
+        self.init(rawValue: rawValue)
     }
     
     public convenience init(acoth: Float) throws {
-        try Trigonometry.validate(value: acoth, for: .acoth)
-        self.init(rawValue: Trigonometry.acoth(Double(acoth)))
+        let rawValue: Double = try Trigonometry.acoth(Double(acoth))
+        self.init(rawValue: rawValue)
     }
     
     #if !os(Linux)
     public convenience init(acoth: CGFloat) throws {
-        try Trigonometry.validate(value: acoth, for: .acoth)
-        self.init(cgFloat: Trigonometry.acoth(acoth))
+        let rawValue: CGFloat = try Trigonometry.acoth(acoth)
+        self.init(cgFloat: rawValue)
     }
     #endif
     
     public convenience init(asech: Double) throws {
-        try Trigonometry.validate(value: asech, for: .asech)
-        self.init(rawValue: Trigonometry.asech(asech))
+        let rawValue: Double = try Trigonometry.asech(asech)
+        self.init(rawValue: rawValue)
     }
     
     public convenience init(asech: Float) throws {
-        try Trigonometry.validate(value: asech, for: .asech)
-        self.init(rawValue: Trigonometry.asech(Double(asech)))
+        let rawValue: Double = try Trigonometry.asech(Double(asech))
+        self.init(rawValue: rawValue)
     }
     
     #if !os(Linux)
     public convenience init(asech: CGFloat) throws {
-        try Trigonometry.validate(value: asech, for: .asech)
-        self.init(cgFloat: Trigonometry.asech(asech))
+        let rawValue: CGFloat = try Trigonometry.asech(asech)
+        self.init(cgFloat: rawValue)
     }
     #endif
     
     public convenience init(acsch: Double) throws {
-        try Trigonometry.validate(value: acsch, for: .acsch)
-        self.init(rawValue: Trigonometry.acsch(acsch))
+        let rawValue: Double = try Trigonometry.acsch(acsch)
+        self.init(rawValue: rawValue)
     }
     
     public convenience init(acsch: Float) throws {
-        try Trigonometry.validate(value: acsch, for: .acsch)
-        self.init(rawValue: Trigonometry.acsch(Double(acsch)))
+        let rawValue: Double = try Trigonometry.acsch(Double(acsch))
+        self.init(rawValue: rawValue)
     }
     
     #if !os(Linux)
     public convenience init(acsch: CGFloat) throws {
-        try Trigonometry.validate(value: acsch, for: .acsch)
-        self.init(cgFloat: Trigonometry.acsch(acsch))
+        let rawValue: CGFloat = try Trigonometry.acsch(acsch)
+        self.init(cgFloat: rawValue)
     }
     #endif
     
@@ -250,17 +250,17 @@ public extension Radian {
     }
     #endif
     
-    public func cos() -> Double {
-        return Trigonometry.cos(self)
+    public func cos() throws -> Double {
+        return try Trigonometry.cos(self)
     }
     
-    public func cos() -> Float {
-        return Trigonometry.cos(self)
+    public func cos() throws -> Float {
+        return try Trigonometry.cos(self)
     }
     
     #if !os(Linux)
-    public func cos() -> CGFloat {
-        return Trigonometry.cos(self)
+    public func cos() throws -> CGFloat {
+        return try Trigonometry.cos(self)
     }
     #endif
     

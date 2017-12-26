@@ -63,6 +63,8 @@ public class Angle {
     // MARK: Normalization
     
     func normalize(by value: Double) {
+        guard rawValue.isFinite else { return }
+
         rawValue = rawValue.truncatingRemainder(dividingBy: value)
         if rawValue < 0.0 {
            rawValue += value
@@ -70,6 +72,8 @@ public class Angle {
     }
     
     func normalized<A: Angle>(by value: Double) -> A {
+        guard rawValue.isFinite else { return A(rawValue: rawValue) }
+
         let angle = A(rawValue: rawValue)
         angle.normalize(by: value)
         return angle

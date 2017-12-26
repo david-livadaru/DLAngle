@@ -21,9 +21,14 @@ import UIKit
 
 /// A concrete interface for checking arguments of trigonometric functions.  
 class TrigonometricArgumentsChecker: ArgumentsChecker {
+    private let function: TrigonometricFunction
+    private let value: Double
+
     init(value: Double, function: TrigonometricFunction) throws {
+        self.value = value
+        self.function = function
         switch function {
-        case .asin, .acos, .asec, .acsc, .acosh, .atanh, .acoth, .asech:
+        case .asin, .acos, .asec, .acsc, .acosh, .atanh, .acoth, .asech, .atan:
             super.init(value: value,
                        validInterval: TrigonometricArgumentsChecker.validInterval(for: function))
         case .acot, .acsch, .coth:
@@ -35,29 +40,29 @@ class TrigonometricArgumentsChecker: ArgumentsChecker {
     }
 
     init(angle: Radian, function: TrigonometricFunction) throws {
+        self.function = function
         angle.normalize()
+        value = angle.rawValue
         switch function {
         case .tan, .cot, .sec, .csc, .coth, .csch:
-            super.init(value: angle.rawValue,
+            super.init(value: value,
                        invalidValues: TrigonometricArgumentsChecker.invalidArguments(for: function))
+        case .sin, .cos:
+            super.init(value: value,
+                       validInterval: TrigonometricArgumentsChecker.validInterval(for: function))
         default:
             throw TrigonometricError.undefinedFunction
         }
     }
 
-    func checkInfinityValue(for function: TrigonometricFunction) throws {
-        switch function {
-        case .sin, .cos, .tan, .cot, .sec, .csc, .asech:
-            throw TrigonometricError.codomainValueNotComputable
-        case .atan, .acot, .asec, .acsc, .acoth, .acsch:
-            throw TrigonometricError.undefinedCodomainValue
-        default:
-            break
-        }
+    override func check() throws {
+        try super.check()
+
+        try checkInfinityValue()
     }
-    
+
     // MARK: Private functionality
-    
+
     private static func invalidArguments(for function: TrigonometricFunction) -> [Double] {
         switch function {
         case .sec, .tan:
@@ -70,7 +75,7 @@ class TrigonometricArgumentsChecker: ArgumentsChecker {
             return []
         }
     }
-    
+
     private static func validInterval(for function: TrigonometricFunction) -> UnionInterval {
         switch function {
         case .asin, .acos:
@@ -87,6 +92,18 @@ class TrigonometricArgumentsChecker: ArgumentsChecker {
             return [0.<.1]
         default:
             return [-Double.infinity .><. Double.infinity]
+        }
+    }
+
+    private func checkInfinityValue() throws {
+        guard value.isInfinite else { return }
+        switch function {
+        case .sin, .cos, .tan, .cot, .sec, .csc, .asech:
+            throw TrigonometricError.codomainValueNotComputable
+        case .atan, .acot, .asec, .acsc, .acoth, .acsch:
+            throw TrigonometricError.undefinedCodomainValue
+        default:
+            break
         }
     }
 }

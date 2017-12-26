@@ -10,23 +10,26 @@ import XCTest
 @testable import DLAngle_iOS
 
 extension Double {
-    func isEqual(to other: Double) -> Bool {
+    func isEqual(with other: Double, precision: Double = -15.0) -> Bool {
         let diff = self - other
-        return abs(diff) < Double(pow(10.0, 15))
+        let argument = max(precision, -15.0)
+        return abs(diff) < Double(pow(10.0, argument))
     }
 }
 
 extension CGFloat {
-    func isEqual(to other: CGFloat) -> Bool {
+    func isEqual(with other: CGFloat, precision: Double = -15.0) -> Bool {
         let diff = self - other
-        return abs(diff) < CGFloat(pow(10.0, 15))
+        let argument = Swift.max(Double(precision), -15.0)
+        return abs(diff) < CGFloat(pow(10.0, argument))
     }
 }
 
 extension Float {
-    func isEqual(to other: Float) -> Bool {
+    func isEqual(with other: Float, precision: Double = -7.0) -> Bool {
         let diff = self - other
-        return abs(diff) < Float(pow(10.0, 7))
+        let argument = max(precision, -7.0)
+        return abs(diff) < Float(pow(10.0, argument))
     }
 }
 
@@ -112,22 +115,34 @@ class TrigonometryFunctionsTest: XCTestCase {
     }
 
     func testAtan() {
-        let value: Double = 1.0
-        let angle: Radian = Trigonometry.atan(value)
-        XCTAssert(angle == Radian(rawValue: Double.pi / 4))
+        do {
+            let value: Double = 1.0
+            let angle: Radian = try Trigonometry.atan(value)
+            XCTAssert(angle == Radian(rawValue: Double.pi / 4))
+        } catch {
+            XCTFail()
+        }
     }
 
     func testAtanFloat() {
-        let value: Float = 1.0
-        let angle: Radian = Trigonometry.atan(value)
-        Angle.equalityPrecision = 6
-        XCTAssert(angle == Radian(rawValue: Double.pi / 4))
+        do {
+            let value: Float = 1.0
+            let angle: Radian = try Trigonometry.atan(value)
+            Angle.equalityPrecision = 6
+            XCTAssert(angle == Radian(rawValue: Double.pi / 4))
+        } catch {
+
+        }
     }
 
     func testAtanCGFloat() {
-        let value: CGFloat = 1.0
-        let angle: Radian = Trigonometry.atan(value)
-        XCTAssert(angle == Radian(rawValue: Double.pi / 4))
+        do {
+            let value: CGFloat = 1.0
+            let angle: Radian = try Trigonometry.atan(value)
+            XCTAssert(angle == Radian(rawValue: Double.pi / 4))
+        } catch {
+            XCTFail()
+        }
     }
 
     func testAtan2() {
@@ -473,9 +488,9 @@ class TrigonometryFunctionsTest: XCTestCase {
 
     func testAcsch() {
         do {
-            let value: Double = 0.881373587019543
+            let value: Double = 0.850918128239321
             let angle: Radian = try Trigonometry.acsch(value)
-            XCTAssert(angle.rawValue.isEqual(to: 1.0))
+            XCTAssert(angle.rawValue.isEqual(with: 1.0))
         } catch {
             XCTFail()
         }
@@ -483,9 +498,10 @@ class TrigonometryFunctionsTest: XCTestCase {
 
     func testAcschFloat() {
         do {
-            let value: Float = 0.881373587019543
+            let value: Float = 0.850918128239321
             let angle: Radian = try Trigonometry.acsch(value)
-            XCTAssert(angle.rawValue.isEqual(to: 1.0))
+            let rawAngle = Float(angle.rawValue)
+            XCTAssert(rawAngle.isEqual(with: 1.0))
         } catch {
             XCTFail()
         }
@@ -493,9 +509,9 @@ class TrigonometryFunctionsTest: XCTestCase {
 
     func testAcschCGFloat() {
         do {
-            let value: CGFloat = 0.881373587019543
+            let value: CGFloat = 0.850918128239321
             let angle: Radian = try Trigonometry.acsch(value)
-            XCTAssert(angle.rawValue.isEqual(to: 1.0))
+            XCTAssert(angle.rawValue.isEqual(with: 1.0))
         } catch {
             XCTFail()
         }
