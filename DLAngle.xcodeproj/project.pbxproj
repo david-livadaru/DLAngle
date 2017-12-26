@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		630EDBD71FF2CEB4009DE57A /* GenericTrigonometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EDBD61FF2CEB4009DE57A /* GenericTrigonometryTests.swift */; };
+		630EDBD91FF2D6E0009DE57A /* Radian+Measument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EDBD81FF2D6E0009DE57A /* Radian+Measument.swift */; };
+		630EDBDA1FF2D6E0009DE57A /* Radian+Measument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EDBD81FF2D6E0009DE57A /* Radian+Measument.swift */; };
+		630EDBDB1FF2D6E0009DE57A /* Radian+Measument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EDBD81FF2D6E0009DE57A /* Radian+Measument.swift */; };
+		630EDBDC1FF2D6E0009DE57A /* Radian+Measument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EDBD81FF2D6E0009DE57A /* Radian+Measument.swift */; };
+		630EDBDE1FF2D7D7009DE57A /* Degree+Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EDBDD1FF2D7D7009DE57A /* Degree+Measurement.swift */; };
+		630EDBDF1FF2D7D7009DE57A /* Degree+Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EDBDD1FF2D7D7009DE57A /* Degree+Measurement.swift */; };
+		630EDBE01FF2D7D7009DE57A /* Degree+Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EDBDD1FF2D7D7009DE57A /* Degree+Measurement.swift */; };
+		630EDBE11FF2D7D7009DE57A /* Degree+Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EDBDD1FF2D7D7009DE57A /* Degree+Measurement.swift */; };
+		630EDBE31FF2D8EE009DE57A /* DegreeMeasurementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EDBE21FF2D8EE009DE57A /* DegreeMeasurementTests.swift */; };
+		630EDBE51FF2D917009DE57A /* RadianMeasurementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EDBE41FF2D917009DE57A /* RadianMeasurementTests.swift */; };
 		63252D331E5A3B6400324B66 /* DLAngle_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 63252D311E5A3B6400324B66 /* DLAngle_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63252D401E5A3B7600324B66 /* DLAngle_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 63252D3E1E5A3B7600324B66 /* DLAngle_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63252D4D1E5A3B8800324B66 /* DLAngle_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 63252D4B1E5A3B8800324B66 /* DLAngle_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -123,6 +133,10 @@
 
 /* Begin PBXFileReference section */
 		630EDBD61FF2CEB4009DE57A /* GenericTrigonometryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTrigonometryTests.swift; sourceTree = "<group>"; };
+		630EDBD81FF2D6E0009DE57A /* Radian+Measument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Radian+Measument.swift"; sourceTree = "<group>"; };
+		630EDBDD1FF2D7D7009DE57A /* Degree+Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Degree+Measurement.swift"; sourceTree = "<group>"; };
+		630EDBE21FF2D8EE009DE57A /* DegreeMeasurementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DegreeMeasurementTests.swift; sourceTree = "<group>"; };
+		630EDBE41FF2D917009DE57A /* RadianMeasurementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadianMeasurementTests.swift; sourceTree = "<group>"; };
 		63252D2F1E5A3B6400324B66 /* DLAngle_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLAngle_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63252D311E5A3B6400324B66 /* DLAngle_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAngle_iOS.h; sourceTree = "<group>"; };
 		63252D321E5A3B6400324B66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -305,10 +319,12 @@
 			children = (
 				639220321FC9FD82003FB121 /* Angle.swift */,
 				639220361FC9FD82003FB121 /* Degree.swift */,
+				630EDBDD1FF2D7D7009DE57A /* Degree+Measurement.swift */,
 				639220401FC9FD82003FB121 /* NormalizedType.swift */,
 				639220431FC9FD82003FB121 /* Radian.swift */,
-				639220421FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift */,
 				63B9110F1FF2AE2B008E3E62 /* Radian+InverseTrigonometricFunctions.swift */,
+				630EDBD81FF2D6E0009DE57A /* Radian+Measument.swift */,
+				639220421FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift */,
 			);
 			name = Angle;
 			sourceTree = "<group>";
@@ -388,7 +404,9 @@
 			isa = PBXGroup;
 			children = (
 				639D7A0E1E58DADF008D10EF /* AngleTests.swift */,
+				630EDBE21FF2D8EE009DE57A /* DegreeMeasurementTests.swift */,
 				639D7A151E58DE2B008D10EF /* DegreeTests.swift */,
+				630EDBE41FF2D917009DE57A /* RadianMeasurementTests.swift */,
 				639D7A171E58F1E6008D10EF /* RadianTests.swift */,
 			);
 			path = Angle;
@@ -667,6 +685,7 @@
 				63A76A4E1FF2B17900B5943F /* Trigonometry+TrigonometricFunctions.swift in Sources */,
 				63A76A441FF2B07A00B5943F /* Trigonometry+Validation.swift in Sources */,
 				6392206C1FC9FD82003FB121 /* GenericTrigonometry.swift in Sources */,
+				630EDBDE1FF2D7D7009DE57A /* Degree+Measurement.swift in Sources */,
 				63A76A581FF2B23400B5943F /* Trigonometry+InverseHyperbolicTrigonometricFunctions.swift in Sources */,
 				639220881FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift in Sources */,
 				639220B41FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift in Sources */,
@@ -679,6 +698,7 @@
 				63A76A491FF2B0E800B5943F /* Trigonometry+InverseTrigonometricFunctions.swift in Sources */,
 				6392204C1FC9FD82003FB121 /* TrigonometricError.swift in Sources */,
 				639220581FC9FD82003FB121 /* Degree.swift in Sources */,
+				630EDBD91FF2D6E0009DE57A /* Radian+Measument.swift in Sources */,
 				639220B01FC9FE60003FB121 /* Predicate.swift in Sources */,
 				63B749CD1FD1F79300A6296F /* Atan2ArgumentsChecker.swift in Sources */,
 				639220481FC9FD82003FB121 /* Angle.swift in Sources */,
@@ -694,6 +714,7 @@
 				63A76A4F1FF2B17900B5943F /* Trigonometry+TrigonometricFunctions.swift in Sources */,
 				63A76A451FF2B07A00B5943F /* Trigonometry+Validation.swift in Sources */,
 				6392206D1FC9FD82003FB121 /* GenericTrigonometry.swift in Sources */,
+				630EDBDF1FF2D7D7009DE57A /* Degree+Measurement.swift in Sources */,
 				63A76A591FF2B23400B5943F /* Trigonometry+InverseHyperbolicTrigonometricFunctions.swift in Sources */,
 				639220891FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift in Sources */,
 				639220B51FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift in Sources */,
@@ -706,6 +727,7 @@
 				63A76A4A1FF2B0E800B5943F /* Trigonometry+InverseTrigonometricFunctions.swift in Sources */,
 				6392204D1FC9FD82003FB121 /* TrigonometricError.swift in Sources */,
 				639220591FC9FD82003FB121 /* Degree.swift in Sources */,
+				630EDBDA1FF2D6E0009DE57A /* Radian+Measument.swift in Sources */,
 				639220B11FC9FE60003FB121 /* Predicate.swift in Sources */,
 				63B749CE1FD1F79300A6296F /* Atan2ArgumentsChecker.swift in Sources */,
 				639220491FC9FD82003FB121 /* Angle.swift in Sources */,
@@ -721,6 +743,7 @@
 				63A76A501FF2B17900B5943F /* Trigonometry+TrigonometricFunctions.swift in Sources */,
 				63A76A461FF2B07A00B5943F /* Trigonometry+Validation.swift in Sources */,
 				6392206E1FC9FD82003FB121 /* GenericTrigonometry.swift in Sources */,
+				630EDBE01FF2D7D7009DE57A /* Degree+Measurement.swift in Sources */,
 				63A76A5A1FF2B23400B5943F /* Trigonometry+InverseHyperbolicTrigonometricFunctions.swift in Sources */,
 				6392208A1FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift in Sources */,
 				639220B61FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift in Sources */,
@@ -733,6 +756,7 @@
 				63A76A4B1FF2B0E800B5943F /* Trigonometry+InverseTrigonometricFunctions.swift in Sources */,
 				6392204E1FC9FD82003FB121 /* TrigonometricError.swift in Sources */,
 				6392205A1FC9FD82003FB121 /* Degree.swift in Sources */,
+				630EDBDB1FF2D6E0009DE57A /* Radian+Measument.swift in Sources */,
 				639220B21FC9FE60003FB121 /* Predicate.swift in Sources */,
 				63B749CF1FD1F79300A6296F /* Atan2ArgumentsChecker.swift in Sources */,
 				6392204A1FC9FD82003FB121 /* Angle.swift in Sources */,
@@ -748,6 +772,7 @@
 				63A76A511FF2B17900B5943F /* Trigonometry+TrigonometricFunctions.swift in Sources */,
 				63A76A471FF2B07A00B5943F /* Trigonometry+Validation.swift in Sources */,
 				6392206F1FC9FD82003FB121 /* GenericTrigonometry.swift in Sources */,
+				630EDBE11FF2D7D7009DE57A /* Degree+Measurement.swift in Sources */,
 				63A76A5B1FF2B23400B5943F /* Trigonometry+InverseHyperbolicTrigonometricFunctions.swift in Sources */,
 				6392208B1FC9FD82003FB121 /* Radian+TrigonometricFunctions.swift in Sources */,
 				639220B71FC9FE60003FB121 /* TrigonometricArgumentsChecker.swift in Sources */,
@@ -760,6 +785,7 @@
 				63A76A4C1FF2B0E800B5943F /* Trigonometry+InverseTrigonometricFunctions.swift in Sources */,
 				6392204F1FC9FD82003FB121 /* TrigonometricError.swift in Sources */,
 				6392205B1FC9FD82003FB121 /* Degree.swift in Sources */,
+				630EDBDC1FF2D6E0009DE57A /* Radian+Measument.swift in Sources */,
 				639220B31FC9FE60003FB121 /* Predicate.swift in Sources */,
 				63B749D01FD1F79300A6296F /* Atan2ArgumentsChecker.swift in Sources */,
 				6392204B1FC9FD82003FB121 /* Angle.swift in Sources */,
@@ -791,8 +817,10 @@
 				63F687431E74349200E6CA13 /* TrigonometricArgumentsCheckerTests.swift in Sources */,
 				639D7A0F1E58DADF008D10EF /* AngleTests.swift in Sources */,
 				63A76A701FF2B7A700B5943F /* TrigonometricConstants.swift in Sources */,
+				630EDBE31FF2D8EE009DE57A /* DegreeMeasurementTests.swift in Sources */,
 				63A76A781FF2BA5600B5943F /* RadianTrigonometricTests2.swift in Sources */,
 				639D7A181E58F1E6008D10EF /* RadianTests.swift in Sources */,
+				630EDBE51FF2D917009DE57A /* RadianMeasurementTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
