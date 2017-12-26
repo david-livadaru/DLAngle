@@ -8,11 +8,6 @@
 
 import Foundation
 
-///
-///
-/// - undefinedFunction:
-/// - invalidParameter:
-
 /// An error which is thrown when an error has been catched.
 ///
 /// - undefinedFunction: thrown when an attempt to check an invalid function has been made.

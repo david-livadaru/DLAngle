@@ -96,21 +96,33 @@ class RadianTrigonometryTests: XCTestCase {
     }
 
     func testAtan() {
-        let angle = Radian(atan: 0.0)
-        XCTAssert(angle.rawValue == 0.0)
+        do {
+            let angle = try Radian(atan: 0.0)
+            XCTAssert(angle.rawValue == 0.0)
+        } catch {
+            XCTFail()
+        }
     }
 
     func testAtanFloat() {
-        let value: Float = 1.0
-        let angle = Radian(atan: value)
-        Radian.equalityPrecision = 7
-        XCTAssert(angle == Radian(rawValue: Double.pi / 4))
+        do {
+            let value: Float = 1.0
+            let angle = try Radian(atan: value)
+            Radian.equalityPrecision = 7
+            XCTAssert(angle == Radian(rawValue: Double.pi / 4))
+        } catch {
+            XCTFail()
+        }
     }
 
     func testAtanCGFloat() {
-        let value: CGFloat = -1.0
-        let angle = Radian(atan: value)
-        XCTAssert(angle.rawValue == -Double.pi / 4)
+        do {
+            let value: CGFloat = -1.0
+            let angle = try Radian(atan: value)
+            XCTAssert(angle.rawValue == -Double.pi / 4)
+        } catch {
+            XCTFail()
+        }
     }
     
     func testAtanMinusInfinity() {
