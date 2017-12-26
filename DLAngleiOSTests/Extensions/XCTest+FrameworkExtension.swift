@@ -5,7 +5,6 @@
 //  Created by David Livadaru on 12/26/17.
 //
 
-import Foundation
 import XCTest
 import DLAngle_iOS
 

@@ -22,7 +22,7 @@ class RadianTrigonometricTests: XCTestCase {
     func testSinFloat() {
         do {
             let angle = Radian(rawValue: Double.pi / 2)
-            let value: Double = try angle.sin()
+            let value: Float = try angle.sin()
             XCTAssert(value.equals(to: 1.0))
         } catch {
             XCTFail(failMessage(forCatched: error, testing: .sin))
@@ -32,7 +32,7 @@ class RadianTrigonometricTests: XCTestCase {
     func testSinCGFloat() {
         do {
             let angle = Radian(rawValue: Double.pi / 6)
-            let value: Double = try angle.sin()
+            let value: CGFloat = try angle.sin()
             XCTAssert(value.equals(to: 0.5))
         } catch {
             XCTFail(failMessage(forCatched: error, testing: .sin))

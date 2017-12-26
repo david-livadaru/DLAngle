@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630EDBD71FF2CEB4009DE57A /* GenericTrigonometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EDBD61FF2CEB4009DE57A /* GenericTrigonometryTests.swift */; };
 		63252D331E5A3B6400324B66 /* DLAngle_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 63252D311E5A3B6400324B66 /* DLAngle_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63252D401E5A3B7600324B66 /* DLAngle_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 63252D3E1E5A3B7600324B66 /* DLAngle_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63252D4D1E5A3B8800324B66 /* DLAngle_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 63252D4B1E5A3B8800324B66 /* DLAngle_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -121,6 +122,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		630EDBD61FF2CEB4009DE57A /* GenericTrigonometryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTrigonometryTests.swift; sourceTree = "<group>"; };
 		63252D2F1E5A3B6400324B66 /* DLAngle_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLAngle_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63252D311E5A3B6400324B66 /* DLAngle_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAngle_iOS.h; sourceTree = "<group>"; };
 		63252D321E5A3B6400324B66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -406,6 +408,9 @@
 		63A76A661FF2B62200B5943F /* Trigonometry */ = {
 			isa = PBXGroup;
 			children = (
+				630EDBD61FF2CEB4009DE57A /* GenericTrigonometryTests.swift */,
+				63A76A711FF2B91E00B5943F /* InverseHyperbolicTrigonometricTests.swift */,
+				63A76A731FF2B92C00B5943F /* InverseTrigonometricTests.swift */,
 				63A76A691FF2B68D00B5943F /* RadianInverseHTrigonometricTests.swift */,
 				63A76A791FF2BB1C00B5943F /* RadianInverseHTrigonometricTests2.swift */,
 				63A76A671FF2B66000B5943F /* RadianInverseTrigonometricTests.swift */,
@@ -414,8 +419,6 @@
 				63A76A6D1FF2B6A400B5943F /* RadianTrigonometricTests.swift */,
 				63A76A771FF2BA5600B5943F /* RadianTrigonometricTests2.swift */,
 				63A76A6F1FF2B7A700B5943F /* TrigonometricConstants.swift */,
-				63A76A711FF2B91E00B5943F /* InverseHyperbolicTrigonometricTests.swift */,
-				63A76A731FF2B92C00B5943F /* InverseTrigonometricTests.swift */,
 			);
 			path = Trigonometry;
 			sourceTree = "<group>";
@@ -778,6 +781,7 @@
 				63A76A6C1FF2B69900B5943F /* RadianHyperbolicTrigonometricTests.swift in Sources */,
 				63A76A601FF2B4C400B5943F /* Float+FrameworkExtension.swift in Sources */,
 				639D7A161E58DE2B008D10EF /* DegreeTests.swift in Sources */,
+				630EDBD71FF2CEB4009DE57A /* GenericTrigonometryTests.swift in Sources */,
 				63A76A761FF2BA0200B5943F /* RadianInverseTrigonometricTests2.swift in Sources */,
 				63A76A681FF2B66000B5943F /* RadianInverseTrigonometricTests.swift in Sources */,
 				63A76A7C1FF2C52C00B5943F /* XCTest+FrameworkExtension.swift in Sources */,
