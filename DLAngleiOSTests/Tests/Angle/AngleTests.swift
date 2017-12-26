@@ -15,19 +15,19 @@ class AngleTests: XCTestCase {
         let angle = Angle(rawValue: rawValue)
         XCTAssert(angle.rawValue == rawValue)
     }
-    
+
     func testFloatConstructor() {
         let ninety: Float = 90.0
         let angle = Angle(float: ninety)
         XCTAssert(angle.float == ninety)
     }
-    
+
     func testDoubleConstructor() {
         let rawValue: Double = 25.0
         let angle = Angle(rawValue: rawValue)
         XCTAssert(angle.rawValue == rawValue)
     }
-    
+
     func testCGFloatConstructor4() {
         let rawValue: CGFloat = 120.0
         let angle = Angle(cgFloat: rawValue)

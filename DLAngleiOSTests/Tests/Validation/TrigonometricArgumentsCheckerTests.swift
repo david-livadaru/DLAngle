@@ -189,7 +189,7 @@ class TrigonometricArgumentsCheckerTests: XCTestCase {
     // MARK: Fail messages
 
     private func failMessage(forCatched error: Error,
-                         testing function: TrigonometricFunction) -> String {
+                             testing function: TrigonometricFunction) -> String {
         return "\(function.rawValue.capitalized) check failed due to error \(error.localizedDescription)"
     }
 }

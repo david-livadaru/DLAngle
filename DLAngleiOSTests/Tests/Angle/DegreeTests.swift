@@ -76,7 +76,7 @@ class DegreeTests: XCTestCase {
         angle.normalize()
         XCTAssert(angle.rawValue == 90)
     }
-    
+
     func testAdditionOperation() {
         let firstAngle = Degree(rawValue: 45.0)
         let secondAngle = Degree(rawValue: 15.0)

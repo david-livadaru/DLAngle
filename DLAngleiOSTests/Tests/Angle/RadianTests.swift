@@ -26,13 +26,13 @@ class RadianTests: XCTestCase {
         let radianAngle = Radian(degrees: rawValue)
         XCTAssert(radianAngle.rawValue == Double.pi * 3.0 / 4.0)
     }
-    
+
     func testConvenienceInitWithRadianAngle() {
         let degreeAngle = Degree(rawValue: 45.0)
         let radianAngle = Radian(degree: degreeAngle)
         XCTAssert(radianAngle.rawValue == Double.pi / 4.0)
     }
-    
+
     func testAdditionOperation() {
         let firstAngle = Radian(rawValue: Double.pi / 4.0)
         let secondAngle = Radian(rawValue: Double.pi / 4.0)
@@ -53,14 +53,14 @@ class RadianTests: XCTestCase {
         let resultAngle = firstAngle - secondAngle
         XCTAssert(resultAngle.rawValue == Double.pi / 2.0)
     }
-    
+
     func testSubtractEqualOperation() {
         var firstAngle = Radian(rawValue: 2.0 * Double.pi)
         let secondAngle = Radian(rawValue: Double.pi / 2.0)
         firstAngle -= secondAngle
         XCTAssert(firstAngle.rawValue == 3.0 * Double.pi / 2.0)
     }
-    
+
     func testMultiplicationOperation() {
         let angle = Radian(rawValue: Double.pi / 2)
         let resultAngle = angle * 2.0
@@ -80,7 +80,7 @@ class RadianTests: XCTestCase {
         let resultAngle = angle * ratio
         XCTAssert(resultAngle.rawValue == 2 * Double.pi)
     }
-    
+
     func testValueMultipliedWithAngleOperation() {
         let angle = Radian(float: Float.pi / 6.0)
         let resultAngle = 2.0 * angle
@@ -100,7 +100,7 @@ class RadianTests: XCTestCase {
         let resultAngle = ratio * angle
         XCTAssert(resultAngle.float == Float.pi / 3.0)
     }
-    
+
     func testMultiplicationEqualOperation() {
         var angle = Radian(float: 3.0 * Float.pi / 4.0)
         angle *= 2.0
@@ -120,7 +120,7 @@ class RadianTests: XCTestCase {
         angle *= ratio
         XCTAssert(angle.float == 3.0 * Float.pi / 2.0)
     }
-    
+
     func testDivideOperation() {
         let angle = Radian(cgFloat: CGFloat.pi)
         let resultAngle = angle / 7.0
@@ -140,7 +140,7 @@ class RadianTests: XCTestCase {
         let resultAngle = angle / ratio
         XCTAssert(resultAngle.cgFloat == CGFloat.pi / 7.0)
     }
-    
+
     func testDivideEqualOperation() {
         var angle = Radian(cgFloat: CGFloat.pi)
         angle /= 4.0
@@ -180,19 +180,19 @@ class RadianTests: XCTestCase {
         angle = value / angle
         XCTAssert(angle.rawValue == M_2_SQRTPI)
     }
-    
+
     func testNormalization() {
         let angle = Radian(rawValue: 2 * Double.pi)
         angle.normalize()
         XCTAssert(angle == Radian(rawValue: 0.0))
     }
-    
+
     func testSecondNormalization() {
         let angle = Radian(rawValue: 5 * Double.pi / 2)
         angle.normalize()
         XCTAssert(angle == Radian(rawValue: Double.pi / 2))
     }
-    
+
     func testNormalizationForNegativeAngle() {
         let angle = Radian(rawValue: -Double.pi)
         angle.normalize()
