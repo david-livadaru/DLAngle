@@ -153,7 +153,7 @@ do {
 
 ```swift
 let angle = Radian(degrees: 45.0)
-if let sin = try? angle.sin() {
+if let sin: Double = try? angle.sin() {
    // use computed sine value
 }
 ```
