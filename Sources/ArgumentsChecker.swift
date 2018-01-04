@@ -4,7 +4,6 @@
 //
 //  Created by David Livadaru on 3/11/17.
 //
-//
 
 import Foundation
 #if os(iOS)

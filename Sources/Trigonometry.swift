@@ -4,7 +4,6 @@
 //
 //  Created by David Livadaru on 18/02/2017.
 //
-//
 
 import Foundation
 #if !os(Linux)

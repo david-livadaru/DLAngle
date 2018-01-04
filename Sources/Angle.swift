@@ -4,7 +4,6 @@
 //
 //  Created by David Livadaru on 18/02/2017.
 //
-//
 
 import Foundation
 #if !os(Linux)
@@ -13,18 +12,22 @@ import Foundation
 
 /// A class which provides an abstraction of the angle.
 public class Angle {
+    /// The internal representation of angle.
     public private (set) var rawValue: Double
 
+    /// RawValue represented as Float.
     public var float: Float {
         return Float(rawValue)
     }
 
     #if !os(Linux)
+    /// RawValue represented as CGFloat.
     public var cgFloat: CGFloat {
         return CGFloat(rawValue)
     }
     #endif
 
+    /// The precision to use for equality.
     public static var equalityPrecision: Int {
         get {
             return _equalityPrecision
@@ -42,19 +45,31 @@ public class Angle {
 
     // MARK: Initializers
 
+    /// Create an angle by providing raw value.
+    ///
+    /// - Parameter rawValue: The representation of angle.
     public required init(rawValue: Double) {
         self.rawValue = rawValue
     }
 
+    /// Create an angle with 0.0 as raw value.
     public convenience init() {
         self.init(rawValue: 0.0)
     }
 
+    /// Create an angle by providing raw value as Float.
+    /// Note that the raw value will be converted to Double.
+    ///
+    /// - Parameter float: The representation of angle.
     public convenience init(float: Float) {
         self.init(rawValue: Double(float))
     }
 
     #if !os(Linux)
+    /// Create an angle by providing raw value as CGFloat.
+    /// Note that the raw value will be converted to Double.
+    ///
+    /// - Parameter cgFloat: The representation of angle.
     public convenience init(cgFloat: CGFloat) {
         self.init(rawValue: Double(cgFloat))
     }
