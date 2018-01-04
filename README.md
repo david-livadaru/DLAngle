@@ -132,8 +132,7 @@ angle1 < angle2 // false
 ```swift
 let angleMeasurement = Measurement<UnitAngle>(value: 45.0, unit: .degrees)
 let radian = Radian(measurement: angleMeasurement)
-radian.measurement // Measurement<UnitAngle>(value: Double.pi / 4, 
-                                             unit: .radians)
+radian.measurement // Measurement<UnitAngle>(value: Double.pi / 4, unit: .radians)
 let degrees = Degrees(measurement: angleMeasurement)
 degrees.measurement // Measurement<UnitAngle>(value: 45.0, unit: .degrees)
 ```
