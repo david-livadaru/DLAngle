@@ -1,12 +1,11 @@
 <div align="center" markdown="1">
 
-	![DLAngle Logo](DLAngleLogo.png)
+![DLAngle Logo](DLAngleLogo.png)
 
-	
-	[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-	[![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat)](https://github.com/CocoaPods/CocoaPods)
-	[![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange.svg?style=flat)](https://swift.org/package-manager/)
-	[![Swift 4.0](https://img.shields.io/badge/Swift_4.0-compatible-orange.svg?style=flat)](https://swift.org)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat)](https://github.com/CocoaPods/CocoaPods)
+[![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange.svg?style=flat)](https://swift.org/package-manager/)
+[![Swift 4.0](https://img.shields.io/badge/Swift_4.0-compatible-orange.svg?style=flat)](https://swift.org)
 	
 </div>
 
@@ -53,14 +52,14 @@ let zeroRadians = Radian()
 
 ### Converting between Degree and Radian
 
-From Degree to Radian
+From Degree to Radian:
 
 ```swift
 let degree = Degree(rawValue: 90.0)
 let radian = Radian(degree: degree)
 ```
 
-From Radian to Degree
+From Radian to Degree:
 
 ```swift
 let radian = Radian(rawValue: Double.pi)
@@ -234,6 +233,6 @@ import DLAngle
 
 [Open a pull request](https://github.com/davidlivadaru/DLAngle/compare) if you fixed a bug and want to share it.
 
-##License
+## License
 
 See [LICENSE](LICENSE) file.
