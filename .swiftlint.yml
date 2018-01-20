@@ -1,2 +1,5 @@
+included:
+    - ../../Sources/DLAngle
+    - ../../Tests/DLAngleTests
 excluded:
     - Carthage

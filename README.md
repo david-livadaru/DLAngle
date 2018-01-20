@@ -162,11 +162,11 @@ if let sin: Double = try? angle.sin() {
 
 ### Supported Operating Systems
 
+* **macOS** 10.12 and later
+* **iOS** 10.0 and later
+* **watchOS** 3.0 and later
+* **tvOS** 10.0 and later
 * **Linux** (check [Swift.org](https://swift.org) for more information regarding Swift support on Linux)
-* **macOS** 10.10 and later
-* **iOS** 9.0 and later
-* **watchOS** 2.0 and later
-* **tvOS** 9.0 and later
 
 ### 1. [Carthage](https://github.com/Carthage/Carthage)
 
