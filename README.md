@@ -22,6 +22,7 @@ Support convenience initializers, operators and functions for natural, fast and 
 ## Table of contents
 
 - [Usage](https://github.com/davidlivadaru/DLAngle#usage)
+	- [Importing the module](https://github.com/davidlivadaru/DLAngle#importing-the-module)
 	- [Creation](https://github.com/davidlivadaru/DLAngle#creation)
 	- [Converting between Degree and Radian](https://github.com/davidlivadaru/DLAngle#converting-between-degree-and-radian)
 	- [Basic Operations](https://github.com/davidlivadaru/DLAngle#basic-operations)
@@ -40,6 +41,14 @@ Support convenience initializers, operators and functions for natural, fast and 
 - [License](https://github.com/davidlivadaru/DLAngle#license)
 
 ## Usage
+
+### Importing the module
+
+You can import this module using:
+
+```swift
+import DLAngle
+```
 
 ### Creation
 
@@ -176,27 +185,12 @@ github "davidlivadaru/DLAngle"
 
 If you need the framework only for a single OS, then I propose to use `--platform [iOS|macOS|watchOS|tvOS]` specifier when your perform `carthage update`.
 
-You must to import the module using:
-
-```swift
-import DLAngle_iOS
-import DLAnle_macOS
-import DLAngle_watchOS
-import DLAngle_tvOS
-```
-
 ### 2. [CocoaPods](https://github.com/CocoaPods/CocoaPods)
 
 Add the dependency in your `Podfile`.
 
 ```
 pod 'DLAngle'
-```
-
-You must to import the module using:
-
-```swift
-import DLAngle
 ```
 
 ### 3. [Swift Package Manager](https://swift.org/package-manager/)
@@ -220,18 +214,13 @@ targets: [
     ]
 ```
 
-You must to import the module using:
-
-```swift
-import DLAngle
-```
-
 ## Contribution
 
-[Open an issue](https://github.com/davidlivadaru/DLAngle/issues/new) if you have found a bug, have a feature request or provide feedback.
+Module is covered by unit tests, however, bugs always slip through.
+If you find a bug in the module create an [issue](https://github.com/davidlivadaru/DLAngle/issues).
 
-[Open a pull request](https://github.com/davidlivadaru/DLAngle/compare) if you fixed a bug and want to share it.
+If you want to contribute on fixing bugs or implementing new features then create a [pull request](https://github.com/davidlivadaru/DLAngle/pulls).
 
 ## License
 
-See [LICENSE](LICENSE) file.
+**DLAngle** is released under MIT license. See [LICENSE](LICENSE) for details.
