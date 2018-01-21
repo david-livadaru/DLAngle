@@ -20,5 +20,6 @@ XCTMain([
     testCase(ArgumentsCheckerTests.allTests),
     testCase(Atan2ArgumentsCheckerTests.allTests),
     testCase(PredicateTests.allTests),
-    testCase(TrigonometricArgumentsCheckerTests.allTests)
+    testCase(TrigonometricArgumentsCheckerTests.allTests),
+    testCase(RadianConstantsTests.allTests)
 ])

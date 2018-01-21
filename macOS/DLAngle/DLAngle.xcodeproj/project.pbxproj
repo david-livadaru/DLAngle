@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		638825F72014C41B00CC6E83 /* RadianConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638825F62014C41B00CC6E83 /* RadianConstants.swift */; };
 		63D2D49D2013E062007011BD /* DLAngle.h in Headers */ = {isa = PBXBuildFile; fileRef = 63D2D49B2013E062007011BD /* DLAngle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63D2D4BE2013E07A007011BD /* ArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D2D4A42013E07A007011BD /* ArgumentsChecker.swift */; };
 		63D2D4BF2013E07A007011BD /* Atan2ArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D2D4A52013E07A007011BD /* Atan2ArgumentsChecker.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		638825F62014C41B00CC6E83 /* RadianConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadianConstants.swift; sourceTree = "<group>"; };
 		63D2D4982013E062007011BD /* DLAngle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLAngle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D2D49B2013E062007011BD /* DLAngle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAngle.h; sourceTree = "<group>"; };
 		63D2D49C2013E062007011BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				63D2D4B32013E07A007011BD /* Radian+Measument.swift */,
 				63D2D4B42013E07A007011BD /* Radian+TrigonometricFunctions.swift */,
 				63D2D4B52013E07A007011BD /* Radian.swift */,
+				638825F62014C41B00CC6E83 /* RadianConstants.swift */,
 			);
 			name = Angle;
 			path = ../../../Sources/DLAngle/Angle;
@@ -259,6 +262,7 @@
 				63D2D4C92013E07A007011BD /* Radian+HyperbolicTrigonometricFunctions.swift in Sources */,
 				63D2D4C52013E07A007011BD /* Angle.swift in Sources */,
 				63D2D4CC2013E07A007011BD /* Radian+Measument.swift in Sources */,
+				638825F72014C41B00CC6E83 /* RadianConstants.swift in Sources */,
 				63D2D4BF2013E07A007011BD /* Atan2ArgumentsChecker.swift in Sources */,
 				63D2D4C82013E07A007011BD /* NormalizedType.swift in Sources */,
 				63D2D4D32013E07A007011BD /* Trigonometry+TrigonometricFunctions.swift in Sources */,

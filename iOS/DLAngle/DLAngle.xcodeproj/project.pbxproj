@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		638825F32014C3CE00CC6E83 /* RadianConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638825F22014C3CE00CC6E83 /* RadianConstants.swift */; };
+		638825FB2014C44D00CC6E83 /* RadianConstantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638825FA2014C44D00CC6E83 /* RadianConstantsTests.swift */; };
 		63D2D3872013D9E8007011BD /* DLAngle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D2D37D2013D9E8007011BD /* DLAngle.framework */; };
 		63D2D38E2013D9E8007011BD /* DLAngle.h in Headers */ = {isa = PBXBuildFile; fileRef = 63D2D3802013D9E8007011BD /* DLAngle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63D2D3B22013DB34007011BD /* ArgumentsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D2D3982013DB34007011BD /* ArgumentsChecker.swift */; };
@@ -72,6 +74,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		638825F22014C3CE00CC6E83 /* RadianConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadianConstants.swift; sourceTree = "<group>"; };
+		638825FA2014C44D00CC6E83 /* RadianConstantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadianConstantsTests.swift; sourceTree = "<group>"; };
 		63D2D37D2013D9E8007011BD /* DLAngle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLAngle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D2D3802013D9E8007011BD /* DLAngle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAngle.h; sourceTree = "<group>"; };
 		63D2D3812013D9E8007011BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -220,6 +224,7 @@
 				63D2D3A72013DB34007011BD /* Radian+Measument.swift */,
 				63D2D3A82013DB34007011BD /* Radian+TrigonometricFunctions.swift */,
 				63D2D3A92013DB34007011BD /* Radian.swift */,
+				638825F22014C3CE00CC6E83 /* RadianConstants.swift */,
 			);
 			name = Angle;
 			path = ../../../Sources/DLAngle/Angle;
@@ -291,6 +296,7 @@
 				63D2D3E32013DB40007011BD /* DegreeTests.swift */,
 				63D2D3E42013DB40007011BD /* RadianMeasurementTests.swift */,
 				63D2D3E52013DB40007011BD /* RadianTests.swift */,
+				638825FA2014C44D00CC6E83 /* RadianConstantsTests.swift */,
 			);
 			name = Angle;
 			path = ../../../Tests/DLAngleTests/Angle;
@@ -449,6 +455,7 @@
 				63D2D3BD2013DB34007011BD /* Radian+HyperbolicTrigonometricFunctions.swift in Sources */,
 				63D2D3B92013DB34007011BD /* Angle.swift in Sources */,
 				63D2D3C02013DB34007011BD /* Radian+Measument.swift in Sources */,
+				638825F32014C3CE00CC6E83 /* RadianConstants.swift in Sources */,
 				63D2D3B32013DB34007011BD /* Atan2ArgumentsChecker.swift in Sources */,
 				63D2D3BC2013DB34007011BD /* NormalizedType.swift in Sources */,
 				63D2D3C72013DB34007011BD /* Trigonometry+TrigonometricFunctions.swift in Sources */,
@@ -471,6 +478,7 @@
 				63D2D3F92013DB40007011BD /* AngleTests.swift in Sources */,
 				63D2D3F62013DB40007011BD /* RadianTrigonometricTests.swift in Sources */,
 				63D2D3FB2013DB40007011BD /* DegreeTests.swift in Sources */,
+				638825FB2014C44D00CC6E83 /* RadianConstantsTests.swift in Sources */,
 				63D2D3EF2013DB40007011BD /* InverseHyperbolicTrigonometricTests.swift in Sources */,
 				63D2D3E82013DB40007011BD /* Float+FrameworkExtension.swift in Sources */,
 				63D2D3EA2013DB40007011BD /* ArgumentsCheckerTests.swift in Sources */,
