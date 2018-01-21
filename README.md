@@ -27,7 +27,7 @@ Support convenience initializers, operators and functions for natural, fast and 
 	- [Converting between Degree and Radian](https://github.com/davidlivadaru/DLAngle#converting-between-degree-and-radian)
 	- [Basic Operations](https://github.com/davidlivadaru/DLAngle#basic-operations)
 	- [Normalization](https://github.com/davidlivadaru/DLAngle#normalization)
-	- [Equality](https://github.com/davidlivadaru/DLAngle#Equality)
+	- [Equality](https://github.com/davidlivadaru/DLAngle#equality)
 	- [Comparison](https://github.com/davidlivadaru/DLAngle#comparison)
 	- [Foundation.Measurement conversion](https://github.com/davidlivadaru/DLAngle#foundationmeasurement-conversion)
 	- [Inverse trigonometric functions](https://github.com/davidlivadaru/DLAngle#inverse-trigonometric-functions)
