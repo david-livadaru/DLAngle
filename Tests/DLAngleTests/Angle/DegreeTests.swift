@@ -45,7 +45,8 @@ class DegreeTests: XCTestCase {
         ("testEquality", testEquality),
         ("testEquality2", testEquality2),
         ("testEquality3", testEquality3),
-        ("testComparison", testComparison)
+        ("testComparison", testComparison),
+        ("testMinusOperator", testMinusOperator)
     ]
 
     func testConvenienceInitWithRawDoubleValue() {
@@ -266,5 +267,11 @@ class DegreeTests: XCTestCase {
         let first = Degree(rawValue: 180.0)
         let second = Degree(radians: Double.pi / 2)
         XCTAssert(first > second)
+    }
+
+    func testMinusOperator() {
+        let angle = Degree(rawValue: 90.0)
+        let symetricAngle = -angle
+        XCTAssertEqual(angle.rawValue, -symetricAngle.rawValue)
     }
 }

@@ -85,6 +85,10 @@ public final class Radian: Angle, Comparable, NormalizedType {
         minusEqual(lhs: &lhs, rhs: rhs)
     }
 
+    public prefix static func - (operand: Radian) -> Radian {
+        return Radian(rawValue: -operand.rawValue)
+    }
+
     public static func * (lhs: Radian, rhs: Double) -> Radian {
         return multiply(angle: lhs, with: rhs)
     }

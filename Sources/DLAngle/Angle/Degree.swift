@@ -83,6 +83,10 @@ public final class Degree: Angle, Comparable, NormalizedType {
         minusEqual(lhs: &lhs, rhs: rhs)
     }
 
+    public prefix static func - (operand: Degree) -> Degree {
+        return Degree(rawValue: -operand.rawValue)
+    }
+
     public static func * (lhs: Degree, rhs: Double) -> Degree {
         return multiply(angle: lhs, with: rhs)
     }

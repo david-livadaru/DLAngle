@@ -41,7 +41,8 @@ class RadianTests: XCTestCase {
         ("testSecondNormalization", testSecondNormalization),
         ("testNormalizationForNegativeAngle", testNormalizationForNegativeAngle),
         ("testNormalized", testNormalized),
-        ("testComparison", testComparison)
+        ("testComparison", testComparison),
+        ("testMinusOperator", testMinusOperator)
     ]
 
     func testConvenienceInitWithRawDegrees() {
@@ -243,5 +244,11 @@ class RadianTests: XCTestCase {
         let first = Radian(rawValue: Double.pi)
         let second = Radian(rawValue: 2 * Double.pi)
         XCTAssert(first < second)
+    }
+
+    func testMinusOperator() {
+        let angle = Radian(rawValue: Double.pi / 2)
+        let symetricAngle = -angle
+        XCTAssertEqual(angle.rawValue, -symetricAngle.rawValue)
     }
 }
