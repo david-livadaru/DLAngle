@@ -32,6 +32,7 @@ Support convenience initializers, operators and functions for natural, fast and 
 	- [Foundation.Measurement conversion](https://github.com/davidlivadaru/DLAngle#foundationmeasurement-conversion)
 	- [Inverse trigonometric functions](https://github.com/davidlivadaru/DLAngle#inverse-trigonometric-functions)
 	- [Trigonometric functions](https://github.com/davidlivadaru/DLAngle#trigonometric-functions)
+	- [Constants](https://github.com/davidlivadaru/DLAngle#constants)
 - [Installation](https://github.com/davidlivadaru/DLAngle#installation)
 	- [Supported Operating Systems](https://github.com/davidlivadaru/DLAngle#supported-operating-systems)
 	- [Carthage](https://github.com/davidlivadaru/DLAngle#1-carthage)
@@ -167,6 +168,15 @@ if let sin: Double = try? angle.sin() {
 }
 ```
 
+### Constants
+
+Frequently used Radian angles have constants:
+
+```swift
+let pi = Radian.pi
+let half_quadrant_II = Radian.pi_2 + Radian.pi_4
+```
+
 ## Installation
 
 ### Supported Operating Systems
@@ -175,13 +185,13 @@ if let sin: Double = try? angle.sin() {
 * **iOS** 10.0 and later
 * **watchOS** 3.0 and later
 * **tvOS** 10.0 and later
-* **Linux** (check [Swift.org](https://swift.org) for more information regarding Swift support on Linux)
+* **Ubuntu** - check [official site](https://swift.org/download/#releases) to find which versions support Swift 4.0.
 
 ### 1. [Carthage](https://github.com/Carthage/Carthage)
 
-`
+```
 github "davidlivadaru/DLAngle"
-`
+```
 
 If you need the framework only for a single OS, then I propose to use `--platform [iOS|macOS|watchOS|tvOS]` specifier when your perform `carthage update`.
 
@@ -195,7 +205,6 @@ pod 'DLAngle'
 
 ### 3. [Swift Package Manager](https://swift.org/package-manager/)
 
-If you don't have a [Package] file, create one.
 Add the the following dependecy in your [`Package.swift`]((https://swift.org/package-manager/#example-usage)):
 
 ```
